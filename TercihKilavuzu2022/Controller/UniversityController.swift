@@ -60,8 +60,6 @@ class UniversityController: UITableViewController {
     
     private func loadFavorites() {
         favorites = realm.objects(University.self)
-        
-        print("DEBUG: favorites array is \(favorites)")
     }
     
     // MARK: - API
@@ -102,9 +100,7 @@ extension UniversityController {
 extension UniversityController: UniversityCellDelegate {
     func handleFavoriteTapped(_ cell: UniversityCell) {
         guard let university = cell.university else { return }
-        
-        print("DEBUG: university.isFavorite is \(university.isFavorite)")
-        
+                
         RealmService.shared.saveFavorite(favorite: university)
         university.isFavorite.toggle()
         cell.university = university

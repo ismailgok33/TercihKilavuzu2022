@@ -127,16 +127,11 @@ class UniversityCell: UITableViewCell {
         guard let university = university else { return }
         let viewModel = UniversityViewModel(university: university)
         
-//        universityNameLabel.text = university.name
         universityNameLabel.attributedText = viewModel.universityNameLabel
-//        departmentLabel.text = university.department
         departmentLabel.attributedText = viewModel.departmentLabel
         minScoreValue.text = university.minScore
         placementValue.text = university.placement
         quotaValue.text = university.quota
-        
-        print("DEBUG: Cell configure'a girdi..")
-        
         favoriteButton.setImage(viewModel.favoriteButtonImage, for: .normal)
     }
 }
