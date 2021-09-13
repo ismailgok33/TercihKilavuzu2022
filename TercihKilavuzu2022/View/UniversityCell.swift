@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol UniversityCellDelegate: AnyObject {
+    func handleFavoriteTapped(_ cell: UniversityCell)
+}
+
 class UniversityCell: UITableViewCell {
 
     // MARK: - Properties
@@ -17,45 +21,62 @@ class UniversityCell: UITableViewCell {
         }
     }
     
-    let universityNameLabel: UILabel = {
-        var label = UILabel()
+    weak var delegate: UniversityCellDelegate?
+    
+    private let universityNameLabel: UILabel = {
+        let label = UILabel()
         label.text = "Test Universitesi (Ankara)"
         label.font = UIFont.systemFont(ofSize: 16)
         label.textColor = .black
         return label
     }()
     
-    let departmentLabel: UILabel = {
-        var label = UILabel()
+    private let departmentLabel: UILabel = {
+        let label = UILabel()
         label.text = "Test Bölümü (İngilizce)"
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textColor = .black
         return label
     }()
     
-    lazy var minScoreLabel: UILabel = createLowerLabels(name: "Taban Puanı")
+    private lazy var minScoreLabel: UILabel = createLowerLabels(name: "Taban Puanı")
     
-    lazy var minScoreValue: UILabel = createLowerLabels(name: "00000")
+    private lazy var minScoreValue: UILabel = createLowerLabels(name: "00000")
     
-    lazy var placementLabel: UILabel = createLowerLabels(name: "Sıralaması")
+    private lazy var placementLabel: UILabel = createLowerLabels(name: "Sıralaması")
     
-    lazy var placementValue: UILabel = createLowerLabels(name: "00000")
+    private lazy var placementValue: UILabel = createLowerLabels(name: "00000")
     
-    lazy var quotaLabel: UILabel = createLowerLabels(name: "Kontenjanı")
+    private lazy var quotaLabel: UILabel = createLowerLabels(name: "Kontenjanı")
     
-    lazy var quotaValue: UILabel = createLowerLabels(name: "00")
+    private lazy var quotaValue: UILabel = createLowerLabels(name: "00")
+    
+    private lazy var favoriteButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(systemName: "suit.heart"), for: .normal)
+        button.tintColor = .systemPink
+        button.setDimensions(width: 50, height: 50)
+        button.addTarget(self, action: #selector(handleFavoriteButtonTapped), for: .touchUpInside)
+        return button
+    }()
     
     
     // MARK: - Lifecycle
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+        contentView.isUserInteractionEnabled = true
         configureCellUI()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Selectors
+    
+    @objc func handleFavoriteButtonTapped() {
+        delegate?.handleFavoriteTapped(self)
     }
     
     // MARK: - Helpers
@@ -66,6 +87,9 @@ class UniversityCell: UITableViewCell {
         
         addSubview(departmentLabel)
         departmentLabel.anchor(top: universityNameLabel.bottomAnchor, left: leftAnchor, paddingTop: 12, paddingLeft: 12)
+        
+        addSubview(favoriteButton)
+        favoriteButton.anchor(top: topAnchor, right: rightAnchor, paddingTop: 30, paddingRight: 12)
         
         let minScoreStack = createLowerStackViews(subviews: [minScoreLabel, minScoreValue])
         
@@ -79,6 +103,7 @@ class UniversityCell: UITableViewCell {
         
         addSubview(bottomStack)
         bottomStack.anchor(top: departmentLabel.bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 24, paddingLeft: 24, paddingRight: 24)
+        
     }
     
     private func createLowerLabels(name: String) -> UILabel {
@@ -109,5 +134,9 @@ class UniversityCell: UITableViewCell {
         minScoreValue.text = university.minScore
         placementValue.text = university.placement
         quotaValue.text = university.quota
+        
+        print("DEBUG: Cell configure'a girdi..")
+        
+        favoriteButton.setImage(viewModel.favoriteButtonImage, for: .normal)
     }
 }

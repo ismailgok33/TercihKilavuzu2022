@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 private let reuseIdentifier = "universityCell"
 
 class UniversityController: UITableViewController {
+    
+    let realm = try! Realm()
     
     // MARK: - Properties
     
@@ -20,6 +23,8 @@ class UniversityController: UITableViewController {
             }
         }
     }
+    
+    var favorites: Results<University>?
     
     let actionButton: UIButton = {
         let button = UIButton(type: .system)
@@ -36,6 +41,7 @@ class UniversityController: UITableViewController {
         super.viewDidLoad()
         configureUI()
         fetchUniversities()
+        loadFavorites()
     }
     
     // MARK: - Helpers
@@ -44,11 +50,18 @@ class UniversityController: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UniversityCell.self, forCellReuseIdentifier: reuseIdentifier)
+        tableView.allowsSelection = false
         
         view.addSubview(actionButton)
         actionButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingBottom: 32, paddingRight: 16)
         actionButton.setDimensions(width: 56, height: 56)
         actionButton.layer.cornerRadius = 56 / 2
+    }
+    
+    private func loadFavorites() {
+        favorites = realm.objects(University.self)
+        
+        print("DEBUG: favorites array is \(favorites)")
     }
     
     // MARK: - API
@@ -75,10 +88,28 @@ extension UniversityController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! UniversityCell
         cell.university = universities[indexPath.row]
+        cell.delegate = self
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
+    }
+}
+
+// MARK: - UniversityCellDelegate
+
+extension UniversityController: UniversityCellDelegate {
+    func handleFavoriteTapped(_ cell: UniversityCell) {
+        guard let university = cell.university else { return }
+        
+        print("DEBUG: university.isFavorite is \(university.isFavorite)")
+        
+        RealmService.shared.saveFavorite(favorite: university)
+        university.isFavorite.toggle()
+        cell.university = university
+        
+        loadFavorites()
+        
     }
 }

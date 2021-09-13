@@ -22,6 +22,11 @@ struct UniversityViewModel {
         return name
     }
     
+    var favoriteButtonImage: UIImage {
+        let imageName = university.isFavorite ? "suit.heart.fill" : "suit.heart"
+        return UIImage(systemName: imageName)!
+    }
+    
     init(university: University) {
         self.university = university
     }

@@ -6,21 +6,24 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct University {
-    let uid: String
-    let name: String
-    let department: String
-    let city: String
-    let language: String
-    let minScore: String
-    let placement: String
-    let quota: String
-    let duration: String
-    let type: String
+class University: Object {
+    @objc dynamic var uid: String = ""
+    @objc dynamic var name: String = ""
+    @objc dynamic var department: String = ""
+    @objc dynamic var city: String = ""
+    @objc dynamic var language: String = ""
+    @objc dynamic var minScore: String = ""
+    @objc dynamic var placement: String = ""
+    @objc dynamic var quota: String = ""
+    @objc dynamic var duration: String = ""
+    @objc dynamic var type: String = ""
+    var isFavorite = false
     
     
-    init(universityID: String, dictionary: [String: Any]) {
+    convenience init(universityID: String, dictionary: [String: Any]) {
+        self.init()
         self.uid = universityID
         
         self.name = dictionary["name"] as? String ?? "unnamed"
@@ -32,5 +35,9 @@ struct University {
         self.quota = dictionary["quota"] as? String ?? "unnamed"
         self.duration = dictionary["duration"] as? String ?? "unnamed"
         self.type = dictionary["type"] as? String ?? "unnamed"
+    }
+    
+    override static func primaryKey() -> String? {
+        return "uid"
     }
 }

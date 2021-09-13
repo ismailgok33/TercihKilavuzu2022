@@ -9,5 +9,6 @@ target 'TercihKilavuzu2022' do
 pod 'FireStore'
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
+pod 'RealmSwift'
 
 end
