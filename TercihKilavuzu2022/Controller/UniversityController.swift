@@ -41,7 +41,7 @@ class UniversityController: UITableViewController {
         super.viewDidLoad()
         configureUI()
         fetchUniversities()
-        loadFavorites()
+//        loadFavorites()
     }
     
     // MARK: - Helpers
@@ -60,6 +60,13 @@ class UniversityController: UITableViewController {
     
     private func loadFavorites() {
         favorites = realm.objects(University.self)
+                
+        guard let favorites = favorites else { return }
+        
+        for favorite in favorites {            
+            guard let i = universities.firstIndex(where: {$0.uid == favorite.uid}) else { return }
+            universities[i].isFavorite = true
+        }
     }
     
     // MARK: - API
@@ -67,6 +74,7 @@ class UniversityController: UITableViewController {
     func fetchUniversities() {
         FirestoreService.shared.fetchUniversities { universities in
             self.universities = universities
+            self.loadFavorites()
         }
     }
     
@@ -105,7 +113,7 @@ extension UniversityController: UniversityCellDelegate {
         university.isFavorite.toggle()
         cell.university = university
         
-        loadFavorites()
+//        loadFavorites()
         
     }
 }
