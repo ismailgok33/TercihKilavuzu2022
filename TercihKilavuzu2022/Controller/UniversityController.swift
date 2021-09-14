@@ -12,9 +12,9 @@ private let reuseIdentifier = "universityCell"
 
 class UniversityController: UITableViewController {
     
-    let realm = try! Realm()
-    
     // MARK: - Properties
+    
+    let realm = try! Realm()
     
     private var universities = [University]() {
         didSet {
@@ -58,16 +58,7 @@ class UniversityController: UITableViewController {
         actionButton.layer.cornerRadius = 56 / 2
     }
     
-    private func loadFavorites() {
-        favorites = realm.objects(University.self)
-                
-        guard let favorites = favorites else { return }
-        
-        for favorite in favorites {            
-            guard let i = universities.firstIndex(where: {$0.uid == favorite.uid}) else { return }
-            universities[i].isFavorite = true
-        }
-    }
+    
     
     // MARK: - API
     
@@ -75,6 +66,17 @@ class UniversityController: UITableViewController {
         FirestoreService.shared.fetchUniversities { universities in
             self.universities = universities
             self.loadFavorites()
+        }
+    }
+    
+    private func loadFavorites() {
+        favorites = realm.objects(University.self)
+                
+        guard let favorites = favorites else { return }
+        
+        for favorite in favorites {
+            guard let i = universities.firstIndex(where: {$0.uid == favorite.uid}) else { return }
+            universities[i].isFavorite = true
         }
     }
     
@@ -86,6 +88,7 @@ class UniversityController: UITableViewController {
 }
 
 // MARK: - TableView Delegate/Datasource methods
+
 extension UniversityController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return universities.count
