@@ -126,7 +126,7 @@ class UniversityCell: UITableViewCell {
     private func configure() {
         guard let university = university else { return }
         let viewModel = UniversityViewModel(university: university)
-        
+                        
         universityNameLabel.attributedText = viewModel.universityNameLabel
         departmentLabel.attributedText = viewModel.departmentLabel
         minScoreValue.text = university.minScore

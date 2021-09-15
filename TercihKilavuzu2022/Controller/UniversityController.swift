@@ -10,11 +10,17 @@ import RealmSwift
 
 private let reuseIdentifier = "universityCell"
 
+protocol UniversityControllerDelegate: AnyObject {
+    func handleFavoriteTappedAtUniversityController(_ cell: UniversityCell)
+}
+
 class UniversityController: UITableViewController {
     
     // MARK: - Properties
     
     let realm = try! Realm()
+    
+    weak var delegate: UniversityControllerDelegate?
     
     private var universities = [University]() {
         didSet {
@@ -24,7 +30,13 @@ class UniversityController: UITableViewController {
         }
     }
     
-    var favorites: Results<University>?
+    var favorites: Results<University>? {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     let actionButton: UIButton = {
         let button = UIButton(type: .system)
@@ -41,7 +53,7 @@ class UniversityController: UITableViewController {
         super.viewDidLoad()
         configureUI()
         fetchUniversities()
-//        loadFavorites()
+        sortUniversitiesByNameAsc()
     }
     
     // MARK: - Helpers
@@ -58,6 +70,10 @@ class UniversityController: UITableViewController {
         actionButton.layer.cornerRadius = 56 / 2
     }
     
+    func sortUniversitiesByNameAsc() {
+        universities = universities.sorted(by: { $0.name < $1.name })
+    }
+    
     
     
     // MARK: - API
@@ -69,7 +85,7 @@ class UniversityController: UITableViewController {
         }
     }
     
-    private func loadFavorites() {
+    func loadFavorites() {
         favorites = realm.objects(University.self)
                 
         guard let favorites = favorites else { return }
@@ -80,6 +96,14 @@ class UniversityController: UITableViewController {
         }
     }
     
+    func changeFavoritesFromFavoritesController(withFavorite favorite: University) {
+        loadFavorites()
+
+        guard let i = universities.firstIndex(where: {$0.uid == favorite.uid}) else { return }
+        universities[i].isFavorite.toggle()
+        
+    }
+        
     
     // MARK: - Selectors
     @objc func handleFilterButtonTapped() {
@@ -110,13 +134,14 @@ extension UniversityController {
 
 extension UniversityController: UniversityCellDelegate {
     func handleFavoriteTapped(_ cell: UniversityCell) {
-        guard let university = cell.university else { return }
-                
-        RealmService.shared.saveFavorite(favorite: university)
-        university.isFavorite.toggle()
-        cell.university = university
         
-//        loadFavorites()
+        delegate?.handleFavoriteTappedAtUniversityController(cell)
+        
+//        guard let university = cell.university else { return }
+//
+//        RealmService.shared.saveFavorite(favorite: university)
+//        university.isFavorite.toggle()
+//        cell.university = university
         
     }
 }

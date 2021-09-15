@@ -8,13 +8,19 @@
 import UIKit
 import RealmSwift
 
-private let reuseIdentifier = "universityCell"
+private let reuseIdentifier = "favoriteCell"
+
+protocol FavoritesControllerDelegate: AnyObject {
+    func handleFavoriteTappedAtFavoritesController(_ cell: UniversityCell)
+}
 
 class FavoritesController: UITableViewController {
     
     // MARK: - Properties
     
     let realm = try! Realm()
+    
+    weak var delegate: FavoritesControllerDelegate?
     
     var favorites: Results<University>? {
         didSet {
@@ -31,6 +37,14 @@ class FavoritesController: UITableViewController {
         
         configureUI()
         loadFavorites()
+        sortFavoritesByNameAsc()
+        
+//        favorites?.observe({ notification in
+//            print("DEBUG: Realm observer is \(notification)")
+//            DispatchQueue.main.async {
+//                self.tableView.reloadData()
+//            }
+//        })
     }
     
     // MARK: - Helpers
@@ -40,12 +54,29 @@ class FavoritesController: UITableViewController {
         tableView.register(UniversityCell.self, forCellReuseIdentifier: reuseIdentifier)
         tableView.allowsSelection = false
         
+        let refreshControl = UIRefreshControl()
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
+    }
+    
+    func sortFavoritesByNameAsc() {
+        
+        favorites = favorites?.sorted(byKeyPath: "name", ascending: true)
     }
     
     // MARK: - API
     
-    private func loadFavorites() {
+     func loadFavorites() {
+        refreshControl?.beginRefreshing()
         favorites = realm.objects(University.self)
+        sortFavoritesByNameAsc()
+        refreshControl?.endRefreshing()
+    }
+    
+    // MARK: - Selectors
+    
+    @objc func handleRefresh() {
+        loadFavorites()
     }
 }
 
@@ -78,11 +109,14 @@ extension FavoritesController {
 
 extension FavoritesController: UniversityCellDelegate {
     func handleFavoriteTapped(_ cell: UniversityCell) {
-        guard let favorite = cell.university else { return }
-                
-        RealmService.shared.saveFavorite(favorite: favorite)
-        favorite.isFavorite.toggle()
-        cell.university = favorite
-                
+        
+        delegate?.handleFavoriteTappedAtFavoritesController(cell)
+        
+//        guard let favorite = cell.university else { return }
+//        favorite.isFavorite = true
+//        RealmService.shared.saveFavorite(favorite: favorite)
+//        favorite.isFavorite.toggle()
+//        //cell.university = favorite
+//        loadFavorites()
     }
 }
