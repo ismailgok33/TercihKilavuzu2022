@@ -78,6 +78,8 @@ extension MainTabController: UniversityControllerDelegate {
     
 }
 
+// MARK: - FavoritesControllerDelegate
+
 extension MainTabController: FavoritesControllerDelegate {
     func handleFavoriteTappedAtFavoritesController(_ cell: UniversityCell) {
         guard let favorite = cell.university else { return }

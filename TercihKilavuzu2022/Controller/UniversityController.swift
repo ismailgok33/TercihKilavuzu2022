@@ -20,9 +20,19 @@ class UniversityController: UITableViewController {
     
     let realm = try! Realm()
     
+    let searchController = UISearchController()
+    
     weak var delegate: UniversityControllerDelegate?
     
     private var universities = [University]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    private var searchedUniversities: [University]? {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -68,6 +78,11 @@ class UniversityController: UITableViewController {
         actionButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingBottom: 32, paddingRight: 16)
         actionButton.setDimensions(width: 56, height: 56)
         actionButton.layer.cornerRadius = 56 / 2
+        
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Arayınız..."
+        navigationItem.searchController = searchController
     }
     
     func sortUniversitiesByNameAsc() {
@@ -115,12 +130,23 @@ class UniversityController: UITableViewController {
 
 extension UniversityController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return universities.count
+        if let searchedUniversities = searchedUniversities {
+            return searchedUniversities.count
+        }
+        else {
+            return universities.count
+        }
+        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! UniversityCell
-        cell.university = universities[indexPath.row]
+        if let searchedUniversities = searchedUniversities {
+            cell.university = searchedUniversities[indexPath.row]
+        }
+        else {
+            cell.university = universities[indexPath.row]
+        }
         cell.delegate = self
         return cell
     }
@@ -136,12 +162,24 @@ extension UniversityController: UniversityCellDelegate {
     func handleFavoriteTapped(_ cell: UniversityCell) {
         
         delegate?.handleFavoriteTappedAtUniversityController(cell)
-        
-//        guard let university = cell.university else { return }
-//
-//        RealmService.shared.saveFavorite(favorite: university)
-//        university.isFavorite.toggle()
-//        cell.university = university
-        
     }
+}
+
+
+extension UniversityController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        if let text = searchController.searchBar.text, !text.isEmpty {
+            searchedUniversities = universities.filter({ university in
+                university.name.localizedCaseInsensitiveContains(text)
+                    || university.department.localizedCaseInsensitiveContains(text)
+                    || university.city.localizedCaseInsensitiveContains(text)
+                    || university.language.localizedCaseInsensitiveContains(text)
+            })
+        }
+        else {
+            searchedUniversities = nil
+        }
+    }
+    
+    
 }
