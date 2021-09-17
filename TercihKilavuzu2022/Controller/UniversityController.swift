@@ -48,6 +48,8 @@ class UniversityController: UITableViewController {
         }
     }
     
+    private let actionSheetLauncher = ActionSheetLauncher()
+    
     let actionButton: UIButton = {
         let button = UIButton(type: .system)
         button.tintColor = .white
@@ -83,6 +85,8 @@ class UniversityController: UITableViewController {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Arayınız..."
         navigationItem.searchController = searchController
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.up.arrow.down"), style: .plain, target: self, action: #selector(handleSortTapped))
     }
     
     func sortUniversitiesByNameAsc() {
@@ -123,6 +127,11 @@ class UniversityController: UITableViewController {
     // MARK: - Selectors
     @objc func handleFilterButtonTapped() {
         print("DEBUG: filter button tapped..")
+    }
+    
+    @objc func handleSortTapped() {
+        actionSheetLauncher.delegate = self
+        actionSheetLauncher.show()
     }
 }
 
@@ -182,4 +191,37 @@ extension UniversityController: UISearchResultsUpdating {
     }
     
     
+}
+
+// MARK: - ActionSheetLauncherDelegate
+
+extension UniversityController: ActionSheetLauncherDelegate {
+    func didSelectOption(option: ActionSheetOptions) {
+        switch option {
+        case .nameAsc:
+            return universities.sort(by: { $0.name < $1.name })
+        case .nameDesc:
+            return universities.sort(by: { $0.name > $1.name })
+        case .minScoreAsc:
+            return universities.sort(by: { $0.minScore < $1.minScore })
+        case .minScoreDesc:
+            return universities.sort(by: { $0.minScore > $1.minScore })
+        case .placementAsc:
+            return universities.sort(by: { $0.placement < $1.placement })
+        case .placementDesc:
+            return universities.sort(by: { $0.placement > $1.placement })
+        case .departmentAsc:
+            return universities.sort(by: { $0.department < $1.department })
+        case .departmenDesc:
+            return universities.sort(by: { $0.department > $1.department })
+        case .cityAsc:
+           return universities.sort(by: { $0.city < $1.city })
+        case .cityDesc:
+            return universities.sort(by: { $0.city > $1.city })
+        case .quotaAsc:
+            return universities.sort(by: { $0.quota < $1.quota })
+        case .quotaDesc:
+            return universities.sort(by: { $0.quota > $1.quota })
+        }
+    }
 }

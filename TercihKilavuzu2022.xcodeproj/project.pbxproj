@@ -22,6 +22,9 @@
 		EC51D6AE26EEA0E900594A81 /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC51D6AD26EEA0E900594A81 /* University.swift */; };
 		EC51D6B026EEA16300594A81 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC51D6AF26EEA16300594A81 /* FirestoreService.swift */; };
 		EC51D6B426EEA95A00594A81 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC51D6B326EEA95A00594A81 /* GoogleService-Info.plist */; };
+		EC8A56AA26F521B50081587F /* ActionSheetLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8A56A926F521B50081587F /* ActionSheetLauncher.swift */; };
+		EC8A56AC26F52BA60081587F /* ActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8A56AB26F52BA60081587F /* ActionSheetCell.swift */; };
+		EC8A56AE26F53D970081587F /* ActionSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8A56AD26F53D970081587F /* ActionSheetViewModel.swift */; };
 		ECC22CBC26EFE5C000350A4F /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC22CBB26EFE5C000350A4F /* RealmService.swift */; };
 		ECDBD1EE26EEB6D100635021 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDBD1ED26EEB6D100635021 /* Constants.swift */; };
 		ECDBD1F026EEB77A00635021 /* UniversityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDBD1EF26EEB77A00635021 /* UniversityViewModel.swift */; };
@@ -47,6 +50,9 @@
 		EC51D6AD26EEA0E900594A81 /* University.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
 		EC51D6AF26EEA16300594A81 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		EC51D6B326EEA95A00594A81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EC8A56A926F521B50081587F /* ActionSheetLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetLauncher.swift; sourceTree = "<group>"; };
+		EC8A56AB26F52BA60081587F /* ActionSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetCell.swift; sourceTree = "<group>"; };
+		EC8A56AD26F53D970081587F /* ActionSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetViewModel.swift; sourceTree = "<group>"; };
 		ECC22CBB26EFE5C000350A4F /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		ECDBD1ED26EEB6D100635021 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ECDBD1EF26EEB77A00635021 /* UniversityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityViewModel.swift; sourceTree = "<group>"; };
@@ -131,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				EC488B9226ECE63F005B7D31 /* UniversityCell.swift */,
+				EC8A56AB26F52BA60081587F /* ActionSheetCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -139,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				ECDBD1EF26EEB77A00635021 /* UniversityViewModel.swift */,
+				EC8A56AD26F53D970081587F /* ActionSheetViewModel.swift */,
 			);
 			path = ModelView;
 			sourceTree = "<group>";
@@ -168,6 +176,7 @@
 			children = (
 				EC488B9026ECDE25005B7D31 /* Extensions.swift */,
 				ECDBD1ED26EEB6D100635021 /* Constants.swift */,
+				EC8A56A926F521B50081587F /* ActionSheetLauncher.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -313,11 +322,14 @@
 				EC488B8D26ECC60A005B7D31 /* CountdownController.swift in Sources */,
 				EC488B6F26ECC209005B7D31 /* SceneDelegate.swift in Sources */,
 				EC488B8B26ECC5B9005B7D31 /* FavoritesController.swift in Sources */,
+				EC8A56AE26F53D970081587F /* ActionSheetViewModel.swift in Sources */,
 				EC488B8726ECC33C005B7D31 /* MainTabController.swift in Sources */,
 				ECC22CBC26EFE5C000350A4F /* RealmService.swift in Sources */,
+				EC8A56AC26F52BA60081587F /* ActionSheetCell.swift in Sources */,
 				EC488B8926ECC53E005B7D31 /* UniversityController.swift in Sources */,
 				ECDBD1F026EEB77A00635021 /* UniversityViewModel.swift in Sources */,
 				EC488B9126ECDE25005B7D31 /* Extensions.swift in Sources */,
+				EC8A56AA26F521B50081587F /* ActionSheetLauncher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
