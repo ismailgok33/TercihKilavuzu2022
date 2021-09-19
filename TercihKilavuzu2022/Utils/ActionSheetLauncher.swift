@@ -94,7 +94,7 @@ class ActionSheetLauncher: NSObject {
     }
     
     func showTableView(_ shouldShow: Bool) {
-        guard let window = window else { return }
+        guard let window = window else { return }
         guard let heigth = tableViewHeight else { return }
         let y = shouldShow ? window.frame.height - heigth : window.frame.height
         tableView.frame.origin.y = y

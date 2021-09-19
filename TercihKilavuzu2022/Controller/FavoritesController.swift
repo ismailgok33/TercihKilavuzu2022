@@ -111,12 +111,5 @@ extension FavoritesController: UniversityCellDelegate {
     func handleFavoriteTapped(_ cell: UniversityCell) {
         
         delegate?.handleFavoriteTappedAtFavoritesController(cell)
-        
-//        guard let favorite = cell.university else { return }
-//        favorite.isFavorite = true
-//        RealmService.shared.saveFavorite(favorite: favorite)
-//        favorite.isFavorite.toggle()
-//        //cell.university = favorite
-//        loadFavorites()
     }
 }

@@ -41,15 +41,15 @@ class UniversityCell: UITableViewCell {
     
     private lazy var minScoreLabel: UILabel = createLowerLabels(name: "Taban Puanı")
     
-    private lazy var minScoreValue: UILabel = createLowerLabels(name: "00000")
+    private lazy var minScoreValue: UILabel = createLowerLabelValue(value: 0)
     
     private lazy var placementLabel: UILabel = createLowerLabels(name: "Sıralaması")
     
-    private lazy var placementValue: UILabel = createLowerLabels(name: "00000")
+    private lazy var placementValue: UILabel = createLowerLabelValue(value: 0)
     
     private lazy var quotaLabel: UILabel = createLowerLabels(name: "Kontenjanı")
     
-    private lazy var quotaValue: UILabel = createLowerLabels(name: "00")
+    private lazy var quotaValue: UILabel = createLowerLabelValue(value: 0)
     
     private lazy var favoriteButton: UIButton = {
         let button = UIButton(type: .system)
@@ -114,6 +114,14 @@ class UniversityCell: UITableViewCell {
         return label
     }
     
+    private func createLowerLabelValue(value: Int) -> UILabel {
+        let label = UILabel()
+        label.text = String(value)
+        label.font = UIFont.systemFont(ofSize: 12)
+        label.textColor = .black
+        return label
+    }
+    
     private func createLowerStackViews(subviews: [UIView]) -> UIStackView {
         let stack = UIStackView(arrangedSubviews: subviews)
         stack.axis = .vertical
@@ -129,9 +137,9 @@ class UniversityCell: UITableViewCell {
                         
         universityNameLabel.attributedText = viewModel.universityNameLabel
         departmentLabel.attributedText = viewModel.departmentLabel
-        minScoreValue.text = university.minScore
-        placementValue.text = university.placement
-        quotaValue.text = university.quota
+        minScoreValue.text = String(university.minScore)
+        placementValue.text = String(university.placement)
+        quotaValue.text = String(university.quota)
         favoriteButton.setImage(viewModel.favoriteButtonImage, for: .normal)
     }
 }

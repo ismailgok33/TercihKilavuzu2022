@@ -14,9 +14,9 @@ class University: Object {
     @objc dynamic var department: String = ""
     @objc dynamic var city: String = ""
     @objc dynamic var language: String = ""
-    @objc dynamic var minScore: String = ""
-    @objc dynamic var placement: String = ""
-    @objc dynamic var quota: String = ""
+    @objc dynamic var minScore: Double = 0
+    @objc dynamic var placement: Int = 0
+    @objc dynamic var quota: Int = 0
     @objc dynamic var duration: String = ""
     @objc dynamic var type: String = ""
     var isFavorite = false
@@ -30,9 +30,9 @@ class University: Object {
         self.department = dictionary["department"] as? String ?? "unnamed"
         self.city = dictionary["city"] as? String ?? "unnamed"
         self.language = dictionary["language"] as? String ?? "unnamed"
-        self.minScore = dictionary["minScore"] as? String ?? "unnamed"
-        self.placement = dictionary["placement"] as? String ?? "unnamed"
-        self.quota = dictionary["quota"] as? String ?? "unnamed"
+        self.minScore = dictionary["minScore"] as? Double ?? 0
+        self.placement = dictionary["placement"] as? Int ?? 0
+        self.quota = dictionary["quota"] as? Int ?? 0
         self.duration = dictionary["duration"] as? String ?? "unnamed"
         self.type = dictionary["type"] as? String ?? "unnamed"
     }
