@@ -50,11 +50,12 @@ class UniversityController: UITableViewController {
     
     private let actionSheetLauncher = ActionSheetLauncher()
     
-    let actionButton: UIButton = {
+    private lazy var actionButton: UIButton = {
         let button = UIButton(type: .system)
         button.tintColor = .white
         button.backgroundColor = .myCustomBlue
         button.setImage(UIImage(named: "new_tweet"), for: .normal)
+//        button.setImage(#imageLiteral(resourceName: "new_tweet"), for: .normal)
         button.addTarget(self, action: #selector(handleFilterButtonTapped), for: .touchUpInside)
         return button
     }()
@@ -68,6 +69,12 @@ class UniversityController: UITableViewController {
         sortUniversities(byOption: .nameAsc)
     }
     
+    override func viewDidLayoutSubviews() {
+        actionButton.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingLeft: view.frame.width - 56 - 16, paddingBottom: 32, paddingRight: 16, width: 56, height: 56)
+        actionButton.layer.cornerRadius = 56 / 2
+    }
+    
+    
     // MARK: - Helpers
     
     func configureUI() {        
@@ -76,17 +83,16 @@ class UniversityController: UITableViewController {
         tableView.register(UniversityCell.self, forCellReuseIdentifier: reuseIdentifier)
         tableView.allowsSelection = false
         
-        view.addSubview(actionButton)
-        actionButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingBottom: 32, paddingRight: 16)
-        actionButton.setDimensions(width: 56, height: 56)
-        actionButton.layer.cornerRadius = 56 / 2
-        
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Arayınız..."
         navigationItem.searchController = searchController
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.up.arrow.down"), style: .plain, target: self, action: #selector(handleSortTapped))
+        
+        view.addSubview(actionButton)
+        
+        
     }
     
     func sortUniversities(byOption option: ActionSheetOptions) {
@@ -150,8 +156,11 @@ class UniversityController: UITableViewController {
         
     
     // MARK: - Selectors
+    
     @objc func handleFilterButtonTapped() {
-        print("DEBUG: filter button tapped..")
+        let nav = UINavigationController(rootViewController: FilterController())
+        nav.modalPresentationStyle = .fullScreen
+        present(nav, animated: true, completion: nil)
     }
     
     @objc func handleSortTapped() {

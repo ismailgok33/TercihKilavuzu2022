@@ -22,6 +22,10 @@
 		EC51D6AE26EEA0E900594A81 /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC51D6AD26EEA0E900594A81 /* University.swift */; };
 		EC51D6B026EEA16300594A81 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC51D6AF26EEA16300594A81 /* FirestoreService.swift */; };
 		EC51D6B426EEA95A00594A81 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC51D6B326EEA95A00594A81 /* GoogleService-Info.plist */; };
+		EC88418E26F9037B00D6F5C0 /* FilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88418D26F9037B00D6F5C0 /* FilterController.swift */; };
+		EC88419026F91A5100D6F5C0 /* CityListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88418F26F91A5100D6F5C0 /* CityListController.swift */; };
+		EC88419226F91BE400D6F5C0 /* DepartmentListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88419126F91BE400D6F5C0 /* DepartmentListController.swift */; };
+		EC88419626F91D0900D6F5C0 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88419526F91D0900D6F5C0 /* City.swift */; };
 		EC8A56AA26F521B50081587F /* ActionSheetLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8A56A926F521B50081587F /* ActionSheetLauncher.swift */; };
 		EC8A56AC26F52BA60081587F /* ActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8A56AB26F52BA60081587F /* ActionSheetCell.swift */; };
 		EC8A56AE26F53D970081587F /* ActionSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8A56AD26F53D970081587F /* ActionSheetViewModel.swift */; };
@@ -50,6 +54,10 @@
 		EC51D6AD26EEA0E900594A81 /* University.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
 		EC51D6AF26EEA16300594A81 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		EC51D6B326EEA95A00594A81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EC88418D26F9037B00D6F5C0 /* FilterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterController.swift; sourceTree = "<group>"; };
+		EC88418F26F91A5100D6F5C0 /* CityListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListController.swift; sourceTree = "<group>"; };
+		EC88419126F91BE400D6F5C0 /* DepartmentListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentListController.swift; sourceTree = "<group>"; };
+		EC88419526F91D0900D6F5C0 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		EC8A56A926F521B50081587F /* ActionSheetLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetLauncher.swift; sourceTree = "<group>"; };
 		EC8A56AB26F52BA60081587F /* ActionSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetCell.swift; sourceTree = "<group>"; };
 		EC8A56AD26F53D970081587F /* ActionSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetViewModel.swift; sourceTree = "<group>"; };
@@ -129,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				EC51D6AD26EEA0E900594A81 /* University.swift */,
+				EC88419526F91D0900D6F5C0 /* City.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				EC488B8626ECC33C005B7D31 /* MainTabController.swift */,
+				EC88419426F91C0600D6F5C0 /* Filter */,
 				EC488B8826ECC53E005B7D31 /* UniversityController.swift */,
 				EC488B8A26ECC5B9005B7D31 /* FavoritesController.swift */,
 				EC488B8C26ECC60A005B7D31 /* CountdownController.swift */,
@@ -179,6 +189,16 @@
 				EC8A56A926F521B50081587F /* ActionSheetLauncher.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		EC88419426F91C0600D6F5C0 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				EC88418D26F9037B00D6F5C0 /* FilterController.swift */,
+				EC88418F26F91A5100D6F5C0 /* CityListController.swift */,
+				EC88419126F91BE400D6F5C0 /* DepartmentListController.swift */,
+			);
+			path = Filter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,17 +336,21 @@
 			files = (
 				EC488B6D26ECC209005B7D31 /* AppDelegate.swift in Sources */,
 				ECDBD1EE26EEB6D100635021 /* Constants.swift in Sources */,
+				EC88419226F91BE400D6F5C0 /* DepartmentListController.swift in Sources */,
 				EC51D6B026EEA16300594A81 /* FirestoreService.swift in Sources */,
 				EC488B9326ECE63F005B7D31 /* UniversityCell.swift in Sources */,
 				EC51D6AE26EEA0E900594A81 /* University.swift in Sources */,
+				EC88419626F91D0900D6F5C0 /* City.swift in Sources */,
 				EC488B8D26ECC60A005B7D31 /* CountdownController.swift in Sources */,
 				EC488B6F26ECC209005B7D31 /* SceneDelegate.swift in Sources */,
 				EC488B8B26ECC5B9005B7D31 /* FavoritesController.swift in Sources */,
 				EC8A56AE26F53D970081587F /* ActionSheetViewModel.swift in Sources */,
 				EC488B8726ECC33C005B7D31 /* MainTabController.swift in Sources */,
+				EC88419026F91A5100D6F5C0 /* CityListController.swift in Sources */,
 				ECC22CBC26EFE5C000350A4F /* RealmService.swift in Sources */,
 				EC8A56AC26F52BA60081587F /* ActionSheetCell.swift in Sources */,
 				EC488B8926ECC53E005B7D31 /* UniversityController.swift in Sources */,
+				EC88418E26F9037B00D6F5C0 /* FilterController.swift in Sources */,
 				ECDBD1F026EEB77A00635021 /* UniversityViewModel.swift in Sources */,
 				EC488B9126ECDE25005B7D31 /* Extensions.swift in Sources */,
 				EC8A56AA26F521B50081587F /* ActionSheetLauncher.swift in Sources */,
