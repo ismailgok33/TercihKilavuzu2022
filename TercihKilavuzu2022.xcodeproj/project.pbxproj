@@ -26,6 +26,9 @@
 		EC88419026F91A5100D6F5C0 /* CityListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88418F26F91A5100D6F5C0 /* CityListController.swift */; };
 		EC88419226F91BE400D6F5C0 /* DepartmentListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88419126F91BE400D6F5C0 /* DepartmentListController.swift */; };
 		EC88419626F91D0900D6F5C0 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88419526F91D0900D6F5C0 /* City.swift */; };
+		EC88419826F92CC200D6F5C0 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88419726F92CC200D6F5C0 /* CityCell.swift */; };
+		EC88419A26F932FB00D6F5C0 /* DepartmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88419926F932FB00D6F5C0 /* DepartmentCell.swift */; };
+		EC88419C26F933BF00D6F5C0 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88419B26F933BF00D6F5C0 /* Department.swift */; };
 		EC8A56AA26F521B50081587F /* ActionSheetLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8A56A926F521B50081587F /* ActionSheetLauncher.swift */; };
 		EC8A56AC26F52BA60081587F /* ActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8A56AB26F52BA60081587F /* ActionSheetCell.swift */; };
 		EC8A56AE26F53D970081587F /* ActionSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8A56AD26F53D970081587F /* ActionSheetViewModel.swift */; };
@@ -58,6 +61,9 @@
 		EC88418F26F91A5100D6F5C0 /* CityListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListController.swift; sourceTree = "<group>"; };
 		EC88419126F91BE400D6F5C0 /* DepartmentListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentListController.swift; sourceTree = "<group>"; };
 		EC88419526F91D0900D6F5C0 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		EC88419726F92CC200D6F5C0 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
+		EC88419926F932FB00D6F5C0 /* DepartmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentCell.swift; sourceTree = "<group>"; };
+		EC88419B26F933BF00D6F5C0 /* Department.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
 		EC8A56A926F521B50081587F /* ActionSheetLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetLauncher.swift; sourceTree = "<group>"; };
 		EC8A56AB26F52BA60081587F /* ActionSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetCell.swift; sourceTree = "<group>"; };
 		EC8A56AD26F53D970081587F /* ActionSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetViewModel.swift; sourceTree = "<group>"; };
@@ -138,6 +144,7 @@
 			children = (
 				EC51D6AD26EEA0E900594A81 /* University.swift */,
 				EC88419526F91D0900D6F5C0 /* City.swift */,
+				EC88419B26F933BF00D6F5C0 /* Department.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -147,6 +154,8 @@
 			children = (
 				EC488B9226ECE63F005B7D31 /* UniversityCell.swift */,
 				EC8A56AB26F52BA60081587F /* ActionSheetCell.swift */,
+				EC88419726F92CC200D6F5C0 /* CityCell.swift */,
+				EC88419926F932FB00D6F5C0 /* DepartmentCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -339,14 +348,17 @@
 				EC88419226F91BE400D6F5C0 /* DepartmentListController.swift in Sources */,
 				EC51D6B026EEA16300594A81 /* FirestoreService.swift in Sources */,
 				EC488B9326ECE63F005B7D31 /* UniversityCell.swift in Sources */,
+				EC88419826F92CC200D6F5C0 /* CityCell.swift in Sources */,
 				EC51D6AE26EEA0E900594A81 /* University.swift in Sources */,
 				EC88419626F91D0900D6F5C0 /* City.swift in Sources */,
 				EC488B8D26ECC60A005B7D31 /* CountdownController.swift in Sources */,
+				EC88419A26F932FB00D6F5C0 /* DepartmentCell.swift in Sources */,
 				EC488B6F26ECC209005B7D31 /* SceneDelegate.swift in Sources */,
 				EC488B8B26ECC5B9005B7D31 /* FavoritesController.swift in Sources */,
 				EC8A56AE26F53D970081587F /* ActionSheetViewModel.swift in Sources */,
 				EC488B8726ECC33C005B7D31 /* MainTabController.swift in Sources */,
 				EC88419026F91A5100D6F5C0 /* CityListController.swift in Sources */,
+				EC88419C26F933BF00D6F5C0 /* Department.swift in Sources */,
 				ECC22CBC26EFE5C000350A4F /* RealmService.swift in Sources */,
 				EC8A56AC26F52BA60081587F /* ActionSheetCell.swift in Sources */,
 				EC488B8926ECC53E005B7D31 /* UniversityController.swift in Sources */,

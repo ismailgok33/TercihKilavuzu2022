@@ -11,4 +11,6 @@ import FirebaseFirestore
 
     
 let REF_UNIVERSITIES_DB = Firestore.firestore().collection("universities")
+let REF_CITIES_DB = Firestore.firestore().collection("cities")
+let REF_DEPARTMENTS_DB = Firestore.firestore().collection("departments")
 
