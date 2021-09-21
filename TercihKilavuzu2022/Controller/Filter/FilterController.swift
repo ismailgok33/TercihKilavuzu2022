@@ -11,25 +11,9 @@ class FilterController: UIViewController {
     
     // MARK: - Properties
     
-    private lazy var cityView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .red
-        
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(handleCityTapped))
-        view.addGestureRecognizer(gesture)
-        
-        return view
-    }()
+    private let cityListView = CityListView()
     
-    private lazy var departmentView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .green
-        
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(handleDepartmentTapped))
-        view.addGestureRecognizer(gesture)
-        
-        return view
-    }()
+    private let departmentListView = DepartmentListView()
     
     private let scholarshipView = ScholarshipView()
     
@@ -42,6 +26,19 @@ class FilterController: UIViewController {
     private let scoreRangeView = ScoreRangeView()
     
     private let placementRangeView = PlacementRangeView()
+    
+    private let resetButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setDimensions(width: 100, height: 50)
+        button.backgroundColor = UIColor(white: 0, alpha: 0.2)
+        button.setTitle("Sıfırla", for: .normal)
+        button.tintColor = .white
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        button.layer.cornerRadius = 50 / 2
+        button.layer.borderWidth = 2
+        button.layer.borderColor = UIColor.white.cgColor
+        return button
+    }()
     
     
     // MARK: - Lifecycle
@@ -62,37 +59,41 @@ class FilterController: UIViewController {
         let nav = UINavigationController(rootViewController: DepartmentListController())
         present(nav, animated: true, completion: nil)
     }
+    
+    @objc func handleSaveFilterTapped() {
+        print("DEBUG: Save button is tapped in Filter Screen..")
+    }
+    
+    @objc func handleResetButtonTapped() {
+        print("DEBUG: Reset button is tapped in Filter Screen..")
+    }
      
     // MARK: Helpers
     
     func configureUI() {
         view.backgroundColor = .filterBackgroundColor
-
-        view.addSubview(cityView)
-        cityView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor,
-                        height: 75)
         
-        view.addSubview(departmentView)
-        departmentView.anchor(top: cityView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 75)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filtrele", style: .done, target: self, action: #selector(handleSaveFilterTapped))
         
-        view.addSubview(scholarshipView)
-        scholarshipView.anchor(top: departmentView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 100)
+        let stack = UIStackView(arrangedSubviews: [cityListView, departmentListView, scholarshipView,
+                                                   universityTypeView, languageTypeView, durationTypeView,
+                                                   scoreRangeView, placementRangeView ])
+        stack.axis = .vertical
+        stack.distribution = .fillEqually
         
-        view.addSubview(universityTypeView)
-        universityTypeView.anchor(top: scholarshipView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 100)
+        let cityTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleCityTapped))
+        cityListView.addGestureRecognizer(cityTapGesture)
         
-        view.addSubview(languageTypeView)
-        languageTypeView.anchor(top: universityTypeView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 100)
+        let departmentTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleDepartmentTapped))
+        departmentListView.addGestureRecognizer(departmentTapGesture)
         
-        view.addSubview(durationTypeView)
-        durationTypeView.anchor(top: languageTypeView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 100)
+        view.addSubview(stack)
+        stack.anchor(top:view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor)
+//        stack.addConstraintsToSafelyFillView(view)
         
-        view.addSubview(scoreRangeView)
-        scoreRangeView.anchor(top: durationTypeView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 100)
-        
-        view.addSubview(placementRangeView)
-        placementRangeView.anchor(top: scoreRangeView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 100)
-        
+        view.addSubview(resetButton)
+        resetButton.anchor(top:stack.bottomAnchor, left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor,
+                           paddingTop: 20, paddingLeft: 25, paddingBottom: 20, paddingRight: 25)
         
     }
 }
