@@ -23,13 +23,25 @@ class FilterController: UIViewController {
     
     private lazy var departmentView: UIView = {
         let view = UIView()
-        view.backgroundColor = .blue
+        view.backgroundColor = .green
         
         let gesture = UITapGestureRecognizer(target: self, action: #selector(handleDepartmentTapped))
         view.addGestureRecognizer(gesture)
         
         return view
     }()
+    
+    private let scholarshipView = ScholarshipView()
+    
+    private let universityTypeView = StatePrivateView()
+    
+    private let languageTypeView = LanguageView()
+    
+    private let durationTypeView = DurationView()
+    
+    private let scoreRangeView = ScoreRangeView()
+    
+    private let placementRangeView = PlacementRangeView()
     
     
     // MARK: - Lifecycle
@@ -54,13 +66,33 @@ class FilterController: UIViewController {
     // MARK: Helpers
     
     func configureUI() {
-        view.backgroundColor = .white
+        view.backgroundColor = .filterBackgroundColor
 
         view.addSubview(cityView)
-        cityView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 100)
+        cityView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor,
+                        height: 75)
         
         view.addSubview(departmentView)
-        departmentView.anchor(top: cityView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 10, height: 100)
+        departmentView.anchor(top: cityView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 75)
+        
+        view.addSubview(scholarshipView)
+        scholarshipView.anchor(top: departmentView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 100)
+        
+        view.addSubview(universityTypeView)
+        universityTypeView.anchor(top: scholarshipView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 100)
+        
+        view.addSubview(languageTypeView)
+        languageTypeView.anchor(top: universityTypeView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 100)
+        
+        view.addSubview(durationTypeView)
+        durationTypeView.anchor(top: languageTypeView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 100)
+        
+        view.addSubview(scoreRangeView)
+        scoreRangeView.anchor(top: durationTypeView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 100)
+        
+        view.addSubview(placementRangeView)
+        placementRangeView.anchor(top: scoreRangeView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 100)
+        
         
     }
 }

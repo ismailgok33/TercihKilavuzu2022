@@ -93,4 +93,5 @@ extension UIColor {
     }
     
     static let myCustomBlue = UIColor.rgb(red: 29, green: 161, blue: 242)
+    static let filterBackgroundColor = UIColor.rgb(red: 189, green: 178, blue: 255)
 }

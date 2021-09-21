@@ -158,9 +158,10 @@ class UniversityController: UITableViewController {
     // MARK: - Selectors
     
     @objc func handleFilterButtonTapped() {
-        let nav = UINavigationController(rootViewController: FilterController())
-        nav.modalPresentationStyle = .fullScreen
-        present(nav, animated: true, completion: nil)
+//        let nav = UINavigationController(rootViewController: FilterController())
+//        nav.modalPresentationStyle = .fullScreen
+        let vc = FilterController()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func handleSortTapped() {

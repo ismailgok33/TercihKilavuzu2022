@@ -21,6 +21,22 @@ class CityListController: UITableViewController {
         }
     }
     
+    private let saveButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Kaydet", for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        button.addTarget(self, action: #selector(handleSaveButtonTapped), for: .touchUpInside)
+        return button
+    }()
+        
+    let cancelButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Vazgeç", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+        button.addTarget(self, action: #selector(handleCancelButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -35,6 +51,9 @@ class CityListController: UITableViewController {
         print("DEBUG: save button tapped in City Controller..")
     }
     
+    @objc func handleCancelButtonTapped() {
+        dismiss(animated: true, completion: nil)
+    }
     
     // MARK: - Helpers
     
@@ -81,14 +100,23 @@ extension CityListController {
         view.heightAnchor.constraint(equalToConstant: 50).isActive = true
         view.backgroundColor = .systemGroupedBackground
         
-        let button = UIButton(type: .system)
-        button.setTitle("Kaydet", for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-        button.addTarget(self, action: #selector(handleSaveButtonTapped), for: .touchUpInside)
+//        let saveButton = UIButton(type: .system)
+//        saveButton.setTitle("Kaydet", for: .normal)
+//        saveButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+//        saveButton.addTarget(self, action: #selector(handleSaveButtonTapped), for: .touchUpInside)
+//
+//        let cancelButton = UIButton(type: .system)
+//        cancelButton.setTitle("Kaydet", for: .normal)
+//        cancelButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+//        cancelButton.addTarget(self, action: #selector(handleSaveButtonTapped), for: .touchUpInside)
+//
+        view.addSubview(saveButton)
+        saveButton.centerY(inView: view)
+        saveButton.anchor(right: view.rightAnchor, paddingRight: 12)
         
-        view.addSubview(button)
-        button.centerY(inView: view)
-        button.anchor(right: view.rightAnchor, paddingRight: 12)
+        view.addSubview(cancelButton)
+        cancelButton.centerY(inView: view)
+        cancelButton.anchor(left: view.leftAnchor, paddingLeft: 12)
         
         return view
     }

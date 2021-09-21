@@ -21,6 +21,22 @@ class DepartmentListController: UITableViewController {
         }
     }
     
+    private let saveButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Kaydet", for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        button.addTarget(self, action: #selector(handleSaveButtonTapped), for: .touchUpInside)
+        return button
+    }()
+        
+    let cancelButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Vazgeç", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+        button.addTarget(self, action: #selector(handleCancelButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
     
     // MARK: - Lifecycle
     
@@ -33,6 +49,10 @@ class DepartmentListController: UITableViewController {
     
     @objc func handleSaveButtonTapped() {
         print("DEBUG: save button tapped in Department Controller..")
+    }
+    
+    @objc func handleCancelButtonTapped() {
+        dismiss(animated: true, completion: nil)
     }
     
     
@@ -82,14 +102,13 @@ extension DepartmentListController {
         view.heightAnchor.constraint(equalToConstant: 50).isActive = true
         view.backgroundColor = .systemGroupedBackground
         
-        let button = UIButton(type: .system)
-        button.setTitle("Kaydet", for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-        button.addTarget(self, action: #selector(handleSaveButtonTapped), for: .touchUpInside)
+        view.addSubview(saveButton)
+        saveButton.centerY(inView: view)
+        saveButton.anchor(right: view.rightAnchor, paddingRight: 12)
         
-        view.addSubview(button)
-        button.centerY(inView: view)
-        button.anchor(right: view.rightAnchor, paddingRight: 12)
+        view.addSubview(cancelButton)
+        cancelButton.centerY(inView: view)
+        cancelButton.anchor(left: view.leftAnchor, paddingLeft: 12)
         
         return view
     }
