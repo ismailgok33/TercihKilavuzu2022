@@ -11,6 +11,8 @@ class DurationView: UIView {
     
     // MARK: - Properties
     
+    var durationFilterOptions: [FilterOptions]
+    
     private let viewTitle: UILabel = {
         let label = UILabel()
         label.text = "Eğitim Süresi"
@@ -19,7 +21,7 @@ class DurationView: UIView {
         return label
     }()
     
-    private let allButton: UIButton = {
+    private lazy var allButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = .none
         button.setTitle("Hepsi", for: .normal)
@@ -27,6 +29,7 @@ class DurationView: UIView {
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.white.cgColor
         button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(handleAllButtonTapped), for: .touchUpInside)
         return button
     }()
     
@@ -38,6 +41,8 @@ class DurationView: UIView {
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.white.cgColor
         button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(handleYear4ButtonTapped), for: .touchUpInside)
+
         return button
     }()
     
@@ -49,12 +54,15 @@ class DurationView: UIView {
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.white.cgColor
         button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(handleYear2ButtonTapped), for: .touchUpInside)
+
         return button
     }()
     
     // MARK: - Lifecycle
     
     override init(frame: CGRect) {
+        self.durationFilterOptions = [.allYears]
         super.init(frame: frame)
         
         configureUI()
@@ -64,10 +72,41 @@ class DurationView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Selectors
+    
+    @objc func handleAllButtonTapped() {
+        if durationFilterOptions.contains(.allYears) {
+            removeAllDurationOption()
+        }
+        else {
+            appendAllDurationOption()
+        }
+    }
+    
+    @objc func handleYear4ButtonTapped() {
+        if durationFilterOptions.contains(.year4) {
+            removeYear4Option()
+        }
+        else {
+            appendYear4Option()
+        }
+    }
+    
+    @objc func handleYear2ButtonTapped() {
+        if durationFilterOptions.contains(.year2) {
+            removeYear2Option()
+        }
+        else {
+            appendYear2Option()
+        }
+    }
+    
     // MARK: - Helpers
     
     func configureUI() {
         backgroundColor = .filterBackgroundColor
+        allButton.tintColor = .red
+        allButton.layer.borderColor = UIColor.red.cgColor
         
         addSubview(viewTitle)
         viewTitle.anchor(top: topAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 12)
@@ -79,5 +118,60 @@ class DurationView: UIView {
         addSubview(stack)
         stack.anchor(top: viewTitle.bottomAnchor, left: leftAnchor, right: rightAnchor,
                      paddingTop: 12, paddingLeft: 12, paddingRight: 12)
+    }
+    
+    private func checkIfOptionsAreEmpty() {
+        if durationFilterOptions.isEmpty {
+            appendAllDurationOption()
+        }
+    }
+    
+    private func appendAllDurationOption() {
+        durationFilterOptions.removeAll()
+        durationFilterOptions.append(.allYears)
+        allButton.tintColor = .red
+        allButton.layer.borderColor = UIColor.red.cgColor
+        yearButton4.tintColor = .white
+        yearButton4.layer.borderColor = UIColor.white.cgColor
+        yearButton2.tintColor = .white
+        yearButton2.layer.borderColor = UIColor.white.cgColor
+    }
+    
+    private func removeAllDurationOption() {
+        durationFilterOptions = durationFilterOptions.filter{ $0 != .allYears }
+        allButton.tintColor = .white
+        allButton.layer.borderColor = UIColor.white.cgColor
+        checkIfOptionsAreEmpty()
+    }
+    
+    private func appendYear4Option() {
+        
+        durationFilterOptions.append(.year4)
+        yearButton4.tintColor = .red
+        yearButton4.layer.borderColor = UIColor.red.cgColor
+        removeAllDurationOption()
+
+    }
+    
+    private func removeYear4Option() {
+        durationFilterOptions = durationFilterOptions.filter{ $0 != .year4 }
+        yearButton4.tintColor = .white
+        yearButton4.layer.borderColor = UIColor.white.cgColor
+        checkIfOptionsAreEmpty()
+    }
+    
+    private func appendYear2Option() {
+        
+        durationFilterOptions.append(.year2)
+        yearButton2.tintColor = .red
+        yearButton2.layer.borderColor = UIColor.red.cgColor
+        removeAllDurationOption()
+    }
+    
+    private func removeYear2Option() {
+        durationFilterOptions = durationFilterOptions.filter { $0 != .year2 }
+        yearButton2.tintColor = .white
+        yearButton2.layer.borderColor = UIColor.white.cgColor
+        checkIfOptionsAreEmpty()
     }
 }

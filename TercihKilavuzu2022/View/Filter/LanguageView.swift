@@ -11,6 +11,8 @@ class LanguageView: UIView {
     
     // MARK: - Properties
     
+    var languageFilterOptions: [FilterOptions]
+    
     private let viewTitle: UILabel = {
         let label = UILabel()
         label.text = "Eğitim Dili"
@@ -19,7 +21,7 @@ class LanguageView: UIView {
         return label
     }()
     
-    private let allButton: UIButton = {
+    private lazy var allButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = .none
         button.setTitle("Hepsi", for: .normal)
@@ -27,10 +29,11 @@ class LanguageView: UIView {
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.white.cgColor
         button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(handleAllButtonTapped), for: .touchUpInside)
         return button
     }()
     
-    private let turkishButton: UIButton = {
+    private lazy var turkishButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = .none
         button.setTitle("Türkçe", for: .normal)
@@ -38,6 +41,7 @@ class LanguageView: UIView {
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.white.cgColor
         button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(handleTurkishButtonTapped), for: .touchUpInside)
         return button
     }()
     
@@ -49,14 +53,15 @@ class LanguageView: UIView {
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.white.cgColor
         button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(handleEnglishButtonTapped), for: .touchUpInside)
         return button
     }()
     
     // MARK: - Lifecycle
     
     override init(frame: CGRect) {
+        self.languageFilterOptions = [.allLanguages]
         super.init(frame: frame)
-        
         configureUI()
     }
     
@@ -64,11 +69,42 @@ class LanguageView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Selectors
+    
+    @objc func handleAllButtonTapped() {
+        if languageFilterOptions.contains(.allLanguages) {
+            removeAllLanguagesOption()
+        }
+        else {
+            appendAllLanguagesOption()
+        }
+    }
+    
+    @objc func handleTurkishButtonTapped() {
+        if languageFilterOptions.contains(.turkish) {
+            removeTurkishLanguageOption()
+        }
+        else {
+            appendTurkishLanguageOption()
+        }
+    }
+    
+    @objc func handleEnglishButtonTapped() {
+        if languageFilterOptions.contains(.english) {
+            removeEnglishLanguageOption()
+        }
+        else {
+            appendEnglishLanguageOption()
+        }
+    }
+    
     
     // MARK: - Helpers
     
     func configureUI() {
         backgroundColor = .filterBackgroundColor
+        allButton.tintColor = .red
+        allButton.layer.borderColor = UIColor.red.cgColor
         
         addSubview(viewTitle)
         viewTitle.anchor(top: topAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 12)
@@ -80,5 +116,60 @@ class LanguageView: UIView {
         addSubview(stack)
         stack.anchor(top: viewTitle.bottomAnchor, left: leftAnchor, right: rightAnchor,
                      paddingTop: 12, paddingLeft: 12, paddingRight: 12)
+    }
+    
+    func checkIfOptionsAreEmpty() {
+        if languageFilterOptions.isEmpty {
+            appendAllLanguagesOption()
+        }
+    }
+    
+    func appendAllLanguagesOption() {
+        languageFilterOptions.removeAll()
+        languageFilterOptions.append(.allLanguages)
+        allButton.tintColor = .red
+        allButton.layer.borderColor = UIColor.red.cgColor
+        turkishButton.tintColor = .white
+        turkishButton.layer.borderColor = UIColor.white.cgColor
+        englishButton.tintColor = .white
+        englishButton.layer.borderColor = UIColor.white.cgColor
+    }
+    
+    func removeAllLanguagesOption() {
+        languageFilterOptions = languageFilterOptions.filter{ $0 != .allLanguages }
+        allButton.tintColor = .white
+        allButton.layer.borderColor = UIColor.white.cgColor
+        checkIfOptionsAreEmpty()
+    }
+    
+    func appendTurkishLanguageOption() {
+        
+        languageFilterOptions.append(.turkish)
+        turkishButton.tintColor = .red
+        turkishButton.layer.borderColor = UIColor.red.cgColor
+        removeAllLanguagesOption()
+
+    }
+    
+    func removeTurkishLanguageOption() {
+        languageFilterOptions = languageFilterOptions.filter{ $0 != .turkish }
+        turkishButton.tintColor = .white
+        turkishButton.layer.borderColor = UIColor.white.cgColor
+        checkIfOptionsAreEmpty()
+    }
+    
+    func appendEnglishLanguageOption() {
+        
+        languageFilterOptions.append(.english)
+        englishButton.tintColor = .red
+        englishButton.layer.borderColor = UIColor.red.cgColor
+        removeAllLanguagesOption()
+    }
+    
+    func removeEnglishLanguageOption() {
+        languageFilterOptions = languageFilterOptions.filter { $0 != .english }
+        englishButton.tintColor = .white
+        englishButton.layer.borderColor = UIColor.white.cgColor
+        checkIfOptionsAreEmpty()
     }
 }

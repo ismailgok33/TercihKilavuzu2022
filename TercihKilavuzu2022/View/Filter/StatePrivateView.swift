@@ -11,6 +11,8 @@ class StatePrivateView: UIView {
     
     // MARK: - Properties
     
+    var statePrivateFilterOptions: [FilterOptions]
+    
     private let viewTitle: UILabel = {
         let label = UILabel()
         label.text = "Üniversite Türü"
@@ -27,6 +29,7 @@ class StatePrivateView: UIView {
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.white.cgColor
         button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(handleStateButtonTapped), for: .touchUpInside)
         return button
     }()
     
@@ -38,6 +41,7 @@ class StatePrivateView: UIView {
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.white.cgColor
         button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(handlePrivateButtonTapped), for: .touchUpInside)
         return button
     }()
     
@@ -49,12 +53,14 @@ class StatePrivateView: UIView {
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.white.cgColor
         button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(handleAllButtonTapped), for: .touchUpInside)
         return button
     }()
     
     // MARK: - Lifecycle
     
     override init(frame: CGRect) {
+        self.statePrivateFilterOptions = [.allUniversityTypes]
         super.init(frame: frame)
         
         configureUI()
@@ -64,10 +70,41 @@ class StatePrivateView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Selectors
+    
+    @objc func handleAllButtonTapped() {
+        if statePrivateFilterOptions.contains(.allUniversityTypes) {
+            removeAllUniversityTypeOption()
+        }
+        else {
+            appendAllUniversityTypeOption()
+        }
+    }
+    
+    @objc func handleStateButtonTapped() {
+        if statePrivateFilterOptions.contains(.stateUniversities) {
+            removeStateOption()
+        }
+        else {
+            appendStateOption()
+        }
+    }
+    
+    @objc func handlePrivateButtonTapped() {
+        if statePrivateFilterOptions.contains(.privateUniversities) {
+            removePrivateOption()
+        }
+        else {
+            appendPrivateOption()
+        }
+    }
+    
     // MARK: - Helpers
     
     func configureUI() {
         backgroundColor = .filterBackgroundColor
+        allButton.tintColor = .red
+        allButton.layer.borderColor = UIColor.red.cgColor
         
         addSubview(viewTitle)
         viewTitle.anchor(top: topAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 12)
@@ -79,5 +116,60 @@ class StatePrivateView: UIView {
         addSubview(stack)
         stack.anchor(top: viewTitle.bottomAnchor, left: leftAnchor, right: rightAnchor,
                      paddingTop: 12, paddingLeft: 12, paddingRight: 12)
+    }
+    
+    func checkIfOptionsAreEmpty() {
+        if statePrivateFilterOptions.isEmpty {
+            appendAllUniversityTypeOption()
+        }
+    }
+    
+    func appendAllUniversityTypeOption() {
+        statePrivateFilterOptions.removeAll()
+        statePrivateFilterOptions.append(.allUniversityTypes)
+        allButton.tintColor = .red
+        allButton.layer.borderColor = UIColor.red.cgColor
+        privateButton.tintColor = .white
+        privateButton.layer.borderColor = UIColor.white.cgColor
+        stateButton.tintColor = .white
+        stateButton.layer.borderColor = UIColor.white.cgColor
+    }
+    
+    func removeAllUniversityTypeOption() {
+        statePrivateFilterOptions = statePrivateFilterOptions.filter{ $0 != .allUniversityTypes }
+        allButton.tintColor = .white
+        allButton.layer.borderColor = UIColor.white.cgColor
+        checkIfOptionsAreEmpty()
+    }
+    
+    func appendPrivateOption() {
+        
+        statePrivateFilterOptions.append(.privateUniversities)
+        privateButton.tintColor = .red
+        privateButton.layer.borderColor = UIColor.red.cgColor
+        removeAllUniversityTypeOption()
+
+    }
+    
+    func removePrivateOption() {
+        statePrivateFilterOptions = statePrivateFilterOptions.filter{ $0 != .privateUniversities }
+        privateButton.tintColor = .white
+        privateButton.layer.borderColor = UIColor.white.cgColor
+        checkIfOptionsAreEmpty()
+    }
+    
+    func appendStateOption() {
+        
+        statePrivateFilterOptions.append(.stateUniversities)
+        stateButton.tintColor = .red
+        stateButton.layer.borderColor = UIColor.red.cgColor
+        removeAllUniversityTypeOption()
+    }
+    
+    func removeStateOption() {
+        statePrivateFilterOptions = statePrivateFilterOptions.filter { $0 != .stateUniversities }
+        stateButton.tintColor = .white
+        stateButton.layer.borderColor = UIColor.white.cgColor
+        checkIfOptionsAreEmpty()
     }
 }

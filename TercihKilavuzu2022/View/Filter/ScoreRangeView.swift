@@ -33,6 +33,7 @@ class ScoreRangeView: UIView {
         tf.backgroundColor = UIColor(white: 1, alpha: 0.2)
         tf.heightAnchor.constraint(equalToConstant: 40).isActive = true
         tf.layer.cornerRadius = 5
+        tf.keyboardType = UIKeyboardType.numberPad
         tf.attributedPlaceholder = NSAttributedString(string: "Minimum", attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.7)])
         return tf
     }()
@@ -51,6 +52,7 @@ class ScoreRangeView: UIView {
         tf.backgroundColor = UIColor(white: 1, alpha: 0.2)
         tf.heightAnchor.constraint(equalToConstant: 40).isActive = true
         tf.layer.cornerRadius = 5
+        tf.keyboardType = UIKeyboardType.numberPad
         tf.attributedPlaceholder = NSAttributedString(string: "Maximum", attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.7)])
         return tf
     }()
@@ -59,7 +61,6 @@ class ScoreRangeView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         configureUI()
     }
     
@@ -83,3 +84,4 @@ class ScoreRangeView: UIView {
         stack.anchor(top:viewTitle.bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 12, paddingLeft: 12, paddingRight: 12)
     }
 }
+
