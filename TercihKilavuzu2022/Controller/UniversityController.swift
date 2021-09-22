@@ -22,6 +22,12 @@ class UniversityController: UITableViewController {
     
     let searchController = UISearchController()
     
+    private var selectedFilters: [FilterOptions]?
+    private var minScore: Double?
+    private var maxScore: Double?
+    private var minPlacement: Int?
+    private var maxPlacement: Int?
+    
     weak var delegate: UniversityControllerDelegate?
     
     private var universities = [University]() {
@@ -47,6 +53,8 @@ class UniversityController: UITableViewController {
             }
         }
     }
+    
+    private var filteredUniversities: [University]?
     
     private let actionSheetLauncher = ActionSheetLauncher()
     
@@ -124,6 +132,23 @@ class UniversityController: UITableViewController {
         }
     }
     
+    func filterUniversitiesWithSelectedFilters() {
+        guard let filters = selectedFilters else { return }
+        
+        filteredUniversities = universities
+        
+//        if selectedFilters?.contains(.privateUniversities) && !selectedFilters?.contains(.stateUniversities) {
+//            filteredUniversities = universities.filter({ $0.type == 1 })
+//        }
+        
+        if filters.contains(.year4) && !filters.contains(.year2) {
+            filteredUniversities = filteredUniversities!.filter({ $0.duration == "4" })
+        }
+        
+        if filters.contains(.year2) && !filters.contains(.year4) {
+            filteredUniversities = filteredUniversities!.filter({ $0.duration == "2" })
+        }
+    }
     
     
     // MARK: - API
@@ -233,5 +258,18 @@ extension UniversityController: UISearchResultsUpdating {
 extension UniversityController: ActionSheetLauncherDelegate {
     func didSelectOption(option: ActionSheetOptions) {
         sortUniversities(byOption: option)
+    }
+}
+
+
+extension UniversityController: FilterControllerDelegate {
+    func filterUniversities(_ filter: FilterController) {
+        selectedFilters = filter.selectedFilters
+        minScore = filter.minScore
+        maxScore = filter.maxScore
+        minPlacement = filter.minPlacement
+        maxPlacement = filter.maxPlacement
+        
+        filterUniversitiesWithSelectedFilters()
     }
 }

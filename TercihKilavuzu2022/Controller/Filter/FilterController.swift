@@ -7,26 +7,31 @@
 
 import UIKit
 
+protocol FilterControllerDelegate: AnyObject {
+    func filterUniversities(_ filter: FilterController)
+}
+
 class FilterController: UIViewController {
     
     // MARK: - Properties
     
-    private let filterOptions = [FilterOptions]()
+    var selectedFilters = [FilterOptions]()
+    var minScore: Double?
+    var maxScore: Double?
+    var minPlacement: Int?
+    var maxPlacement: Int?
+    
+    weak var delegate: FilterControllerDelegate?
+    
+    // MARK: - Subviews
     
     private let cityListView = CityListView()
-    
     private let departmentListView = DepartmentListView()
-    
     private let scholarshipView = ScholarshipView()
-    
     private let universityTypeView = StatePrivateView()
-    
     private let languageTypeView = LanguageView()
-    
     private let durationTypeView = DurationView()
-    
     private let scoreRangeView = ScoreRangeView()
-    
     private let placementRangeView = PlacementRangeView()
     
     private let resetButton: UIButton = {
@@ -47,7 +52,7 @@ class FilterController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
 //        textField.delegate = self
         
         // call the 'keyboardWillShow' function when the view controller receive the notification that a keyboard is going to be shown
@@ -72,7 +77,16 @@ class FilterController: UIViewController {
     }
     
     @objc func handleSaveFilterTapped() {
-        print("DEBUG: Save button is tapped in Filter Screen..")
+        selectedFilters.append(contentsOf: scholarshipView.filterScholarshipOptions)
+        selectedFilters.append(contentsOf: universityTypeView.statePrivateFilterOptions)
+        selectedFilters.append(contentsOf: languageTypeView.languageFilterOptions)
+        selectedFilters.append(contentsOf: durationTypeView.durationFilterOptions)
+        minScore = Double(scoreRangeView.minScore.text ?? "")
+        maxScore = Double(scoreRangeView.maxScore.text ?? "")
+        minPlacement = Int(placementRangeView.minPlacement.text ?? "")
+        maxPlacement = Int(placementRangeView.maxPlacement.text ?? "")
+        
+        delegate?.filterUniversities(self)
     }
     
     @objc func handleResetButtonTapped() {
@@ -94,6 +108,7 @@ class FilterController: UIViewController {
         // move back the root view origin to zero
         self.view.frame.origin.y = 0
     }
+    
      
     // MARK: Helpers
     
