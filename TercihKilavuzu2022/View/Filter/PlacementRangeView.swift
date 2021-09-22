@@ -19,7 +19,7 @@ class PlacementRangeView: UIView {
         return label
     }()
     
-    private let minPlacement: UITextField = {
+     let minPlacement: UITextField = {
         let tf = UITextField()
         
         let spacer = UIView()
@@ -33,11 +33,12 @@ class PlacementRangeView: UIView {
         tf.backgroundColor = UIColor(white: 1, alpha: 0.2)
         tf.heightAnchor.constraint(equalToConstant: 40).isActive = true
         tf.layer.cornerRadius = 5
+        tf.keyboardType = UIKeyboardType.numberPad
         tf.attributedPlaceholder = NSAttributedString(string: "Minimum", attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.7)])
         return tf
     }()
     
-    private let maxPlacement: UITextField = {
+     let maxPlacement: UITextField = {
         let tf = UITextField()
         
         let spacer = UIView()
@@ -51,6 +52,7 @@ class PlacementRangeView: UIView {
         tf.backgroundColor = UIColor(white: 1, alpha: 0.2)
         tf.heightAnchor.constraint(equalToConstant: 40).isActive = true
         tf.layer.cornerRadius = 5
+        tf.keyboardType = UIKeyboardType.numberPad
         tf.attributedPlaceholder = NSAttributedString(string: "Maximum", attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.7)])
         return tf
     }()

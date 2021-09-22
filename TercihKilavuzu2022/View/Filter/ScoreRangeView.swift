@@ -19,7 +19,7 @@ class ScoreRangeView: UIView {
         return label
     }()
     
-    private let minScore: UITextField = {
+     let minScore: UITextField = {
         let tf = UITextField()
         
         let spacer = UIView()
@@ -33,12 +33,12 @@ class ScoreRangeView: UIView {
         tf.backgroundColor = UIColor(white: 1, alpha: 0.2)
         tf.heightAnchor.constraint(equalToConstant: 40).isActive = true
         tf.layer.cornerRadius = 5
-        tf.keyboardType = UIKeyboardType.numberPad
+        tf.keyboardType = UIKeyboardType.decimalPad
         tf.attributedPlaceholder = NSAttributedString(string: "Minimum", attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.7)])
         return tf
     }()
     
-    private let maxScore: UITextField = {
+     let maxScore: UITextField = {
         let tf = UITextField()
         
         let spacer = UIView()
@@ -52,7 +52,7 @@ class ScoreRangeView: UIView {
         tf.backgroundColor = UIColor(white: 1, alpha: 0.2)
         tf.heightAnchor.constraint(equalToConstant: 40).isActive = true
         tf.layer.cornerRadius = 5
-        tf.keyboardType = UIKeyboardType.numberPad
+        tf.keyboardType = UIKeyboardType.decimalPad
         tf.attributedPlaceholder = NSAttributedString(string: "Maximum", attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.7)])
         return tf
     }()

@@ -133,4 +133,11 @@ extension FilterController: UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        scoreRangeView.minScore.resignFirstResponder()
+        scoreRangeView.maxScore.resignFirstResponder()
+        placementRangeView.minPlacement.resignFirstResponder()
+        placementRangeView.maxPlacement.resignFirstResponder()
+    }
 }
