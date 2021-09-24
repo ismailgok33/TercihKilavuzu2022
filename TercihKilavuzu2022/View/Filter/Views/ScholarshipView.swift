@@ -97,9 +97,32 @@ class ScholarshipView: UIView {
     
     // MARK: - Lifecycle
     
-    override init(frame: CGRect) {
-        self.filterScholarshipOptions = [.scholarshipAll]
-        super.init(frame: frame)
+    init(filters: [FilterOptions]?) {
+        filterScholarshipOptions = [FilterOptions]()
+        
+        super.init(frame: .zero)
+        
+        if let filters = filters, filters.count > 0 {
+            if filters.contains(.scholarship100) {
+                append100PercentOption()
+            }
+            if filters.contains(.scholarship75) {
+                appendPercent75Option()
+            }
+            if filters.contains(.scholarship50) {
+                appendPercent50Option()
+            }
+            if filters.contains(.scholarship25) {
+                appendPercent25Option()
+            }
+            if filters.contains(.scholarship0) {
+                appendPercent0Option()
+            }
+            
+        }
+        else {
+            self.filterScholarshipOptions = [.scholarshipAll]
+        }
         
         configureUI()
     }
@@ -167,8 +190,10 @@ class ScholarshipView: UIView {
     
     func configureUI() {
         backgroundColor = .filterBackgroundColor
-        allButton.tintColor = .red
-        allButton.layer.borderColor = UIColor.red.cgColor
+        if filterScholarshipOptions.count == 0 || filterScholarshipOptions.contains(.scholarshipAll) {
+            allButton.tintColor = .red
+            allButton.layer.borderColor = UIColor.red.cgColor
+        }      
         
         addSubview(viewTitle)
         viewTitle.anchor(top: topAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 12)

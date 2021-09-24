@@ -21,7 +21,7 @@ class DurationView: UIView {
         return label
     }()
     
-    private lazy var allButton: UIButton = {
+    private let allButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = .none
         button.setTitle("Hepsi", for: .normal)
@@ -61,9 +61,22 @@ class DurationView: UIView {
     
     // MARK: - Lifecycle
     
-    override init(frame: CGRect) {
-        self.durationFilterOptions = [.allYears]
-        super.init(frame: frame)
+    init(filters: [FilterOptions]?) {
+        durationFilterOptions = [FilterOptions]()
+
+        super.init(frame: .zero)
+
+        if let filters = filters, filters.count > 0 {
+                if filters.contains(.year4) {
+                    appendYear4Option()
+                }
+                if filters.contains(.year2) {
+                    appendYear2Option()
+                }
+        }
+        else {
+            self.durationFilterOptions = [.allYears]
+        }
         
         configureUI()
     }
@@ -105,8 +118,13 @@ class DurationView: UIView {
     
     func configureUI() {
         backgroundColor = .filterBackgroundColor
-        allButton.tintColor = .red
-        allButton.layer.borderColor = UIColor.red.cgColor
+        if durationFilterOptions.count == 0 || durationFilterOptions.contains(.allYears) {
+            allButton.tintColor = .red
+            allButton.layer.borderColor = UIColor.red.cgColor
+
+        }
+       
+//        checkIfOptionsAreEmpty()
         
         addSubview(viewTitle)
         viewTitle.anchor(top: topAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 12)
@@ -139,6 +157,7 @@ class DurationView: UIView {
     
     private func removeAllDurationOption() {
         durationFilterOptions = durationFilterOptions.filter{ $0 != .allYears }
+        print("DEBUG: durationFilterOptions after removeALlDurationOptions is \(durationFilterOptions)")
         allButton.tintColor = .white
         allButton.layer.borderColor = UIColor.white.cgColor
         checkIfOptionsAreEmpty()

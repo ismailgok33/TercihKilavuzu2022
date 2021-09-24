@@ -27,12 +27,12 @@ class FilterController: UIViewController {
     
     private let cityListView = CityListView()
     private let departmentListView = DepartmentListView()
-    private let scholarshipView = ScholarshipView()
-    private let universityTypeView = StatePrivateView()
-    private let languageTypeView = LanguageView()
-    private let durationTypeView = DurationView()
-    private let scoreRangeView = ScoreRangeView()
-    private let placementRangeView = PlacementRangeView()
+    private var scholarshipView : ScholarshipView?
+    private var universityTypeView : StatePrivateView?
+    private var languageTypeView : LanguageView?
+    private var durationTypeView : DurationView?
+    private var scoreRangeView = ScoreRangeView()
+    private var placementRangeView = PlacementRangeView()
     
     private let resetButton: UIButton = {
         let button = UIButton(type: .system)
@@ -49,7 +49,7 @@ class FilterController: UIViewController {
     
     
     // MARK: - Lifecycle
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
                 
@@ -77,16 +77,19 @@ class FilterController: UIViewController {
     }
     
     @objc func handleSaveFilterTapped() {
-        selectedFilters.append(contentsOf: scholarshipView.filterScholarshipOptions)
-        selectedFilters.append(contentsOf: universityTypeView.statePrivateFilterOptions)
-        selectedFilters.append(contentsOf: languageTypeView.languageFilterOptions)
-        selectedFilters.append(contentsOf: durationTypeView.durationFilterOptions)
+        selectedFilters.removeAll() // delete all filters first
+        
+        selectedFilters.append(contentsOf: scholarshipView!.filterScholarshipOptions)
+        selectedFilters.append(contentsOf: universityTypeView!.statePrivateFilterOptions)
+        selectedFilters.append(contentsOf: languageTypeView!.languageFilterOptions)
+        selectedFilters.append(contentsOf: durationTypeView!.durationFilterOptions)
         minScore = Double(scoreRangeView.minScore.text ?? "")
         maxScore = Double(scoreRangeView.maxScore.text ?? "")
         minPlacement = Int(placementRangeView.minPlacement.text ?? "")
         maxPlacement = Int(placementRangeView.maxPlacement.text ?? "")
-        
+                
         delegate?.filterUniversities(self)
+        navigationController?.popViewController(animated: true)
     }
     
     @objc func handleResetButtonTapped() {
@@ -117,8 +120,13 @@ class FilterController: UIViewController {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filtrele", style: .done, target: self, action: #selector(handleSaveFilterTapped))
         
-        let stack = UIStackView(arrangedSubviews: [cityListView, departmentListView, scholarshipView,
-                                                   universityTypeView, languageTypeView, durationTypeView,
+        durationTypeView = DurationView(filters: selectedFilters)
+        languageTypeView = LanguageView(filters: selectedFilters)
+        universityTypeView = StatePrivateView(filters: selectedFilters)
+        scholarshipView = ScholarshipView(filters: selectedFilters)
+        
+        let stack = UIStackView(arrangedSubviews: [cityListView, departmentListView, scholarshipView!,
+                                                   universityTypeView!, languageTypeView!, durationTypeView!,
                                                    scoreRangeView, placementRangeView ])
         stack.axis = .vertical
         stack.distribution = .fillEqually
@@ -138,7 +146,6 @@ class FilterController: UIViewController {
                            paddingTop: 20, paddingLeft: 25, paddingBottom: 20, paddingRight: 25)
         
     }
-    
     
 }
 

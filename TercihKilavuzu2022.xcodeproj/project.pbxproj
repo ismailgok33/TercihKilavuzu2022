@@ -124,14 +124,7 @@
 			children = (
 				EC88419726F92CC200D6F5C0 /* CityCell.swift */,
 				EC88419926F932FB00D6F5C0 /* DepartmentCell.swift */,
-				EC3D113E26FA56F70031609C /* ScholarshipView.swift */,
-				EC3D114026FA5F210031609C /* StatePrivateView.swift */,
-				EC3D114226FA60720031609C /* LanguageView.swift */,
-				EC3D114426FA61810031609C /* DurationView.swift */,
-				EC3D114626FA641E0031609C /* ScoreRangeView.swift */,
-				EC3D114826FA67FD0031609C /* PlacementRangeView.swift */,
-				EC3D114A26FA742C0031609C /* CityListView.swift */,
-				EC3D114C26FA77FB0031609C /* DepartmentListView.swift */,
+				EC984BE326FE6D21005DA79A /* Views */,
 			);
 			path = Filter;
 			sourceTree = "<group>";
@@ -243,6 +236,21 @@
 				EC88419126F91BE400D6F5C0 /* DepartmentListController.swift */,
 			);
 			path = Filter;
+			sourceTree = "<group>";
+		};
+		EC984BE326FE6D21005DA79A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EC3D113E26FA56F70031609C /* ScholarshipView.swift */,
+				EC3D114026FA5F210031609C /* StatePrivateView.swift */,
+				EC3D114226FA60720031609C /* LanguageView.swift */,
+				EC3D114426FA61810031609C /* DurationView.swift */,
+				EC3D114626FA641E0031609C /* ScoreRangeView.swift */,
+				EC3D114826FA67FD0031609C /* PlacementRangeView.swift */,
+				EC3D114A26FA742C0031609C /* CityListView.swift */,
+				EC3D114C26FA77FB0031609C /* DepartmentListView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

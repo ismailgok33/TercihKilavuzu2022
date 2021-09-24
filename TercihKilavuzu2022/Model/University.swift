@@ -19,6 +19,9 @@ class University: Object {
     @objc dynamic var quota: Int = 0
     @objc dynamic var duration: String = ""
     @objc dynamic var type: String = ""
+    @objc dynamic var scholarship: String = ""
+    @objc dynamic var state: Bool = false
+
     var isFavorite = false
     
     
@@ -35,6 +38,9 @@ class University: Object {
         self.quota = dictionary["quota"] as? Int ?? 0
         self.duration = dictionary["duration"] as? String ?? "unnamed"
         self.type = dictionary["type"] as? String ?? "unnamed"
+        self.scholarship = dictionary["scholarship"] as? String ?? "unnamed"
+        self.state = dictionary["state"] as? Bool ?? false
+
     }
     
     override static func primaryKey() -> String? {

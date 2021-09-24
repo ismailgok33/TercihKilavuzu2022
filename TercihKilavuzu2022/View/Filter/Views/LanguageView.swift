@@ -59,9 +59,23 @@ class LanguageView: UIView {
     
     // MARK: - Lifecycle
     
-    override init(frame: CGRect) {
-        self.languageFilterOptions = [.allLanguages]
-        super.init(frame: frame)
+    init(filters: [FilterOptions]?) {
+        languageFilterOptions = [FilterOptions]()
+
+        super.init(frame: .zero)
+
+        if let filters = filters, filters.count > 0 {
+            if filters.contains(.turkish) {
+                    appendTurkishLanguageOption()
+                }
+                if filters.contains(.english) {
+                    appendEnglishLanguageOption()
+                }
+            
+        }
+        else {
+            self.languageFilterOptions = [.allLanguages]
+        }
         configureUI()
     }
     
@@ -103,8 +117,13 @@ class LanguageView: UIView {
     
     func configureUI() {
         backgroundColor = .filterBackgroundColor
-        allButton.tintColor = .red
-        allButton.layer.borderColor = UIColor.red.cgColor
+        print("DEBUG: languageFilterOptions: \(languageFilterOptions)")
+        if languageFilterOptions.count == 0 || languageFilterOptions.contains(.allLanguages){
+            allButton.tintColor = .red
+            allButton.layer.borderColor = UIColor.red.cgColor
+
+        }
+//        checkIfOptionsAreEmpty()
         
         addSubview(viewTitle)
         viewTitle.anchor(top: topAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 12)

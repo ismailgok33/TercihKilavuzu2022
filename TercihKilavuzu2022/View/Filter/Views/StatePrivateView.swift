@@ -59,9 +59,23 @@ class StatePrivateView: UIView {
     
     // MARK: - Lifecycle
     
-    override init(frame: CGRect) {
-        self.statePrivateFilterOptions = [.allUniversityTypes]
-        super.init(frame: frame)
+    init(filters: [FilterOptions]?) {
+        statePrivateFilterOptions = [FilterOptions]()
+
+        super.init(frame: .zero)
+
+        if let filters = filters, filters.count > 0 {
+            if filters.contains(.stateUniversities) {
+                    appendStateOption()
+                }
+                if filters.contains(.privateUniversities) {
+                    appendPrivateOption()
+                }
+            
+        }
+        else {
+            self.statePrivateFilterOptions = [.allUniversityTypes]
+        }
         
         configureUI()
     }
@@ -103,8 +117,11 @@ class StatePrivateView: UIView {
     
     func configureUI() {
         backgroundColor = .filterBackgroundColor
-        allButton.tintColor = .red
-        allButton.layer.borderColor = UIColor.red.cgColor
+        if statePrivateFilterOptions.count == 0 || statePrivateFilterOptions.contains(.allUniversityTypes) {
+            allButton.tintColor = .red
+            allButton.layer.borderColor = UIColor.red.cgColor
+        }
+        
         
         addSubview(viewTitle)
         viewTitle.anchor(top: topAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 12)

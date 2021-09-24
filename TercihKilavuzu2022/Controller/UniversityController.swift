@@ -54,7 +54,13 @@ class UniversityController: UITableViewController {
         }
     }
     
-    private var filteredUniversities: [University]?
+    private var filteredUniversities = [University](){
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     private let actionSheetLauncher = ActionSheetLauncher()
     
@@ -75,6 +81,7 @@ class UniversityController: UITableViewController {
         configureUI()
         fetchUniversities()
         sortUniversities(byOption: .nameAsc)
+        filteredUniversities = universities
     }
     
     override func viewDidLayoutSubviews() {
@@ -141,13 +148,62 @@ class UniversityController: UITableViewController {
 //            filteredUniversities = universities.filter({ $0.type == 1 })
 //        }
         
+        print("filters are \(filters)")
+        
         if filters.contains(.year4) && !filters.contains(.year2) {
-            filteredUniversities = filteredUniversities!.filter({ $0.duration == "4" })
+            filteredUniversities = filteredUniversities.filter({ $0.duration == "4" })
         }
         
         if filters.contains(.year2) && !filters.contains(.year4) {
-            filteredUniversities = filteredUniversities!.filter({ $0.duration == "2" })
+            filteredUniversities = filteredUniversities.filter({ $0.duration == "2" })
         }
+        
+        if filters.contains(.english) && !filters.contains(.turkish) {
+            filteredUniversities = filteredUniversities.filter({ $0.language == "İngilizce"})
+        }
+        
+        if filters.contains(.turkish) && !filters.contains(.english) {
+            filteredUniversities = filteredUniversities.filter({ $0.language == "Türkçe"})
+        }
+        
+        if filters.contains(.stateUniversities) && !filters.contains(.privateUniversities) {
+            filteredUniversities = filteredUniversities.filter({ $0.state == true})
+        }
+        
+        if filters.contains(.privateUniversities) && !filters.contains(.stateUniversities) {
+            filteredUniversities = filteredUniversities.filter({ $0.state == false})
+        }
+        
+        if filters.contains(.scholarship100) && !filters.contains(.scholarship75) && !filters.contains(.scholarship50) &&
+            !filters.contains(.scholarship25) && !filters.contains(.scholarship0)
+        {
+            filteredUniversities = filteredUniversities.filter({ $0.scholarship == "%100 Burslu"})
+        }
+        
+        if filters.contains(.scholarship75) && !filters.contains(.scholarship100) && !filters.contains(.scholarship50) &&
+            !filters.contains(.scholarship25) && !filters.contains(.scholarship0)
+        {
+            filteredUniversities = filteredUniversities.filter({ $0.scholarship == "%75 Burslu"})
+        }
+        
+        if filters.contains(.scholarship50) && !filters.contains(.scholarship100) && !filters.contains(.scholarship75) &&
+            !filters.contains(.scholarship25) && !filters.contains(.scholarship0)
+        {
+            filteredUniversities = filteredUniversities.filter({ $0.scholarship == "%50 Burslu"})
+        }
+        
+        if filters.contains(.scholarship25) && !filters.contains(.scholarship100) && !filters.contains(.scholarship75) &&
+            !filters.contains(.scholarship50) && !filters.contains(.scholarship0)
+        {
+            filteredUniversities = filteredUniversities.filter({ $0.scholarship == "%25 Burslu"})
+        }
+        
+        if filters.contains(.scholarship0) && !filters.contains(.scholarship75) && !filters.contains(.scholarship50) &&
+            !filters.contains(.scholarship25) && !filters.contains(.scholarship100)
+        {
+            filteredUniversities = filteredUniversities.filter({ $0.scholarship == "%0 Burslu"})
+        }
+        
     }
     
     
@@ -156,6 +212,7 @@ class UniversityController: UITableViewController {
     func fetchUniversities() {
         FirestoreService.shared.fetchUniversities { universities in
             self.universities = universities
+            self.filteredUniversities = universities
             self.loadFavorites()
         }
     }
@@ -183,9 +240,9 @@ class UniversityController: UITableViewController {
     // MARK: - Selectors
     
     @objc func handleFilterButtonTapped() {
-//        let nav = UINavigationController(rootViewController: FilterController())
-//        nav.modalPresentationStyle = .fullScreen
         let vc = FilterController()
+        vc.selectedFilters = selectedFilters ?? [FilterOptions]()
+        vc.delegate = self
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -203,7 +260,7 @@ extension UniversityController {
             return searchedUniversities.count
         }
         else {
-            return universities.count
+            return filteredUniversities.count
         }
         
     }
@@ -214,7 +271,7 @@ extension UniversityController {
             cell.university = searchedUniversities[indexPath.row]
         }
         else {
-            cell.university = universities[indexPath.row]
+            cell.university = filteredUniversities[indexPath.row]
         }
         cell.delegate = self
         return cell
@@ -238,7 +295,7 @@ extension UniversityController: UniversityCellDelegate {
 extension UniversityController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         if let text = searchController.searchBar.text, !text.isEmpty {
-            searchedUniversities = universities.filter({ university in
+            searchedUniversities = filteredUniversities.filter({ university in
                 university.name.localizedCaseInsensitiveContains(text)
                     || university.department.localizedCaseInsensitiveContains(text)
                     || university.city.localizedCaseInsensitiveContains(text)
@@ -269,7 +326,7 @@ extension UniversityController: FilterControllerDelegate {
         maxScore = filter.maxScore
         minPlacement = filter.minPlacement
         maxPlacement = filter.maxPlacement
-        
+                
         filterUniversitiesWithSelectedFilters()
     }
 }
