@@ -9,6 +9,10 @@ import UIKit
 
 private let reuseIdentifier =  "departmentCell"
 
+protocol DepartmentListDelegate: AnyObject {
+    func saveSelectedDepartments(_ departmentListController: DepartmentListController)
+}
+
 class DepartmentListController: UITableViewController {
     
     // MARK: - Properties
@@ -20,6 +24,10 @@ class DepartmentListController: UITableViewController {
             }
         }
     }
+    
+    var selectedDepartments = [Department]()
+    
+    weak var delegate: DepartmentListDelegate?
     
     private let saveButton: UIButton = {
         let button = UIButton(type: .system)
@@ -48,7 +56,8 @@ class DepartmentListController: UITableViewController {
     // MARK: - Selectors
     
     @objc func handleSaveButtonTapped() {
-        print("DEBUG: save button tapped in Department Controller..")
+        delegate?.saveSelectedDepartments(self)
+        dismiss(animated: true, completion: nil)
     }
     
     @objc func handleCancelButtonTapped() {
@@ -64,12 +73,23 @@ class DepartmentListController: UITableViewController {
 
     }
     
+    func loadSelectedDepartments() {
+        let selectedDepartmentNames = selectedDepartments.map({ $0.name })
+        
+        for i in departments.indices {
+            if selectedDepartmentNames.contains(departments[i].name) {
+                departments[i].isSelected = true
+            }
+        }
+    }
+    
     
     // MARK: - API
     
     func fetchDepartments() {
         FirestoreService.shared.fetchDepartments { departments in
             self.departments = departments
+            self.loadSelectedDepartments()
         }
     }
 }
@@ -88,9 +108,11 @@ extension DepartmentListController {
         if let department = cell.department {
             if department.isSelected {
                 cell.accessoryType = .checkmark
+                selectedDepartments.append(departments[indexPath.row])
             }
             else {
                 cell.accessoryType = .none
+                selectedDepartments = selectedDepartments.filter({ $0.id != departments[indexPath.row].id })
             }
         }
         

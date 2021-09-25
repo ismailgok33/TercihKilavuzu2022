@@ -19,7 +19,7 @@ class PlacementRangeView: UIView {
         return label
     }()
     
-     let minPlacement: UITextField = {
+     let minPlacementField: UITextField = {
         let tf = UITextField()
         
         let spacer = UIView()
@@ -38,7 +38,7 @@ class PlacementRangeView: UIView {
         return tf
     }()
     
-     let maxPlacement: UITextField = {
+     let maxPlacementField: UITextField = {
         let tf = UITextField()
         
         let spacer = UIView()
@@ -60,8 +60,16 @@ class PlacementRangeView: UIView {
     
     // MARK: - Lifecycle
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(minPlacement: Int?, maxPlacement: Int?) {
+        super.init(frame: .zero)
+        
+        if let safeMinPlacement = minPlacement {
+            minPlacementField.text = "\(safeMinPlacement)"
+        }
+        
+        if let safeMaxPlacement = maxPlacement {
+            maxPlacementField.text = "\(safeMaxPlacement)"
+        }
         
         configureUI()
     }
@@ -78,7 +86,7 @@ class PlacementRangeView: UIView {
         addSubview(viewTitle)
         viewTitle.anchor(top: topAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 12)
         
-        let stack = UIStackView(arrangedSubviews: [minPlacement, maxPlacement])
+        let stack = UIStackView(arrangedSubviews: [minPlacementField, maxPlacementField])
         stack.axis = .horizontal
         stack.distribution = .fillEqually
         stack.spacing = 20

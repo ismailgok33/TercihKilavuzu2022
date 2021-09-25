@@ -9,6 +9,10 @@ import UIKit
 
 private let reuseIdentifier =  "cityCell"
 
+protocol CityListDelegate: AnyObject {
+    func saveSelectedCities(_ cityListController: CityListController)
+}
+
 class CityListController: UITableViewController {
     
     // MARK: - Properties
@@ -20,6 +24,10 @@ class CityListController: UITableViewController {
             }
         }
     }
+    
+    var selectedCities = [City]()
+    
+    weak var delegate: CityListDelegate?
     
     private let saveButton: UIButton = {
         let button = UIButton(type: .system)
@@ -42,13 +50,15 @@ class CityListController: UITableViewController {
     override func viewDidLoad() {
         configureUI()
         fetchCities()
+//        loadSelectedCities()
     }
     
     
     // MARK: - Selectors
     
     @objc func handleSaveButtonTapped() {
-        print("DEBUG: save button tapped in City Controller..")
+        delegate?.saveSelectedCities(self)
+        dismiss(animated: true, completion: nil)
     }
     
     @objc func handleCancelButtonTapped() {
@@ -63,11 +73,22 @@ class CityListController: UITableViewController {
 
     }
     
+    func loadSelectedCities() {
+        let selectedCityNames = selectedCities.map({ $0.name })
+        
+        for i in cities.indices {
+            if selectedCityNames.contains(cities[i].name) {
+                cities[i].isSelected = true
+            }
+        }
+    }
+        
     // MARK: - API
     
     func fetchCities() {
         FirestoreService.shared.fetchCities { cities in
             self.cities = cities
+            self.loadSelectedCities()
         }
     }
 }
@@ -87,9 +108,11 @@ extension CityListController {
             city.isSelected = cities[indexPath.row].isSelected
             if city.isSelected {
                 cell.accessoryType = .checkmark
+                selectedCities.append(cities[indexPath.row])
             }
             else {
                 cell.accessoryType = .none
+                selectedCities = selectedCities.filter({ $0.id != cities[indexPath.row].id })
             }
         }
         return cell

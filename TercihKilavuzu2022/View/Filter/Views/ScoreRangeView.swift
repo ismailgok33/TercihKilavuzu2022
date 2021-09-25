@@ -19,7 +19,7 @@ class ScoreRangeView: UIView {
         return label
     }()
     
-     let minScore: UITextField = {
+     let minScoreField: UITextField = {
         let tf = UITextField()
         
         let spacer = UIView()
@@ -38,7 +38,7 @@ class ScoreRangeView: UIView {
         return tf
     }()
     
-     let maxScore: UITextField = {
+     let maxScoreField: UITextField = {
         let tf = UITextField()
         
         let spacer = UIView()
@@ -59,8 +59,17 @@ class ScoreRangeView: UIView {
     
     // MARK: - Lifecycle
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(minScore: Double?, maxScore: Double?) {
+        super.init(frame: .zero)
+        
+        if let safeMinScore = minScore {
+            minScoreField.text = "\(safeMinScore)"
+        }
+        
+        if let safeMaxScore = maxScore {
+            maxScoreField.text = "\(safeMaxScore)"
+        }
+        
         configureUI()
     }
     
@@ -76,7 +85,7 @@ class ScoreRangeView: UIView {
         addSubview(viewTitle)
         viewTitle.anchor(top: topAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 12)
         
-        let stack = UIStackView(arrangedSubviews: [minScore, maxScore])
+        let stack = UIStackView(arrangedSubviews: [minScoreField, maxScoreField])
         stack.axis = .horizontal
         stack.distribution = .fillEqually
         stack.spacing = 20

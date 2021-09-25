@@ -27,6 +27,8 @@ class UniversityController: UITableViewController {
     private var maxScore: Double?
     private var minPlacement: Int?
     private var maxPlacement: Int?
+    private var selectedCities = [City]()
+    private var selectedDepartments = [Department]()
     
     weak var delegate: UniversityControllerDelegate?
     
@@ -143,12 +145,8 @@ class UniversityController: UITableViewController {
         guard let filters = selectedFilters else { return }
         
         filteredUniversities = universities
-        
-//        if selectedFilters?.contains(.privateUniversities) && !selectedFilters?.contains(.stateUniversities) {
-//            filteredUniversities = universities.filter({ $0.type == 1 })
-//        }
-        
-        print("filters are \(filters)")
+        let selectedCityNames = selectedCities.map({ $0.name })
+        let selectedDepartmentNames = selectedDepartments.map({ $0.name })
         
         if filters.contains(.year4) && !filters.contains(.year2) {
             filteredUniversities = filteredUniversities.filter({ $0.duration == "4" })
@@ -204,6 +202,39 @@ class UniversityController: UITableViewController {
             filteredUniversities = filteredUniversities.filter({ $0.scholarship == "%0 Burslu"})
         }
         
+        if let safeMinScore = minScore {
+            filteredUniversities = filteredUniversities.filter({ $0.minScore >= safeMinScore })
+        }
+        
+        if let safeMaxScore = maxScore {
+            filteredUniversities = filteredUniversities.filter({ $0.minScore <= safeMaxScore })
+        }
+        
+        if let safeMinPlacement = minPlacement {
+            filteredUniversities = filteredUniversities.filter({ $0.placement >= safeMinPlacement })
+        }
+        
+        if let safeMaxPlacement = maxPlacement {
+            filteredUniversities = filteredUniversities.filter({ $0.placement <= safeMaxPlacement })
+        }
+                
+        if selectedCityNames.count > 0 {
+            filteredUniversities.forEach({ university in
+                if !selectedCityNames.contains(university.city) {
+                    filteredUniversities = filteredUniversities.filter({ $0 != university })
+                }
+            })
+        }
+        
+        if selectedDepartmentNames.count > 0 {
+            filteredUniversities.forEach({ university in
+                if !selectedDepartmentNames.contains(university.department) {
+                    filteredUniversities = filteredUniversities.filter({ $0 != university })
+                }
+            })
+        }
+        
+        
     }
     
     
@@ -242,6 +273,12 @@ class UniversityController: UITableViewController {
     @objc func handleFilterButtonTapped() {
         let vc = FilterController()
         vc.selectedFilters = selectedFilters ?? [FilterOptions]()
+        vc.minScore = minScore
+        vc.maxScore = maxScore
+        vc.minPlacement = minPlacement
+        vc.maxPlacement = maxPlacement
+        vc.selectedCities = selectedCities
+        vc.selectedDepartments = selectedDepartments
         vc.delegate = self
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -326,6 +363,8 @@ extension UniversityController: FilterControllerDelegate {
         maxScore = filter.maxScore
         minPlacement = filter.minPlacement
         maxPlacement = filter.maxPlacement
+        selectedCities = filter.selectedCities ?? [City]()
+        selectedDepartments = filter.selectedDepartments ?? [Department]()
                 
         filterUniversitiesWithSelectedFilters()
     }

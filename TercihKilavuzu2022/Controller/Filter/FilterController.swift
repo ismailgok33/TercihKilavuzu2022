@@ -20,6 +20,8 @@ class FilterController: UIViewController {
     var maxScore: Double?
     var minPlacement: Int?
     var maxPlacement: Int?
+    var selectedCities: [City]?
+    var selectedDepartments: [Department]?
     
     weak var delegate: FilterControllerDelegate?
     
@@ -31,8 +33,8 @@ class FilterController: UIViewController {
     private var universityTypeView : StatePrivateView?
     private var languageTypeView : LanguageView?
     private var durationTypeView : DurationView?
-    private var scoreRangeView = ScoreRangeView()
-    private var placementRangeView = PlacementRangeView()
+    private var scoreRangeView : ScoreRangeView?
+    private var placementRangeView : PlacementRangeView?
     
     private let resetButton: UIButton = {
         let button = UIButton(type: .system)
@@ -67,12 +69,18 @@ class FilterController: UIViewController {
     // MARK: - Selectors
     
     @objc func handleCityTapped() {
-        let nav = UINavigationController(rootViewController: CityListController())
+        let vc = CityListController()
+        vc.delegate = self
+        vc.selectedCities = selectedCities ?? [City]()
+        let nav = UINavigationController(rootViewController: vc)
         present(nav, animated: true, completion: nil)
     }
     
     @objc func handleDepartmentTapped() {
-        let nav = UINavigationController(rootViewController: DepartmentListController())
+        let vc = DepartmentListController()
+        vc.delegate = self
+        vc.selectedDepartments = selectedDepartments ?? [Department]()
+        let nav = UINavigationController(rootViewController: vc)
         present(nav, animated: true, completion: nil)
     }
     
@@ -83,10 +91,10 @@ class FilterController: UIViewController {
         selectedFilters.append(contentsOf: universityTypeView!.statePrivateFilterOptions)
         selectedFilters.append(contentsOf: languageTypeView!.languageFilterOptions)
         selectedFilters.append(contentsOf: durationTypeView!.durationFilterOptions)
-        minScore = Double(scoreRangeView.minScore.text ?? "")
-        maxScore = Double(scoreRangeView.maxScore.text ?? "")
-        minPlacement = Int(placementRangeView.minPlacement.text ?? "")
-        maxPlacement = Int(placementRangeView.maxPlacement.text ?? "")
+        minScore = Double(scoreRangeView?.minScoreField.text ?? "")
+        maxScore = Double(scoreRangeView?.maxScoreField.text ?? "")
+        minPlacement = Int(placementRangeView?.minPlacementField.text ?? "")
+        maxPlacement = Int(placementRangeView?.maxPlacementField.text ?? "")
                 
         delegate?.filterUniversities(self)
         navigationController?.popViewController(animated: true)
@@ -124,10 +132,12 @@ class FilterController: UIViewController {
         languageTypeView = LanguageView(filters: selectedFilters)
         universityTypeView = StatePrivateView(filters: selectedFilters)
         scholarshipView = ScholarshipView(filters: selectedFilters)
+        scoreRangeView = ScoreRangeView(minScore: minScore, maxScore: maxScore)
+        placementRangeView = PlacementRangeView(minPlacement: minPlacement, maxPlacement: maxPlacement)
         
         let stack = UIStackView(arrangedSubviews: [cityListView, departmentListView, scholarshipView!,
                                                    universityTypeView!, languageTypeView!, durationTypeView!,
-                                                   scoreRangeView, placementRangeView ])
+                                                   scoreRangeView!, placementRangeView! ])
         stack.axis = .vertical
         stack.distribution = .fillEqually
         
@@ -157,9 +167,22 @@ extension FilterController: UITextFieldDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        scoreRangeView.minScore.resignFirstResponder()
-        scoreRangeView.maxScore.resignFirstResponder()
-        placementRangeView.minPlacement.resignFirstResponder()
-        placementRangeView.maxPlacement.resignFirstResponder()
+        scoreRangeView?.minScoreField.resignFirstResponder()
+        scoreRangeView?.maxScoreField.resignFirstResponder()
+        placementRangeView?.minPlacementField.resignFirstResponder()
+        placementRangeView?.maxPlacementField.resignFirstResponder()
+    }
+}
+
+extension FilterController: CityListDelegate {
+    func saveSelectedCities(_ cityListController: CityListController) {
+        self.selectedCities = cityListController.selectedCities
+    }
+}
+
+extension FilterController: DepartmentListDelegate {
+    func saveSelectedDepartments(_ departmentListController: DepartmentListController) {
+        print("Save button is called in FilterController..")
+        self.selectedDepartments = departmentListController.selectedDepartments
     }
 }
