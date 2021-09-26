@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import RealmSwift
+import GoogleMobileAds
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } catch {
             print("Error while starting realm \(error)")
         }
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
         return true
     }
 

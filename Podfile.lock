@@ -57,6 +57,7 @@ PODS:
     - FireStore/Core
     - ReactiveSwift (~> 4.0)
     - SwiftXtend (~> 1.1)
+  - Google-Mobile-Ads-SDK (7.41.0)
   - GoogleAppMeasurement (5.4.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
     - GoogleUtilities/MethodSwizzler (~> 5.2)
@@ -123,6 +124,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Firestore
   - FireStore
+  - Google-Mobile-Ads-SDK
   - RealmSwift
 
 SPEC REPOS:
@@ -135,6 +137,7 @@ SPEC REPOS:
     - FirebaseFirestore
     - FirebaseInstanceID
     - FireStore
+    - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
     - GoogleUtilities
     - "gRPC-C++"
@@ -157,6 +160,7 @@ SPEC CHECKSUMS:
   FirebaseFirestore: 58043a1c2d2c91efdaa8d8f385cdbaa2ce750cfe
   FirebaseInstanceID: e2fa4cb35ef5558c200f7f0ad8a53e212215f93e
   FireStore: e90b5b02454dc25d2d73cf9763a8ebe8a1bd1135
+  Google-Mobile-Ads-SDK: 101ce89b94fdf60ec64ba7b6e9b9d812dc765936
   GoogleAppMeasurement: 98b71f5e04142793729a5ef23e5b96651ff4b70f
   GoogleUtilities: 04fce34bcd5620c1ee76fb79172105c74a4df335
   "gRPC-C++": 19eec1ffd34de29453f5fab5b4697ad0f240ad51
@@ -170,6 +174,6 @@ SPEC CHECKSUMS:
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   SwiftXtend: 12539d07f953ee1ce6b9653b51f681909a21e913
 
-PODFILE CHECKSUM: c2821414f98d508e0cfbda89524baf9722383602
+PODFILE CHECKSUM: 616a84c04e5c160939ed56a1ca32d02a2fa5f8e2
 
 COCOAPODS: 1.10.1

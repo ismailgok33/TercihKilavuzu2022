@@ -89,6 +89,7 @@ class UniversityController: UITableViewController {
     override func viewDidLayoutSubviews() {
         actionButton.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingLeft: view.frame.width - 56 - 16, paddingBottom: 32, paddingRight: 16, width: 56, height: 56)
         actionButton.layer.cornerRadius = 56 / 2
+        
     }
     
     
@@ -108,8 +109,6 @@ class UniversityController: UITableViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.up.arrow.down"), style: .plain, target: self, action: #selector(handleSortTapped))
         
         view.addSubview(actionButton)
-        
-        
     }
     
     func sortUniversities(byOption option: ActionSheetOptions) {

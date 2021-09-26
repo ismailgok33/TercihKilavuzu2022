@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import GoogleMobileAds
 
 class MainTabController: UITabBarController {
     
@@ -20,17 +21,30 @@ class MainTabController: UITabBarController {
     let favoriteVC = FavoritesController()
     let countdownVC = CountdownController()
     
+    private let bannerAd: GADBannerView = {
+        let banner = GADBannerView()
+        banner.adUnitID = "ca-app-pub-6180320592686930/4022248406"
+        banner.load(GADRequest())
+        banner.backgroundColor = .red
+        return banner
+    }()
+    
     //MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureViewControllers()
+        
+        bannerAd.rootViewController = self
+        view.addSubview(bannerAd)
+//        view.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, height: 50)
     }
     
-    
-    //MARK: - API
-    
+    override func viewDidLayoutSubviews() {
+        guard let tabBarHeight = tabBarController?.tabBar.frame.height else { return }
+        bannerAd.frame = CGRect(x: 0, y: view.frame.height - tabBarHeight - 50, width: view.frame.width, height: 50)
+    }
     
     
     //MARK: - Helpers

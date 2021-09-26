@@ -31,6 +31,10 @@
 		EC51D6AE26EEA0E900594A81 /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC51D6AD26EEA0E900594A81 /* University.swift */; };
 		EC51D6B026EEA16300594A81 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC51D6AF26EEA16300594A81 /* FirestoreService.swift */; };
 		EC51D6B426EEA95A00594A81 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC51D6B326EEA95A00594A81 /* GoogleService-Info.plist */; };
+		EC703E2D2700CD8400020664 /* TYTCountdownGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC703E2C2700CD8400020664 /* TYTCountdownGraphView.swift */; };
+		EC703E312700F4FD00020664 /* AYTCountdownGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC703E302700F4FD00020664 /* AYTCountdownGraphView.swift */; };
+		EC703E332700F5C700020664 /* YDTCountdownGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC703E322700F5C700020664 /* YDTCountdownGraphView.swift */; };
+		EC703E352700F9CD00020664 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC703E342700F9CD00020664 /* StoreKit.framework */; };
 		EC88418E26F9037B00D6F5C0 /* FilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88418D26F9037B00D6F5C0 /* FilterController.swift */; };
 		EC88419026F91A5100D6F5C0 /* CityListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88418F26F91A5100D6F5C0 /* CityListController.swift */; };
 		EC88419226F91BE400D6F5C0 /* DepartmentListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88419126F91BE400D6F5C0 /* DepartmentListController.swift */; };
@@ -75,6 +79,10 @@
 		EC51D6AD26EEA0E900594A81 /* University.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
 		EC51D6AF26EEA16300594A81 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		EC51D6B326EEA95A00594A81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EC703E2C2700CD8400020664 /* TYTCountdownGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TYTCountdownGraphView.swift; sourceTree = "<group>"; };
+		EC703E302700F4FD00020664 /* AYTCountdownGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AYTCountdownGraphView.swift; sourceTree = "<group>"; };
+		EC703E322700F5C700020664 /* YDTCountdownGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDTCountdownGraphView.swift; sourceTree = "<group>"; };
+		EC703E342700F9CD00020664 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		EC88418D26F9037B00D6F5C0 /* FilterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterController.swift; sourceTree = "<group>"; };
 		EC88418F26F91A5100D6F5C0 /* CityListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListController.swift; sourceTree = "<group>"; };
 		EC88419126F91BE400D6F5C0 /* DepartmentListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentListController.swift; sourceTree = "<group>"; };
@@ -96,6 +104,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BB16C6BCFA75F532604856D /* Pods_TercihKilavuzu2022.framework in Frameworks */,
+				EC703E352700F9CD00020664 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +114,7 @@
 		11FF1FDC7FAB9D19D8F5531B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EC703E342700F9CD00020664 /* StoreKit.framework */,
 				EA1BC2D92414808E49427A6A /* Pods_TercihKilavuzu2022.framework */,
 			);
 			name = Frameworks;
@@ -183,6 +193,9 @@
 				EC488B9226ECE63F005B7D31 /* UniversityCell.swift */,
 				EC8A56AB26F52BA60081587F /* ActionSheetCell.swift */,
 				EC3D113D26FA558A0031609C /* Filter */,
+				EC703E2C2700CD8400020664 /* TYTCountdownGraphView.swift */,
+				EC703E302700F4FD00020664 /* AYTCountdownGraphView.swift */,
+				EC703E322700F5C700020664 /* YDTCountdownGraphView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -386,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC703E2D2700CD8400020664 /* TYTCountdownGraphView.swift in Sources */,
 				EC488B6D26ECC209005B7D31 /* AppDelegate.swift in Sources */,
 				EC3D114926FA67FD0031609C /* PlacementRangeView.swift in Sources */,
 				EC3D114F26FA7E5C0031609C /* FilterModelView.swift in Sources */,
@@ -394,6 +408,7 @@
 				EC88419226F91BE400D6F5C0 /* DepartmentListController.swift in Sources */,
 				EC3D113F26FA56F70031609C /* ScholarshipView.swift in Sources */,
 				EC51D6B026EEA16300594A81 /* FirestoreService.swift in Sources */,
+				EC703E332700F5C700020664 /* YDTCountdownGraphView.swift in Sources */,
 				EC488B9326ECE63F005B7D31 /* UniversityCell.swift in Sources */,
 				EC3D114526FA61810031609C /* DurationView.swift in Sources */,
 				EC88419826F92CC200D6F5C0 /* CityCell.swift in Sources */,
@@ -407,6 +422,7 @@
 				EC8A56AE26F53D970081587F /* ActionSheetViewModel.swift in Sources */,
 				EC488B8726ECC33C005B7D31 /* MainTabController.swift in Sources */,
 				EC88419026F91A5100D6F5C0 /* CityListController.swift in Sources */,
+				EC703E312700F4FD00020664 /* AYTCountdownGraphView.swift in Sources */,
 				EC88419C26F933BF00D6F5C0 /* Department.swift in Sources */,
 				ECC22CBC26EFE5C000350A4F /* RealmService.swift in Sources */,
 				EC3D114B26FA742C0031609C /* CityListView.swift in Sources */,
@@ -566,6 +582,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G3P4L7GVWA;
 				INFOPLIST_FILE = TercihKilavuzu2022/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -585,6 +602,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G3P4L7GVWA;
 				INFOPLIST_FILE = TercihKilavuzu2022/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
