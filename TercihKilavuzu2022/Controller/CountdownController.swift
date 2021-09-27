@@ -32,12 +32,6 @@ class CountdownController: UIViewController {
         configureUI()
     }
     
-//    override func viewDidLayoutSubviews() {
-//        guard let tabBarHeight = tabBarController?.tabBar.frame.height else { return }
-//
-//        bannerAd.frame = CGRect(x: 0, y: view.frame.height - tabBarHeight - 50, width: view.frame.width, height: 50)
-//    }
-    
     // MARK: Helpers
     
     func configureUI() {
@@ -52,13 +46,12 @@ class CountdownController: UIViewController {
         view.addSubview(stack)
         stack.addConstraintsToSafelyFillView(view)
         stack.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor)
-        
-//        bannerAd.rootViewController = self
-//        view.addSubview(bannerAd)
     }
     
     
 }
+
+// MARK: - NSObject extension for copying a class
 
 extension NSObject {
     func copyObject<T:NSObject>() throws -> T? {

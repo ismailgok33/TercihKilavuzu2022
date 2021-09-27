@@ -359,6 +359,7 @@ extension UniversityController: UniversityCellDelegate {
     }
 }
 
+// MARK: - UISearchResultsUpdating
 
 extension UniversityController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
@@ -386,6 +387,7 @@ extension UniversityController: ActionSheetLauncherDelegate {
     }
 }
 
+// MARK: - FilterControllerDelegate
 
 extension UniversityController: FilterControllerDelegate {
     func filterUniversities(_ filter: FilterController) {
@@ -401,6 +403,7 @@ extension UniversityController: FilterControllerDelegate {
     }
 }
 
+// MARK: - GADInterstitialDelegate
 
 extension UniversityController: GADInterstitialDelegate {
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {

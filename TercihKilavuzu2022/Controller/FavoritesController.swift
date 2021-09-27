@@ -179,6 +179,8 @@ extension FavoritesController: UniversityCellDelegate {
     }
 }
 
+// MARK: - GADInterstitialDelegate
+
 extension FavoritesController: GADInterstitialDelegate {
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {
         interstitialAd = createInterstitialAd()
