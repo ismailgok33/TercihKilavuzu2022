@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import GoogleMobileAds
 
 private let reuseIdentifier = "favoriteCell"
 
@@ -30,6 +31,17 @@ class FavoritesController: UITableViewController {
         }
     }
     
+    private let bannerAd: GADBannerView = {
+        let banner = GADBannerView()
+        banner.adUnitID = "ca-app-pub-6180320592686930/4022248406"
+        banner.load(GADRequest())
+        banner.backgroundColor = .secondarySystemBackground
+        return banner
+    }()
+    
+    private var interstitialAd: GADInterstitial?
+
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -39,12 +51,26 @@ class FavoritesController: UITableViewController {
         loadFavorites()
         sortFavoritesByNameAsc()
         
+        // Adding BannerAD to Subview
+        bannerAd.rootViewController = self
+        self.navigationController?.view.addSubview(bannerAd)
+        
+        interstitialAd = createInterstitialAd()
+        
 //        favorites?.observe({ notification in
 //            print("DEBUG: Realm observer is \(notification)")
 //            DispatchQueue.main.async {
 //                self.tableView.reloadData()
 //            }
 //        })
+    }
+    
+    override func viewDidLayoutSubviews() {
+        guard let tabBarHeight = tabBarController?.tabBar.frame.height else { return }
+        bannerAd.frame = CGRect(x: 0, y: view.frame.height - tabBarHeight - BANNER_AD_HEIGHT, width: view.frame.width, height: 50)
+        
+        guard let tabBarHeight = tabBarController?.tabBar.frame.height else { return }
+        tableView.contentInset.bottom = tabBarHeight + BANNER_AD_HEIGHT
     }
     
     // MARK: - Helpers
@@ -62,6 +88,13 @@ class FavoritesController: UITableViewController {
     func sortFavoritesByNameAsc() {
         
         favorites = favorites?.sorted(byKeyPath: "name", ascending: true)
+    }
+    
+    private func createInterstitialAd() -> GADInterstitial {
+        let ad = GADInterstitial(adUnitID: INTERSTITIAL_AD_ID)
+        ad.delegate = self
+        ad.load(GADRequest())
+        return ad
     }
     
     // MARK: - API
@@ -110,6 +143,16 @@ extension FavoritesController {
 extension FavoritesController: UniversityCellDelegate {
     func handleFavoriteTapped(_ cell: UniversityCell) {
         
+        if interstitialAd?.isReady == true {
+            interstitialAd?.present(fromRootViewController: self)
+        }
+        
         delegate?.handleFavoriteTappedAtFavoritesController(cell)
+    }
+}
+
+extension FavoritesController: GADInterstitialDelegate {
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        interstitialAd = createInterstitialAd()
     }
 }

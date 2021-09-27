@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import GoogleMobileAds
 
 private let reuseIdentifier = "universityCell"
 
@@ -76,6 +77,16 @@ class UniversityController: UITableViewController {
         return button
     }()
     
+    private let bannerAd: GADBannerView = {
+        let banner = GADBannerView()
+        banner.adUnitID = BANNER_AD_ID
+        banner.load(GADRequest())
+        banner.backgroundColor = .secondarySystemBackground
+        return banner
+    }()
+    
+    private var interstitialAd: GADInterstitial?
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -84,12 +95,19 @@ class UniversityController: UITableViewController {
         fetchUniversities()
         sortUniversities(byOption: .nameAsc)
         filteredUniversities = universities
+        
+        interstitialAd = createInterstitialAd()
     }
     
     override func viewDidLayoutSubviews() {
-        actionButton.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingLeft: view.frame.width - 56 - 16, paddingBottom: 32, paddingRight: 16, width: 56, height: 56)
+        actionButton.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingLeft: view.frame.width - 56 - 16, paddingBottom: 16 + BANNER_AD_HEIGHT, paddingRight: 16, width: 56, height: 56)
         actionButton.layer.cornerRadius = 56 / 2
         
+        guard let tabBarHeight = tabBarController?.tabBar.frame.height else { return }
+        bannerAd.frame = CGRect(x: 0, y: view.frame.height - tabBarHeight - BANNER_AD_HEIGHT, width: view.frame.width, height: 50)
+        
+        guard let tabBarHeight = tabBarController?.tabBar.frame.height else { return }
+        tableView.contentInset.bottom = tabBarHeight + BANNER_AD_HEIGHT
     }
     
     
@@ -109,6 +127,9 @@ class UniversityController: UITableViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.up.arrow.down"), style: .plain, target: self, action: #selector(handleSortTapped))
         
         view.addSubview(actionButton)
+        
+        bannerAd.rootViewController = self
+        self.navigationController?.view.addSubview(bannerAd)
     }
     
     func sortUniversities(byOption option: ActionSheetOptions) {
@@ -236,6 +257,13 @@ class UniversityController: UITableViewController {
         
     }
     
+    private func createInterstitialAd() -> GADInterstitial {
+        let ad = GADInterstitial(adUnitID: INTERSTITIAL_AD_ID)
+        ad.delegate = self
+        ad.load(GADRequest())
+        return ad
+    }
+    
     
     // MARK: - API
     
@@ -323,6 +351,10 @@ extension UniversityController {
 extension UniversityController: UniversityCellDelegate {
     func handleFavoriteTapped(_ cell: UniversityCell) {
         
+        if interstitialAd?.isReady == true {
+            interstitialAd?.present(fromRootViewController: self)
+        }
+        
         delegate?.handleFavoriteTappedAtUniversityController(cell)
     }
 }
@@ -366,5 +398,12 @@ extension UniversityController: FilterControllerDelegate {
         selectedDepartments = filter.selectedDepartments ?? [Department]()
                 
         filterUniversitiesWithSelectedFilters()
+    }
+}
+
+
+extension UniversityController: GADInterstitialDelegate {
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        interstitialAd = createInterstitialAd()
     }
 }

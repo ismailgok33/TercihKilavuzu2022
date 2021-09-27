@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 protocol UniversityCellDelegate: AnyObject {
     func handleFavoriteTapped(_ cell: UniversityCell)
@@ -20,7 +21,7 @@ class UniversityCell: UITableViewCell {
             configure()
         }
     }
-    
+        
     weak var delegate: UniversityCellDelegate?
     
     private let universityNameLabel: UILabel = {
