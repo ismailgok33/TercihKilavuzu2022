@@ -80,6 +80,8 @@ class FavoritesController: UITableViewController {
         tableView.register(UniversityCell.self, forCellReuseIdentifier: reuseIdentifier)
         tableView.allowsSelection = false
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(handleShareTapped))
+        
         let refreshControl = UIRefreshControl()
         tableView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
@@ -110,6 +112,32 @@ class FavoritesController: UITableViewController {
     
     @objc func handleRefresh() {
         loadFavorites()
+    }
+    
+    @objc func handleShareTapped() {
+        // text to share
+        var favoriteTextList = ""
+        
+        favorites?.forEach({ favorite in
+            favoriteTextList += "- \(favorite.name) / \(favorite.department) \n"
+        })
+        
+        if favoriteTextList == "" {
+            let alert = UIAlertController(title: "Uyarı", message: "Paylaşılacak favori bulunamadı", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        else {
+            let textToShare = [ favoriteTextList ]
+            let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+            activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+            
+            activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
+            
+            self.present(activityViewController, animated: true, completion: nil)
+        }
+        
+       
     }
 }
 
