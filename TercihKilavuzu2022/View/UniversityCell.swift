@@ -61,6 +61,19 @@ class UniversityCell: UITableViewCell {
         return button
     }()
     
+    private let typeLabel: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("SAY", for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+//        button.setTitleColor(.white, for: .normal)
+        button.tintColor = .white
+        button.layer.borderWidth = 1.25
+        button.layer.borderColor = UIColor.white.cgColor
+        button.backgroundColor = .green
+//        button.setDimensions(width: 30, height: 10)
+        return button
+    }()
+    
     
     // MARK: - Lifecycle
     
@@ -102,8 +115,13 @@ class UniversityCell: UITableViewCell {
         bottomStack.axis = .horizontal
         bottomStack.distribution = .equalSpacing
         
+        addSubview(typeLabel)
+//        typeLabel.anchor(top: departmentLabel.bottomAnchor, right: rightAnchor, paddingTop: 24 + 50 / 2, paddingRight: 12)
+        typeLabel.anchor(bottom: bottomAnchor, right: rightAnchor, paddingBottom: 12, paddingRight: 12)
+        typeLabel.setDimensions(width: 50, height: 25)
+        
         addSubview(bottomStack)
-        bottomStack.anchor(top: departmentLabel.bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 24, paddingLeft: 24, paddingRight: 24)
+        bottomStack.anchor(top: departmentLabel.bottomAnchor, left: leftAnchor, right: typeLabel.leftAnchor, paddingTop: 24, paddingLeft: 24, paddingRight: 24)
         
     }
     
@@ -142,5 +160,7 @@ class UniversityCell: UITableViewCell {
         placementValue.text = String(university.placement)
         quotaValue.text = String(university.quota)
         favoriteButton.setImage(viewModel.favoriteButtonImage, for: .normal)
+        typeLabel.setTitle(university.type, for: .normal)
+        typeLabel.backgroundColor = viewModel.typeColor
     }
 }

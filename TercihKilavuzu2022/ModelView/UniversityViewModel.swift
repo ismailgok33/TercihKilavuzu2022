@@ -27,6 +27,23 @@ struct UniversityViewModel {
         return UIImage(systemName: imageName)!
     }
     
+    var typeColor: UIColor {
+        var color = UIColor.clear
+        
+        switch university.type {
+        case "SAY":
+            color = .green
+        case "EA":
+            color = .blue
+        case "SÖZ":
+            color = .brown
+        default:
+            color = .clear
+        }
+        
+        return color
+    }
+    
     init(university: University) {
         self.university = university
     }
