@@ -55,7 +55,7 @@ class TYTCountdownGraphView: UIView {
     
     func drawBgShape() {
         bgShapeLayer.path = UIBezierPath(arcCenter: CGPoint(x: frame.midX , y: frame.midY), radius:
-            100, startAngle: -90.degreesToRadians, endAngle: 270.degreesToRadians, clockwise: true).cgPath
+            70, startAngle: -90.degreesToRadians, endAngle: 270.degreesToRadians, clockwise: true).cgPath
         bgShapeLayer.strokeColor = UIColor.white.cgColor
         bgShapeLayer.fillColor = UIColor.clear.cgColor
         bgShapeLayer.lineWidth = 15
@@ -63,7 +63,7 @@ class TYTCountdownGraphView: UIView {
     }
     func drawTimeLeftShape() {
         timeLeftShapeLayer.path = UIBezierPath(arcCenter: CGPoint(x: frame.midX , y: frame.midY), radius:
-            100, startAngle: -90.degreesToRadians, endAngle: 270.degreesToRadians, clockwise: true).cgPath
+            70, startAngle: -90.degreesToRadians, endAngle: 270.degreesToRadians, clockwise: true).cgPath
         timeLeftShapeLayer.strokeColor = UIColor.myCustomBlue.cgColor
         timeLeftShapeLayer.fillColor = UIColor.clear.cgColor
         timeLeftShapeLayer.lineWidth = 15
@@ -73,7 +73,8 @@ class TYTCountdownGraphView: UIView {
     func addTimeLabel() {
         timeLabel = UILabel(frame: CGRect(x: frame.midX-50 ,y: frame.midY-25, width: 100, height: 50))
         timeLabel.textAlignment = .center
-        timeLabel.text = timeLeft.time
+//        timeLabel.text = timeLeft.time
+        timeLabel.text = "\(timeLeft) gün kaldı"
 //        timeLabel.text = endTime.time
         addSubview(timeLabel)
     }
@@ -83,9 +84,9 @@ class TYTCountdownGraphView: UIView {
     @objc func updateTime() {
         if timeLeft > 0 {
             timeLeft -= 1
-            timeLabel.text = timeLeft.time
+            timeLabel.text = "\(Int(timeLeft)) gün kaldı"
         } else {
-            timeLabel.text = "00:00"
+            timeLabel.text = "0 gün kaldı."
             timer.invalidate()
         }
     }
