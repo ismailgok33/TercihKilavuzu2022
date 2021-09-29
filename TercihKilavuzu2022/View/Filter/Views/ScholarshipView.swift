@@ -189,7 +189,9 @@ class ScholarshipView: UIView {
     // MARK: - Helpers
     
     func configureUI() {
-        backgroundColor = .filterBackgroundColor
+//        backgroundColor = .filterBackgroundColor
+        backgroundColor = .clear
+        
         if filterScholarshipOptions.count == 0 || filterScholarshipOptions.contains(.scholarshipAll) {
             allButton.tintColor = .red
             allButton.layer.borderColor = UIColor.red.cgColor

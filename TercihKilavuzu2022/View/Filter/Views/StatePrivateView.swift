@@ -116,7 +116,8 @@ class StatePrivateView: UIView {
     // MARK: - Helpers
     
     func configureUI() {
-        backgroundColor = .filterBackgroundColor
+//        backgroundColor = .filterBackgroundColor
+        backgroundColor = .clear
         if statePrivateFilterOptions.count == 0 || statePrivateFilterOptions.contains(.allUniversityTypes) {
             allButton.tintColor = .red
             allButton.layer.borderColor = UIColor.red.cgColor

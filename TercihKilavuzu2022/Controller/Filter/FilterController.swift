@@ -36,16 +36,17 @@ class FilterController: UIViewController {
     private var scoreRangeView : ScoreRangeView?
     private var placementRangeView : PlacementRangeView?
     
-    private let resetButton: UIButton = {
+    private lazy var resetButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setDimensions(width: 100, height: 50)
+        button.setDimensions(width: 60, height: 40)
         button.backgroundColor = UIColor(white: 0, alpha: 0.2)
         button.setTitle("Sıfırla", for: .normal)
         button.tintColor = .white
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-        button.layer.cornerRadius = 50 / 2
+        button.layer.cornerRadius = 40 / 2
         button.layer.borderWidth = 2
         button.layer.borderColor = UIColor.white.cgColor
+        button.addTarget(self, action: #selector(handleResetButtonTapped), for: .touchUpInside)
         return button
     }()
     
@@ -63,6 +64,7 @@ class FilterController: UIViewController {
         // call the 'keyboardWillHide' function when the view controlelr receive notification that keyboard is going to be hidden
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
+        configureGradientLayer()
         configureUI()
     }
     
@@ -85,6 +87,7 @@ class FilterController: UIViewController {
     }
     
     @objc func handleSaveFilterTapped() {
+        
         selectedFilters.removeAll() // delete all filters first
         
         selectedFilters.append(contentsOf: scholarshipView!.filterScholarshipOptions)
@@ -101,7 +104,20 @@ class FilterController: UIViewController {
     }
     
     @objc func handleResetButtonTapped() {
-        print("DEBUG: Reset button is tapped in Filter Screen..")
+        selectedFilters.removeAll()
+        minScore = nil
+        maxScore = nil
+        minPlacement = nil
+        maxPlacement = nil
+        
+        durationTypeView?.handleAllButtonTapped()
+        languageTypeView?.handleAllButtonTapped()
+        universityTypeView?.handleAllButtonTapped()
+        scholarshipView?.handleAllButtonTapped()
+        scoreRangeView?.minScoreField.text = nil
+        scoreRangeView?.maxScoreField.text = nil
+        placementRangeView?.minPlacementField.text = nil
+        placementRangeView?.maxPlacementField.text = nil
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -124,7 +140,9 @@ class FilterController: UIViewController {
     // MARK: Helpers
     
     func configureUI() {
-        view.backgroundColor = .filterBackgroundColor
+//        view.backgroundColor = .filterBackgroundColor
+        
+        title = "Filtrele"
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filtrele", style: .done, target: self, action: #selector(handleSaveFilterTapped))
         
@@ -153,8 +171,19 @@ class FilterController: UIViewController {
         
         view.addSubview(resetButton)
         resetButton.anchor(top:stack.bottomAnchor, left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor,
-                           paddingTop: 20, paddingLeft: 25, paddingBottom: 20, paddingRight: 25)
+                           paddingTop: 20, paddingLeft: 70, paddingBottom: 20, paddingRight: 70)
         
+    }
+    
+    func configureGradientLayer() {
+        let topColor = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
+        let bottomColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [topColor.cgColor, bottomColor.cgColor]
+        gradientLayer.locations = [0, 1]
+        view.layer.addSublayer(gradientLayer)
+        gradientLayer.frame = view.frame
     }
     
 }

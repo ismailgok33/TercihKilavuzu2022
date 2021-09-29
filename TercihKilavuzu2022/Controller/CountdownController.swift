@@ -46,6 +46,15 @@ class CountdownController: UIViewController {
         view.addSubview(stack)
         stack.addConstraintsToSafelyFillView(view)
         stack.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "info.circle"), style: .plain, target: self, action: #selector(handleAboutButtonTapped))
+    }
+    
+    
+    // MARK: - Selectors
+    
+    @objc func handleAboutButtonTapped() {
+        navigationController?.pushViewController(AboutController(), animated: true)
     }
     
     

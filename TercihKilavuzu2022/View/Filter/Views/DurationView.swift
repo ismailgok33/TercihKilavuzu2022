@@ -117,7 +117,9 @@ class DurationView: UIView {
     // MARK: - Helpers
     
     func configureUI() {
-        backgroundColor = .filterBackgroundColor
+//        backgroundColor = .filterBackgroundColor
+        backgroundColor = .clear
+        
         if durationFilterOptions.count == 0 || durationFilterOptions.contains(.allYears) {
             allButton.tintColor = .red
             allButton.layer.borderColor = UIColor.red.cgColor

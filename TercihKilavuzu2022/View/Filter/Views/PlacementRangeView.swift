@@ -81,7 +81,8 @@ class PlacementRangeView: UIView {
     // MARK: - Helpers
     
     func configureUI() {
-        backgroundColor = .filterBackgroundColor
+//        backgroundColor = .filterBackgroundColor
+        backgroundColor = .clear
         
         addSubview(viewTitle)
         viewTitle.anchor(top: topAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 12)

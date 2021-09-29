@@ -77,7 +77,7 @@ class UniversityController: UITableViewController {
         return button
     }()
     
-    private let bannerAd: GADBannerView = {
+    let bannerAd: GADBannerView = {
         let banner = GADBannerView()
         banner.adUnitID = BANNER_AD_ID
         banner.load(GADRequest())
@@ -110,6 +110,9 @@ class UniversityController: UITableViewController {
         tableView.contentInset.bottom = tabBarHeight + BANNER_AD_HEIGHT
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        bannerAd.isHidden = false
+    }
     
     // MARK: - Helpers
     
@@ -257,7 +260,7 @@ class UniversityController: UITableViewController {
         
     }
     
-    private func createInterstitialAd() -> GADInterstitial {
+    func createInterstitialAd() -> GADInterstitial {
         let ad = GADInterstitial(adUnitID: INTERSTITIAL_AD_ID)
         ad.delegate = self
         ad.load(GADRequest())
@@ -298,6 +301,8 @@ class UniversityController: UITableViewController {
     // MARK: - Selectors
     
     @objc func handleFilterButtonTapped() {
+        bannerAd.isHidden = true
+        
         let vc = FilterController()
         vc.selectedFilters = selectedFilters ?? [FilterOptions]()
         vc.minScore = minScore
@@ -391,6 +396,8 @@ extension UniversityController: ActionSheetLauncherDelegate {
 
 extension UniversityController: FilterControllerDelegate {
     func filterUniversities(_ filter: FilterController) {
+//        bannerAd.isHidden = false
+        
         selectedFilters = filter.selectedFilters
         minScore = filter.minScore
         maxScore = filter.maxScore

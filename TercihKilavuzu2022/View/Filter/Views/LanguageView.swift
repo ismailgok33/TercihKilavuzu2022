@@ -116,8 +116,9 @@ class LanguageView: UIView {
     // MARK: - Helpers
     
     func configureUI() {
-        backgroundColor = .filterBackgroundColor
-        print("DEBUG: languageFilterOptions: \(languageFilterOptions)")
+//        backgroundColor = .filterBackgroundColor
+        backgroundColor = .clear
+        
         if languageFilterOptions.count == 0 || languageFilterOptions.contains(.allLanguages){
             allButton.tintColor = .red
             allButton.layer.borderColor = UIColor.red.cgColor
