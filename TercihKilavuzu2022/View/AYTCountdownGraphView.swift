@@ -11,82 +11,112 @@ class AYTCountdownGraphView: UIView {
     
     // MARK: - Properties
     
-    private let timeLeftShapeLayer = CAShapeLayer()
-    private let bgShapeLayer = CAShapeLayer()
-    private var timeLeft: TimeInterval = 250
-    private var endTime: TimeInterval = 365
-    private var timeLabel =  UILabel()
-    private var timer = Timer()
-    // here you create your basic animation object to animate the strokeEnd
-    private let strokeIt = CABasicAnimation(keyPath: "strokeEnd")
+    var shapeLayer: CAShapeLayer!
+    var pulsatingLayer: CAShapeLayer!
+    
+    private var remainingDays: Int
+    
+    let percentageLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.textColor = .white
+        return label
+    }()
     
     // MARK: - Lifecycle
-    
+
     override init(frame: CGRect) {
+        self.remainingDays = 250
+
         super.init(frame: frame)
+        
+        let attributedString = NSMutableAttributedString(attributedString: NSAttributedString(string: "TYT", attributes: [.font: UIFont.boldSystemFont(ofSize: 32)]))
+        attributedString.append(NSAttributedString(string: "(\(remainingDays))", attributes: [.font: UIFont.systemFont(ofSize: 16)]))
+        percentageLabel.attributedText = attributedString
+        
+        backgroundColor = UIColor.backgroundColor
+        
+        setupCircleLayers()
+        
+        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
+        
+        setupPercentageLabel()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    override func layoutSubviews() {
-        configureUI()
-    }
+
     
     // MARK: - Helpers
     
-    func configureUI() {
-        backgroundColor = UIColor(white: 0.94, alpha: 1.0)
-        drawBgShape()
-        drawTimeLeftShape()
-        addTimeLabel()
-        // here you define the fromValue, toValue and duration of your animation
-        strokeIt.fromValue = Float(365-250)/Float(365)
-        strokeIt.toValue = 1
-//        strokeIt.duration = timeLeft
-        strokeIt.duration = (365-250)*60
-        // add the animation to your timeLeftShapeLayer
-        timeLeftShapeLayer.add(strokeIt, forKey: nil)
-        // define the future end time by adding the timeLeft to now Date()
-        //endTime = Date().addingTimeInterval(timeLeft)
-        //timer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+    private func createCircleShapeLayer(strokeColor: UIColor, fillColor: UIColor) -> CAShapeLayer {
+        let layer = CAShapeLayer()
+        let circularPath = UIBezierPath(arcCenter: .zero, radius: 90, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        layer.path = circularPath.cgPath
+        layer.strokeColor = strokeColor.cgColor
+        layer.lineWidth = 16
+        layer.fillColor = fillColor.cgColor
+        layer.lineCap = CAShapeLayerLineCap.round
+        layer.position = center
+        return layer
     }
     
-    func drawBgShape() {
-        bgShapeLayer.path = UIBezierPath(arcCenter: CGPoint(x: frame.midX , y: frame.midY), radius:
-            70, startAngle: -90.degreesToRadians, endAngle: 270.degreesToRadians, clockwise: true).cgPath
-        bgShapeLayer.strokeColor = UIColor.white.cgColor
-        bgShapeLayer.fillColor = UIColor.clear.cgColor
-        bgShapeLayer.lineWidth = 15
-        layer.addSublayer(bgShapeLayer)
-    }
-    func drawTimeLeftShape() {
-        timeLeftShapeLayer.path = UIBezierPath(arcCenter: CGPoint(x: frame.midX , y: frame.midY), radius:
-            70, startAngle: -90.degreesToRadians, endAngle: 270.degreesToRadians, clockwise: true).cgPath
-        timeLeftShapeLayer.strokeColor = UIColor.myCustomBlue.cgColor
-        timeLeftShapeLayer.fillColor = UIColor.clear.cgColor
-        timeLeftShapeLayer.lineWidth = 15
-        layer.addSublayer(timeLeftShapeLayer)
+    private func setupPercentageLabel() {
+        addSubview(percentageLabel)
+        percentageLabel.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
+        percentageLabel.center = center
     }
     
-    func addTimeLabel() {
-        timeLabel = UILabel(frame: CGRect(x: frame.midX-50 ,y: frame.midY-25, width: 100, height: 50))
-        timeLabel.textAlignment = .center
-        timeLabel.text = timeLeft.time
-//        timeLabel.text = endTime.time
-        addSubview(timeLabel)
+    private func setupCircleLayers() {
+        pulsatingLayer = createCircleShapeLayer(strokeColor: .clear, fillColor: UIColor.pulsatingFillColor)
+        layer.addSublayer(pulsatingLayer)
+        animatePulsatingLayer()
+        
+        let trackLayer = createCircleShapeLayer(strokeColor: .trackStrokeColor, fillColor: .backgroundColor)
+        layer.addSublayer(trackLayer)
+        
+        shapeLayer = createCircleShapeLayer(strokeColor: .outlineStrokeColor, fillColor: .clear)
+        
+        shapeLayer.transform = CATransform3DMakeRotation(-CGFloat.pi / 2, 0, 0, 1)
+        shapeLayer.strokeEnd = 0
+        layer.addSublayer(shapeLayer)
+    }
+    
+    private func animatePulsatingLayer() {
+        let animation = CABasicAnimation(keyPath: "transform.scale")
+        
+        animation.toValue = 1.25
+        animation.duration = 0.8
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+        animation.autoreverses = true
+        animation.repeatCount = Float.infinity
+        
+        pulsatingLayer.add(animation, forKey: "pulsing")
+    }
+    
+    func animateCircle() {
+        let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        
+        basicAnimation.toValue = CGFloat(365 - remainingDays) / CGFloat(365)
+        
+        basicAnimation.duration = 2
+        
+        basicAnimation.fillMode = CAMediaTimingFillMode.forwards
+        basicAnimation.isRemovedOnCompletion = false
+        
+        shapeLayer.add(basicAnimation, forKey: "urSoBasic")
     }
     
     // MARK: - Selectors
     
-    @objc func updateTime() {
-        if timeLeft > 0 {
-            timeLeft -= 1
-            timeLabel.text = timeLeft.time
-        } else {
-            timeLabel.text = "00:00"
-            timer.invalidate()
-        }
+    @objc private func handleEnterForeground() {
+        animatePulsatingLayer()
+    }
+    
+    @objc private func handleTap() {
+        print("Attempting to animate stroke")
+                
+        animateCircle()
     }
 }

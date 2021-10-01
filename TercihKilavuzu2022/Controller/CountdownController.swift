@@ -12,90 +12,57 @@ class CountdownController: UIViewController {
     
     // MARK: - Properties
     
-    private var tytCountdownGraphView = TYTCountdownGraphView()
-    private var aytCountdownGraphView = AYTCountdownGraphView()
-    private var ydtCountdownGraphView = YDTCountdownGraphView()
+    private var tytView: TYTCountdownGraphView!
+    private var aytView: AYTCountdownGraphView!
+    private var ydtView: YDTCountdownGraphView!
     
-    private let tytLabel : UILabel = {
+    private let countdownTitle: UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 18)
-        label.text = "TYT"
+        label.text = "Sınavlara kalan süreler"
         label.textColor = .white
+        label.textAlignment = .center
+        label.font = .boldSystemFont(ofSize: 26)
         return label
     }()
-    
-    private let aytLabel : UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 18)
-        label.text = "AYT"
-        label.textColor = .white
-        return label
-    }()
-    
-    private let ydtLabel : UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 18)
-        label.text = "YDT"
-        label.textColor = .white
-        return label
-    }()
-    
-    private let seperator: UIView = {
-        let view = UIView()
-        view.backgroundColor = .white
-        return view
-    }()
-    
+        
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureGradientLayer()
+        tytView = TYTCountdownGraphView(frame: CGRect(x: 0, y: 0, width: .zero, height: view.frame.height / 3 - 20))
+        aytView = AYTCountdownGraphView(frame: CGRect(x: 0, y: 0, width: .zero, height: view.frame.height / 3 - 20))
+        ydtView = YDTCountdownGraphView(frame: CGRect(x: 0, y: 0, width: .zero, height: view.frame.height / 3 - 20))
+        
+//        configureGradientLayer()
         configureUI()
     }
     
-    override func viewDidLayoutSubviews() {
-        seperator.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 1)
+    override func viewWillAppear(_ animated: Bool) {
+        tytView.animateCircle()
+        aytView.animateCircle()
+        ydtView.animateCircle()
     }
     
     // MARK: Helpers
     
     func configureUI() {
-//        view.backgroundColor = .red
+        view.backgroundColor = .backgroundColor
         
         
-        let tytStack = UIStackView(arrangedSubviews: [tytLabel, tytCountdownGraphView])
-//        tytStack.widthAnchor.constraint(equalToConstant: view.frame.width).isActive = true
-        tytStack.axis = .vertical
-        tytStack.alignment = .center
-        tytStack.spacing = -10
-//        tytStack.backgroundColor = .red
-        
-        let aytStack = UIStackView(arrangedSubviews: [aytLabel, aytCountdownGraphView])
-        aytStack.axis = .vertical
-        aytStack.alignment = .center
-        aytStack.spacing = -10
-//        aytStack.backgroundColor = .blue
-        
-        let ydtStack = UIStackView(arrangedSubviews: [ydtLabel, ydtCountdownGraphView])
-        ydtStack.axis = .vertical
-        ydtStack.alignment = .center
-        ydtStack.spacing = -10
-//        ydtStack.backgroundColor = .green
-    
-        
-        let stack = UIStackView(arrangedSubviews: [tytStack, seperator, aytStack, seperator, ydtStack])
+        let stack = UIStackView(arrangedSubviews: [tytView, aytView, ydtView])
         stack.axis = .vertical
         stack.distribution = .fillEqually
         stack.alignment = .center
         stack.spacing = 20
 
         view.addSubview(stack)
-//        stack.frame = view.frame
-        stack.addConstraintsToSafelyFillView(view)
-        stack.anchor(paddingTop: 20, paddingBottom: 20)
-//        stack.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor)
+        stack.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingBottom: 10)
+//        stack.addConstraintsToSafelyFillView(view)
+//        stack.anchor(paddingTop: 10, paddingBottom: 20)
+        
+        view.addSubview(countdownTitle)
+        countdownTitle.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingRight: 10)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "info.circle"), style: .plain, target: self, action: #selector(handleAboutButtonTapped))
     }

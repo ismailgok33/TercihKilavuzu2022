@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class AboutController: UIViewController {
     
@@ -71,6 +72,8 @@ class AboutController: UIViewController {
     
     @objc func goToAppWebSite() {
         guard let url = URL(string: "http://www.google.com") else { return }
-        UIApplication.shared.open(url)
+        let vc = SFSafariViewController(url: url)
+        present(vc, animated: true, completion: nil)
+//        UIApplication.shared.open(url)
     }
 }
