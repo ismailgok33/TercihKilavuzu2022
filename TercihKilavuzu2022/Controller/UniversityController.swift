@@ -136,31 +136,32 @@ class UniversityController: UITableViewController {
     }
     
     func sortUniversities(byOption option: ActionSheetOptions) {
+        
         switch option {
         case .nameAsc:
-            return universities.sort(by: { $0.name < $1.name })
+            return filteredUniversities.sort(by: { $0.name < $1.name })
         case .nameDesc:
-            return universities.sort(by: { $0.name > $1.name })
+            return filteredUniversities.sort(by: { $0.name > $1.name })
         case .minScoreAsc:
-            return universities.sort(by: { $0.minScore < $1.minScore })
+            return filteredUniversities.sort(by: { $0.minScore < $1.minScore })
         case .minScoreDesc:
-            return universities.sort(by: { $0.minScore > $1.minScore })
+            return filteredUniversities.sort(by: { $0.minScore > $1.minScore })
         case .placementAsc:
-            return universities.sort(by: { $0.placement < $1.placement })
+            return filteredUniversities.sort(by: { $0.placement < $1.placement })
         case .placementDesc:
-            return universities.sort(by: { $0.placement > $1.placement })
+            return filteredUniversities.sort(by: { $0.placement > $1.placement })
         case .departmentAsc:
-            return universities.sort(by: { $0.department < $1.department })
+            return filteredUniversities.sort(by: { $0.department < $1.department })
         case .departmenDesc:
-            return universities.sort(by: { $0.department > $1.department })
+            return filteredUniversities.sort(by: { $0.department > $1.department })
         case .cityAsc:
-           return universities.sort(by: { $0.city < $1.city })
+           return filteredUniversities.sort(by: { $0.city < $1.city })
         case .cityDesc:
-            return universities.sort(by: { $0.city > $1.city })
+            return filteredUniversities.sort(by: { $0.city > $1.city })
         case .quotaAsc:
-            return universities.sort(by: { $0.quota < $1.quota })
+            return filteredUniversities.sort(by: { $0.quota < $1.quota })
         case .quotaDesc:
-            return universities.sort(by: { $0.quota > $1.quota })
+            return filteredUniversities.sort(by: { $0.quota > $1.quota })
         }
     }
     
