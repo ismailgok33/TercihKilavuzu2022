@@ -30,7 +30,7 @@ class AYTCountdownGraphView: UIView {
 
         super.init(frame: frame)
         
-        let attributedString = NSMutableAttributedString(attributedString: NSAttributedString(string: "TYT", attributes: [.font: UIFont.boldSystemFont(ofSize: 32)]))
+        let attributedString = NSMutableAttributedString(attributedString: NSAttributedString(string: "AYT", attributes: [.font: UIFont.boldSystemFont(ofSize: 32)]))
         attributedString.append(NSAttributedString(string: "(\(remainingDays))", attributes: [.font: UIFont.systemFont(ofSize: 16)]))
         percentageLabel.attributedText = attributedString
         
