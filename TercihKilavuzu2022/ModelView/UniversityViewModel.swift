@@ -37,6 +37,8 @@ struct UniversityViewModel {
             color = .blue
         case "SÖZ":
             color = .brown
+        case "DİL":
+            color = .orange
         default:
             color = .clear
         }

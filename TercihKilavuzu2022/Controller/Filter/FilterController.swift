@@ -22,6 +22,7 @@ class FilterController: UIViewController {
     var maxPlacement: Int?
     var selectedCities: [City]?
     var selectedDepartments: [Department]?
+    var showEmptyScoreAndPlacement = false
     
     weak var delegate: FilterControllerDelegate?
     
@@ -35,6 +36,25 @@ class FilterController: UIViewController {
     private var durationTypeView : DurationView?
     private var scoreRangeView : ScoreRangeView?
     private var placementRangeView : PlacementRangeView?
+
+    private let showEmptyScoreAndPlacementLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Taban Puanı ve Sıralaması olmayanları getir"
+        label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        label.textAlignment = .left
+        label.textColor = .white
+        label.numberOfLines = 0
+        return label
+    }()
+    
+    private lazy var showEmptyScoreAndPlacementSwitch: UISwitch = {
+        let sw = UISwitch()
+        sw.setOn(showEmptyScoreAndPlacement, animated: true)
+        sw.tintColor = .systemGray
+        sw.backgroundColor = .clear
+        sw.addTarget(self, action: #selector(handleSwitchChanged), for: .valueChanged)
+        return sw
+    }()
     
     private lazy var resetButton: UIButton = {
         let button = UIButton(type: .system)
@@ -103,12 +123,26 @@ class FilterController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    @objc func handleSwitchChanged() {
+        if showEmptyScoreAndPlacementSwitch.isOn {
+            showEmptyScoreAndPlacementSwitch.setOn(true, animated: true)
+            showEmptyScoreAndPlacement.toggle()
+        }
+        else {
+            showEmptyScoreAndPlacementSwitch.setOn(false, animated: true)
+            showEmptyScoreAndPlacement.toggle()
+        }
+    }
+    
     @objc func handleResetButtonTapped() {
         selectedFilters.removeAll()
         minScore = nil
         maxScore = nil
         minPlacement = nil
         maxPlacement = nil
+        selectedCities?.removeAll()
+        selectedDepartments?.removeAll()
+        showEmptyScoreAndPlacement = false
         
         durationTypeView?.handleAllButtonTapped()
         languageTypeView?.handleAllButtonTapped()
@@ -118,6 +152,7 @@ class FilterController: UIViewController {
         scoreRangeView?.maxScoreField.text = nil
         placementRangeView?.minPlacementField.text = nil
         placementRangeView?.maxPlacementField.text = nil
+        showEmptyScoreAndPlacementSwitch.setOn(false, animated: true)
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -169,9 +204,17 @@ class FilterController: UIViewController {
         stack.anchor(top:view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor)
 //        stack.addConstraintsToSafelyFillView(view)
         
+        let hStack = UIStackView(arrangedSubviews: [showEmptyScoreAndPlacementLabel, showEmptyScoreAndPlacementSwitch])
+        hStack.axis = .horizontal
+        hStack.alignment = .center
+        hStack.distribution = .fillProportionally
+//        hStack.spacing = 10
+        
+        view.addSubview(hStack)
+        hStack.anchor(top:stack.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 20, paddingLeft: 10, paddingRight: 20)
+        
         view.addSubview(resetButton)
-        resetButton.anchor(top:stack.bottomAnchor, left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor,
-                           paddingTop: 20, paddingLeft: 70, paddingBottom: 20, paddingRight: 70)
+        resetButton.anchor(top:showEmptyScoreAndPlacementSwitch.bottomAnchor, left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingTop: 20, paddingLeft: 70, paddingBottom: 20, paddingRight: 70)
         
     }
     

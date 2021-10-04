@@ -53,7 +53,7 @@ class PlacementRangeView: UIView {
         tf.heightAnchor.constraint(equalToConstant: 40).isActive = true
         tf.layer.cornerRadius = 5
         tf.keyboardType = UIKeyboardType.numberPad
-        tf.attributedPlaceholder = NSAttributedString(string: "Maximum", attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.7)])
+        tf.attributedPlaceholder = NSAttributedString(string: "Maksimum", attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.7)])
         return tf
     }()
     

@@ -30,6 +30,7 @@ class UniversityController: UITableViewController {
     private var maxPlacement: Int?
     private var selectedCities = [City]()
     private var selectedDepartments = [Department]()
+    private var showEmptyScoreAndPlacement = false
     
     weak var delegate: UniversityControllerDelegate?
     
@@ -94,7 +95,7 @@ class UniversityController: UITableViewController {
         configureUI()
         fetchUniversities()
         sortUniversities(byOption: .nameAsc)
-        filteredUniversities = universities
+//        filteredUniversities = universities
         
         interstitialAd = createInterstitialAd()
     }
@@ -168,7 +169,13 @@ class UniversityController: UITableViewController {
     func filterUniversitiesWithSelectedFilters() {
         guard let filters = selectedFilters else { return }
         
-        filteredUniversities = universities
+        if showEmptyScoreAndPlacement {
+            filteredUniversities = universities
+        }
+        else {
+            filteredUniversities = hideEmptyScoreAndPlacement()
+        }
+                
         let selectedCityNames = selectedCities.map({ $0.name })
         let selectedDepartmentNames = selectedDepartments.map({ $0.name })
         
@@ -261,6 +268,10 @@ class UniversityController: UITableViewController {
         
     }
     
+    func hideEmptyScoreAndPlacement() -> [University] {
+        return universities.filter({ $0.minScore > 0 && $0.placement > 0 })
+    }
+    
     func createInterstitialAd() -> GADInterstitial {
         let ad = GADInterstitial(adUnitID: INTERSTITIAL_AD_ID)
         ad.delegate = self
@@ -272,9 +283,16 @@ class UniversityController: UITableViewController {
     // MARK: - API
     
     func fetchUniversities() {
-        FirestoreService.shared.fetchUniversities { universities in
+//        FirestoreService.shared.fetchUniversities { universities in
+//            self.universities = universities
+//            self.filteredUniversities = universities
+//            self.loadFavorites()
+//        }
+        
+        FirestoreService.shared.fetchStaticUniversities { universities in
             self.universities = universities
-            self.filteredUniversities = universities
+            self.filteredUniversities = self.hideEmptyScoreAndPlacement()
+            print("DEBUG: filteredUniversities is \(self.filteredUniversities)")
             self.loadFavorites()
         }
     }
@@ -312,6 +330,7 @@ class UniversityController: UITableViewController {
         vc.maxPlacement = maxPlacement
         vc.selectedCities = selectedCities
         vc.selectedDepartments = selectedDepartments
+        vc.showEmptyScoreAndPlacement = showEmptyScoreAndPlacement
         vc.delegate = self
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -406,6 +425,7 @@ extension UniversityController: FilterControllerDelegate {
         maxPlacement = filter.maxPlacement
         selectedCities = filter.selectedCities ?? [City]()
         selectedDepartments = filter.selectedDepartments ?? [Department]()
+        showEmptyScoreAndPlacement = filter.showEmptyScoreAndPlacement
                 
         filterUniversitiesWithSelectedFilters()
     }

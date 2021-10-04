@@ -87,7 +87,12 @@ class DepartmentListController: UITableViewController {
     // MARK: - API
     
     func fetchDepartments() {
-        FirestoreService.shared.fetchDepartments { departments in
+//        FirestoreService.shared.fetchDepartments { departments in
+//            self.departments = departments
+//            self.loadSelectedDepartments()
+//        }
+        
+        FirestoreService.shared.fetchStaticDepartments { departments in
             self.departments = departments
             self.loadSelectedDepartments()
         }

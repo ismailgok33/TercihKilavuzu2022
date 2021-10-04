@@ -86,7 +86,12 @@ class CityListController: UITableViewController {
     // MARK: - API
     
     func fetchCities() {
-        FirestoreService.shared.fetchCities { cities in
+//        FirestoreService.shared.fetchCities { cities in
+//            self.cities = cities
+//            self.loadSelectedCities()
+//        }
+        
+        FirestoreService.shared.fetchStaticCities { cities in
             self.cities = cities
             self.loadSelectedCities()
         }
