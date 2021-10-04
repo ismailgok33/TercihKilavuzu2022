@@ -29,6 +29,7 @@ class UniversityCell: UITableViewCell {
         label.text = "Test Universitesi (Ankara)"
         label.font = UIFont.systemFont(ofSize: 16)
         label.textColor = .black
+        label.numberOfLines = 0
         return label
     }()
     
@@ -37,6 +38,7 @@ class UniversityCell: UITableViewCell {
         label.text = "Test Bölümü (İngilizce)"
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textColor = .black
+        label.numberOfLines = 0
         return label
     }()
     

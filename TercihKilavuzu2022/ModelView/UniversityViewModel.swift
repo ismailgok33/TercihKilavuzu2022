@@ -18,7 +18,8 @@ struct UniversityViewModel {
     
     var departmentLabel: NSAttributedString {
         let name = NSMutableAttributedString(string: university.department, attributes: [.font: UIFont.boldSystemFont(ofSize: 16)])
-        name.append(NSAttributedString(string: " (\(university.language))", attributes: [.font: UIFont.boldSystemFont(ofSize: 12)]))
+        let props = university.scholarship.isEmpty ? " (\(university.language))" : " (\(university.scholarship) - \(university.language))"
+        name.append(NSAttributedString(string: props, attributes: [.font: UIFont.boldSystemFont(ofSize: 12)]))
         return name
     }
     

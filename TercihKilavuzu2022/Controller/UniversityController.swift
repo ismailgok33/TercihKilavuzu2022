@@ -95,8 +95,7 @@ class UniversityController: UITableViewController {
         configureUI()
         fetchUniversities()
         sortUniversities(byOption: .nameAsc)
-//        filteredUniversities = universities
-        
+        selectedFilters = [.allYears, .allLanguages, .scholarshipAll, .allUniversityTypes]
         interstitialAd = createInterstitialAd()
     }
     
@@ -203,35 +202,61 @@ class UniversityController: UITableViewController {
             filteredUniversities = filteredUniversities.filter({ $0.state == false})
         }
         
-        if filters.contains(.scholarship100) && !filters.contains(.scholarship75) && !filters.contains(.scholarship50) &&
-            !filters.contains(.scholarship25) && !filters.contains(.scholarship0)
-        {
-            filteredUniversities = filteredUniversities.filter({ $0.scholarship == "%100 Burslu"})
+        let filteredUniversitiesBeforeScholarFilter = filteredUniversities
+        
+        if !filters.contains(.scholarship100) {
+            filteredUniversities = filteredUniversities.filter({ $0.scholarship != "%100 Burslu" && $0.scholarship != ""})
         }
         
-        if filters.contains(.scholarship75) && !filters.contains(.scholarship100) && !filters.contains(.scholarship50) &&
-            !filters.contains(.scholarship25) && !filters.contains(.scholarship0)
-        {
-            filteredUniversities = filteredUniversities.filter({ $0.scholarship == "%75 Burslu"})
+        if !filters.contains(.scholarship75) {
+            filteredUniversities = filteredUniversities.filter({ $0.scholarship != "%75 Burslu" && $0.scholarship != ""})
         }
         
-        if filters.contains(.scholarship50) && !filters.contains(.scholarship100) && !filters.contains(.scholarship75) &&
-            !filters.contains(.scholarship25) && !filters.contains(.scholarship0)
-        {
-            filteredUniversities = filteredUniversities.filter({ $0.scholarship == "%50 Burslu"})
+        if !filters.contains(.scholarship50) {
+            filteredUniversities = filteredUniversities.filter({ $0.scholarship != "%50 Burslu" && $0.scholarship != ""})
         }
         
-        if filters.contains(.scholarship25) && !filters.contains(.scholarship100) && !filters.contains(.scholarship75) &&
-            !filters.contains(.scholarship50) && !filters.contains(.scholarship0)
-        {
-            filteredUniversities = filteredUniversities.filter({ $0.scholarship == "%25 Burslu"})
+        if !filters.contains(.scholarship25) {
+            filteredUniversities = filteredUniversities.filter({ $0.scholarship != "%25 Burslu" && $0.scholarship != ""})
         }
         
-        if filters.contains(.scholarship0) && !filters.contains(.scholarship75) && !filters.contains(.scholarship50) &&
-            !filters.contains(.scholarship25) && !filters.contains(.scholarship100)
-        {
-            filteredUniversities = filteredUniversities.filter({ $0.scholarship == "%0 Burslu"})
+        if !filters.contains(.scholarship0) {
+            filteredUniversities = filteredUniversities.filter({ $0.scholarship != "%0 Burslu" && $0.scholarship != ""})
         }
+        
+        if filters.contains(.scholarshipAll) {
+            filteredUniversities = filteredUniversitiesBeforeScholarFilter
+        }
+        
+//        if filters.contains(.scholarship100) && !filters.contains(.scholarship75) && !filters.contains(.scholarship50) &&
+//            !filters.contains(.scholarship25) && !filters.contains(.scholarship0)
+//        {
+//            filteredUniversities = filteredUniversities.filter({ $0.scholarship == "%100 Burslu"})
+//        }
+//
+//        if filters.contains(.scholarship75) && !filters.contains(.scholarship100) && !filters.contains(.scholarship50) &&
+//            !filters.contains(.scholarship25) && !filters.contains(.scholarship0)
+//        {
+//            filteredUniversities = filteredUniversities.filter({ $0.scholarship == "%75 Burslu"})
+//        }
+//
+//        if filters.contains(.scholarship50) && !filters.contains(.scholarship100) && !filters.contains(.scholarship75) &&
+//            !filters.contains(.scholarship25) && !filters.contains(.scholarship0)
+//        {
+//            filteredUniversities = filteredUniversities.filter({ $0.scholarship == "%50 Burslu"})
+//        }
+//
+//        if filters.contains(.scholarship25) && !filters.contains(.scholarship100) && !filters.contains(.scholarship75) &&
+//            !filters.contains(.scholarship50) && !filters.contains(.scholarship0)
+//        {
+//            filteredUniversities = filteredUniversities.filter({ $0.scholarship == "%25 Burslu"})
+//        }
+//
+//        if filters.contains(.scholarship0) && !filters.contains(.scholarship75) && !filters.contains(.scholarship50) &&
+//            !filters.contains(.scholarship25) && !filters.contains(.scholarship100)
+//        {
+//            filteredUniversities = filteredUniversities.filter({ $0.scholarship == "%0 Burslu"})
+//        }
         
         if let safeMinScore = minScore {
             filteredUniversities = filteredUniversities.filter({ $0.minScore >= safeMinScore })
