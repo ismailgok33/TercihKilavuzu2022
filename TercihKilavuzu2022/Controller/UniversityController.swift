@@ -31,6 +31,7 @@ class UniversityController: UITableViewController {
     private var selectedCities = [City]()
     private var selectedDepartments = [Department]()
     private var showEmptyScoreAndPlacement = false
+    private var lastContentOffset: CGFloat = 0
     
     weak var delegate: UniversityControllerDelegate?
     
@@ -71,10 +72,22 @@ class UniversityController: UITableViewController {
     private lazy var actionButton: UIButton = {
         let button = UIButton(type: .system)
         button.tintColor = .white
-        button.backgroundColor = .myCustomBlue
-        button.setImage(UIImage(named: "new_tweet"), for: .normal)
-//        button.setImage(#imageLiteral(resourceName: "new_tweet"), for: .normal)
+        button.backgroundColor = #colorLiteral(red: 0.5336218476, green: 0.9556542039, blue: 0.8722702861, alpha: 1)
+//        let config = UIImage.SymbolConfiguration(pointSize: 50, weight: .bold, scale: .large)
+//        button.setImage(UIImage(systemName: "pencil.circle", withConfiguration: config), for: .normal)
+        button.setImage(#imageLiteral(resourceName: "filter-icon-50"), for: .normal)
+        button.imageEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         button.addTarget(self, action: #selector(handleFilterButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
+    private lazy var scrollTopActionButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.tintColor = .white
+        button.backgroundColor = #colorLiteral(red: 0.6278412938, green: 0.9580132365, blue: 0.9230172038, alpha: 1)
+        button.setImage(UIImage(systemName: "arrow.up"), for: .normal)
+        button.addTarget(self, action: #selector(handleScrollToTop), for: .touchUpInside)
+        button.isHidden = true
         return button
     }()
     
@@ -97,11 +110,20 @@ class UniversityController: UITableViewController {
         sortUniversities(byOption: .nameAsc)
         selectedFilters = [.allYears, .allLanguages, .scholarshipAll, .allUniversityTypes]
         interstitialAd = createInterstitialAd()
+                
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("statusBarSelected"), object: nil, queue: nil) { event in
+            // scroll to top of a table view
+            self.handleScrollToTop()
+        }
+
     }
     
     override func viewDidLayoutSubviews() {
         actionButton.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingLeft: view.frame.width - 56 - 16, paddingBottom: 16 + BANNER_AD_HEIGHT, paddingRight: 16, width: 56, height: 56)
         actionButton.layer.cornerRadius = 56 / 2
+        
+        scrollTopActionButton.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingLeft: 16, paddingBottom: 16 + BANNER_AD_HEIGHT, paddingRight: view.frame.width - 56 - 16, width: 56, height: 56)
+        scrollTopActionButton.layer.cornerRadius = 56 / 2
         
         guard let tabBarHeight = tabBarController?.tabBar.frame.height else { return }
         bannerAd.frame = CGRect(x: 0, y: view.frame.height - tabBarHeight - BANNER_AD_HEIGHT, width: view.frame.width, height: 50)
@@ -130,6 +152,7 @@ class UniversityController: UITableViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.up.arrow.down"), style: .plain, target: self, action: #selector(handleSortTapped))
         
         view.addSubview(actionButton)
+        view.addSubview(scrollTopActionButton)
         
         bannerAd.rootViewController = self
         self.navigationController?.view.addSubview(bannerAd)
@@ -228,36 +251,6 @@ class UniversityController: UITableViewController {
             filteredUniversities = filteredUniversitiesBeforeScholarFilter
         }
         
-//        if filters.contains(.scholarship100) && !filters.contains(.scholarship75) && !filters.contains(.scholarship50) &&
-//            !filters.contains(.scholarship25) && !filters.contains(.scholarship0)
-//        {
-//            filteredUniversities = filteredUniversities.filter({ $0.scholarship == "%100 Burslu"})
-//        }
-//
-//        if filters.contains(.scholarship75) && !filters.contains(.scholarship100) && !filters.contains(.scholarship50) &&
-//            !filters.contains(.scholarship25) && !filters.contains(.scholarship0)
-//        {
-//            filteredUniversities = filteredUniversities.filter({ $0.scholarship == "%75 Burslu"})
-//        }
-//
-//        if filters.contains(.scholarship50) && !filters.contains(.scholarship100) && !filters.contains(.scholarship75) &&
-//            !filters.contains(.scholarship25) && !filters.contains(.scholarship0)
-//        {
-//            filteredUniversities = filteredUniversities.filter({ $0.scholarship == "%50 Burslu"})
-//        }
-//
-//        if filters.contains(.scholarship25) && !filters.contains(.scholarship100) && !filters.contains(.scholarship75) &&
-//            !filters.contains(.scholarship50) && !filters.contains(.scholarship0)
-//        {
-//            filteredUniversities = filteredUniversities.filter({ $0.scholarship == "%25 Burslu"})
-//        }
-//
-//        if filters.contains(.scholarship0) && !filters.contains(.scholarship75) && !filters.contains(.scholarship50) &&
-//            !filters.contains(.scholarship25) && !filters.contains(.scholarship100)
-//        {
-//            filteredUniversities = filteredUniversities.filter({ $0.scholarship == "%0 Burslu"})
-//        }
-        
         if let safeMinScore = minScore {
             filteredUniversities = filteredUniversities.filter({ $0.minScore >= safeMinScore })
         }
@@ -289,8 +282,6 @@ class UniversityController: UITableViewController {
                 }
             })
         }
-        
-        
     }
     
     func hideEmptyScoreAndPlacement() -> [University] {
@@ -364,6 +355,11 @@ class UniversityController: UITableViewController {
         actionSheetLauncher.delegate = self
         actionSheetLauncher.show()
     }
+    
+    @objc func handleScrollToTop() {
+        tableView.setContentOffset(.zero, animated: true)
+        scrollTopActionButton.isHidden = true
+    }
 }
 
 // MARK: - TableView Delegate/Datasource methods
@@ -406,6 +402,39 @@ extension UniversityController: UniversityCellDelegate {
         }
         
         delegate?.handleFavoriteTappedAtUniversityController(cell)
+    }
+}
+
+// MARK: - ScrollView Extentions
+
+extension UniversityController {
+//    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        if scrollView == tableView {
+//            scrollTopActionButton.isHidden = scrollView.contentOffset.y > 50
+//        }
+//    }
+    
+//    override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+//        let targetPoint = targetContentOffset as? CGPoint
+//        let currentPoint = scrollView.contentOffset
+//
+//        if (targetPoint?.y ?? 0.0) > currentPoint.y {
+//            scrollTopActionButton.isHidden = false
+//        }
+//        else {
+//            scrollTopActionButton.isHidden = true
+//        }
+//    }
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if (self.lastContentOffset > scrollView.contentOffset.y && scrollView.contentOffset.y > 100) {
+            scrollTopActionButton.isHidden = false
+        }
+        else if (self.lastContentOffset < scrollView.contentOffset.y) {
+            scrollTopActionButton.isHidden = true
+        }
+        
+        self.lastContentOffset = scrollView.contentOffset.y
     }
 }
 

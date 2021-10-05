@@ -66,11 +66,14 @@ class LanguageView: UIView {
 
         if let filters = filters, filters.count > 0 {
             if filters.contains(.turkish) {
-                    appendTurkishLanguageOption()
-                }
-                if filters.contains(.english) {
-                    appendEnglishLanguageOption()
-                }
+                appendTurkishLanguageOption()
+            }
+            if filters.contains(.english) {
+                appendEnglishLanguageOption()
+            }
+            if filters.contains(.allLanguages) {
+                appendAllLanguagesOption()
+            }
             
         }
         else {

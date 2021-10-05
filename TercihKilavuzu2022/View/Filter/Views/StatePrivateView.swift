@@ -66,11 +66,14 @@ class StatePrivateView: UIView {
 
         if let filters = filters, filters.count > 0 {
             if filters.contains(.stateUniversities) {
-                    appendStateOption()
-                }
-                if filters.contains(.privateUniversities) {
-                    appendPrivateOption()
-                }
+                appendStateOption()
+            }
+            if filters.contains(.privateUniversities) {
+                appendPrivateOption()
+            }
+            if filters.contains(.allUniversityTypes) {
+                appendAllUniversityTypeOption()
+            }
             
         }
         else {

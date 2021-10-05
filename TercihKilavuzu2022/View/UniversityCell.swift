@@ -58,7 +58,10 @@ class UniversityCell: UITableViewCell {
         let button = UIButton(type: .system)
         button.setImage(UIImage(systemName: "suit.heart"), for: .normal)
         button.tintColor = .systemPink
-        button.setDimensions(width: 50, height: 50)
+//        button.setDimensions(width: 50, height: 50)
+        button.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        button.imageEdgeInsets = UIEdgeInsets(top: 40, left: 40, bottom: 40, right: 40)
+        button.imageView?.contentMode = .scaleAspectFit
         button.addTarget(self, action: #selector(handleFavoriteButtonTapped), for: .touchUpInside)
         return button
     }()
@@ -83,6 +86,7 @@ class UniversityCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.isUserInteractionEnabled = true
         configureCellUI()
+        addTapGestureForLiking()
     }
     
     required init?(coder: NSCoder) {
@@ -93,6 +97,12 @@ class UniversityCell: UITableViewCell {
     
     @objc func handleFavoriteButtonTapped() {
         delegate?.handleFavoriteTapped(self)
+        animate()
+    }
+    
+    @objc func handleDoubleTap() {
+        delegate?.handleFavoriteTapped(self)
+        animate()
     }
     
     // MARK: - Helpers
@@ -105,7 +115,7 @@ class UniversityCell: UITableViewCell {
         departmentLabel.anchor(top: universityNameLabel.bottomAnchor, left: leftAnchor, paddingTop: 12, paddingLeft: 12)
         
         addSubview(favoriteButton)
-        favoriteButton.anchor(top: topAnchor, right: rightAnchor, paddingTop: 30, paddingRight: 12)
+        favoriteButton.anchor(top: topAnchor, right: rightAnchor, paddingTop: 30, paddingRight: 20)
         
         let minScoreStack = createLowerStackViews(subviews: [minScoreLabel, minScoreValue])
         
@@ -162,7 +172,27 @@ class UniversityCell: UITableViewCell {
         placementValue.text = String(university.placement)
         quotaValue.text = String(university.quota)
         favoriteButton.setImage(viewModel.favoriteButtonImage, for: .normal)
+        favoriteButton.tintColor = viewModel.favoriteButtonColor
         typeLabel.setTitle(university.type, for: .normal)
         typeLabel.backgroundColor = viewModel.typeColor
     }
+    
+    private func addTapGestureForLiking() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleDoubleTap))
+        tap.numberOfTapsRequired = 2
+        addGestureRecognizer(tap)
+    }
+    
+    private func animate() {
+        guard let university = university else { return }
+        let viewModel = UniversityViewModel(university: university)
+        
+        UIView.animate(withDuration: 0.1, animations: {
+            self.favoriteButton.transform = self.favoriteButton.transform.scaledBy(x: viewModel.favoriteButtonScale, y: viewModel.favoriteButtonScale)
+        }, completion: { _ in
+          UIView.animate(withDuration: 0.1, animations: {
+            self.favoriteButton.transform = CGAffineTransform.identity
+          })
+        })
+      }
 }

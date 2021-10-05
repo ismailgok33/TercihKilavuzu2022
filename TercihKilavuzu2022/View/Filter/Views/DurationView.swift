@@ -67,12 +67,15 @@ class DurationView: UIView {
         super.init(frame: .zero)
 
         if let filters = filters, filters.count > 0 {
-                if filters.contains(.year4) {
-                    appendYear4Option()
-                }
-                if filters.contains(.year2) {
-                    appendYear2Option()
-                }
+            if filters.contains(.year4) {
+                appendYear4Option()
+            }
+            if filters.contains(.year2) {
+                appendYear2Option()
+            }
+            if filters.contains(.allYears) {
+                appendAllDurationOption()
+            }
         }
         else {
             self.durationFilterOptions = [.allYears]

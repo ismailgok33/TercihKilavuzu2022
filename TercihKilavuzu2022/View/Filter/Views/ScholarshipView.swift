@@ -118,6 +118,9 @@ class ScholarshipView: UIView {
             if filters.contains(.scholarship0) {
                 appendPercent0Option()
             }
+            if filters.contains(.scholarshipAll) {
+                appendAllScholarshipOption()
+            }
             
         }
         else {

@@ -38,7 +38,6 @@
 		EC703E2D2700CD8400020664 /* TYTCountdownGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC703E2C2700CD8400020664 /* TYTCountdownGraphView.swift */; };
 		EC703E312700F4FD00020664 /* AYTCountdownGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC703E302700F4FD00020664 /* AYTCountdownGraphView.swift */; };
 		EC703E332700F5C700020664 /* YDTCountdownGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC703E322700F5C700020664 /* YDTCountdownGraphView.swift */; };
-		EC703E352700F9CD00020664 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC703E342700F9CD00020664 /* StoreKit.framework */; };
 		EC88418E26F9037B00D6F5C0 /* FilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88418D26F9037B00D6F5C0 /* FilterController.swift */; };
 		EC88419026F91A5100D6F5C0 /* CityListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88418F26F91A5100D6F5C0 /* CityListController.swift */; };
 		EC88419226F91BE400D6F5C0 /* DepartmentListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88419126F91BE400D6F5C0 /* DepartmentListController.swift */; };
@@ -53,6 +52,7 @@
 		ECCA78902705000B00ADF48C /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA788F2705000B00ADF48C /* AboutController.swift */; };
 		ECDBD1EE26EEB6D100635021 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDBD1ED26EEB6D100635021 /* Constants.swift */; };
 		ECDBD1F026EEB77A00635021 /* UniversityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDBD1EF26EEB77A00635021 /* UniversityViewModel.swift */; };
+		ECED875A270CF854000B2AFF /* LaunchAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECED8759270CF854000B2AFF /* LaunchAnimationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,7 +91,6 @@
 		EC703E2C2700CD8400020664 /* TYTCountdownGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TYTCountdownGraphView.swift; sourceTree = "<group>"; };
 		EC703E302700F4FD00020664 /* AYTCountdownGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AYTCountdownGraphView.swift; sourceTree = "<group>"; };
 		EC703E322700F5C700020664 /* YDTCountdownGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDTCountdownGraphView.swift; sourceTree = "<group>"; };
-		EC703E342700F9CD00020664 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		EC88418D26F9037B00D6F5C0 /* FilterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterController.swift; sourceTree = "<group>"; };
 		EC88418F26F91A5100D6F5C0 /* CityListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListController.swift; sourceTree = "<group>"; };
 		EC88419126F91BE400D6F5C0 /* DepartmentListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentListController.swift; sourceTree = "<group>"; };
@@ -106,6 +105,7 @@
 		ECCA788F2705000B00ADF48C /* AboutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
 		ECDBD1ED26EEB6D100635021 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ECDBD1EF26EEB77A00635021 /* UniversityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityViewModel.swift; sourceTree = "<group>"; };
+		ECED8759270CF854000B2AFF /* LaunchAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAnimationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +114,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BB16C6BCFA75F532604856D /* Pods_TercihKilavuzu2022.framework in Frameworks */,
-				EC703E352700F9CD00020664 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,7 +123,6 @@
 		11FF1FDC7FAB9D19D8F5531B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EC703E342700F9CD00020664 /* StoreKit.framework */,
 				EA1BC2D92414808E49427A6A /* Pods_TercihKilavuzu2022.framework */,
 			);
 			name = Frameworks;
@@ -230,6 +228,7 @@
 				EC488B8C26ECC60A005B7D31 /* CountdownController.swift */,
 				ECCA788F2705000B00ADF48C /* AboutController.swift */,
 				EC88419426F91C0600D6F5C0 /* Filter */,
+				ECED8759270CF854000B2AFF /* LaunchAnimationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -423,6 +422,7 @@
 				EC3D114326FA60720031609C /* LanguageView.swift in Sources */,
 				EC88419226F91BE400D6F5C0 /* DepartmentListController.swift in Sources */,
 				EC3D113F26FA56F70031609C /* ScholarshipView.swift in Sources */,
+				ECED875A270CF854000B2AFF /* LaunchAnimationViewController.swift in Sources */,
 				EC51D6B026EEA16300594A81 /* FirestoreService.swift in Sources */,
 				EC703E332700F5C700020664 /* YDTCountdownGraphView.swift in Sources */,
 				EC488B9326ECE63F005B7D31 /* UniversityCell.swift in Sources */,

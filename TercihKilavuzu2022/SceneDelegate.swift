@@ -15,8 +15,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        window?.rootViewController = MainTabController()
+//        window?.rootViewController = MainTabController()
+        window?.rootViewController = LaunchAnimationViewController()
         window?.makeKeyAndVisible()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        let events = event!.allTouches
+        let touch = events!.first
+        let location = touch!.location(in: self.window)
+        let statusBarFrame = UIApplication.shared.statusBarFrame
+        if statusBarFrame.contains(location) {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "statusBarSelected"), object: nil)
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

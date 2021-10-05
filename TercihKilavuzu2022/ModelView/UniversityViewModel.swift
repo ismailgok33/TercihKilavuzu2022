@@ -28,6 +28,14 @@ struct UniversityViewModel {
         return UIImage(systemName: imageName)!
     }
     
+    var favoriteButtonColor: UIColor {
+        return university.isFavorite ? UIColor.systemPink : UIColor.systemGray
+    }
+    
+    var favoriteButtonScale: CGFloat {
+        return university.isFavorite ? 1.3 : 0.7
+    }
+    
     var typeColor: UIColor {
         var color = UIColor.clear
         
