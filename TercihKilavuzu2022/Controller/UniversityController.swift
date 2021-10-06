@@ -164,9 +164,9 @@ class UniversityController: UITableViewController {
         
         switch option {
         case .nameAsc:
-            return filteredUniversities.sort(by: { $0.name < $1.name })
+            return filteredUniversities.sort(by: { $0.name.localizedCompare($1.name) == .orderedAscending  })
         case .nameDesc:
-            return filteredUniversities.sort(by: { $0.name > $1.name })
+            return filteredUniversities.sort(by: { $0.name.localizedCompare($1.name) == .orderedDescending })
         case .minScoreAsc:
             return filteredUniversities.sort(by: { $0.minScore < $1.minScore })
         case .minScoreDesc:
@@ -176,9 +176,9 @@ class UniversityController: UITableViewController {
         case .placementDesc:
             return filteredUniversities.sort(by: { $0.placement > $1.placement })
         case .departmentAsc:
-            return filteredUniversities.sort(by: { $0.department < $1.department })
+            return filteredUniversities.sort(by: { $0.department.localizedCompare($1.department) == .orderedAscending })
         case .departmenDesc:
-            return filteredUniversities.sort(by: { $0.department > $1.department })
+            return filteredUniversities.sort(by: { $0.department.localizedCompare($1.department) == .orderedDescending})
         case .cityAsc:
            return filteredUniversities.sort(by: { $0.city < $1.city })
         case .cityDesc:
