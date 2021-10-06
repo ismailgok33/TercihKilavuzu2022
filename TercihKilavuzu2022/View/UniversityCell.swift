@@ -107,7 +107,9 @@ class UniversityCell: UITableViewCell {
     
     // MARK: - Helpers
     
-    func configureCellUI() {        
+    func configureCellUI() {
+        backgroundColor = .white
+        
         addSubview(universityNameLabel)
         universityNameLabel.anchor(top: topAnchor, left: leftAnchor, paddingTop: 16, paddingLeft: 12)
         

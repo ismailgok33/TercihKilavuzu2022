@@ -24,6 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Error while starting realm \(error)")
         }
         GADMobileAds.sharedInstance().start(completionHandler: nil)
+        
+        UINavigationBar.appearance().barTintColor = .white // navigation background color
+//        UINavigationBar.appearance().tintColor = .black
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.black] // navigation title color
+        
         return true
     }
 

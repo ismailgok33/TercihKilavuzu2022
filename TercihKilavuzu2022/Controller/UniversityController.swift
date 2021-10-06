@@ -95,7 +95,7 @@ class UniversityController: UITableViewController {
         let banner = GADBannerView()
         banner.adUnitID = BANNER_AD_ID
         banner.load(GADRequest())
-        banner.backgroundColor = .secondarySystemBackground
+        banner.backgroundColor = .lightGray
         return banner
     }()
     
@@ -138,7 +138,9 @@ class UniversityController: UITableViewController {
     
     // MARK: - Helpers
     
-    func configureUI() {        
+    func configureUI() {
+        view.backgroundColor = .white
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UniversityCell.self, forCellReuseIdentifier: reuseIdentifier)
@@ -294,6 +296,10 @@ class UniversityController: UITableViewController {
         ad.load(GADRequest())
         return ad
     }
+    
+//    override var preferredStatusBarStyle: UIStatusBarStyle {
+//        return UIStatusBarStyle.darkContent
+//    }
     
     
     // MARK: - API

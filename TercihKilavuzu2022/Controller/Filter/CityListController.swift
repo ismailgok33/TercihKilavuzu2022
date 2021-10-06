@@ -113,7 +113,11 @@ extension CityListController {
             city.isSelected = cities[indexPath.row].isSelected
             if city.isSelected {
                 cell.accessoryType = .checkmark
-                selectedCities.append(cities[indexPath.row])
+                if !selectedCities.contains(where: { city in
+                    city.id == cities[indexPath.row].id
+                }) {
+                    selectedCities.append(cities[indexPath.row])
+                }
             }
             else {
                 cell.accessoryType = .none

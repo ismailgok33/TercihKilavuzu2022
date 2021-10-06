@@ -153,6 +153,9 @@ class FilterController: UIViewController {
         placementRangeView?.minPlacementField.text = nil
         placementRangeView?.maxPlacementField.text = nil
         showEmptyScoreAndPlacementSwitch.setOn(false, animated: true)
+        
+        cityListView.selectedCitiesField.attributedText = NSAttributedString(string: "Şehir seçiniz...")
+        departmentListView.selectedDepartmentsField.attributedText = NSAttributedString(string: "Bölüm seçiniz...")
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -187,6 +190,20 @@ class FilterController: UIViewController {
         scholarshipView = ScholarshipView(filters: selectedFilters)
         scoreRangeView = ScoreRangeView(minScore: minScore, maxScore: maxScore)
         placementRangeView = PlacementRangeView(minPlacement: minPlacement, maxPlacement: maxPlacement)
+        
+        // Set selected city names to CitiesView textField when FilterScreen appear
+        let cities = NSMutableAttributedString(string: "")
+        selectedCities?.forEach({
+            cities.append(NSAttributedString(string: "\($0.name), "))
+        })
+        cityListView.selectedCitiesField.attributedText = cities.string.isEmpty ? NSAttributedString(string: "Şehir seçiniz...") : cities
+        
+        // Set selected department names to DepartmentView textField when FilterScreen appear
+        let departments = NSMutableAttributedString(string: "")
+        selectedDepartments?.forEach({
+            departments.append(NSAttributedString(string: "\($0.name), "))
+        })
+        departmentListView.selectedDepartmentsField.attributedText = departments.string.isEmpty ? NSAttributedString(string: "Bölüm seçiniz...") : departments
         
         let stack = UIStackView(arrangedSubviews: [cityListView, departmentListView, scholarshipView!,
                                                    universityTypeView!, languageTypeView!, durationTypeView!,
@@ -249,12 +266,27 @@ extension FilterController: UITextFieldDelegate {
 extension FilterController: CityListDelegate {
     func saveSelectedCities(_ cityListController: CityListController) {
         self.selectedCities = cityListController.selectedCities
+                        
+        // Load selected city names from CityController into CityView in FilterScreen
+        let cities = NSMutableAttributedString(string: "")
+        cityListController.selectedCities.forEach {
+            cities.append(NSAttributedString(string: "\($0.name), "))
+        }
+        cities.setAttributedString(NSAttributedString(string: String(cities.string.dropLast(2))))
+        cityListView.selectedCitiesField.attributedText = cities.string.isEmpty ? NSAttributedString(string: "Şehir seçiniz...") : cities
     }
 }
 
 extension FilterController: DepartmentListDelegate {
     func saveSelectedDepartments(_ departmentListController: DepartmentListController) {
-        print("Save button is called in FilterController..")
         self.selectedDepartments = departmentListController.selectedDepartments
+        
+        // Load selected department names from DepartmentController into DepartmentView in FilterScreen
+        let departments = NSMutableAttributedString(string: "")
+        departmentListController.selectedDepartments.forEach {
+            departments.append(NSAttributedString(string: "\($0.name), "))
+        }
+        departments.setAttributedString(NSAttributedString(string: String(departments.string.dropLast(2))))
+        departmentListView.selectedDepartmentsField.attributedText = departments.string.isEmpty ? NSAttributedString(string: "Bölüm seçiniz...") : departments
     }
 }

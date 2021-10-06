@@ -35,7 +35,7 @@ class FavoritesController: UITableViewController {
         let banner = GADBannerView()
         banner.adUnitID = "ca-app-pub-6180320592686930/4022248406"
         banner.load(GADRequest())
-        banner.backgroundColor = .secondarySystemBackground
+        banner.backgroundColor = .lightGray
         return banner
     }()
     
@@ -75,6 +75,8 @@ class FavoritesController: UITableViewController {
     
     // MARK: - Helpers
     func configureUI() {
+        view.backgroundColor = .white
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UniversityCell.self, forCellReuseIdentifier: reuseIdentifier)

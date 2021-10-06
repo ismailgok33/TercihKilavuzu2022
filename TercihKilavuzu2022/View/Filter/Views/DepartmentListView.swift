@@ -19,6 +19,16 @@ class DepartmentListView: UIView {
         return label
     }()
     
+    var selectedDepartmentsField: UITextField = {
+        let tf = UITextField()
+        tf.attributedText = NSAttributedString(string: "Bölüm seçilmedi...")
+//        tf.font = .systemFont(ofSize: 12, weight: .semibold)
+        tf.font = UIFont.italicSystemFont(ofSize: 12)
+        tf.textColor = .white
+        tf.isUserInteractionEnabled = false
+        return tf
+    }()
+    
     
     // MARK: - Lifecycle
     
@@ -41,7 +51,10 @@ class DepartmentListView: UIView {
         layer.cornerRadius = 5
         
         addSubview(viewTitle)
-        viewTitle.centerY(inView: self)
-        viewTitle.anchor(left: leftAnchor, paddingLeft: 12)
+//        viewTitle.centerY(inView: self)
+        viewTitle.anchor(top:topAnchor, left: leftAnchor, paddingTop: 12, paddingLeft: 12)
+        
+        addSubview(selectedDepartmentsField)
+        selectedDepartmentsField.anchor(top: viewTitle.bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 8, paddingLeft: 12, paddingRight: 12)
     }
 }

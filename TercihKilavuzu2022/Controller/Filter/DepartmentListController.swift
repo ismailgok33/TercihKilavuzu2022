@@ -113,7 +113,12 @@ extension DepartmentListController {
         if let department = cell.department {
             if department.isSelected {
                 cell.accessoryType = .checkmark
-                selectedDepartments.append(departments[indexPath.row])
+                
+                if !selectedDepartments.contains(where: { department in
+                    department.id == departments[indexPath.row].id
+                }) {
+                    selectedDepartments.append(departments[indexPath.row])
+                }
             }
             else {
                 cell.accessoryType = .none

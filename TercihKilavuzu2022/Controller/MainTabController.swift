@@ -24,7 +24,8 @@ class MainTabController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tabBar.barTintColor = .white // tab bar background color
+        tabBar.tintColor = #colorLiteral(red: 0.7517034411, green: 0.9552429318, blue: 0.9215249419, alpha: 1) // tab bar selected bar button color
         configureViewControllers()
     }
     
@@ -33,6 +34,8 @@ class MainTabController: UITabBarController {
     
     func configureViewControllers() {
         //let universityVC = UniversityController()
+//        UIApplication.shared.statusBarStyle = .lightContent
+        
         uniVC.delegate = self
         uniVC.title = "Üniversiteler"
         let nav1 = templateNavigationController(image: UIImage(systemName: "building.columns.fill")!, rootController: uniVC)
@@ -56,6 +59,10 @@ class MainTabController: UITabBarController {
         nav.navigationBar.barTintColor = .white
         return nav
     }
+    
+//    override var preferredStatusBarStyle: UIStatusBarStyle {
+//        return UIStatusBarStyle.darkContent
+//    }
 }
 
 // MARK: - UniversityControllerDelegate
