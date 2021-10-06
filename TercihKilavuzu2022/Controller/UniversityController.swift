@@ -146,10 +146,15 @@ class UniversityController: UITableViewController {
         tableView.register(UniversityCell.self, forCellReuseIdentifier: reuseIdentifier)
         tableView.allowsSelection = false
         
+        searchController.searchBar.searchBarStyle = .default
+        searchController.searchBar.searchTextField.backgroundColor = UIColor.white
+        
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Arayınız..."
         navigationItem.searchController = searchController
+        
+        
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.up.arrow.down"), style: .plain, target: self, action: #selector(handleSortTapped))
         
@@ -460,7 +465,6 @@ extension UniversityController: UISearchResultsUpdating {
             searchedUniversities = nil
         }
     }
-    
     
 }
 
