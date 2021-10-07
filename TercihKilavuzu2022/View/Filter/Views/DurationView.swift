@@ -162,7 +162,6 @@ class DurationView: UIView {
     
     private func removeAllDurationOption() {
         durationFilterOptions = durationFilterOptions.filter{ $0 != .allYears }
-        print("DEBUG: durationFilterOptions after removeALlDurationOptions is \(durationFilterOptions)")
         allButton.tintColor = .white
         allButton.layer.borderColor = UIColor.white.cgColor
         checkIfOptionsAreEmpty()

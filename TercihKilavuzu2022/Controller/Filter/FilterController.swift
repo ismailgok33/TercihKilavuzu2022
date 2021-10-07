@@ -95,6 +95,7 @@ class FilterController: UIViewController {
         vc.delegate = self
         vc.selectedCities = selectedCities ?? [City]()
         let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .fullScreen
         present(nav, animated: true, completion: nil)
     }
     
@@ -103,6 +104,7 @@ class FilterController: UIViewController {
         vc.delegate = self
         vc.selectedDepartments = selectedDepartments ?? [Department]()
         let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .fullScreen
         present(nav, animated: true, completion: nil)
     }
     

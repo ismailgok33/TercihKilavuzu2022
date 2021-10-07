@@ -17,7 +17,18 @@ class CityListController: UITableViewController {
     
     // MARK: - Properties
     
+    let searchController = UISearchController()
+
+    
     private var cities = [City]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    private var searchedCities: [City]? {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -71,6 +82,13 @@ class CityListController: UITableViewController {
         tableView.backgroundColor = .white
         tableView.register(CityCell.self, forCellReuseIdentifier: reuseIdentifier)
 
+        searchController.searchBar.searchBarStyle = .default
+        searchController.searchBar.searchTextField.backgroundColor = UIColor.white
+        
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Arayınız..."
+        navigationItem.searchController = searchController
     }
     
     func loadSelectedCities() {
@@ -86,10 +104,6 @@ class CityListController: UITableViewController {
     // MARK: - API
     
     func fetchCities() {
-//        FirestoreService.shared.fetchCities { cities in
-//            self.cities = cities
-//            self.loadSelectedCities()
-//        }
         
         FirestoreService.shared.fetchStaticCities { cities in
             self.cities = cities
@@ -102,28 +116,54 @@ class CityListController: UITableViewController {
 
 extension CityListController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let searchedCities = searchedCities {
+            return searchedCities.count
+        }
         return cities.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! CityCell
-        cell.city = cities[indexPath.row]
         
-        if var city = cell.city {
-            city.isSelected = cities[indexPath.row].isSelected
-            if city.isSelected {
-                cell.accessoryType = .checkmark
-                if !selectedCities.contains(where: { city in
-                    city.id == cities[indexPath.row].id
-                }) {
-                    selectedCities.append(cities[indexPath.row])
+        if let searchedCities = searchedCities {
+            cell.city = searchedCities[indexPath.row]
+            if let city = cell.city {
+                if city.isSelected {
+                    cell.accessoryType = .checkmark
+                    
+                    if !selectedCities.contains(where: { city in
+                        city.id == searchedCities[indexPath.row].id
+                    }) {
+                        selectedCities.append(searchedCities[indexPath.row])
+                    }
+                }
+                else {
+                    cell.accessoryType = .none
+                    selectedCities = selectedCities.filter({ $0.id != searchedCities[indexPath.row].id })
                 }
             }
-            else {
-                cell.accessoryType = .none
-                selectedCities = selectedCities.filter({ $0.id != cities[indexPath.row].id })
+        }
+        else {
+            cell.city = cities[indexPath.row]
+            
+            if var city = cell.city {
+                city.isSelected = cities[indexPath.row].isSelected
+                if city.isSelected {
+                    cell.accessoryType = .checkmark
+                    if !selectedCities.contains(where: { city in
+                        city.id == cities[indexPath.row].id
+                    }) {
+                        selectedCities.append(cities[indexPath.row])
+                    }
+                }
+                else {
+                    cell.accessoryType = .none
+                    selectedCities = selectedCities.filter({ $0.id != cities[indexPath.row].id })
+                }
             }
         }
+        
+        
         return cell
     }
     
@@ -160,11 +200,40 @@ extension CityListController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
         
-        let city = cities[indexPath.row]
-        cities[indexPath.row].isSelected = !city.isSelected
+        if var searchCityList = searchedCities {
+            let city = searchedCities?[indexPath.row]
+            searchedCities?[indexPath.row].isSelected = !(city?.isSelected ?? false)
+            
+            // Toggle isSelected of the main departments array when searched departments array'e element is toggled
+            for (index, value) in cities.enumerated() {
+                if value.name == city?.name {
+                    cities[index].isSelected = !(city?.isSelected ?? false)
+                }
+            }
+        }
+        else {
+            let city = cities[indexPath.row]
+            cities[indexPath.row].isSelected = !city.isSelected
+        }
         
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
     }
+}
+
+// MARK: - UISearchResultsUpdating
+
+extension CityListController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        if let text = searchController.searchBar.text, !text.isEmpty {
+            searchedCities = cities.filter({ city in
+                city.name.localizedCaseInsensitiveContains(text)
+            })
+        }
+        else {
+            searchedCities = nil
+        }
+    }
+    
 }

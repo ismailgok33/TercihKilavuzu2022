@@ -17,7 +17,17 @@ class DepartmentListController: UITableViewController {
     
     // MARK: - Properties
     
+    let searchController = UISearchController()
+    
     private var departments = [Department]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    private var searchedDepartments: [Department]? {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -71,6 +81,13 @@ class DepartmentListController: UITableViewController {
         view.backgroundColor = .white
         tableView.register(DepartmentCell.self, forCellReuseIdentifier: reuseIdentifier)
 
+        searchController.searchBar.searchBarStyle = .default
+        searchController.searchBar.searchTextField.backgroundColor = UIColor.white
+        
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Arayınız..."
+        navigationItem.searchController = searchController
     }
     
     func loadSelectedDepartments() {
@@ -87,12 +104,8 @@ class DepartmentListController: UITableViewController {
     // MARK: - API
     
     func fetchDepartments() {
-//        FirestoreService.shared.fetchDepartments { departments in
-//            self.departments = departments
-//            self.loadSelectedDepartments()
-//        }
         
-        FirestoreService.shared.fetchStaticDepartments { departments in
+        TextService.shared.fetchStaticDepartments { departments in
             self.departments = departments
             self.loadSelectedDepartments()
         }
@@ -103,26 +116,49 @@ class DepartmentListController: UITableViewController {
 
 extension DepartmentListController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let searchedDepartments = searchedDepartments {
+            return searchedDepartments.count
+        }
         return departments.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! DepartmentCell
-        cell.department = departments[indexPath.row]
         
-        if let department = cell.department {
-            if department.isSelected {
-                cell.accessoryType = .checkmark
-                
-                if !selectedDepartments.contains(where: { department in
-                    department.id == departments[indexPath.row].id
-                }) {
-                    selectedDepartments.append(departments[indexPath.row])
+        if let searchedDepartments = searchedDepartments {
+            cell.department = searchedDepartments[indexPath.row]
+            if let department = cell.department {
+                if department.isSelected {
+                    cell.accessoryType = .checkmark
+                    
+                    if !selectedDepartments.contains(where: { department in
+                        department.id == searchedDepartments[indexPath.row].id
+                    }) {
+                        selectedDepartments.append(searchedDepartments[indexPath.row])
+                    }
+                }
+                else {
+                    cell.accessoryType = .none
+                    selectedDepartments = selectedDepartments.filter({ $0.id != searchedDepartments[indexPath.row].id })
                 }
             }
-            else {
-                cell.accessoryType = .none
-                selectedDepartments = selectedDepartments.filter({ $0.id != departments[indexPath.row].id })
+        }
+        else {
+            cell.department = departments[indexPath.row]
+            if let department = cell.department {
+                if department.isSelected {
+                    cell.accessoryType = .checkmark
+                    
+                    if !selectedDepartments.contains(where: { department in
+                        department.id == departments[indexPath.row].id
+                    }) {
+                        selectedDepartments.append(departments[indexPath.row])
+                    }
+                }
+                else {
+                    cell.accessoryType = .none
+                    selectedDepartments = selectedDepartments.filter({ $0.id != departments[indexPath.row].id })
+                }
             }
         }
         
@@ -152,11 +188,40 @@ extension DepartmentListController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let department = departments[indexPath.row]
-        departments[indexPath.row].isSelected = !department.isSelected
+        if var searchedDepartmentList = searchedDepartments {
+            let department = searchedDepartments?[indexPath.row]
+            searchedDepartments?[indexPath.row].isSelected = !(department?.isSelected ?? false)
+            
+            // Toggle isSelected of the main departments array when searched departments array'e element is toggled
+            for (index, value) in departments.enumerated() {
+                if value.name == department?.name {
+                    departments[index].isSelected = !(department?.isSelected ?? false)
+                }
+            }
+        }
+        else {
+            let department = departments[indexPath.row]
+            departments[indexPath.row].isSelected = !department.isSelected
+        }
         
         DispatchQueue.main.async {
             tableView.reloadData()
         }
     }
+}
+
+// MARK: - UISearchResultsUpdating
+
+extension DepartmentListController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        if let text = searchController.searchBar.text, !text.isEmpty {
+            searchedDepartments = departments.filter({ department in
+                department.name.localizedCaseInsensitiveContains(text)
+            })
+        }
+        else {
+            searchedDepartments = nil
+        }
+    }
+    
 }

@@ -310,16 +310,9 @@ class UniversityController: UITableViewController {
     // MARK: - API
     
     func fetchUniversities() {
-//        FirestoreService.shared.fetchUniversities { universities in
-//            self.universities = universities
-//            self.filteredUniversities = universities
-//            self.loadFavorites()
-//        }
-        
-        FirestoreService.shared.fetchStaticUniversities { universities in
+        TextService.shared.fetchStaticUniversities { universities in
             self.universities = universities
             self.filteredUniversities = self.hideEmptyScoreAndPlacement()
-            print("DEBUG: filteredUniversities is \(self.filteredUniversities)")
             self.loadFavorites()
         }
     }
