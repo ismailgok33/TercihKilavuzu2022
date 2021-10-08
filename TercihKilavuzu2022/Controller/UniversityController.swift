@@ -197,6 +197,8 @@ class UniversityController: UITableViewController {
     
     func filterUniversitiesWithSelectedFilters() {
         guard let filters = selectedFilters else { return }
+        var filteredUniversitiesBeforeCityFilter = [University]()
+        var filteredUniversitiesBeforeDepartmentFilter = [University]()
         
         if showEmptyScoreAndPlacement {
             filteredUniversities = universities
@@ -274,21 +276,45 @@ class UniversityController: UITableViewController {
             filteredUniversities = filteredUniversities.filter({ $0.placement <= safeMaxPlacement })
         }
                 
+//        if selectedCityNames.count > 0 {
+//            filteredUniversities.forEach({ university in
+//                if !selectedCityNames.contains(university.city) {
+//                    filteredUniversities = filteredUniversities.filter({ $0 != university })
+//                }
+//            })
+//        }
+        
+        
         if selectedCityNames.count > 0 {
-            filteredUniversities.forEach({ university in
-                if !selectedCityNames.contains(university.city) {
-                    filteredUniversities = filteredUniversities.filter({ $0 != university })
+            filteredUniversitiesBeforeCityFilter.append(contentsOf: filteredUniversities)
+            filteredUniversities.removeAll()
+            selectedCityNames.forEach { cityName in
+                let universityCityFiltered = filteredUniversitiesBeforeCityFilter.filter {
+                    $0.city == cityName
                 }
-            })
+                filteredUniversities.append(contentsOf: universityCityFiltered)
+            }
         }
+                
+//        if selectedDepartmentNames.count > 0 {
+//            filteredUniversities.forEach({ university in
+//                if !selectedDepartmentNames.contains(university.department) {
+//                    filteredUniversities = filteredUniversities.filter({ $0 != university })
+//                }
+//            })
+//        }
         
         if selectedDepartmentNames.count > 0 {
-            filteredUniversities.forEach({ university in
-                if !selectedDepartmentNames.contains(university.department) {
-                    filteredUniversities = filteredUniversities.filter({ $0 != university })
+            filteredUniversitiesBeforeDepartmentFilter.append(contentsOf: filteredUniversities)
+            filteredUniversities.removeAll()
+            selectedDepartmentNames.forEach { departmentName in
+                let universityDepartmentFiltered = filteredUniversitiesBeforeDepartmentFilter.filter {
+                    $0.department == departmentName
                 }
-            })
+                filteredUniversities.append(contentsOf: universityDepartmentFiltered)
+            }
         }
+        
     }
     
     func hideEmptyScoreAndPlacement() -> [University] {
@@ -392,7 +418,7 @@ extension UniversityController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 130
     }
 }
 

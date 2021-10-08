@@ -109,20 +109,53 @@ class FilterController: UIViewController {
     }
     
     @objc func handleSaveFilterTapped() {
-        
-        selectedFilters.removeAll() // delete all filters first
-        
-        selectedFilters.append(contentsOf: scholarshipView!.filterScholarshipOptions)
-        selectedFilters.append(contentsOf: universityTypeView!.statePrivateFilterOptions)
-        selectedFilters.append(contentsOf: languageTypeView!.languageFilterOptions)
-        selectedFilters.append(contentsOf: durationTypeView!.durationFilterOptions)
-        minScore = Double(scoreRangeView?.minScoreField.text ?? "")
-        maxScore = Double(scoreRangeView?.maxScoreField.text ?? "")
-        minPlacement = Int(placementRangeView?.minPlacementField.text ?? "")
-        maxPlacement = Int(placementRangeView?.maxPlacementField.text ?? "")
+        if selectedCities?.count ?? -1 > 0 || selectedDepartments?.count ?? -1 > 0 {
+            var loader: UIAlertController?
+            DispatchQueue.main.async {
+                loader = self.loader()
                 
-        delegate?.filterUniversities(self)
-        navigationController?.popViewController(animated: true)
+                self.selectedFilters.removeAll() // delete all filters first
+                self.selectedFilters.append(contentsOf: self.scholarshipView!.filterScholarshipOptions)
+                self.selectedFilters.append(contentsOf: self.universityTypeView!.statePrivateFilterOptions)
+                self.selectedFilters.append(contentsOf: self.languageTypeView!.languageFilterOptions)
+                self.selectedFilters.append(contentsOf: self.durationTypeView!.durationFilterOptions)
+                self.minScore = Double(self.scoreRangeView?.minScoreField.text ?? "")
+                self.maxScore = Double(self.scoreRangeView?.maxScoreField.text ?? "")
+                self.minPlacement = Int(self.placementRangeView?.minPlacementField.text ?? "")
+                self.maxPlacement = Int(self.placementRangeView?.maxPlacementField.text ?? "")
+            }
+            
+            let queue = OperationQueue()
+
+            queue.addOperation() {
+                // do something in the background
+                self.delegate?.filterUniversities(self)
+
+                OperationQueue.main.addOperation() {
+                    // when done, update your UI and/or model on the main queue
+                    loader?.dismiss(animated: true, completion: nil)
+                    DispatchQueue.main.asyncAfter(deadline: .now()+1) {
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                }
+                
+            }
+        }
+        else {
+            self.selectedFilters.removeAll() // delete all filters first
+            self.selectedFilters.append(contentsOf: self.scholarshipView!.filterScholarshipOptions)
+            self.selectedFilters.append(contentsOf: self.universityTypeView!.statePrivateFilterOptions)
+            self.selectedFilters.append(contentsOf: self.languageTypeView!.languageFilterOptions)
+            self.selectedFilters.append(contentsOf: self.durationTypeView!.durationFilterOptions)
+            self.minScore = Double(self.scoreRangeView?.minScoreField.text ?? "")
+            self.maxScore = Double(self.scoreRangeView?.maxScoreField.text ?? "")
+            self.minPlacement = Int(self.placementRangeView?.minPlacementField.text ?? "")
+            self.maxPlacement = Int(self.placementRangeView?.maxPlacementField.text ?? "")
+            
+            self.delegate?.filterUniversities(self)
+            self.navigationController?.popViewController(animated: true)
+        }
+
     }
     
     @objc func handleSwitchChanged() {
@@ -246,6 +279,17 @@ class FilterController: UIViewController {
         gradientLayer.locations = [0, 1]
         view.layer.addSublayer(gradientLayer)
         gradientLayer.frame = view.frame
+    }
+    
+    func loader() -> UIAlertController {
+        let alert = UIAlertController(title: nil, message: "İşlem sürüyor...", preferredStyle: .alert)
+        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.style = UIActivityIndicatorView.Style.large
+        loadingIndicator.startAnimating()
+        alert.view.addSubview(loadingIndicator)
+        present(alert, animated: true, completion: nil)
+        return alert
     }
     
 }

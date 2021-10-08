@@ -168,7 +168,7 @@ extension DepartmentListController {
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
         view.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        view.backgroundColor = .systemGroupedBackground
+        view.backgroundColor = .white
         
         view.addSubview(saveButton)
         saveButton.centerY(inView: view)

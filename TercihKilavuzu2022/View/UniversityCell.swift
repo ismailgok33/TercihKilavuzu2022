@@ -111,10 +111,10 @@ class UniversityCell: UITableViewCell {
         backgroundColor = .white
         
         addSubview(universityNameLabel)
-        universityNameLabel.anchor(top: topAnchor, left: leftAnchor, paddingTop: 16, paddingLeft: 12)
+        universityNameLabel.anchor(top: topAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 8, paddingLeft: 12, paddingRight: 20)
         
         addSubview(departmentLabel)
-        departmentLabel.anchor(top: universityNameLabel.bottomAnchor, left: leftAnchor, paddingTop: 12, paddingLeft: 12)
+        departmentLabel.anchor(top: universityNameLabel.bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 8, paddingLeft: 12, paddingRight: 12)
         
         addSubview(favoriteButton)
         favoriteButton.anchor(top: topAnchor, right: rightAnchor, paddingTop: 30, paddingRight: 20)
@@ -131,11 +131,11 @@ class UniversityCell: UITableViewCell {
         
         addSubview(typeLabel)
 //        typeLabel.anchor(top: departmentLabel.bottomAnchor, right: rightAnchor, paddingTop: 24 + 50 / 2, paddingRight: 12)
-        typeLabel.anchor(bottom: bottomAnchor, right: rightAnchor, paddingBottom: 12, paddingRight: 12)
+        typeLabel.anchor(bottom: bottomAnchor, right: rightAnchor, paddingBottom: 8, paddingRight: 12)
         typeLabel.setDimensions(width: 50, height: 25)
         
         addSubview(bottomStack)
-        bottomStack.anchor(top: departmentLabel.bottomAnchor, left: leftAnchor, right: typeLabel.leftAnchor, paddingTop: 24, paddingLeft: 24, paddingRight: 24)
+        bottomStack.anchor(top: departmentLabel.bottomAnchor, left: leftAnchor, right: typeLabel.leftAnchor, paddingTop: 12, paddingLeft: 24, paddingRight: 24)
         
     }
     

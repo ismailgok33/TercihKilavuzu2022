@@ -21,6 +21,7 @@ class DepartmentCell: UITableViewCell {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 16)
         label.text = "test department"
+        label.textColor = .black
         return label
     }()
     
@@ -28,6 +29,7 @@ class DepartmentCell: UITableViewCell {
     // MARK: - Lifecycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        backgroundColor = .white
         
         addSubview(departmentName)
         departmentName.centerY(inView: self)

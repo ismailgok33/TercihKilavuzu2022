@@ -69,7 +69,7 @@ class CityListController: UITableViewController {
     
     @objc func handleSaveButtonTapped() {
         delegate?.saveSelectedCities(self)
-        dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @objc func handleCancelButtonTapped() {
@@ -170,7 +170,7 @@ extension CityListController {
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
         view.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        view.backgroundColor = .systemGroupedBackground
+        view.backgroundColor = .white
         
 //        let saveButton = UIButton(type: .system)
 //        saveButton.setTitle("Kaydet", for: .normal)
