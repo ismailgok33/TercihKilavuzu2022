@@ -136,7 +136,7 @@ class StatePrivateView: UIView {
         stack.spacing = 10
         addSubview(stack)
         stack.anchor(top: viewTitle.bottomAnchor, left: leftAnchor, right: rightAnchor,
-                     paddingTop: 12, paddingLeft: 12, paddingRight: 12)
+                     paddingTop: 4, paddingLeft: 12, paddingRight: 12)
     }
     
     func checkIfOptionsAreEmpty() {

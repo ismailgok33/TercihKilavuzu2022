@@ -92,6 +92,6 @@ class PlacementRangeView: UIView {
         stack.distribution = .fillEqually
         stack.spacing = 20
         addSubview(stack)
-        stack.anchor(top:viewTitle.bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 12, paddingLeft: 12, paddingRight: 12)
+        stack.anchor(top:viewTitle.bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 4, paddingLeft: 12, paddingRight: 12)
     }
 }

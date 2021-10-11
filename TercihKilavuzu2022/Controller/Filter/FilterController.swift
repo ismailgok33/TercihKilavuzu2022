@@ -245,6 +245,7 @@ class FilterController: UIViewController {
                                                    scoreRangeView!, placementRangeView! ])
         stack.axis = .vertical
         stack.distribution = .fillEqually
+//        stack.spacing = 10
         
         let cityTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleCityTapped))
         cityListView.addGestureRecognizer(cityTapGesture)
@@ -260,7 +261,7 @@ class FilterController: UIViewController {
         hStack.axis = .horizontal
         hStack.alignment = .center
         hStack.distribution = .fillProportionally
-//        hStack.spacing = 10
+        hStack.spacing = 10
         
         view.addSubview(hStack)
         hStack.anchor(top:stack.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 20, paddingLeft: 10, paddingRight: 20)
