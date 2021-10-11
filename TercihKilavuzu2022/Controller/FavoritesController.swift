@@ -40,6 +40,8 @@ class FavoritesController: UITableViewController {
     }()
     
     private var interstitialAd: GADInterstitial?
+    private var deletePlanetIndexPath: IndexPath? = nil
+
 
     
     // MARK: - Lifecycle
@@ -101,6 +103,21 @@ class FavoritesController: UITableViewController {
         return ad
     }
     
+//    func confirmDelete(_ favorite: University) {
+//        let alert = UIAlertController(title: "Emin misiniz?", message: "Favorilerden silmek istediğinizden emin misiniz?", preferredStyle: .actionSheet)
+//        let deleteAction = UIAlertAction(title: "Sil", style: .destructive, handler: handleDeleteFavorite)
+//        let cancelAction = UIAlertAction(title: "Vazgeç", style: .cancel, handler: handleCancelDeleteAction)
+//        
+//        alert.addAction(deleteAction)
+//        alert.addAction(cancelAction)
+//        
+//        // Support display in iPad
+//        alert.popoverPresentationController?.sourceView = self.view
+//        alert.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.size.width / 2.0, y: self.view.bounds.size.height / 2.0, width: 1.0, height: 1.0)
+//        self.present(alert, animated: true, completion: nil)
+//
+//    }
+    
     // MARK: - API
     
      func loadFavorites() {
@@ -135,12 +152,25 @@ class FavoritesController: UITableViewController {
             activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
             
             activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
-            
+                        
             self.present(activityViewController, animated: true, completion: nil)
         }
-        
-       
     }
+    
+//    func handleDeleteFavorite(alertAction: UIAlertAction) -> Void {
+//        guard let deleteIndex = deletePlanetIndexPath else { return }
+//
+////        tableView.beginUpdates()
+//        RealmService.shared.saveFavorite(favorite: favorites![deleteIndex.row])
+//        tableView.reloadData()
+////        tableView.deleteRows(at: [deleteIndex], with: .automatic)
+//        deletePlanetIndexPath = nil
+////        tableView.endUpdates()
+//    }
+//
+//    func handleCancelDeleteAction(alertAction: UIAlertAction) -> Void {
+//        deletePlanetIndexPath = nil
+//    }
 }
 
 
@@ -166,6 +196,19 @@ extension FavoritesController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 130
     }
+    
+//    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+//        return .delete
+//    }
+    
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//            guard let favorites = favorites else { return }
+//            deletePlanetIndexPath = indexPath
+//            confirmDelete(favorites[indexPath.row])
+//        }
+//    }
+    
 }
 
 // MARK: - UniversityCellDelegate
@@ -180,6 +223,7 @@ extension FavoritesController: UniversityCellDelegate {
         delegate?.handleFavoriteTappedAtFavoritesController(cell)
     }
 }
+
 
 // MARK: - GADInterstitialDelegate
 
