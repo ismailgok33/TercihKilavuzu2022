@@ -107,10 +107,10 @@ class FavoritesController: UITableViewController {
 //        let alert = UIAlertController(title: "Emin misiniz?", message: "Favorilerden silmek istediğinizden emin misiniz?", preferredStyle: .actionSheet)
 //        let deleteAction = UIAlertAction(title: "Sil", style: .destructive, handler: handleDeleteFavorite)
 //        let cancelAction = UIAlertAction(title: "Vazgeç", style: .cancel, handler: handleCancelDeleteAction)
-//        
+//
 //        alert.addAction(deleteAction)
 //        alert.addAction(cancelAction)
-//        
+//
 //        // Support display in iPad
 //        alert.popoverPresentationController?.sourceView = self.view
 //        alert.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.size.width / 2.0, y: self.view.bounds.size.height / 2.0, width: 1.0, height: 1.0)
@@ -159,15 +159,16 @@ class FavoritesController: UITableViewController {
     
 //    func handleDeleteFavorite(alertAction: UIAlertAction) -> Void {
 //        guard let deleteIndex = deletePlanetIndexPath else { return }
-//
+//        guard let favorite = favorites?[deleteIndex.row] else { return }
+//        favorite.isFavorite = true
 ////        tableView.beginUpdates()
-//        RealmService.shared.saveFavorite(favorite: favorites![deleteIndex.row])
+//        RealmService.shared.saveFavorite(favorite: favorite)
 //        tableView.reloadData()
 ////        tableView.deleteRows(at: [deleteIndex], with: .automatic)
 //        deletePlanetIndexPath = nil
 ////        tableView.endUpdates()
 //    }
-//
+
 //    func handleCancelDeleteAction(alertAction: UIAlertAction) -> Void {
 //        deletePlanetIndexPath = nil
 //    }
@@ -197,17 +198,25 @@ extension FavoritesController {
         return 130
     }
     
-//    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-//        return .delete
-//    }
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
     
-//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == .delete {
-//            guard let favorites = favorites else { return }
-//            deletePlanetIndexPath = indexPath
-//            confirmDelete(favorites[indexPath.row])
-//        }
-//    }
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            guard let favorites = favorites else { return }
+            
+            let favorite = favorites[indexPath.row]
+            favorite.isFavorite = true
+    //        tableView.beginUpdates()
+            RealmService.shared.saveFavorite(favorite: favorite)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+//            tableView.reloadData()c
+    //        tableView.deleteRows(at: [deleteIndex], with: .automatic)
+            deletePlanetIndexPath = nil
+    //        tableView.endUpdates()
+        }
+    }
     
 }
 
