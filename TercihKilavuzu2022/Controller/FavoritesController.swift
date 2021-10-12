@@ -39,6 +39,14 @@ class FavoritesController: UITableViewController {
         return banner
     }()
     
+    private let emptyImage: UIImageView = {
+        let iv = UIImageView()
+        iv.image = #imageLiteral(resourceName: "no-favorites")
+        iv.contentMode = .scaleAspectFit
+        iv.setDimensions(width: 400, height: 400)
+        return iv
+    }()
+    
     private var interstitialAd: GADInterstitial?
     private var deletePlanetIndexPath: IndexPath? = nil
 
@@ -73,6 +81,7 @@ class FavoritesController: UITableViewController {
         
         guard let tabBarHeight = tabBarController?.tabBar.frame.height else { return }
         tableView.contentInset.bottom = tabBarHeight + BANNER_AD_HEIGHT
+        
     }
     
     // MARK: - Helpers
@@ -89,6 +98,7 @@ class FavoritesController: UITableViewController {
         let refreshControl = UIRefreshControl()
         tableView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
+        
     }
     
     func sortFavoritesByNameAsc() {
@@ -180,6 +190,17 @@ class FavoritesController: UITableViewController {
 extension FavoritesController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let favorites = favorites else { return 0 }
+        if favorites.count == 0 {
+            tableView.backgroundView = emptyImage
+            emptyImage.frame = CGRect(x: view.frame.width / 2 - 200, y: view.frame.height / 2 - 200, width: 400, height: 400)
+            tableView.separatorStyle = .none
+            tableView.isUserInteractionEnabled = false
+        }
+        else {
+            tableView.backgroundView = nil
+            tableView.separatorStyle = .singleLine
+            tableView.isUserInteractionEnabled = true
+        }
         return favorites.count
     }
     
@@ -209,10 +230,12 @@ extension FavoritesController {
             let favorite = favorites[indexPath.row]
             favorite.isFavorite = true
     //        tableView.beginUpdates()
-            RealmService.shared.saveFavorite(favorite: favorite)
+//            RealmService.shared.saveFavorite(favorite: favorite)
+            delegate?.handleFavoriteTappedAtFavoritesController(tableView.cellForRow(at: indexPath) as! UniversityCell)
             tableView.deleteRows(at: [indexPath], with: .automatic)
-//            tableView.reloadData()
-    //        tableView.deleteRows(at: [deleteIndex], with: .automatic)
+            if interstitialAd?.isReady == true {
+                interstitialAd?.present(fromRootViewController: self)
+            }
             deletePlanetIndexPath = nil
     //        tableView.endUpdates()
         }

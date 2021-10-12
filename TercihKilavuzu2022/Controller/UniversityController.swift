@@ -99,6 +99,14 @@ class UniversityController: UITableViewController {
         return banner
     }()
     
+    private let emptyImage: UIImageView = {
+        let iv = UIImageView()
+        iv.image = #imageLiteral(resourceName: "no-university")
+        iv.contentMode = .scaleAspectFit
+        iv.setDimensions(width: 400, height: 400)
+        return iv
+    }()
+    
     private var interstitialAd: GADInterstitial?
     
     // MARK: - Lifecycle
@@ -397,9 +405,29 @@ class UniversityController: UITableViewController {
 extension UniversityController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let searchedUniversities = searchedUniversities {
+            if searchedUniversities.count == 0 {
+                tableView.backgroundView = emptyImage
+                emptyImage.frame = CGRect(x: view.frame.width / 2 - 200, y: view.frame.height / 2 - 200, width: 400, height: 400)
+                tableView.separatorStyle = .none
+                tableView.isUserInteractionEnabled = false
+            }
+            else {
+                tableView.backgroundView = nil
+                tableView.separatorStyle = .singleLine
+                tableView.isUserInteractionEnabled = true
+            }
             return searchedUniversities.count
         }
         else {
+            if filteredUniversities.count == 0 {
+                tableView.backgroundView = emptyImage
+                emptyImage.frame = CGRect(x: view.frame.width / 2 - 200, y: view.frame.height / 2 - 200, width: 400, height: 400)
+                tableView.separatorStyle = .none
+            }
+            else {
+                tableView.backgroundView = nil
+                tableView.separatorStyle = .singleLine
+            }
             return filteredUniversities.count
         }
         
