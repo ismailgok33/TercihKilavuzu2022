@@ -154,15 +154,16 @@ class UniversityController: UITableViewController {
         tableView.register(UniversityCell.self, forCellReuseIdentifier: reuseIdentifier)
         tableView.allowsSelection = false
         
-        searchController.searchBar.searchBarStyle = .default
-        searchController.searchBar.searchTextField.backgroundColor = UIColor.white
-        
+        searchController.searchBar.searchBarStyle = .minimal
+
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Arayınız..."
         navigationItem.searchController = searchController
         
-        
+        searchController.searchBar.searchTextField.backgroundColor = UIColor.white
+        searchController.searchBar.searchTextField.textColor = .black
+        searchController.searchBar.searchTextField.tintColor = .black
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.up.arrow.down"), style: .plain, target: self, action: #selector(handleSortTapped))
         
