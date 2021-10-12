@@ -211,7 +211,7 @@ extension FavoritesController {
     //        tableView.beginUpdates()
             RealmService.shared.saveFavorite(favorite: favorite)
             tableView.deleteRows(at: [indexPath], with: .automatic)
-//            tableView.reloadData()c
+//            tableView.reloadData()
     //        tableView.deleteRows(at: [deleteIndex], with: .automatic)
             deletePlanetIndexPath = nil
     //        tableView.endUpdates()

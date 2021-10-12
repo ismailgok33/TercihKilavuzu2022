@@ -21,7 +21,7 @@ class CountdownController: UIViewController {
         label.text = "Sınavlara kalan süreler"
         label.textColor = .white
         label.textAlignment = .center
-        label.font = .boldSystemFont(ofSize: 26)
+        label.font = .boldSystemFont(ofSize: 20)
         return label
     }()
         
@@ -30,9 +30,9 @@ class CountdownController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tytView = TYTCountdownGraphView(frame: CGRect(x: 0, y: 0, width: .zero, height: view.frame.height / 3 - 20))
-        aytView = AYTCountdownGraphView(frame: CGRect(x: 0, y: 0, width: .zero, height: view.frame.height / 3 - 20))
-        ydtView = YDTCountdownGraphView(frame: CGRect(x: 0, y: 0, width: .zero, height: view.frame.height / 3 - 20))
+        tytView = TYTCountdownGraphView(frame: CGRect(x: 0, y: 0, width: .zero, height: view.frame.height / 3 - 30))
+        aytView = AYTCountdownGraphView(frame: CGRect(x: 0, y: 0, width: .zero, height: view.frame.height / 3 - 30))
+        ydtView = YDTCountdownGraphView(frame: CGRect(x: 0, y: 0, width: .zero, height: view.frame.height / 3 - 30))
         
 //        configureGradientLayer()
         configureUI()
@@ -57,12 +57,12 @@ class CountdownController: UIViewController {
         stack.spacing = 20
 
         view.addSubview(stack)
-        stack.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingBottom: 10)
+        stack.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingBottom: 20)
 //        stack.addConstraintsToSafelyFillView(view)
 //        stack.anchor(paddingTop: 10, paddingBottom: 20)
         
-        view.addSubview(countdownTitle)
-        countdownTitle.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingRight: 10)
+//        view.addSubview(countdownTitle)
+//        countdownTitle.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingRight: 10)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "info.circle"), style: .plain, target: self, action: #selector(handleAboutButtonTapped))
     }

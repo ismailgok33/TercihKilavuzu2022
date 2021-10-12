@@ -46,7 +46,7 @@ class MainTabController: UITabBarController {
         let nav2 = templateNavigationController(image: UIImage(systemName: "heart.fill")!, rootController: favoriteVC)
         nav2.tabBarItem.title = "Favoriler"
         
-        countdownVC.title = "Geri Sayım"
+        countdownVC.title = "Sınavlara kalan süre"
         let nav3 = templateNavigationController(image: UIImage(systemName: "timer")!, rootController: countdownVC)
         nav3.tabBarItem.title = "Geri Sayım"
         

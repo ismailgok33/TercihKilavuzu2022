@@ -102,7 +102,8 @@ extension UIColor {
     static let filterBackgroundColor = UIColor.rgb(red: 189, green: 178, blue: 255)
     static let countdownBackgroundColor = UIColor.rgb(red: 233, green: 237, blue: 201)
     
-    static let backgroundColor = UIColor.rgb(red: 21, green: 22, blue: 33)
+    static let backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+//    static let backgroundColor = UIColor.rgb(red: 21, green: 22, blue: 33)
     static let outlineStrokeColor = UIColor.rgb(red: 234, green: 46, blue: 111)
     static let trackStrokeColor = UIColor.rgb(red: 56, green: 25, blue: 49)
     static let pulsatingFillColor = UIColor.rgb(red: 86, green: 30, blue: 63)
