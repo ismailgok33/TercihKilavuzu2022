@@ -50,6 +50,8 @@
 		ECA2CEFB2717592E0078A559 /* SubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA2CEFA2717592E0078A559 /* SubscriptionViewController.swift */; };
 		ECA2CEFD27175D640078A559 /* SubscriptionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA2CEFC27175D640078A559 /* SubscriptionHeaderView.swift */; };
 		ECA2CEFF271768580078A559 /* SubscriptionDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA2CEFE271768580078A559 /* SubscriptionDescriptionView.swift */; };
+		ECA2CF0127176DD50078A559 /* IAPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA2CF0027176DD50078A559 /* IAPService.swift */; };
+		ECA2CF0327177F2B0078A559 /* AppStoreReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA2CF0227177F2B0078A559 /* AppStoreReviewManager.swift */; };
 		ECC11581270F7437004E4863 /* TextService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC11580270F7437004E4863 /* TextService.swift */; };
 		ECC11587270F824E004E4863 /* StaticDepartmentData.txt in Resources */ = {isa = PBXBuildFile; fileRef = ECC11586270F824E004E4863 /* StaticDepartmentData.txt */; };
 		ECC22CBC26EFE5C000350A4F /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC22CBB26EFE5C000350A4F /* RealmService.swift */; };
@@ -107,6 +109,8 @@
 		ECA2CEFA2717592E0078A559 /* SubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewController.swift; sourceTree = "<group>"; };
 		ECA2CEFC27175D640078A559 /* SubscriptionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionHeaderView.swift; sourceTree = "<group>"; };
 		ECA2CEFE271768580078A559 /* SubscriptionDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionDescriptionView.swift; sourceTree = "<group>"; };
+		ECA2CF0027176DD50078A559 /* IAPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPService.swift; sourceTree = "<group>"; };
+		ECA2CF0227177F2B0078A559 /* AppStoreReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewManager.swift; sourceTree = "<group>"; };
 		ECC11580270F7437004E4863 /* TextService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextService.swift; sourceTree = "<group>"; };
 		ECC11586270F824E004E4863 /* StaticDepartmentData.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StaticDepartmentData.txt; sourceTree = "<group>"; };
 		ECC22CBB26EFE5C000350A4F /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
@@ -249,6 +253,8 @@
 				EC51D6AF26EEA16300594A81 /* FirestoreService.swift */,
 				ECC22CBB26EFE5C000350A4F /* RealmService.swift */,
 				ECC11580270F7437004E4863 /* TextService.swift */,
+				ECA2CF0027176DD50078A559 /* IAPService.swift */,
+				ECA2CF0227177F2B0078A559 /* AppStoreReviewManager.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -441,10 +447,12 @@
 				EC51D6B026EEA16300594A81 /* FirestoreService.swift in Sources */,
 				ECC11581270F7437004E4863 /* TextService.swift in Sources */,
 				EC703E332700F5C700020664 /* YDTCountdownGraphView.swift in Sources */,
+				ECA2CF0327177F2B0078A559 /* AppStoreReviewManager.swift in Sources */,
 				EC488B9326ECE63F005B7D31 /* UniversityCell.swift in Sources */,
 				EC3D114526FA61810031609C /* DurationView.swift in Sources */,
 				EC6427F62709FA950052931E /* StaticCityData.swift in Sources */,
 				EC88419826F92CC200D6F5C0 /* CityCell.swift in Sources */,
+				ECA2CF0127176DD50078A559 /* IAPService.swift in Sources */,
 				EC51D6AE26EEA0E900594A81 /* University.swift in Sources */,
 				EC88419626F91D0900D6F5C0 /* City.swift in Sources */,
 				EC488B8D26ECC60A005B7D31 /* CountdownController.swift in Sources */,

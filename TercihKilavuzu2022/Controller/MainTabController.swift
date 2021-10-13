@@ -28,11 +28,14 @@ class MainTabController: UITabBarController {
         tabBar.tintColor = #colorLiteral(red: 0.7517034411, green: 0.9552429318, blue: 0.9215249419, alpha: 1) // tab bar selected bar button color
         configureViewControllers()
         
-        DispatchQueue.main.asyncAfter(deadline: .now()+3) {
-            let subscriptionVC = SubscriptionViewController()
-            let subscriptionNav = UINavigationController(rootViewController: subscriptionVC)
-            self.present(subscriptionNav, animated: true)
+        if !IAPService.shared.isPremium() {
+            DispatchQueue.main.asyncAfter(deadline: .now()+3) {
+                let subscriptionVC = SubscriptionViewController()
+                let subscriptionNav = UINavigationController(rootViewController: subscriptionVC)
+                self.present(subscriptionNav, animated: true)
+            }
         }
+        
     }
     
     
@@ -81,6 +84,9 @@ extension MainTabController: UniversityControllerDelegate {
         university.isFavorite.toggle()
         cell.university = university
         
+        // Ask for rating if appropriate
+        AppStoreReviewManager.requestReviewIfAppropriate()
+        
         favoriteVC.loadFavorites()
     }
     
@@ -96,6 +102,10 @@ extension MainTabController: FavoritesControllerDelegate {
         uniVC.changeFavoritesFromFavoritesController(withFavorite: favorite)
         RealmService.shared.saveFavorite(favorite: favorite)
         favorite.isFavorite.toggle()
+        
+        // Ask for rating if appropriate
+        AppStoreReviewManager.requestReviewIfAppropriate()
+        
         favoriteVC.loadFavorites()
     }
 }

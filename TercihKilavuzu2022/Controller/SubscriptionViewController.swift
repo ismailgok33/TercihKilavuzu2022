@@ -61,7 +61,6 @@ class SubscriptionViewController: UIViewController {
                              paddingLeft: 40, paddingBottom: 10, paddingRight: 40, height: 50)
         subscribeButton.anchor(left: view.leftAnchor, bottom: restoreButton.topAnchor, right: view.rightAnchor,
                                paddingLeft: 40, paddingBottom: 10, paddingRight: 40, height: 50)
-//        descriptionView.anchor(top: headerView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor)
         descriptionView.anchor(top: headerView.bottomAnchor, left: view.leftAnchor, bottom: restoreButton.topAnchor, right: view.rightAnchor,
                                paddingTop: (view.frame.height - headerView.frame.height - restoreButton.frame.height - subscribeButton.frame.height) / 4)
     }
