@@ -27,6 +27,12 @@ class MainTabController: UITabBarController {
         tabBar.barTintColor = .white // tab bar background color
         tabBar.tintColor = #colorLiteral(red: 0.7517034411, green: 0.9552429318, blue: 0.9215249419, alpha: 1) // tab bar selected bar button color
         configureViewControllers()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()+3) {
+            let subscriptionVC = SubscriptionViewController()
+            let subscriptionNav = UINavigationController(rootViewController: subscriptionVC)
+            self.present(subscriptionNav, animated: true)
+        }
     }
     
     
