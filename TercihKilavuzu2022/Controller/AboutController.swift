@@ -7,6 +7,7 @@
 
 import UIKit
 import SafariServices
+import MessageUI
 
 class AboutController: UIViewController {
     
@@ -39,6 +40,15 @@ class AboutController: UIViewController {
         return button
     }()
     
+    private lazy var feedbackButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Geri Bildirim Gönder", for: .normal)
+        button.backgroundColor = .systemBlue
+        button.setTitleColor(.white, for: .normal)
+        button.addTarget(self, action: #selector(handleFeedBack), for: .touchUpInside)
+        return button
+    }()
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -63,17 +73,47 @@ class AboutController: UIViewController {
         
         view.addSubview(webSitelink)
         webSitelink.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor,
-                           paddingBottom: 30)
+                           paddingBottom: 20)
         webSitelink.centerX(inView: view)
+        
+        view.addSubview(feedbackButton)
+        feedbackButton.anchor(left: view.leftAnchor, bottom: webSitelink.topAnchor, right: view.rightAnchor, paddingLeft: 40,paddingBottom: 10, paddingRight: 40, height: 40)
     }
     
+    func openMailApp() {
+        let mailVC = MFMailComposeViewController()
+        mailVC.delegate = self
+        mailVC.setSubject("Geri bildirim")
+        mailVC.setToRecipients(["tercihkilavuzuapp@gmail.com"])
+        mailVC.setMessageBody("Test", isHTML: false)
+        present(mailVC, animated: true)
+    }
     
-    // MARK: - Selectors
-    
-    @objc func goToAppWebSite() {
+    func openWebSite() {
         guard let url = URL(string: "http://www.google.com") else { return }
         let vc = SFSafariViewController(url: url)
         present(vc, animated: true, completion: nil)
-//        UIApplication.shared.open(url)
+    }
+    
+    // MARK: - Selectors
+    
+    @objc private func goToAppWebSite() {
+        openWebSite()
+    }
+    
+    @objc private func handleFeedBack() {
+        if MFMailComposeViewController.canSendMail() {
+            openMailApp()
+        }
+        else {
+            openWebSite()
+        }
+        
+    }
+}
+
+extension AboutController: MFMailComposeViewControllerDelegate, UINavigationControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
     }
 }

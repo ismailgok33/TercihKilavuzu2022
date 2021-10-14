@@ -11,7 +11,9 @@ class SubscriptionViewController: UIViewController {
     
     // MARK: - Properties
     
-   let headerView = SubscriptionHeaderView()
+    var fromTabBar = false
+    
+    let headerView = SubscriptionHeaderView()
     
     let subscribeButton: UIButton = {
         let button = UIButton()
@@ -61,8 +63,9 @@ class SubscriptionViewController: UIViewController {
                              paddingLeft: 40, paddingBottom: 10, paddingRight: 40, height: 50)
         subscribeButton.anchor(left: view.leftAnchor, bottom: restoreButton.topAnchor, right: view.rightAnchor,
                                paddingLeft: 40, paddingBottom: 10, paddingRight: 40, height: 50)
-        descriptionView.anchor(top: headerView.bottomAnchor, left: view.leftAnchor, bottom: restoreButton.topAnchor, right: view.rightAnchor,
-                               paddingTop: (view.frame.height - headerView.frame.height - restoreButton.frame.height - subscribeButton.frame.height) / 4)
+        descriptionView.anchor(top: headerView.bottomAnchor, left: view.leftAnchor, bottom: termsOfServiceView.topAnchor, right: view.rightAnchor, paddingTop: 50)
+//        descriptionView.anchor(top: headerView.bottomAnchor, left: view.leftAnchor, bottom: restoreButton.topAnchor, right: view.rightAnchor,
+//                               paddingTop: (view.frame.height - headerView.frame.height - restoreButton.frame.height - subscribeButton.frame.height) / 4)
     }
     
     // MARK: - Helpers
@@ -77,7 +80,9 @@ class SubscriptionViewController: UIViewController {
         view.addSubview(termsOfServiceView)
         view.addSubview(descriptionView)
         
-        setUpCloseButton()
+        if !fromTabBar {
+            setUpCloseButton()
+        }
         setUpButtons()
     }
     

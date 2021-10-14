@@ -64,7 +64,7 @@ class CountdownController: UIViewController {
 //        view.addSubview(countdownTitle)
 //        countdownTitle.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingRight: 10)
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "info.circle"), style: .plain, target: self, action: #selector(handleAboutButtonTapped))
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "info.circle"), style: .plain, target: self, action: #selector(handleAboutButtonTapped))
     }
     
     func configureGradientLayer() {
@@ -81,9 +81,9 @@ class CountdownController: UIViewController {
     
     // MARK: - Selectors
     
-    @objc func handleAboutButtonTapped() {
-        navigationController?.pushViewController(AboutController(), animated: true)
-    }
+//    @objc func handleAboutButtonTapped() {
+//        navigationController?.pushViewController(AboutController(), animated: true)
+//    }
     
     
 }

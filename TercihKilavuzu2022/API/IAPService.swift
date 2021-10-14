@@ -16,7 +16,11 @@ class IAPService {
         return false
     }
     
-    func subscribe() {
+    public func subscribe() {
+        
+    }
+    
+    public func restore() {
         
     }
 }

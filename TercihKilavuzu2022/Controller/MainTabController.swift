@@ -19,6 +19,8 @@ class MainTabController: UITabBarController {
     let uniVC = UniversityController()
     let favoriteVC = FavoritesController()
     let countdownVC = CountdownController()
+    let aboutVC = AboutController()
+//    let subscriptionVC = SubscriptionViewController()
     
     //MARK: - Lifecycle
 
@@ -31,6 +33,7 @@ class MainTabController: UITabBarController {
         if !IAPService.shared.isPremium() {
             DispatchQueue.main.asyncAfter(deadline: .now()+3) {
                 let subscriptionVC = SubscriptionViewController()
+                subscriptionVC.fromTabBar = false
                 let subscriptionNav = UINavigationController(rootViewController: subscriptionVC)
                 self.present(subscriptionNav, animated: true)
             }
@@ -59,7 +62,21 @@ class MainTabController: UITabBarController {
         let nav3 = templateNavigationController(image: UIImage(systemName: "timer")!, rootController: countdownVC)
         nav3.tabBarItem.title = "Geri Sayım"
         
-        viewControllers = [nav1, nav2, nav3]
+        let nav4 = templateNavigationController(image: UIImage(systemName: "info.circle")!, rootController: aboutVC)
+        nav4.tabBarItem.title = "Hakkında"
+        
+        let subscriptionTabVC = SubscriptionViewController()
+        subscriptionTabVC.title = "Premium"
+        subscriptionTabVC.fromTabBar = true
+        let nav5 = templateNavigationController(image: UIImage(systemName: "crown")!, rootController: subscriptionTabVC)
+        nav5.tabBarItem.title = "Premium"
+        
+        if IAPService.shared.isPremium() {
+            viewControllers = [nav1, nav2, nav3, nav4]
+        }
+        else {
+            viewControllers = [nav1, nav2, nav3, nav4, nav5]
+        }
     }
     
     func templateNavigationController(image: UIImage, rootController: UIViewController) -> UINavigationController {
