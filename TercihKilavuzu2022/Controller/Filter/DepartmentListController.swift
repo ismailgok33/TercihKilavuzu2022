@@ -80,6 +80,7 @@ class DepartmentListController: UITableViewController {
     func configureUI() {
         view.backgroundColor = .white
         tableView.register(DepartmentCell.self, forCellReuseIdentifier: reuseIdentifier)
+        tableView.keyboardDismissMode = .onDrag
 
         searchController.searchBar.searchBarStyle = .default
         searchController.searchBar.searchTextField.backgroundColor = UIColor.white
@@ -88,6 +89,7 @@ class DepartmentListController: UITableViewController {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Arayınız..."
         navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
     }
     
     func loadSelectedDepartments() {

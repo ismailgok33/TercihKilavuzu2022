@@ -284,15 +284,6 @@ class UniversityController: UITableViewController {
         if let safeMaxPlacement = maxPlacement {
             filteredUniversities = filteredUniversities.filter({ $0.placement <= safeMaxPlacement })
         }
-                
-//        if selectedCityNames.count > 0 {
-//            filteredUniversities.forEach({ university in
-//                if !selectedCityNames.contains(university.city) {
-//                    filteredUniversities = filteredUniversities.filter({ $0 != university })
-//                }
-//            })
-//        }
-        
         
         if selectedCityNames.count > 0 {
             filteredUniversitiesBeforeCityFilter.append(contentsOf: filteredUniversities)
@@ -304,14 +295,6 @@ class UniversityController: UITableViewController {
                 filteredUniversities.append(contentsOf: universityCityFiltered)
             }
         }
-                
-//        if selectedDepartmentNames.count > 0 {
-//            filteredUniversities.forEach({ university in
-//                if !selectedDepartmentNames.contains(university.department) {
-//                    filteredUniversities = filteredUniversities.filter({ $0 != university })
-//                }
-//            })
-//        }
         
         if selectedDepartmentNames.count > 0 {
             filteredUniversitiesBeforeDepartmentFilter.append(contentsOf: filteredUniversities)

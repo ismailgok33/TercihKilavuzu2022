@@ -64,6 +64,11 @@ class CityListController: UITableViewController {
 //        loadSelectedCities()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+       super.viewDidAppear(animated)
+       searchController.searchBar.becomeFirstResponder()
+    }
+    
     
     // MARK: - Selectors
     
@@ -81,6 +86,7 @@ class CityListController: UITableViewController {
     func configureUI() {
         tableView.backgroundColor = .white
         tableView.register(CityCell.self, forCellReuseIdentifier: reuseIdentifier)
+        tableView.keyboardDismissMode = .onDrag
 
         searchController.searchBar.searchBarStyle = .default
         searchController.searchBar.searchTextField.backgroundColor = UIColor.white
@@ -89,6 +95,7 @@ class CityListController: UITableViewController {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Arayınız..."
         navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
     }
     
     func loadSelectedCities() {
@@ -171,16 +178,6 @@ extension CityListController {
         let view = UIView()
         view.heightAnchor.constraint(equalToConstant: 50).isActive = true
         view.backgroundColor = .white
-        
-//        let saveButton = UIButton(type: .system)
-//        saveButton.setTitle("Kaydet", for: .normal)
-//        saveButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-//        saveButton.addTarget(self, action: #selector(handleSaveButtonTapped), for: .touchUpInside)
-//
-//        let cancelButton = UIButton(type: .system)
-//        cancelButton.setTitle("Kaydet", for: .normal)
-//        cancelButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-//        cancelButton.addTarget(self, action: #selector(handleSaveButtonTapped), for: .touchUpInside)
 //
         view.addSubview(saveButton)
         saveButton.centerY(inView: view)

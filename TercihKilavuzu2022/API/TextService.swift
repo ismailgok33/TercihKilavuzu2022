@@ -19,6 +19,7 @@ class TextService {
         var keyArray = [String]()
         
         if let path = Bundle.main.path(forResource: "StaticUniversityData", ofType: "txt") {
+            
           do {
             staticUniversityText = try String(contentsOfFile: path, encoding: .utf8)
             lineArray = staticUniversityText.components(separatedBy: "#")
