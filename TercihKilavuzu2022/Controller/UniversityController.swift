@@ -396,7 +396,8 @@ class UniversityController: UITableViewController {
     }
     
     @objc func handleScrollToTop() {
-        tableView.setContentOffset(.zero, animated: true)
+//        tableView.setContentOffset(.zero, animated: true)
+        tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
         scrollTopActionButton.isHidden = true
     }
 }
@@ -486,10 +487,13 @@ extension UniversityController {
 //    }
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if (self.lastContentOffset > scrollView.contentOffset.y && scrollView.contentOffset.y > 100) {
+        if (self.lastContentOffset > scrollView.contentOffset.y) {
             scrollTopActionButton.isHidden = false
         }
         else if (self.lastContentOffset < scrollView.contentOffset.y) {
+            scrollTopActionButton.isHidden = true
+        }
+        if scrollView.contentOffset.y < 100 {
             scrollTopActionButton.isHidden = true
         }
         

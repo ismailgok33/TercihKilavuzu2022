@@ -69,7 +69,7 @@ class AboutController: UIViewController {
         
         view.addSubview(aboutText)
         aboutText.anchor(top: appImage.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor,
-                         paddingTop: 50, paddingLeft: 20, paddingRight: 20)
+                         paddingTop: 30, paddingLeft: 20, paddingRight: 20)
         
         view.addSubview(webSitelink)
         webSitelink.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor,
