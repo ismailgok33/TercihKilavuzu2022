@@ -31,15 +31,12 @@ class MainTabController: UITabBarController {
         configureViewControllers()
         
         if !IAPService.shared.isPremium() {
-//            let random = Int.random(in: 1...5)
-//            if random == 3 {
-                DispatchQueue.main.asyncAfter(deadline: .now()+3) {
-                    let subscriptionVC = SubscriptionViewController()
-                    subscriptionVC.fromTabBar = false
-                    let subscriptionNav = UINavigationController(rootViewController: subscriptionVC)
-                    self.present(subscriptionNav, animated: true)
-                }
-//            }
+            DispatchQueue.main.asyncAfter(deadline: .now()+1) {
+                let subscriptionVC = SubscriptionViewController()
+//                subscriptionVC.fromTabBar = false
+                let subscriptionNav = UINavigationController(rootViewController: subscriptionVC)
+                self.present(subscriptionNav, animated: true)
+            }
         }
         
     }
@@ -49,7 +46,7 @@ class MainTabController: UITabBarController {
     
     func configureViewControllers() {
         //let universityVC = UniversityController()
-//        UIApplication.shared.statusBarStyle = .lightContent
+        //        UIApplication.shared.statusBarStyle = .lightContent
         
         uniVC.delegate = self
         uniVC.title = "Üniversiteler"
@@ -68,18 +65,14 @@ class MainTabController: UITabBarController {
         let nav4 = templateNavigationController(image: UIImage(systemName: "info.circle")!, rootController: aboutVC)
         nav4.tabBarItem.title = "Hakkında"
         
-        let subscriptionTabVC = SubscriptionViewController()
-        subscriptionTabVC.title = "Premium"
-        subscriptionTabVC.fromTabBar = true
-        let nav5 = templateNavigationController(image: UIImage(systemName: "crown")!, rootController: subscriptionTabVC)
-        nav5.tabBarItem.title = "Premium"
+//        let subscriptionTabVC = SubscriptionViewController()
+//        subscriptionTabVC.title = "Premium"
+//        subscriptionTabVC.fromTabBar = true
+//        let nav5 = templateNavigationController(image: UIImage(systemName: "crown")!, rootController: subscriptionTabVC)
+//        nav5.tabBarItem.title = "Premium"
         
-        if IAPService.shared.isPremium() {
-            viewControllers = [nav1, nav2, nav3, nav4]
-        }
-        else {
-            viewControllers = [nav1, nav2, nav3, nav4, nav5]
-        }
+        viewControllers = [nav1, nav2, nav3, nav4]
+        
     }
     
     func templateNavigationController(image: UIImage, rootController: UIViewController) -> UINavigationController {

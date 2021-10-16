@@ -11,7 +11,7 @@ class SubscriptionViewController: UIViewController {
     
     // MARK: - Properties
     
-    var fromTabBar = false
+//    var fromTabBar = false
     
     let headerView = SubscriptionHeaderView()
     
@@ -22,6 +22,7 @@ class SubscriptionViewController: UIViewController {
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 8
         button.layer.masksToBounds = true
+//        button.addTarget(self, action: #selector(handleSubscribe), for: .touchUpInside)
         return button
     }()
     
@@ -73,16 +74,15 @@ class SubscriptionViewController: UIViewController {
         title = "Premium"
         
         view.addSubview(headerView)
-        view.addSubview(subscribeButton)
-        view.addSubview(restoreButton)
         view.addSubview(termsOfServiceView)
         view.addSubview(descriptionView)
+        view.addSubview(subscribeButton)
+        view.addSubview(restoreButton)
         
         view.isUserInteractionEnabled = true
         
-        if !fromTabBar {
-            setUpCloseButton()
-        }
+        setUpCloseButton()
+        
         setUpButtons()
     }
     
@@ -91,7 +91,6 @@ class SubscriptionViewController: UIViewController {
     }
     
     private func setUpButtons() {
-        print("DEBUG: setUpButtons is triggered")
         subscribeButton.addTarget(self, action: #selector(handleSubscribe), for: .touchUpInside)
         restoreButton.addTarget(self, action: #selector(handleRestore), for: .touchUpInside)
     }
@@ -104,7 +103,6 @@ class SubscriptionViewController: UIViewController {
     }
     
     @objc private func handleSubscribe() {
-        print("DEBUG: handleSubscribe is triggered")
         IAPService.shared.fetchPackages { package in
             guard let package = package else { return }
             
@@ -112,6 +110,7 @@ class SubscriptionViewController: UIViewController {
                 print("DEBUG: subscribed -> \(success)")
                 DispatchQueue.main.async {
                     if success {
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "premiumPurchased"), object: nil)
                         self?.dismiss(animated: true, completion: nil)
                     }
                     else {
@@ -125,11 +124,11 @@ class SubscriptionViewController: UIViewController {
     }
     
     @objc private func handleRestore() {
-        print("DEBUG: handleRestore is triggered")
         IAPService.shared.restore {[weak self] success in
             print("DEBUG: restored -> \(success)")
             DispatchQueue.main.async {
                 if success {
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "premiumPurchased"), object: nil)
                     self?.dismiss(animated: true, completion: nil)
                 }
                 else {

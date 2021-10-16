@@ -62,10 +62,12 @@ class FavoritesController: UITableViewController {
         sortFavoritesByNameAsc()
         
         // Adding BannerAD to Subview
-        bannerAd.rootViewController = self
-        self.navigationController?.view.addSubview(bannerAd)
-        
-        interstitialAd = createInterstitialAd()
+        if !IAPService.shared.isPremium() {
+            bannerAd.rootViewController = self
+            self.navigationController?.view.addSubview(bannerAd)
+            
+            interstitialAd = createInterstitialAd()
+        }
         
 //        favorites?.observe({ notification in
 //            print("DEBUG: Realm observer is \(notification)")

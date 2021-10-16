@@ -117,11 +117,19 @@ class UniversityController: UITableViewController {
         fetchUniversities()
         sortUniversities(byOption: .nameAsc)
         selectedFilters = [.allYears, .allLanguages, .scholarshipAll, .allUniversityTypes]
-        interstitialAd = createInterstitialAd()
+        
+        if !IAPService.shared.isPremium() {
+            interstitialAd = createInterstitialAd()
+        }
                 
         NotificationCenter.default.addObserver(forName: NSNotification.Name("statusBarSelected"), object: nil, queue: nil) { event in
             // scroll to top of a table view
             self.handleScrollToTop()
+        }
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("premiumPurchased"), object: nil, queue: nil) { event in
+            // scroll to top of a table view
+            self.bannerAd.isHidden = true
         }
 
     }
@@ -141,8 +149,14 @@ class UniversityController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        bannerAd.isHidden = false
+        if !IAPService.shared.isPremium() {
+            bannerAd.isHidden = false
+        }
+        else {
+            bannerAd.isHidden = true
+        }
     }
+    
     
     // MARK: - Helpers
     
@@ -170,8 +184,11 @@ class UniversityController: UITableViewController {
         view.addSubview(actionButton)
         view.addSubview(scrollTopActionButton)
         
-        bannerAd.rootViewController = self
-        self.navigationController?.view.addSubview(bannerAd)
+        if !IAPService.shared.isPremium() {
+            bannerAd.rootViewController = self
+            self.navigationController?.view.addSubview(bannerAd)
+        }
+        
     }
     
     func sortUniversities(byOption option: ActionSheetOptions) {
