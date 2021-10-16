@@ -11,5 +11,6 @@ pod 'Firebase/Core'
 pod 'Firebase/Firestore'
 pod 'RealmSwift'
 pod 'Google-Mobile-Ads-SDK'
+pod 'Purchases'
 
 end

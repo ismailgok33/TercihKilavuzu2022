@@ -17,6 +17,8 @@
 		EC3D114B26FA742C0031609C /* CityListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3D114A26FA742C0031609C /* CityListView.swift */; };
 		EC3D114D26FA77FB0031609C /* DepartmentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3D114C26FA77FB0031609C /* DepartmentListView.swift */; };
 		EC3D114F26FA7E5C0031609C /* FilterModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3D114E26FA7E5C0031609C /* FilterModelView.swift */; };
+		EC416772271B24A1007CF2E2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC416771271B24A1007CF2E2 /* StoreKit.framework */; };
+		EC416775271B2B77007CF2E2 /* StoreKitTestCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = EC416774271B2B77007CF2E2 /* StoreKitTestCertificate.cer */; };
 		EC488B6D26ECC209005B7D31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC488B6C26ECC209005B7D31 /* AppDelegate.swift */; };
 		EC488B6F26ECC209005B7D31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC488B6E26ECC209005B7D31 /* SceneDelegate.swift */; };
 		EC488B7426ECC209005B7D31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC488B7226ECC209005B7D31 /* Main.storyboard */; };
@@ -74,6 +76,9 @@
 		EC3D114A26FA742C0031609C /* CityListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListView.swift; sourceTree = "<group>"; };
 		EC3D114C26FA77FB0031609C /* DepartmentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentListView.swift; sourceTree = "<group>"; };
 		EC3D114E26FA7E5C0031609C /* FilterModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterModelView.swift; sourceTree = "<group>"; };
+		EC416771271B24A1007CF2E2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		EC416773271B2865007CF2E2 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
+		EC416774271B2B77007CF2E2 /* StoreKitTestCertificate.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = StoreKitTestCertificate.cer; sourceTree = "<group>"; };
 		EC488B6926ECC209005B7D31 /* TercihKilavuzu2022.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TercihKilavuzu2022.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC488B6C26ECC209005B7D31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC488B6E26ECC209005B7D31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BB16C6BCFA75F532604856D /* Pods_TercihKilavuzu2022.framework in Frameworks */,
+				EC416772271B24A1007CF2E2 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +141,7 @@
 		11FF1FDC7FAB9D19D8F5531B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EC416771271B24A1007CF2E2 /* StoreKit.framework */,
 				EA1BC2D92414808E49427A6A /* Pods_TercihKilavuzu2022.framework */,
 			);
 			name = Frameworks;
@@ -269,6 +276,8 @@
 				EC6427F72709FC5F0052931E /* StaticDepartmentData.swift */,
 				EC5DB405270B715B0099B153 /* StaticUniversityData.txt */,
 				ECC11586270F824E004E4863 /* StaticDepartmentData.txt */,
+				EC416773271B2865007CF2E2 /* Configuration.storekit */,
+				EC416774271B2B77007CF2E2 /* StoreKitTestCertificate.cer */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -359,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC488B7926ECC20A005B7D31 /* LaunchScreen.storyboard in Resources */,
+				EC416775271B2B77007CF2E2 /* StoreKitTestCertificate.cer in Resources */,
 				EC51D6B426EEA95A00594A81 /* GoogleService-Info.plist in Resources */,
 				EC488B7626ECC20A005B7D31 /* Assets.xcassets in Resources */,
 				EC5DB406270B715B0099B153 /* StaticUniversityData.txt in Resources */,

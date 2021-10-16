@@ -105,6 +105,9 @@ PODS:
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
   - Protobuf (3.17.0)
+  - Purchases (3.12.7):
+    - PurchasesCoreSwift (= 3.12.7)
+  - PurchasesCoreSwift (3.12.7)
   - ReactiveSwift (4.0.0):
     - Result (~> 4.0)
   - Realm (10.10.0):
@@ -125,6 +128,7 @@ DEPENDENCIES:
   - Firebase/Firestore
   - FireStore
   - Google-Mobile-Ads-SDK
+  - Purchases
   - RealmSwift
 
 SPEC REPOS:
@@ -145,6 +149,8 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - Protobuf
+    - Purchases
+    - PurchasesCoreSwift
     - ReactiveSwift
     - Realm
     - RealmSwift
@@ -168,12 +174,14 @@ SPEC CHECKSUMS:
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   Protobuf: 7327d4444215b5f18e560a97f879ff5503c4581c
+  Purchases: 1253ea2cab23e515ef4ad280f67d1a0ab2f4e68b
+  PurchasesCoreSwift: ac9d7defa462b28d093c9ea32147c8dcaeebc572
   ReactiveSwift: a2bb9ace428a109e9c0209615645d9d286c8c433
   Realm: f501df41a4222c67850c77cf135d472192ecf294
   RealmSwift: c69aadfc7db0d60075178d037c2f34ada73d5201
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   SwiftXtend: 12539d07f953ee1ce6b9653b51f681909a21e913
 
-PODFILE CHECKSUM: 616a84c04e5c160939ed56a1ca32d02a2fa5f8e2
+PODFILE CHECKSUM: 571e5d9131d75533fc5a2c5c9d05356395cd4fbb
 
 COCOAPODS: 1.10.1

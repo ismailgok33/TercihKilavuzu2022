@@ -31,12 +31,15 @@ class MainTabController: UITabBarController {
         configureViewControllers()
         
         if !IAPService.shared.isPremium() {
-            DispatchQueue.main.asyncAfter(deadline: .now()+3) {
-                let subscriptionVC = SubscriptionViewController()
-                subscriptionVC.fromTabBar = false
-                let subscriptionNav = UINavigationController(rootViewController: subscriptionVC)
-                self.present(subscriptionNav, animated: true)
-            }
+//            let random = Int.random(in: 1...5)
+//            if random == 3 {
+                DispatchQueue.main.asyncAfter(deadline: .now()+3) {
+                    let subscriptionVC = SubscriptionViewController()
+                    subscriptionVC.fromTabBar = false
+                    let subscriptionNav = UINavigationController(rootViewController: subscriptionVC)
+                    self.present(subscriptionNav, animated: true)
+                }
+//            }
         }
         
     }

@@ -9,6 +9,7 @@ import UIKit
 import Firebase
 import RealmSwift
 import GoogleMobileAds
+import Purchases
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +25,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Error while starting realm \(error)")
         }
         GADMobileAds.sharedInstance().start(completionHandler: nil)
+        Purchases.configure(withAPIKey: "yRVqvnFMPsyETOMzMgNdPWAkHnKROwEV")
+        
+        if !IAPService.shared.isPremium() {
+            IAPService.shared.getSubscriptionStatus(completion: nil)
+        }
         
         UINavigationBar.appearance().barTintColor = .white // navigation background color
 //        UINavigationBar.appearance().tintColor = .black

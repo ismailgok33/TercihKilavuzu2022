@@ -64,8 +64,6 @@ class SubscriptionViewController: UIViewController {
         subscribeButton.anchor(left: view.leftAnchor, bottom: restoreButton.topAnchor, right: view.rightAnchor,
                                paddingLeft: 40, paddingBottom: 10, paddingRight: 40, height: 50)
         descriptionView.anchor(top: headerView.bottomAnchor, left: view.leftAnchor, bottom: termsOfServiceView.topAnchor, right: view.rightAnchor, paddingTop: 50)
-//        descriptionView.anchor(top: headerView.bottomAnchor, left: view.leftAnchor, bottom: restoreButton.topAnchor, right: view.rightAnchor,
-//                               paddingTop: (view.frame.height - headerView.frame.height - restoreButton.frame.height - subscribeButton.frame.height) / 4)
     }
     
     // MARK: - Helpers
@@ -80,6 +78,8 @@ class SubscriptionViewController: UIViewController {
         view.addSubview(termsOfServiceView)
         view.addSubview(descriptionView)
         
+        view.isUserInteractionEnabled = true
+        
         if !fromTabBar {
             setUpCloseButton()
         }
@@ -91,6 +91,7 @@ class SubscriptionViewController: UIViewController {
     }
     
     private func setUpButtons() {
+        print("DEBUG: setUpButtons is triggered")
         subscribeButton.addTarget(self, action: #selector(handleSubscribe), for: .touchUpInside)
         restoreButton.addTarget(self, action: #selector(handleRestore), for: .touchUpInside)
     }
@@ -103,10 +104,40 @@ class SubscriptionViewController: UIViewController {
     }
     
     @objc private func handleSubscribe() {
-        // RevenueCat
+        print("DEBUG: handleSubscribe is triggered")
+        IAPService.shared.fetchPackages { package in
+            guard let package = package else { return }
+            
+            IAPService.shared.subscribe(package: package) {[weak self] success in
+                print("DEBUG: subscribed -> \(success)")
+                DispatchQueue.main.async {
+                    if success {
+                        self?.dismiss(animated: true, completion: nil)
+                    }
+                    else {
+                        let alert = UIAlertController(title: "Satın alma hatası", message: "Premium üyelik satın alımı sırasında hata oluştu!", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Geri Dön", style: .cancel, handler: nil))
+                        self?.present(alert, animated: true, completion: nil)
+                    }
+                }
+            }
+        }
     }
     
     @objc private func handleRestore() {
-        
+        print("DEBUG: handleRestore is triggered")
+        IAPService.shared.restore {[weak self] success in
+            print("DEBUG: restored -> \(success)")
+            DispatchQueue.main.async {
+                if success {
+                    self?.dismiss(animated: true, completion: nil)
+                }
+                else {
+                    let alert = UIAlertController(title: "Premium kontrolü hatası", message: "Önceki Premium üyeliğinizi geri getiremedik!", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Geri Dön", style: .cancel, handler: nil))
+                    self?.present(alert, animated: true, completion: nil)
+                }
+            }
+        }
     }
 }

@@ -1,0 +1,33 @@
+{
+  "identifier" : "9B0C68C4",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "2.99",
+      "familyShareable" : false,
+      "internalID" : "0A4888D8",
+      "localizations" : [
+        {
+          "description" : "Reklamsız ve internete bağlı kalmadan erişim",
+          "displayName" : "Tercih Kılavuzu 2022 Premium",
+          "locale" : "tr"
+        }
+      ],
+      "productID" : "com.myiosapps.TercihKilavuzu2022.premium",
+      "referenceName" : "Tercih Kılavuzu 2022 Premium",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 1,
+    "minor" : 1
+  }
+}
