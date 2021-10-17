@@ -31,7 +31,14 @@ class MainTabController: UITabBarController {
         configureViewControllers()
         
         if !IAPService.shared.isPremium() {
-            
+            // Check the internet connection when app runs
+            if !NetworkMonitorService.shared.isConnected {
+                DispatchQueue.main.async {
+                    // show alert
+                    let alert = UIAlertController(title: "İnternete bağlı değilsiniz", message: "Uygulamaya erişmek için lütfen internete bağlanarak tekrar deneyiniz.", preferredStyle: .alert)
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
             
             DispatchQueue.main.asyncAfter(deadline: .now()+1) {
                 let subscriptionVC = SubscriptionViewController()

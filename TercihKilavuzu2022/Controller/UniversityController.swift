@@ -114,13 +114,22 @@ class UniversityController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        checkIfDeviceIsConnectedToInternet()
         fetchUniversities()
         sortUniversities(byOption: .nameAsc)
         selectedFilters = [.allYears, .allLanguages, .scholarshipAll, .allUniversityTypes]
         
         if !IAPService.shared.isPremium() {
             interstitialAd = createInterstitialAd()
+            
+            // Check if internet connection is lost on the run
+            NotificationCenter.default.addObserver(forName: NSNotification.Name("noInternetConnection"), object: nil, queue: nil) { event in
+                DispatchQueue.main.async {
+                    // show alert
+                    let alert = UIAlertController(title: "İnternete bağlı değilsiniz", message: "Uygulamaya erişmek için lütfen internete bağlanarak tekrar deneyiniz.", preferredStyle: .alert)
+                    self.present(alert, animated: true, completion: nil)
+                }
+                
+            }
         }
                 
         NotificationCenter.default.addObserver(forName: NSNotification.Name("statusBarSelected"), object: nil, queue: nil) { event in
