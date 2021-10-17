@@ -114,6 +114,7 @@ class UniversityController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        checkIfDeviceIsConnectedToInternet()
         fetchUniversities()
         sortUniversities(byOption: .nameAsc)
         selectedFilters = [.allYears, .allLanguages, .scholarshipAll, .allUniversityTypes]
@@ -128,9 +129,11 @@ class UniversityController: UITableViewController {
         }
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name("premiumPurchased"), object: nil, queue: nil) { event in
-            // scroll to top of a table view
+            // hide bannerAd
             self.bannerAd.isHidden = true
+            NetworkMonitorService.shared.stopMonitoring()
         }
+        
 
     }
     
@@ -335,6 +338,19 @@ class UniversityController: UITableViewController {
         ad.delegate = self
         ad.load(GADRequest())
         return ad
+    }
+    
+    func checkIfDeviceIsConnectedToInternet() {
+        if !IAPService.shared.isPremium() {
+            NotificationCenter.default.addObserver(forName: NSNotification.Name("noInternetConnection"), object: nil, queue: nil) { event in
+                DispatchQueue.main.async {
+                    // show alert
+                    let alert = UIAlertController(title: "İnternete bağlı değilsiniz", message: "Uygulamaya erişmek için lütfen internete bağlanarak tekrar deneyiniz.", preferredStyle: .alert)
+                    self.present(alert, animated: true, completion: nil)
+                }
+                
+            }
+        }
     }
     
 //    override var preferredStatusBarStyle: UIStatusBarStyle {

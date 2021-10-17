@@ -39,6 +39,7 @@
 		EC703E2D2700CD8400020664 /* TYTCountdownGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC703E2C2700CD8400020664 /* TYTCountdownGraphView.swift */; };
 		EC703E312700F4FD00020664 /* AYTCountdownGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC703E302700F4FD00020664 /* AYTCountdownGraphView.swift */; };
 		EC703E332700F5C700020664 /* YDTCountdownGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC703E322700F5C700020664 /* YDTCountdownGraphView.swift */; };
+		EC83EDBE271C542200164397 /* NetworkMonitorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC83EDBD271C542200164397 /* NetworkMonitorService.swift */; };
 		EC88418E26F9037B00D6F5C0 /* FilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88418D26F9037B00D6F5C0 /* FilterController.swift */; };
 		EC88419026F91A5100D6F5C0 /* CityListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88418F26F91A5100D6F5C0 /* CityListController.swift */; };
 		EC88419226F91BE400D6F5C0 /* DepartmentListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88419126F91BE400D6F5C0 /* DepartmentListController.swift */; };
@@ -101,6 +102,7 @@
 		EC703E2C2700CD8400020664 /* TYTCountdownGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TYTCountdownGraphView.swift; sourceTree = "<group>"; };
 		EC703E302700F4FD00020664 /* AYTCountdownGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AYTCountdownGraphView.swift; sourceTree = "<group>"; };
 		EC703E322700F5C700020664 /* YDTCountdownGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDTCountdownGraphView.swift; sourceTree = "<group>"; };
+		EC83EDBD271C542200164397 /* NetworkMonitorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitorService.swift; sourceTree = "<group>"; };
 		EC88418D26F9037B00D6F5C0 /* FilterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterController.swift; sourceTree = "<group>"; };
 		EC88418F26F91A5100D6F5C0 /* CityListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListController.swift; sourceTree = "<group>"; };
 		EC88419126F91BE400D6F5C0 /* DepartmentListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentListController.swift; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				ECC11580270F7437004E4863 /* TextService.swift */,
 				ECA2CF0027176DD50078A559 /* IAPService.swift */,
 				ECA2CF0227177F2B0078A559 /* AppStoreReviewManager.swift */,
+				EC83EDBD271C542200164397 /* NetworkMonitorService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 				EC88419226F91BE400D6F5C0 /* DepartmentListController.swift in Sources */,
 				EC3D113F26FA56F70031609C /* ScholarshipView.swift in Sources */,
 				ECED875A270CF854000B2AFF /* LaunchAnimationViewController.swift in Sources */,
+				EC83EDBE271C542200164397 /* NetworkMonitorService.swift in Sources */,
 				EC51D6B026EEA16300594A81 /* FirestoreService.swift in Sources */,
 				ECC11581270F7437004E4863 /* TextService.swift in Sources */,
 				EC703E332700F5C700020664 /* YDTCountdownGraphView.swift in Sources */,

@@ -31,6 +31,8 @@ class MainTabController: UITabBarController {
         configureViewControllers()
         
         if !IAPService.shared.isPremium() {
+            
+            
             DispatchQueue.main.asyncAfter(deadline: .now()+1) {
                 let subscriptionVC = SubscriptionViewController()
 //                subscriptionVC.fromTabBar = false

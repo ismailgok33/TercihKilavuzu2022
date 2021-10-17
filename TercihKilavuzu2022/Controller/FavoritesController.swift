@@ -69,12 +69,17 @@ class FavoritesController: UITableViewController {
             interstitialAd = createInterstitialAd()
         }
         
-//        favorites?.observe({ notification in
-//            print("DEBUG: Realm observer is \(notification)")
-//            DispatchQueue.main.async {
-//                self.tableView.reloadData()
-//            }
-//        })
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("statusBarSelected"), object: nil, queue: nil) { event in
+            // scroll to top of a table view
+            self.handleScrollToTop()
+        }
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("premiumPurchased"), object: nil, queue: nil) { event in
+            // hide bannerAd
+            self.bannerAd.isHidden = true
+            NetworkMonitorService.shared.stopMonitoring()
+        }
+
     }
     
     override func viewDidLayoutSubviews() {
@@ -167,6 +172,10 @@ class FavoritesController: UITableViewController {
                         
             self.present(activityViewController, animated: true, completion: nil)
         }
+    }
+    
+    @objc func handleScrollToTop() {
+        tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
     }
     
 //    func handleDeleteFavorite(alertAction: UIAlertAction) -> Void {

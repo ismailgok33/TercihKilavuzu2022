@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if !IAPService.shared.isPremium() {
             IAPService.shared.getSubscriptionStatus(completion: nil)
+            NetworkMonitorService.shared.startMonitoring()
         }
         
         UINavigationBar.appearance().barTintColor = .white // navigation background color
