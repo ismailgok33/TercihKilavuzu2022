@@ -35,7 +35,6 @@
 		EC51D6B426EEA95A00594A81 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC51D6B326EEA95A00594A81 /* GoogleService-Info.plist */; };
 		EC5DB406270B715B0099B153 /* StaticUniversityData.txt in Resources */ = {isa = PBXBuildFile; fileRef = EC5DB405270B715B0099B153 /* StaticUniversityData.txt */; };
 		EC6427F62709FA950052931E /* StaticCityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6427F52709FA950052931E /* StaticCityData.swift */; };
-		EC6427F82709FC5F0052931E /* StaticDepartmentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6427F72709FC5F0052931E /* StaticDepartmentData.swift */; };
 		EC703E2D2700CD8400020664 /* TYTCountdownGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC703E2C2700CD8400020664 /* TYTCountdownGraphView.swift */; };
 		EC703E312700F4FD00020664 /* AYTCountdownGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC703E302700F4FD00020664 /* AYTCountdownGraphView.swift */; };
 		EC703E332700F5C700020664 /* YDTCountdownGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC703E322700F5C700020664 /* YDTCountdownGraphView.swift */; };
@@ -98,7 +97,6 @@
 		EC51D6B326EEA95A00594A81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EC5DB405270B715B0099B153 /* StaticUniversityData.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StaticUniversityData.txt; sourceTree = "<group>"; };
 		EC6427F52709FA950052931E /* StaticCityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticCityData.swift; sourceTree = "<group>"; };
-		EC6427F72709FC5F0052931E /* StaticDepartmentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticDepartmentData.swift; sourceTree = "<group>"; };
 		EC703E2C2700CD8400020664 /* TYTCountdownGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TYTCountdownGraphView.swift; sourceTree = "<group>"; };
 		EC703E302700F4FD00020664 /* AYTCountdownGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AYTCountdownGraphView.swift; sourceTree = "<group>"; };
 		EC703E322700F5C700020664 /* YDTCountdownGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDTCountdownGraphView.swift; sourceTree = "<group>"; };
@@ -276,7 +274,6 @@
 				ECDBD1ED26EEB6D100635021 /* Constants.swift */,
 				EC8A56A926F521B50081587F /* ActionSheetLauncher.swift */,
 				EC6427F52709FA950052931E /* StaticCityData.swift */,
-				EC6427F72709FC5F0052931E /* StaticDepartmentData.swift */,
 				EC5DB405270B715B0099B153 /* StaticUniversityData.txt */,
 				ECC11586270F824E004E4863 /* StaticDepartmentData.txt */,
 				EC416773271B2865007CF2E2 /* Configuration.storekit */,
@@ -473,7 +470,6 @@
 				EC88419A26F932FB00D6F5C0 /* DepartmentCell.swift in Sources */,
 				EC488B6F26ECC209005B7D31 /* SceneDelegate.swift in Sources */,
 				EC488B8B26ECC5B9005B7D31 /* FavoritesController.swift in Sources */,
-				EC6427F82709FC5F0052931E /* StaticDepartmentData.swift in Sources */,
 				EC3D114D26FA77FB0031609C /* DepartmentListView.swift in Sources */,
 				EC8A56AE26F53D970081587F /* ActionSheetViewModel.swift in Sources */,
 				EC488B8726ECC33C005B7D31 /* MainTabController.swift in Sources */,

@@ -69,10 +69,10 @@ class FirestoreService {
         }
     }
     
-    func fetchStaticDepartments(completion: @escaping([Department]) -> Void) {
-        var departments = [Department]()
-        let staticDepartmentData = StaticDepartmentData()
-        departments = staticDepartmentData.staticDepartmentDataList
-        completion(departments)
-    }
+//    func fetchStaticDepartments(completion: @escaping([Department]) -> Void) {
+//        var departments = [Department]()
+//        let staticDepartmentData = StaticDepartmentData()
+//        departments = staticDepartmentData.staticDepartmentDataList
+//        completion(departments)
+//    }
 }

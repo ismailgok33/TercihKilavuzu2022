@@ -17,6 +17,7 @@ class TextService {
         var staticUniversityText = ""
         var lineArray = [String]()
         var keyArray = [String]()
+        var index = 0
         
         if let path = Bundle.main.path(forResource: "StaticUniversityData", ofType: "txt") {
             
@@ -27,7 +28,7 @@ class TextService {
             lineArray.forEach {
                 keyArray = $0.trimmingCharacters(in: .newlines).components(separatedBy: ",")
 
-                universities.append(University(universityID: UUID().uuidString,
+                universities.append(University(universityID: "\(index)",
                                                dictionary: ["name": keyArray[0].trimmingCharacters(in: .whitespaces),
                                                             "state": keyArray[1].trimmingCharacters(in: .whitespaces),
                                                             "city": keyArray[2].trimmingCharacters(in: .whitespaces),
@@ -40,6 +41,7 @@ class TextService {
                                                             "type": keyArray[9].trimmingCharacters(in: .whitespaces),
                                                             "scholarship": keyArray[10].trimmingCharacters(in: .whitespaces)
                                                ]))
+                index += 1
             }
             completion(universities)
           } catch let error {
