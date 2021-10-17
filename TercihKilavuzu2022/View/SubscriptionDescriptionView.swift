@@ -27,7 +27,7 @@ class SubscriptionDescriptionView: UIView {
         label.textAlignment = .center
         label.numberOfLines = 1
         label.textColor = .systemGray
-        label.text = "4.99 TRY"
+        label.text = "2.99 TRY"
         return label
     }()
     
