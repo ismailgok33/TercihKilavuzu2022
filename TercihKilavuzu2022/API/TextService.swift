@@ -30,7 +30,7 @@ class TextService {
 
                 universities.append(University(universityID: "\(index)",
                                                dictionary: ["name": keyArray[0].trimmingCharacters(in: .whitespaces),
-                                                            "state": keyArray[1].trimmingCharacters(in: .whitespaces),
+                                                            "state": keyArray[1].trimmingCharacters(in: .whitespaces).caseInsensitiveCompare("Devlet") == .orderedSame,
                                                             "city": keyArray[2].trimmingCharacters(in: .whitespaces),
                                                             "department": keyArray[3].trimmingCharacters(in: .whitespaces),
                                                             "duration": keyArray[4].trimmingCharacters(in: .whitespaces),

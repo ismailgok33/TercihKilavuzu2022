@@ -197,6 +197,9 @@ extension CityListController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
         
+        self.searchController.searchBar.resignFirstResponder()
+        self.searchController.searchBar.endEditing(true)
+        
         if var searchCityList = searchedCities {
             let city = searchedCities?[indexPath.row]
             searchedCities?[indexPath.row].isSelected = !(city?.isSelected ?? false)

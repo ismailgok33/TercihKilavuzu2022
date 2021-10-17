@@ -113,17 +113,19 @@ class FilterController: UIViewController {
             var loader: UIAlertController?
             DispatchQueue.main.async {
                 loader = self.loader()
-                
-                self.selectedFilters.removeAll() // delete all filters first
-                self.selectedFilters.append(contentsOf: self.scholarshipView!.filterScholarshipOptions)
-                self.selectedFilters.append(contentsOf: self.universityTypeView!.statePrivateFilterOptions)
-                self.selectedFilters.append(contentsOf: self.languageTypeView!.languageFilterOptions)
-                self.selectedFilters.append(contentsOf: self.durationTypeView!.durationFilterOptions)
-                self.minScore = Double(self.scoreRangeView?.minScoreField.text ?? "")
-                self.maxScore = Double(self.scoreRangeView?.maxScoreField.text ?? "")
-                self.minPlacement = Int(self.placementRangeView?.minPlacementField.text ?? "")
-                self.maxPlacement = Int(self.placementRangeView?.maxPlacementField.text ?? "")
             }
+            self.selectedFilters.removeAll() // delete all filters first
+            self.selectedFilters.append(contentsOf: self.scholarshipView!.filterScholarshipOptions)
+            self.selectedFilters.append(contentsOf: self.universityTypeView!.statePrivateFilterOptions)
+            self.selectedFilters.append(contentsOf: self.languageTypeView!.languageFilterOptions)
+            self.selectedFilters.append(contentsOf: self.durationTypeView!.durationFilterOptions)
+            self.minScore = Double(self.scoreRangeView?.minScoreField.text ?? "")
+            self.maxScore = Double(self.scoreRangeView?.maxScoreField.text ?? "")
+            self.minPlacement = Int(self.placementRangeView?.minPlacementField.text ?? "")
+            self.maxPlacement = Int(self.placementRangeView?.maxPlacementField.text ?? "")
+            
+            print("DEBUG: SelectedFilters are \(self.selectedFilters)")
+            
             
             let queue = OperationQueue()
 

@@ -190,6 +190,9 @@ extension DepartmentListController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
+        self.searchController.searchBar.resignFirstResponder()
+        self.searchController.searchBar.endEditing(true)
+        
         if var searchedDepartmentList = searchedDepartments {
             let department = searchedDepartments?[indexPath.row]
             searchedDepartments?[indexPath.row].isSelected = !(department?.isSelected ?? false)

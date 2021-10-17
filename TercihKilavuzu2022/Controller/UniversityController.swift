@@ -530,13 +530,18 @@ extension UniversityController {
 
 extension UniversityController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        if let text = searchController.searchBar.text, !text.isEmpty {
-            searchedUniversities = filteredUniversities.filter({ university in
-                university.name.localizedCaseInsensitiveContains(text)
-                    || university.department.localizedCaseInsensitiveContains(text)
-                    || university.city.localizedCaseInsensitiveContains(text)
-                    || university.language.localizedCaseInsensitiveContains(text)
-            })
+        if let searchText = searchController.searchBar.text, !searchText.isEmpty {
+            let textArray = searchText.trimmingCharacters(in: .whitespaces).components(separatedBy: " ")
+            searchedUniversities = filteredUniversities
+            textArray.forEach { text in
+                searchedUniversities = searchedUniversities?.filter({ university in
+                    university.name.localizedCaseInsensitiveContains(text)
+                        || university.department.localizedCaseInsensitiveContains(text)
+                        || university.city.localizedCaseInsensitiveContains(text)
+                        || university.language.localizedCaseInsensitiveContains(text)
+                })
+            }
+            
         }
         else {
             searchedUniversities = nil
