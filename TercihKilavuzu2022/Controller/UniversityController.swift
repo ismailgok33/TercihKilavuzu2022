@@ -537,7 +537,6 @@ extension UniversityController: UISearchResultsUpdating {
                 searchedUniversities = searchedUniversities?.filter({ university in
                     university.name.localizedCaseInsensitiveContains(text)
                         || university.department.localizedCaseInsensitiveContains(text)
-                        || university.city.localizedCaseInsensitiveContains(text)
                         || university.language.localizedCaseInsensitiveContains(text)
                 })
             }
