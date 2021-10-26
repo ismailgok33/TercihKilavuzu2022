@@ -172,27 +172,17 @@ class FilterController: UIViewController {
     }
     
     @objc func handleResetButtonTapped() {
-        selectedFilters.removeAll()
-        minScore = nil
-        maxScore = nil
-        minPlacement = nil
-        maxPlacement = nil
-        selectedCities?.removeAll()
-        selectedDepartments?.removeAll()
-        showEmptyScoreAndPlacement = false
+        let alert = UIAlertController(title: "Emin misiniz?", message: "Tüm filtreleri sıfırlamak üzeresiniz.", preferredStyle: .alert)
+        let resetAction = UIAlertAction(title: "Sıfırla", style: .destructive) { _ in
+            self.resetFilters()
+        }
+        let cancelAction = UIAlertAction(title: "Vazgeç", style: .default)
         
-        durationTypeView?.handleAllButtonTapped()
-        languageTypeView?.handleAllButtonTapped()
-        universityTypeView?.handleAllButtonTapped()
-        scholarshipView?.handleAllButtonTapped()
-        scoreRangeView?.minScoreField.text = nil
-        scoreRangeView?.maxScoreField.text = nil
-        placementRangeView?.minPlacementField.text = nil
-        placementRangeView?.maxPlacementField.text = nil
-        showEmptyScoreAndPlacementSwitch.setOn(false, animated: true)
+        alert.addAction(resetAction)
+        alert.addAction(cancelAction)
         
-        cityListView.selectedCitiesField.attributedText = NSAttributedString(string: "Şehir seçiniz...")
-        departmentListView.selectedDepartmentsField.attributedText = NSAttributedString(string: "Bölüm seçiniz...")
+        present(alert, animated: true)
+        
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -293,6 +283,30 @@ class FilterController: UIViewController {
         alert.view.addSubview(loadingIndicator)
         present(alert, animated: true, completion: nil)
         return alert
+    }
+    
+    private func resetFilters() {
+        selectedFilters.removeAll()
+        minScore = nil
+        maxScore = nil
+        minPlacement = nil
+        maxPlacement = nil
+        selectedCities?.removeAll()
+        selectedDepartments?.removeAll()
+        showEmptyScoreAndPlacement = false
+        
+        durationTypeView?.handleAllButtonTapped()
+        languageTypeView?.handleAllButtonTapped()
+        universityTypeView?.handleAllButtonTapped()
+        scholarshipView?.handleAllButtonTapped()
+        scoreRangeView?.minScoreField.text = nil
+        scoreRangeView?.maxScoreField.text = nil
+        placementRangeView?.minPlacementField.text = nil
+        placementRangeView?.maxPlacementField.text = nil
+        showEmptyScoreAndPlacementSwitch.setOn(false, animated: true)
+        
+        cityListView.selectedCitiesField.attributedText = NSAttributedString(string: "Şehir seçiniz...")
+        departmentListView.selectedDepartmentsField.attributedText = NSAttributedString(string: "Bölüm seçiniz...")
     }
     
 }
