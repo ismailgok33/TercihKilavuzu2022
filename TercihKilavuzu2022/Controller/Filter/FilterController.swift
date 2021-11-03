@@ -51,6 +51,7 @@ class FilterController: UIViewController {
         let sw = UISwitch()
         sw.setOn(showEmptyScoreAndPlacement, animated: true)
         sw.tintColor = .systemGray
+        sw.onTintColor = .selectedFilterColor
         sw.backgroundColor = .clear
         sw.addTarget(self, action: #selector(handleSwitchChanged), for: .valueChanged)
         return sw
@@ -86,6 +87,9 @@ class FilterController: UIViewController {
         
         configureGradientLayer()
         configureUI()
+        
+        self.navigationController?.navigationBar.tintColor = .none
+        self.navigationController?.navigationBar.tintColor = .white
     }
     
     // MARK: - Selectors
@@ -268,7 +272,7 @@ class FilterController: UIViewController {
         let bottomColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
         
         let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [topColor.cgColor, bottomColor.cgColor]
+        gradientLayer.colors = [UIColor.gradientColorTop.cgColor, UIColor.gradientColorBottom.cgColor]
         gradientLayer.locations = [0, 1]
         view.layer.addSublayer(gradientLayer)
         gradientLayer.frame = view.frame

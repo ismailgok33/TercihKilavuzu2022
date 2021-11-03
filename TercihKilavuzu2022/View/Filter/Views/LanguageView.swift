@@ -123,8 +123,8 @@ class LanguageView: UIView {
         backgroundColor = .clear
         
         if languageFilterOptions.count == 0 || languageFilterOptions.contains(.allLanguages){
-            allButton.tintColor = .red
-            allButton.layer.borderColor = UIColor.red.cgColor
+            allButton.tintColor = .selectedFilterColor
+            allButton.layer.borderColor = UIColor.selectedFilterColor.cgColor
 
         }
 //        checkIfOptionsAreEmpty()
@@ -150,8 +150,8 @@ class LanguageView: UIView {
     func appendAllLanguagesOption() {
         languageFilterOptions.removeAll()
         languageFilterOptions.append(.allLanguages)
-        allButton.tintColor = .red
-        allButton.layer.borderColor = UIColor.red.cgColor
+        allButton.tintColor = .selectedFilterColor
+        allButton.layer.borderColor = UIColor.selectedFilterColor.cgColor
         turkishButton.tintColor = .white
         turkishButton.layer.borderColor = UIColor.white.cgColor
         englishButton.tintColor = .white
@@ -168,8 +168,8 @@ class LanguageView: UIView {
     func appendTurkishLanguageOption() {
         
         languageFilterOptions.append(.turkish)
-        turkishButton.tintColor = .red
-        turkishButton.layer.borderColor = UIColor.red.cgColor
+        turkishButton.tintColor = .selectedFilterColor
+        turkishButton.layer.borderColor = UIColor.selectedFilterColor.cgColor
         removeAllLanguagesOption()
 
     }
@@ -184,8 +184,8 @@ class LanguageView: UIView {
     func appendEnglishLanguageOption() {
         
         languageFilterOptions.append(.english)
-        englishButton.tintColor = .red
-        englishButton.layer.borderColor = UIColor.red.cgColor
+        englishButton.tintColor = .selectedFilterColor
+        englishButton.layer.borderColor = UIColor.selectedFilterColor.cgColor
         removeAllLanguagesOption()
     }
     

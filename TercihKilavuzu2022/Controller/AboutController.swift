@@ -90,7 +90,7 @@ class AboutController: UIViewController {
     }
     
     func openWebSite() {
-        guard let url = URL(string: "http://www.google.com") else { return }
+        guard let url = URL(string: "https://tercihkilavuzuapp.wixsite.com/about") else { return }
         let vc = SFSafariViewController(url: url)
         present(vc, animated: true, completion: nil)
     }

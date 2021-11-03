@@ -34,7 +34,7 @@ class CountdownController: UIViewController {
         aytView = AYTCountdownGraphView(frame: CGRect(x: 0, y: 0, width: .zero, height: view.frame.height / 3 - 30))
         ydtView = YDTCountdownGraphView(frame: CGRect(x: 0, y: 0, width: .zero, height: view.frame.height / 3 - 30))
         
-//        configureGradientLayer()
+        configureGradientLayer()
         configureUI()
     }
     
@@ -47,7 +47,7 @@ class CountdownController: UIViewController {
     // MARK: Helpers
     
     func configureUI() {
-        view.backgroundColor = .backgroundColor
+        // view.backgroundColor = .backgroundColor
         
         
         let stack = UIStackView(arrangedSubviews: [tytView, aytView, ydtView])
@@ -68,11 +68,8 @@ class CountdownController: UIViewController {
     }
     
     func configureGradientLayer() {
-        let topColor = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
-        let bottomColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
-        
         let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [topColor.cgColor, bottomColor.cgColor]
+        gradientLayer.colors = [UIColor.gradientColorTop.cgColor, UIColor.gradientColorBottom.cgColor]
         gradientLayer.locations = [0, 1]
         view.layer.addSublayer(gradientLayer)
         gradientLayer.frame = view.frame

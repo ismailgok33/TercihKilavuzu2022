@@ -104,7 +104,12 @@ extension UIColor {
     
     static let backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
 //    static let backgroundColor = UIColor.rgb(red: 21, green: 22, blue: 33)
-    static let outlineStrokeColor = UIColor.rgb(red: 234, green: 46, blue: 111)
-    static let trackStrokeColor = UIColor.rgb(red: 56, green: 25, blue: 49)
+    static let outlineStrokeColor = UIColor.rgb(red: 255, green: 183, blue: 3)
+    static let trackStrokeColor = UIColor.rgb(red: 251, green: 133, blue: 0)
     static let pulsatingFillColor = UIColor.rgb(red: 86, green: 30, blue: 63)
+    
+    static let gradientColorTop = UIColor(red: 33/256, green: 158/256, blue: 188/256, alpha: 1)
+    static let gradientColorBottom = UIColor(red: 142/256, green: 202/256, blue: 230/256, alpha: 1)
+    
+    static let selectedFilterColor = UIColor.rgb(red: 251, green: 133, blue: 0)
 }

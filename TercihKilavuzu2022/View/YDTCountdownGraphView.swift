@@ -71,7 +71,7 @@ class YDTCountdownGraphView: UIView {
     private func setupCircleLayers() {
         pulsatingLayer = createCircleShapeLayer(strokeColor: .clear, fillColor: UIColor.pulsatingFillColor)
         layer.addSublayer(pulsatingLayer)
-        animatePulsatingLayer()
+        // animatePulsatingLayer()
         
         let trackLayer = createCircleShapeLayer(strokeColor: .trackStrokeColor, fillColor: .backgroundColor)
         layer.addSublayer(trackLayer)

@@ -196,8 +196,8 @@ class ScholarshipView: UIView {
         backgroundColor = .clear
         
         if filterScholarshipOptions.count == 0 || filterScholarshipOptions.contains(.scholarshipAll) {
-            allButton.tintColor = .red
-            allButton.layer.borderColor = UIColor.red.cgColor
+            allButton.tintColor = .selectedFilterColor
+            allButton.layer.borderColor = UIColor.selectedFilterColor.cgColor
         }      
         
         addSubview(viewTitle)
@@ -223,8 +223,8 @@ class ScholarshipView: UIView {
     private func appendAllScholarshipOption() {
         filterScholarshipOptions.removeAll()
         filterScholarshipOptions.append(.scholarshipAll)
-        allButton.tintColor = .red
-        allButton.layer.borderColor = UIColor.red.cgColor
+        allButton.tintColor = .selectedFilterColor
+        allButton.layer.borderColor = UIColor.selectedFilterColor.cgColor
         percentButton100.tintColor = .white
         percentButton100.layer.borderColor = UIColor.white.cgColor
         percentButton75.tintColor = .white
@@ -247,8 +247,8 @@ class ScholarshipView: UIView {
     private func append100PercentOption() {
         
         filterScholarshipOptions.append(.scholarship100)
-        percentButton100.tintColor = .red
-        percentButton100.layer.borderColor = UIColor.red.cgColor
+        percentButton100.tintColor = .selectedFilterColor
+        percentButton100.layer.borderColor = UIColor.selectedFilterColor.cgColor
         removeAllScholarshipOption()
 
     }
@@ -263,8 +263,8 @@ class ScholarshipView: UIView {
     private func appendPercent75Option() {
         
         filterScholarshipOptions.append(.scholarship75)
-        percentButton75.tintColor = .red
-        percentButton75.layer.borderColor = UIColor.red.cgColor
+        percentButton75.tintColor = .selectedFilterColor
+        percentButton75.layer.borderColor = UIColor.selectedFilterColor.cgColor
         removeAllScholarshipOption()
     }
     
@@ -278,8 +278,8 @@ class ScholarshipView: UIView {
     private func appendPercent50Option() {
         
         filterScholarshipOptions.append(.scholarship50)
-        percentButton50.tintColor = .red
-        percentButton50.layer.borderColor = UIColor.red.cgColor
+        percentButton50.tintColor = .selectedFilterColor
+        percentButton50.layer.borderColor = UIColor.selectedFilterColor.cgColor
         removeAllScholarshipOption()
     }
     
@@ -293,8 +293,8 @@ class ScholarshipView: UIView {
     private func appendPercent25Option() {
         
         filterScholarshipOptions.append(.scholarship25)
-        percentButton25.tintColor = .red
-        percentButton25.layer.borderColor = UIColor.red.cgColor
+        percentButton25.tintColor = .selectedFilterColor
+        percentButton25.layer.borderColor = UIColor.selectedFilterColor.cgColor
         removeAllScholarshipOption()
     }
     
@@ -308,8 +308,8 @@ class ScholarshipView: UIView {
     private func appendPercent0Option() {
         
         filterScholarshipOptions.append(.scholarship0)
-        percentButton0.tintColor = .red
-        percentButton0.layer.borderColor = UIColor.red.cgColor
+        percentButton0.tintColor = .selectedFilterColor
+        percentButton0.layer.borderColor = UIColor.selectedFilterColor.cgColor
         removeAllScholarshipOption()
     }
     

@@ -124,8 +124,8 @@ class DurationView: UIView {
         backgroundColor = .clear
         
         if durationFilterOptions.count == 0 || durationFilterOptions.contains(.allYears) {
-            allButton.tintColor = .red
-            allButton.layer.borderColor = UIColor.red.cgColor
+            allButton.tintColor = .selectedFilterColor
+            allButton.layer.borderColor = UIColor.selectedFilterColor.cgColor
 
         }
        
@@ -152,8 +152,8 @@ class DurationView: UIView {
     private func appendAllDurationOption() {
         durationFilterOptions.removeAll()
         durationFilterOptions.append(.allYears)
-        allButton.tintColor = .red
-        allButton.layer.borderColor = UIColor.red.cgColor
+        allButton.tintColor = .selectedFilterColor
+        allButton.layer.borderColor = UIColor.selectedFilterColor.cgColor
         yearButton4.tintColor = .white
         yearButton4.layer.borderColor = UIColor.white.cgColor
         yearButton2.tintColor = .white
@@ -170,8 +170,8 @@ class DurationView: UIView {
     private func appendYear4Option() {
         
         durationFilterOptions.append(.year4)
-        yearButton4.tintColor = .red
-        yearButton4.layer.borderColor = UIColor.red.cgColor
+        yearButton4.tintColor = .selectedFilterColor
+        yearButton4.layer.borderColor = UIColor.selectedFilterColor.cgColor
         removeAllDurationOption()
 
     }
@@ -186,8 +186,8 @@ class DurationView: UIView {
     private func appendYear2Option() {
         
         durationFilterOptions.append(.year2)
-        yearButton2.tintColor = .red
-        yearButton2.layer.borderColor = UIColor.red.cgColor
+        yearButton2.tintColor = .selectedFilterColor
+        yearButton2.layer.borderColor = UIColor.selectedFilterColor.cgColor
         removeAllDurationOption()
     }
     

@@ -192,7 +192,7 @@ class UniversityController: UITableViewController {
         searchController.searchBar.searchTextField.tintColor = .black
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.up.arrow.down"), style: .plain, target: self, action: #selector(handleSortTapped))
-        
+                
         view.addSubview(actionButton)
         view.addSubview(scrollTopActionButton)
         

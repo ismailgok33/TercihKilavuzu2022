@@ -122,8 +122,8 @@ class StatePrivateView: UIView {
 //        backgroundColor = .filterBackgroundColor
         backgroundColor = .clear
         if statePrivateFilterOptions.count == 0 || statePrivateFilterOptions.contains(.allUniversityTypes) {
-            allButton.tintColor = .red
-            allButton.layer.borderColor = UIColor.red.cgColor
+            allButton.tintColor = .selectedFilterColor
+            allButton.layer.borderColor = UIColor.selectedFilterColor.cgColor
         }
         
         
@@ -148,8 +148,8 @@ class StatePrivateView: UIView {
     func appendAllUniversityTypeOption() {
         statePrivateFilterOptions.removeAll()
         statePrivateFilterOptions.append(.allUniversityTypes)
-        allButton.tintColor = .red
-        allButton.layer.borderColor = UIColor.red.cgColor
+        allButton.tintColor = .selectedFilterColor
+        allButton.layer.borderColor = UIColor.selectedFilterColor.cgColor
         privateButton.tintColor = .white
         privateButton.layer.borderColor = UIColor.white.cgColor
         stateButton.tintColor = .white
@@ -166,8 +166,8 @@ class StatePrivateView: UIView {
     func appendPrivateOption() {
         
         statePrivateFilterOptions.append(.privateUniversities)
-        privateButton.tintColor = .red
-        privateButton.layer.borderColor = UIColor.red.cgColor
+        privateButton.tintColor = .selectedFilterColor
+        privateButton.layer.borderColor = UIColor.selectedFilterColor.cgColor
         removeAllUniversityTypeOption()
 
     }
@@ -182,8 +182,8 @@ class StatePrivateView: UIView {
     func appendStateOption() {
         
         statePrivateFilterOptions.append(.stateUniversities)
-        stateButton.tintColor = .red
-        stateButton.layer.borderColor = UIColor.red.cgColor
+        stateButton.tintColor = .selectedFilterColor
+        stateButton.layer.borderColor = UIColor.selectedFilterColor.cgColor
         removeAllUniversityTypeOption()
     }
     
