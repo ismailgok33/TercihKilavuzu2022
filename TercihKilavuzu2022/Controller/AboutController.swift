@@ -85,7 +85,7 @@ class AboutController: UIViewController {
         mailVC.delegate = self
         mailVC.setSubject("Geri bildirim")
         mailVC.setToRecipients(["tercihkilavuzuapp@gmail.com"])
-        mailVC.setMessageBody("Test", isHTML: false)
+        mailVC.setMessageBody("", isHTML: false)
         present(mailVC, animated: true)
     }
     

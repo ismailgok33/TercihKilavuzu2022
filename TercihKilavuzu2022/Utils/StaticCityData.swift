@@ -100,7 +100,8 @@ struct StaticCityData {
             City(id: 86, name: "BİŞKEK-KIRGIZİSTAN"),
             City(id: 87, name: "KOMRAT-MOLDOVA"),
             City(id: 88, name: "LEFKE-KKTC"),
-            City(id: 89, name: "ÜSKÜP-MAKEDONYA")
+            City(id: 89, name: "ÜSKÜP-MAKEDONYA"),
+            City(id: 90, name: "KIRKLARELİ")
         ]
     }
 }
