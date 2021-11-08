@@ -3114,7 +3114,7 @@ Alanya Hamdullah Emin Paşa Üniversitesi, Vakıf, ANTALYA, Gastronomi ve Mutfak
 Girne Üniversitesi, KIBRIS, GİRNE-KKTC, Gastronomi ve Mutfak Sanatları, 4, Türkçe, 0, 0, 25, SÖZ, %50 Burslu #
 Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Gastronomi ve Mutfak Sanatları, 4, Türkçe, 0, 0, 33, SÖZ,  #
 Bahçeşehir Üniversitesi, Vakıf, İSTANBUL, Gastronomi ve Mutfak Sanatları, 4, Türkçe, 0, 0, 40, SÖZ,  #
-Lefke Avrupa Üniversitesi, Devlet LEFKE-KKTC, Gastronomi ve Mutfak Sanatları, 4, Türkçe, 0, 0, 33, SÖZ,  #
+Lefke Avrupa Üniversitesi, Vakıf, LEFKE-KKTC, Gastronomi ve Mutfak Sanatları, 4, Türkçe, 0, 0, 33, SÖZ,  #
 Kapadokya Üniversitesi, Vakıf, NEVŞEHİR, Gastronomi ve Mutfak Sanatları, 4, Türkçe, 0, 0, 59, SÖZ,  #
 Yakın Doğu Üniversitesi, Devlet, LEFKOŞA-KKTC, Gastronomi ve Mutfak Sanatları, 4, Türkçe, 0, 0, 14, SÖZ,  #
 Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Gastronomi ve Mutfak Sanatları, 4, Türkçe, 0, 0, 18, SÖZ,  #

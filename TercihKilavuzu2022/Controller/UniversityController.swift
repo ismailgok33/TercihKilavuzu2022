@@ -167,6 +167,9 @@ class UniversityController: UITableViewController {
         else {
             bannerAd.isHidden = true
         }
+        
+        self.navigationController?.navigationBar.tintColor = .none
+        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.5336218476, green: 0.9556542039, blue: 0.8722702861, alpha: 1)
     }
     
     

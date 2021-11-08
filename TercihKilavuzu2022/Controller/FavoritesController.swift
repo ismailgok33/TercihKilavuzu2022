@@ -102,6 +102,8 @@ class FavoritesController: UITableViewController {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(handleShareTapped))
         
+        navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.5336218476, green: 0.9556542039, blue: 0.8722702861, alpha: 1)
+        
         let refreshControl = UIRefreshControl()
         tableView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
