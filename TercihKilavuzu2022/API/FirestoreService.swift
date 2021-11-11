@@ -6,45 +6,45 @@
 //
 
 import Foundation
-import FirebaseFirestore
+//import FirebaseFirestore
 
 class FirestoreService {
     static let shared = FirestoreService()
             
-    func fetchUniversities(completion: @escaping([University]) -> Void) {
-        var universities = [University]()
-        
-        REF_UNIVERSITIES_DB.getDocuments { snapshot, err in
-            guard err == nil else { return }
-            guard let snapshot = snapshot else { return }
-            
-            for document in snapshot.documents {
-                let universityID = document.documentID
-                guard let dictionary = document.data() as? [String: Any] else { return }
-                let university = University(universityID: universityID, dictionary: dictionary)
-                universities.append(university)
-                completion(universities)
-            }
-        }
-    }
+//    func fetchUniversities(completion: @escaping([University]) -> Void) {
+//        var universities = [University]()
+//
+//        REF_UNIVERSITIES_DB.getDocuments { snapshot, err in
+//            guard err == nil else { return }
+//            guard let snapshot = snapshot else { return }
+//
+//            for document in snapshot.documents {
+//                let universityID = document.documentID
+//                guard let dictionary = document.data() as? [String: Any] else { return }
+//                let university = University(universityID: universityID, dictionary: dictionary)
+//                universities.append(university)
+//                completion(universities)
+//            }
+//        }
+//    }
     
     
-    func fetchCities(completion: @escaping([City]) -> Void) {
-        var cities = [City]()
-        
-        REF_CITIES_DB.getDocuments { snapshot, err in
-            guard err == nil else { return }
-            guard let snapshot = snapshot else { return }
-            
-            for document in snapshot.documents {
-//                let cityUID = document.documentID
-                guard let dictionary = document.data() as? [String: Any] else { return }
-                let city = City(id: dictionary["id"] as! Int, name: dictionary["name"] as! String)
-                cities.append(city)
-                completion(cities)
-            }
-        }
-    }
+//    func fetchCities(completion: @escaping([City]) -> Void) {
+//        var cities = [City]()
+//
+//        REF_CITIES_DB.getDocuments { snapshot, err in
+//            guard err == nil else { return }
+//            guard let snapshot = snapshot else { return }
+//
+//            for document in snapshot.documents {
+////                let cityUID = document.documentID
+//                guard let dictionary = document.data() as? [String: Any] else { return }
+//                let city = City(id: dictionary["id"] as! Int, name: dictionary["name"] as! String)
+//                cities.append(city)
+//                completion(cities)
+//            }
+//        }
+//    }
     
     func fetchStaticCities(completion: @escaping([City]) -> Void) {
         var cities = [City]()
@@ -53,21 +53,21 @@ class FirestoreService {
         completion(cities)
     }
     
-    func fetchDepartments(completion: @escaping([Department]) -> Void) {
-        var departments = [Department]()
-        
-        REF_DEPARTMENTS_DB.getDocuments { snapshot, err in
-            guard err == nil else { return }
-            guard let snapshot = snapshot else { return }
-            
-            for document in snapshot.documents {
-                guard let dictionary = document.data() as? [String: Any] else { return }
-                let department = Department(id: dictionary["id"] as! Int, name: dictionary["name"] as! String)
-                departments.append(department)
-                completion(departments)
-            }
-        }
-    }
+//    func fetchDepartments(completion: @escaping([Department]) -> Void) {
+//        var departments = [Department]()
+//
+//        REF_DEPARTMENTS_DB.getDocuments { snapshot, err in
+//            guard err == nil else { return }
+//            guard let snapshot = snapshot else { return }
+//
+//            for document in snapshot.documents {
+//                guard let dictionary = document.data() as? [String: Any] else { return }
+//                let department = Department(id: dictionary["id"] as! Int, name: dictionary["name"] as! String)
+//                departments.append(department)
+//                completion(departments)
+//            }
+//        }
+//    }
     
 //    func fetchStaticDepartments(completion: @escaping([Department]) -> Void) {
 //        var departments = [Department]()

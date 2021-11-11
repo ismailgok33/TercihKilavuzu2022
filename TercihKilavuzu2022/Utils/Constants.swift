@@ -5,14 +5,14 @@
 //  Created by İsmail on 13.09.2021.
 //
 
-import Foundation
-import FirebaseFirestore
+import UIKit
+//import FirebaseFirestore
 
 
     
-let REF_UNIVERSITIES_DB = Firestore.firestore().collection("universities")
-let REF_CITIES_DB = Firestore.firestore().collection("cities")
-let REF_DEPARTMENTS_DB = Firestore.firestore().collection("departments")
+//let REF_UNIVERSITIES_DB = Firestore.firestore().collection("universities")
+//let REF_CITIES_DB = Firestore.firestore().collection("cities")
+//let REF_DEPARTMENTS_DB = Firestore.firestore().collection("departments")
 
 let BANNER_AD_ID = "ca-app-pub-6180320592686930/4022248406"
 let INTERSTITIAL_AD_ID = "ca-app-pub-6180320592686930/8079847254"

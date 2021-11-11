@@ -319,7 +319,6 @@
 				EC488B6626ECC209005B7D31 /* Frameworks */,
 				EC488B6726ECC209005B7D31 /* Resources */,
 				CB1C4B17E18F4218C1E8FB26 /* [CP] Embed Pods Frameworks */,
-				4E4B2E70F4393351186FB45C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -380,23 +379,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4E4B2E70F4393351186FB45C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TercihKilavuzu2022/Pods-TercihKilavuzu2022-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TercihKilavuzu2022/Pods-TercihKilavuzu2022-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TercihKilavuzu2022/Pods-TercihKilavuzu2022-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B0E96E673AA4CBD8881A3499 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -645,7 +627,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.myiosapps.TercihKilavuzu2022;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -665,7 +647,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.myiosapps.TercihKilavuzu2022;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

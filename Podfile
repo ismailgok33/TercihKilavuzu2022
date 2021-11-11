@@ -6,9 +6,7 @@ target 'TercihKilavuzu2022' do
   use_frameworks!
 
   # Pods for TercihKilavuzu2022
-pod 'FireStore'
-pod 'Firebase/Core'
-pod 'Firebase/Firestore'
+
 pod 'RealmSwift'
 pod 'Google-Mobile-Ads-SDK'
 pod 'Purchases'
