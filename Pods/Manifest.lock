@@ -1,13 +1,13 @@
 PODS:
   - Google-Mobile-Ads-SDK (7.41.0)
-  - Purchases (3.12.7):
-    - PurchasesCoreSwift (= 3.12.7)
-  - PurchasesCoreSwift (3.12.7)
-  - Realm (10.19.0):
-    - Realm/Headers (= 10.19.0)
-  - Realm/Headers (10.19.0)
-  - RealmSwift (10.19.0):
-    - Realm (= 10.19.0)
+  - Purchases (3.13.0):
+    - PurchasesCoreSwift (= 3.13.0)
+  - PurchasesCoreSwift (3.13.0)
+  - Realm (10.20.0):
+    - Realm/Headers (= 10.20.0)
+  - Realm/Headers (10.20.0)
+  - RealmSwift (10.20.0):
+    - Realm (= 10.20.0)
 
 DEPENDENCIES:
   - Google-Mobile-Ads-SDK
@@ -24,10 +24,10 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Google-Mobile-Ads-SDK: 101ce89b94fdf60ec64ba7b6e9b9d812dc765936
-  Purchases: 1253ea2cab23e515ef4ad280f67d1a0ab2f4e68b
-  PurchasesCoreSwift: ac9d7defa462b28d093c9ea32147c8dcaeebc572
-  Realm: 869ab2a7e3bdfa6bf06d8723251539f504e6f602
-  RealmSwift: f1f51c4a02fe826e5cea623b5441992f06bdc942
+  Purchases: a545d402454bc9395495cceaf0e893360670e0ad
+  PurchasesCoreSwift: e7f7267a6dc526da226baad19c61e8977fa664b4
+  Realm: ae32bdc1da7d19c7617e0400201a77acd4a211b9
+  RealmSwift: c95eec6a712924870b2e36c4c081d63ec07e5414
 
 PODFILE CHECKSUM: dbf422541fe9ff1df2e35ba5a2b6eb0e2f31f0ad
 
