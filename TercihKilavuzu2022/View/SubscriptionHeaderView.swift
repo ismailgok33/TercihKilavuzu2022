@@ -13,7 +13,7 @@ class SubscriptionHeaderView: UIView {
     
     let headerImageView: UIImageView = {
         let iv = UIImageView(image: UIImage(systemName: "crown.fill"))
-        iv.frame = CGRect(x: 0, y: 0, width: 110, height: 110)
+        iv.frame = CGRect(x: 0, y: 0, width: 90, height: 90)
         iv.tintColor = .white
         iv.contentMode = .scaleAspectFit
         return iv
@@ -34,7 +34,7 @@ class SubscriptionHeaderView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        headerImageView.frame = CGRect(x: frame.width / 2 - 55, y: frame.height / 2 - 55, width: 110, height: 110)
+        headerImageView.frame = CGRect(x: frame.width / 2 - 45, y: frame.height / 2 - 45, width: 90, height: 90)
     }
 
 }

@@ -39,7 +39,7 @@ class SubscriptionViewController: UIViewController {
         let tv = UITextView()
         tv.isEditable = false
         tv.textAlignment = .center
-        tv.font = .systemFont(ofSize: 12)
+        tv.font = .systemFont(ofSize: 10)
         tv.backgroundColor = .white
         tv.textColor = .systemGray
         tv.text = "Bu bir kerelik satın alımdır. Satın alımla beraber uygulamayı reklamsız ve internet olmadan kullanabilirsiniz. Cihaz değiştirmeniz durumunda yeni cihazınıza satın alımı yaptığınız Apple hesabınızla giriş yaptıysanız 'Restore Purchases' butonuna basarak satın alımınızı yeni cihazınıza aktarabilirsiniz."
@@ -57,9 +57,9 @@ class SubscriptionViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        headerView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor, height: view.frame.height / 3)
+        headerView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor, height: view.frame.height / 4)
         termsOfServiceView.anchor(left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor,
-                                  paddingLeft: 20, paddingRight: 20, height: 150)
+                                  paddingLeft: 20, paddingRight: 20, height: 130)
         restoreButton.anchor(left: view.leftAnchor, bottom: termsOfServiceView.topAnchor, right: view.rightAnchor,
                              paddingLeft: 40, paddingBottom: 10, paddingRight: 40, height: 50)
         subscribeButton.anchor(left: view.leftAnchor, bottom: restoreButton.topAnchor, right: view.rightAnchor,

@@ -13,7 +13,7 @@ class SubscriptionDescriptionView: UIView {
     
     private let descriptorLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 22, weight: .medium)
+        label.font = .systemFont(ofSize: 20, weight: .medium)
         label.textAlignment = .center
         label.numberOfLines = 0
         label.textColor = .black
@@ -23,7 +23,7 @@ class SubscriptionDescriptionView: UIView {
     
     private let priceLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 18, weight: .thin)
+        label.font = .systemFont(ofSize: 16, weight: .thin)
         label.textAlignment = .center
         label.numberOfLines = 1
         label.textColor = .systemGray

@@ -25,7 +25,7 @@ class AboutController: UIViewController {
     
     private let aboutText: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        label.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
         label.textColor = .black
         label.text = "Tercih Kılavuzu 2022, sınavlara hazırlanırken hayalini kurduğunuz üniversiteler ve bölümler hakkında bilgiler içeren yardımcı bir uygulamadır. Üniversite taban puan, sıralamaları vb gibi bilgiler ÖSYM'den alınmış olup, Tercih Kılavuzu 2022 sadece yardımcı bilgiler içeren lisanslı olmayan bir uygulamadır. Detaylı bilgi için aşağıdaki linkten web sitemizi ziyaret edebilirsiniz."
         label.textAlignment = .center
@@ -55,6 +55,11 @@ class AboutController: UIViewController {
         super.viewDidLoad()
         
         configureUI()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        appImage.setDimensions(width: view.frame.height / 4, height: view.frame.height / 4)
+        appImage.layer.cornerRadius = view.frame.height / 8
     }
     
     // MARK: - Helpers

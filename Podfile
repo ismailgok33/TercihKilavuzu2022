@@ -8,7 +8,7 @@ target 'TercihKilavuzu2022' do
   # Pods for TercihKilavuzu2022
 
 pod 'RealmSwift'
-pod 'Google-Mobile-Ads-SDK'
+pod 'Google-Mobile-Ads-SDK' , '~> 7.55'
 pod 'Purchases'
 
 end
