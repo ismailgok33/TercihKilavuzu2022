@@ -36,11 +36,16 @@ class FilterController: UIViewController {
     private var durationTypeView : DurationView?
     private var scoreRangeView : ScoreRangeView?
     private var placementRangeView : PlacementRangeView?
-
+    
     private let showEmptyScoreAndPlacementLabel: UILabel = {
         let label = UILabel()
         label.text = "Taban Puanı ve Sıralaması olmayanları getir"
-        label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        if IS_SMALL_DEVICE {
+            label.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+        }
+        else {
+            label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        }
         label.textAlignment = .left
         label.textColor = .white
         label.numberOfLines = 0
@@ -59,12 +64,22 @@ class FilterController: UIViewController {
     
     private lazy var resetButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setDimensions(width: 60, height: 40)
+        var w: CGFloat = 60, h: CGFloat = 40
+        if UIDevice.modelName.contains("iPhone 8") {
+            w = 40
+            h = 30
+        }
+        button.setDimensions(width: w, height: h)
         button.backgroundColor = UIColor(white: 0, alpha: 0.2)
         button.setTitle("Sıfırla", for: .normal)
         button.tintColor = .white
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-        button.layer.cornerRadius = 40 / 2
+        if IS_SMALL_DEVICE {
+            button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        }
+        else {
+            button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        }
+        button.layer.cornerRadius = h / 2
         button.layer.borderWidth = 2
         button.layer.borderColor = UIColor.white.cgColor
         button.addTarget(self, action: #selector(handleResetButtonTapped), for: .touchUpInside)

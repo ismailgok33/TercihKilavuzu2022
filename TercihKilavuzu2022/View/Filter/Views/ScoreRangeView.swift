@@ -14,12 +14,17 @@ class ScoreRangeView: UIView {
     private let viewTitle: UILabel = {
         let label = UILabel()
         label.text = "Puan Aralığı"
-        label.font = UIFont.boldSystemFont(ofSize: 16)
+        if IS_SMALL_DEVICE {
+            label.font = UIFont.boldSystemFont(ofSize: 14)
+        }
+        else {
+            label.font = UIFont.boldSystemFont(ofSize: 16)
+        }
         label.textColor = .white
         return label
     }()
     
-     let minScoreField: UITextField = {
+    let minScoreField: UITextField = {
         let tf = UITextField()
         
         let spacer = UIView()
@@ -31,14 +36,19 @@ class ScoreRangeView: UIView {
         tf.tintColor = .white
         tf.borderStyle = .none
         tf.backgroundColor = UIColor(white: 1, alpha: 0.2)
-        tf.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        if IS_SMALL_DEVICE {
+            tf.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        }
+        else {
+            tf.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        }
         tf.layer.cornerRadius = 5
         tf.keyboardType = UIKeyboardType.numberPad
         tf.attributedPlaceholder = NSAttributedString(string: "Minimum", attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.7)])
         return tf
     }()
     
-     let maxScoreField: UITextField = {
+    let maxScoreField: UITextField = {
         let tf = UITextField()
         
         let spacer = UIView()
@@ -50,7 +60,12 @@ class ScoreRangeView: UIView {
         tf.tintColor = .white
         tf.borderStyle = .none
         tf.backgroundColor = UIColor(white: 1, alpha: 0.2)
-        tf.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        if IS_SMALL_DEVICE {
+            tf.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        }
+        else {
+            tf.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        }
         tf.layer.cornerRadius = 5
         tf.keyboardType = UIKeyboardType.numberPad
         tf.attributedPlaceholder = NSAttributedString(string: "Maksimum", attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.7)])

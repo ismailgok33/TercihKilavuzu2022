@@ -39,7 +39,7 @@ Ankara Üniversitesi, Devlet, ANKARA, Aktüerya Bilimleri, 4, Türkçe, 226.2773
 Selçuk Üniversitesi, Devlet, KONYA, Aktüerya Bilimleri, 4, Türkçe, 0, 0, 30, SAY,  #
 Kırıkkale Üniversitesi, Devlet, KIRIKKALE, Aktüerya Bilimleri, 4, Türkçe, 0, 0, 40, SAY,  #
 Karabük Üniversitesi, Devlet, KARABÜK, Aktüerya Bilimleri, 4, Türkçe, 0, 0, 40, SAY,  #
-Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Aktüerya Bilimleri, 4, İngilizce, 0, 0, 10, SAY, %100 Burslu #
+Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Aktüerya Bilimleri, 4, İngilizce, 0, 0, 10, SAY, %100 Burslu #
 Marmara Üniversitesi, Devlet, İSTANBUL, Aktüerya Bilimleri, 4, Türkçe, 234.85760, 352184, 60, SAY,  #
 Marmara Üniversitesi, Devlet, İSTANBUL, Aktüerya Bilimleri (KKTC), 4, Türkçe, 0, 0, 2, SAY,  #
 İstanbul Üniversitesi, Devlet, İSTANBUL, Alman Dili ve Edebiyatı, 4, Almanca, 388.4331, 15711, 60, DİL,  #
@@ -94,9 +94,9 @@ Haliç Üniversitesi, Vakıf, İSTANBUL, Amerikan Kültürü ve Edebiyatı, 4, T
 Atatürk Üniversitesi, Devlet, ERZURUM, Amerikan Kültürü ve Edebiyatı, 4, Türkçe, 283.5171, 48790, 40, DİL,  #
 Başkent Üniversitesi, Vakıf, ANKARA, Amerikan Kültürü ve Edebiyatı, 4, Türkçe, 263.3394, 55858, 32, DİL, %50 Burslu #
 Başkent Üniversitesi, Vakıf, ANKARA, Amerikan Kültürü ve Edebiyatı, 4, Türkçe, 262.1557, 56273, 2, DİL, %0 Burslu #
-Girne Amerikan Üniversitesi, Devlet, GİRNE-KKTC, Amerikan Kültürü ve Edebiyatı, 4, İngilizce, 228.8211, 68375, 12, DİL, %100 Burslu #
+Girne Amerikan Üniversitesi, Vakıf, GİRNE-KKTC, Amerikan Kültürü ve Edebiyatı, 4, İngilizce, 228.8211, 68375, 12, DİL, %100 Burslu #
 Haliç Üniversitesi, Vakıf, İSTANBUL, Amerikan Kültürü ve Edebiyatı, 4, Türkçe, 221.6881, 69992, 51, DİL, %50 Burslu #
-Girne Amerikan Üniversitesi, Devlet, GİRNE-KKTC, Amerikan Kültürü ve Edebiyatı, 4, İngilizce, 0, 0, 5, DİL, %50 Burslu #
+Girne Amerikan Üniversitesi, Vakıf, GİRNE-KKTC, Amerikan Kültürü ve Edebiyatı, 4, İngilizce, 0, 0, 5, DİL, %50 Burslu #
 TOBB Ekonomi ve Teknoloji Üniversitesi, Vakıf, ANKARA, Amerikan Kültürü ve Edebiyatı, 4, Türkçe, 239.6292, 64671, 5, DİL,  #
 Kocaeli Üniversitesi, Devlet, KOCAELİ, Antrenörlük Eğitimi, 4, Türkçe, 252.4519, 365079, 50, EA,  #
 Yalova Üniversitesi, Devlet, YALOVA, Antrenörlük Eğitimi, 4, Türkçe, 235.03951, 493453, 40, EA,  #
@@ -104,14 +104,14 @@ Kocaeli Üniversitesi, Devlet, KOCAELİ, Antrenörlük Eğitimi (İ.Ö), 4, Tür
 Bandırma Onyedi Eylül Üniversitesi, Devlet, BALIKESİR, Antrenörlük Eğitimi, 4, Türkçe, 231.6106, 519748, 40, EA,  #
 Uşak Üniversitesi, Devlet, UŞAK, Antrenörlük Eğitimi, 4, Türkçe, 231.19752, 522756, 50, EA,  #
 Bartın Üniversitesi, Devlet, BARTIN, Antrenörlük Eğitimi, 4, Türkçe, 224.06781, 561229, 50, EA,  #
-Girne Amerikan Üniversitesi, Devlet, GİRNE-KKTC, Antrenörlük Eğitimi, 4, Türkçe, 0, 0, 7, EA, %100 Burslu #
+Girne Amerikan Üniversitesi, Vakıf, GİRNE-KKTC, Antrenörlük Eğitimi, 4, Türkçe, 0, 0, 7, EA, %100 Burslu #
 Bartın Üniversitesi, Devlet, BARTIN, Antrenörlük Eğitimi (İ.Ö), 4, Türkçe, 0, 0, 40, EA,  #
 Bingöl Üniversitesi, Devlet, BİNGÖL, Antrenörlük Eğitimi, 4, Türkçe, 0, 0, 50, EA,  #
 Munzur Üniversitesi, Devlet, TUNCELİ, Antrenörlük Eğitimi, 4, Türkçe, 0, 0, 40, EA,  #
-Girne Amerikan Üniversitesi, Devlet, GİRNE-KKTC, Antrenörlük Eğitimi, 4, Türkçe, 0, 0, 4, EA, %50 Burslu #
-Yakın Doğu Üniversitesi, Devlet, LEFKOŞA-KKTC, Antrenörlük Eğitimi, 4, Türkçe, 0, 0, 17, EA, %100 Burslu #
-Yakın Doğu Üniversitesi, Devlet, LEFKOŞA-KKTC, Antrenörlük Eğitimi, 4, Türkçe, 0, 0, 3, EA, %50 Burslu #
-Girne Amerikan Üniversitesi, Devlet, GİRNE-KKTC, Antrenörlük Eğitimi, 4, Türkçe, 0, 0, 4, EA, %0 Burslu #
+Girne Amerikan Üniversitesi, Vakıf, GİRNE-KKTC, Antrenörlük Eğitimi, 4, Türkçe, 0, 0, 4, EA, %50 Burslu #
+Yakın Doğu Üniversitesi, Vakıf, LEFKOŞA-KKTC, Antrenörlük Eğitimi, 4, Türkçe, 0, 0, 17, EA, %100 Burslu #
+Yakın Doğu Üniversitesi, Vakıf, LEFKOŞA-KKTC, Antrenörlük Eğitimi, 4, Türkçe, 0, 0, 3, EA, %50 Burslu #
+Girne Amerikan Üniversitesi, Vakıf, GİRNE-KKTC, Antrenörlük Eğitimi, 4, Türkçe, 0, 0, 4, EA, %0 Burslu #
 Uluslararası Final Üniversitesi, Devlet, GİRNE, Antrenörlük Eğitimi, 4, Türkçe, 0, 0, 7, EA, %100 Burslu #
 Lefke Avrupa Üniversitesi, Vakıf, LEFKE-KKTC, Antrenörlük Eğitimi, 4, Türkçe, 0, 0, 12, EA, %100 Burslu #
 Devlet Sağlık ve Toplum Bilimleri Üniversitesi, Devlet, GÜZELYURT, Antrenörlük Eğitimi, 4, Türkçe, 0, 0, 3, EA, %100 Burslu #
@@ -260,7 +260,7 @@ Lefke Avrupa Üniversitesi, Vakıf, LEFKE-KKTC, Bahçe Bitkileri, 4, İngilizce,
 Iğdır Üniversitesi, Devlet, IĞDIR, Bahçe Bitkileri, 4, Türkçe, 0, 0, 20, SAY,  #
 Karadeniz Teknik Üniversitesi, Devlet, TRABZON, Balıkçılık Teknolojisi Mühendisliği, 4, Türkçe, 0, 0, 20, SAY,  #
 Ordu Üniversitesi, Devlet, ORDU, Balıkçılık Teknolojisi Mühendisliği, 4, Türkçe, 0, 0, 15, SAY,  #
-Girne Üniversitesi, Devlet, GİRNE-KKTC, Balıkçılık Teknolojisi Mühendisliği, 4, İngilizce, 0, 0, 3, SAY, %100 Burslu #
+Girne Üniversitesi, Vakıf, GİRNE-KKTC, Balıkçılık Teknolojisi Mühendisliği, 4, İngilizce, 0, 0, 3, SAY, %100 Burslu #
 Marmara Üniversitesi, Devlet, İSTANBUL, Bankacılık, 4, Türkçe, 263.80302, 297772, 60, EA,  #
 Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, Bankacılık ve Finans, 4, İngilizce, 0, 0, 5, EA, %0 Burslu #
 Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, Bankacılık ve Finans, 4, İngilizce, 0, 0, 2, EA, %50 Burslu #
@@ -272,7 +272,7 @@ Isparta Uygulamalı Bilimler Üniversitesi, Devlet, ISPARTA, Bankacılık ve Sig
 Afyon Kocatepe Üniversitesi, Devlet, AFYONKARAHİSAR, Bankacılık ve Sigortacılık, 4, Türkçe, 0, 0, 50, EA,  #
 Tokat Gaziosmanpaşa Üniversitesi, Devlet, TOKAT, Bankacılık ve Sigortacılık, 4, Türkçe, 0, 0, 30, EA,  #
 İstanbul Gelişim Üniversitesi, Vakıf, İSTANBUL, Bankacılık ve Sigortacılık, 4, Türkçe, 0, 0, 23, EA, %50 Burslu #
-Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Bankacılık ve Sigortacılık, 4, İngilizce, 0, 0, 3, EA, %100 Burslu #
+Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Bankacılık ve Sigortacılık, 4, İngilizce, 0, 0, 3, EA, %100 Burslu #
 Trakya Üniversitesi, Devlet, EDİRNE, Bankacılık ve Sigortacılık, 4, Türkçe, 0, 0, 30, EA,  #
 Trakya Üniversitesi, Devlet, EDİRNE, Bankacılık ve Sigortacılık, 4, Türkçe, 0, 0, 60, EA,  #
 Karamanoğlu Mehmetbey Üniversitesi, Devlet, KARAMAN, Bankacılık ve Sigortacılık, 4, Türkçe, 0, 0, 40, EA,  #
@@ -287,17 +287,17 @@ Bartın Üniversitesi, Devlet, BARTIN, Beden Eğitimi ve Spor Öğretmenliği, 4
 Artvin Çoruh Üniversitesi, Devlet, ARTVİN, Beden Eğitimi ve Spor Öğretmenliği, 4, Türkçe, 265.01821, 291270, 60, EA,  #
 Bingöl Üniversitesi, Devlet, BİNGÖL, Beden Eğitimi ve Spor Öğretmenliği, 4, Türkçe, 263.61733, 298736, 50, EA,  #
 Munzur Üniversitesi, Devlet, TUNCELİ, Beden Eğitimi ve Spor Öğretmenliği, 4, Türkçe, 0, 0, 40, EA,  #
-Girne Amerikan Üniversitesi, Devlet, GİRNE-KKTC, Beden Eğitimi ve Spor Öğretmenliği, 4, Türkçe, 0, 0, 10, EA, %100 Burslu #
-Yakın Doğu Üniversitesi, Devlet, LEFKOŞA-KKTC, Beden Eğitimi ve Spor Öğretmenliği, 4, Türkçe, 0, 0, 17, EA, %100 Burslu #
-Girne Amerikan Üniversitesi, Devlet, GİRNE-KKTC, Beden Eğitimi ve Spor Öğretmenliği, 4, Türkçe, 0, 0, 5, EA, %0 Burslu #
-Girne Amerikan Üniversitesi, Devlet, GİRNE-KKTC, Beden Eğitimi ve Spor Öğretmenliği, 4, Türkçe, 0, 0, 5, EA, %50 Burslu #
-Yakın Doğu Üniversitesi, Devlet, LEFKOŞA-KKTC, Beden Eğitimi ve Spor Öğretmenliği, 4, Türkçe, 0, 0, 3, EA, %50 Burslu #
+Girne Amerikan Üniversitesi, Vakıf, GİRNE-KKTC, Beden Eğitimi ve Spor Öğretmenliği, 4, Türkçe, 0, 0, 10, EA, %100 Burslu #
+Yakın Doğu Üniversitesi, Vakıf, LEFKOŞA-KKTC, Beden Eğitimi ve Spor Öğretmenliği, 4, Türkçe, 0, 0, 17, EA, %100 Burslu #
+Girne Amerikan Üniversitesi, Vakıf, GİRNE-KKTC, Beden Eğitimi ve Spor Öğretmenliği, 4, Türkçe, 0, 0, 5, EA, %0 Burslu #
+Girne Amerikan Üniversitesi, Vakıf, GİRNE-KKTC, Beden Eğitimi ve Spor Öğretmenliği, 4, Türkçe, 0, 0, 5, EA, %50 Burslu #
+Yakın Doğu Üniversitesi, Vakıf, LEFKOŞA-KKTC, Beden Eğitimi ve Spor Öğretmenliği, 4, Türkçe, 0, 0, 3, EA, %50 Burslu #
 Lefke Avrupa Üniversitesi, Vakıf, LEFKE-KKTC, Beden Eğitimi ve Spor Öğretmenliği, 4, Türkçe, 0, 0, 10, EA, %100 Burslu #
-Uluslararası Final Üniversitesi, Devlet, GİRNE, Beden Eğitimi ve Spor Öğretmenliği, 4, Türkçe, 0, 0, 3, EA, %100 Burslu #
+Uluslararası Final Üniversitesi, Vakıf, GİRNE-KKTC, Beden Eğitimi ve Spor Öğretmenliği, 4, Türkçe, 0, 0, 3, EA, %100 Burslu #
 Lefke Avrupa Üniversitesi, Vakıf, LEFKE-KKTC, Beden Eğitimi ve Spor Öğretmenliği, 4, Türkçe, 0, 0, 10, EA, %50 Burslu #
 Uluslararası Devlet Üniversitesi, Vakıf, LEFKOŞA-KKTC, Beden Eğitimi ve Spor Öğretmenliği, 4, Türkçe, 0, 0, 10, EA, %100 Burslu #
 Uluslararası Devlet Üniversitesi, Vakıf, LEFKOŞA-KKTC, Beden Eğitimi ve Spor Öğretmenliği, 4, Türkçe, 0, 0, 10, EA, %50 Burslu #
-Uluslararası Final Üniversitesi, Devlet, GİRNE, Beden Eğitimi ve Spor Öğretmenliği, 4, Türkçe, 0, 0, 17, EA, %50 Burslu #
+Uluslararası Final Üniversitesi, Vakıf, GİRNE-KKTC, Beden Eğitimi ve Spor Öğretmenliği, 4, Türkçe, 0, 0, 17, EA, %50 Burslu #
 KTO Karatay Üniversitesi, Vakıf, KONYA, Beslenme ve Diyetetik, 4, Türkçe, 310.98927, 144498, 10, SAY, %100 Burslu #
 KTO Karatay Üniversitesi, Vakıf, KONYA, Beslenme ve Diyetetik, 4, Türkçe, 264.76365, 244469, 8, SAY, %50 Burslu #
 KTO Karatay Üniversitesi, Vakıf, KONYA, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 47, SAY, %0 Burslu #
@@ -379,12 +379,12 @@ Atatürk Üniversitesi, Devlet, ERZURUM, Beslenme ve Diyetetik, 4, Türkçe, 265
 Burdur Mehmet Akif Ersoy Üniversitesi, Devlet, BURDUR, Beslenme ve Diyetetik, 4, Türkçe, 263.55375, 247997, 70, SAY,  #
 Başkent Üniversitesi, Vakıf, ANKARA, Beslenme ve Diyetetik, 4, Türkçe, 261.83190, 253116, 31, SAY, %25 Burslu #
 Yüksek İhtisas Üniversitesi, Vakıf, ANKARA, Beslenme ve Diyetetik, 4, Türkçe, 258.07798, 264815, 10, SAY, %50 Burslu #
-Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Beslenme ve Diyetetik, 4, İngilizce, 255.65988, 272657, 9, SAY, %100 Burslu #
+Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Beslenme ve Diyetetik, 4, İngilizce, 255.65988, 272657, 9, SAY, %100 Burslu #
 Kastamonu Üniversitesi, Devlet, KASTAMONU, Beslenme ve Diyetetik, 4, Türkçe, 254.78662, 275551, 70, SAY,  #
 Kırklareli Üniversitesi, Devlet, KIRKLARELİ, Beslenme ve Diyetetik, 4, Türkçe, 253.76537, 278906, 70, SAY,  #
 Ankara Medipol Üniversitesi, Vakıf, ANKARA, Beslenme ve Diyetetik, 4, Türkçe, 252.56996, 283054, 51, SAY, %50 Burslu #
 Çankırı Karatekin Üniversitesi, Devlet, ÇANKIRI, Beslenme ve Diyetetik, 4, Türkçe, 252.34897, 283821, 60, SAY,  #
-Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Beslenme ve Diyetetik, 4, Türkçe, 251.79972, 285677, 8, SAY, %100 Burslu #
+Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Beslenme ve Diyetetik, 4, Türkçe, 251.79972, 285677, 8, SAY, %100 Burslu #
 Fırat Üniversitesi, Devlet, ELAZIĞ, Beslenme ve Diyetetik, 4, Türkçe, 250.90068, 288917, 70, SAY,  #
 Malatya Turgut Özal Üniversitesi, Devlet, MALATYA, Beslenme ve Diyetetik, 4, Türkçe, 249.76508, 293023, 60, SAY,  #
 Osmaniye Korkut Ata Üniversitesi, Devlet, OSMANİYE, Beslenme ve Diyetetik, 4, Türkçe, 249.28613, 294729, 70, SAY,  #
@@ -408,7 +408,7 @@ Bayburt Üniversitesi, Devlet, BAYBURT, Beslenme ve Diyetetik, 4, Türkçe, 236.
 Bingöl Üniversitesi, Devlet, BİNGÖL, Beslenme ve Diyetetik, 4, Türkçe, 235.71285, 348672, 60, SAY,  #
 Uluslararası Devlet Üniversitesi, Vakıf, LEFKOŞA-KKTC, Beslenme ve Diyetetik, 4, Türkçe, 235.50968, 349547, 8, SAY, %100 Burslu #
 Munzur Üniversitesi, Devlet, TUNCELİ, Beslenme ve Diyetetik, 4, Türkçe, 234.57966, 353347, 60, SAY,  #
-Girne Üniversitesi, Devlet, GİRNE-KKTC, Beslenme ve Diyetetik, 4, Türkçe, 234.43980, 353885, 5, SAY, %100 Burslu #
+Girne Üniversitesi, Vakıf, GİRNE-KKTC, Beslenme ve Diyetetik, 4, Türkçe, 234.43980, 353885, 5, SAY, %100 Burslu #
 Acıbadem Mehmet Ali Aydınlar Üniversitesi, Vakıf, İSTANBUL, Beslenme ve Diyetetik, 4, İngilizce, 234.17631, 354942, 40, SAY, %25 Burslu #
 Yeditepe Üniversitesi, Vakıf, İSTANBUL, Beslenme ve Diyetetik, 4, İngilizce, 233.73275, 356691, 28, SAY, %0 Burslu #
 Hasan Kalyoncu Üniversitesi, Vakıf, GAZİANTEP, Beslenme ve Diyetetik, 4, Türkçe, 231.05169, 366633, 35, SAY, %50 Burslu #
@@ -421,7 +421,7 @@ Iğdır Üniversitesi, Devlet, IĞDIR, Beslenme ve Diyetetik, 4, Türkçe, 226.2
 İstanbul Bilgi Üniversitesi, Vakıf, İSTANBUL, Beslenme ve Diyetetik, 4, Türkçe, 225.97445, 378818, 42, SAY, %50 Burslu #
 Bayburt Üniversitesi, Devlet, BAYBURT, Beslenme ve Diyetetik (İ.Ö), 4, Türkçe, 222.35423, 382863, 70, SAY,  #
 Lefke Avrupa Üniversitesi, Vakıf, LEFKE-KKTC, Beslenme ve Diyetetik, 4, Türkçe, 219.99560, 384317, 25, SAY, %100 Burslu #
-Yakın Doğu Üniversitesi, Devlet, LEFKOŞA-KKTC, Beslenme ve Diyetetik, 4, Türkçe, 216.18820, 385823, 28, SAY, %100 Burslu #
+Yakın Doğu Üniversitesi, Vakıf, LEFKOŞA-KKTC, Beslenme ve Diyetetik, 4, Türkçe, 216.18820, 385823, 28, SAY, %100 Burslu #
 Başkent Üniversitesi, Vakıf, ANKARA, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 28, SAY, %0 Burslu #
 Acıbadem Mehmet Ali Aydınlar Üniversitesi, Vakıf, İSTANBUL, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 40, SAY, %25 Burslu #
 İstinye Üniversitesi, Vakıf, İSTANBUL, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 51, SAY, %50 Burslu #
@@ -436,7 +436,7 @@ Demiroğlu Bilim Üniversitesi, Vakıf, İSTANBUL, Beslenme ve Diyetetik, 4, Tü
 İstanbul Arel Üniversitesi, Vakıf, İSTANBUL, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 51, SAY, %50 Burslu #
 İstanbul Gelişim Üniversitesi, Vakıf, İSTANBUL, Beslenme ve Diyetetik, 4, İngilizce, 0, 0, 47, SAY, %50 Burslu #
 İstanbul Kültür Üniversitesi, Vakıf, İSTANBUL, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 37, SAY, %50 Burslu #
-Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 17, SAY, %0 Burslu #
+Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 17, SAY, %0 Burslu #
 İstanbul Kültür Üniversitesi, Vakıf, İSTANBUL, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 5, SAY, %0 Burslu #
 Hasan Kalyoncu Üniversitesi, Vakıf, GAZİANTEP, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 15, SAY, %0 Burslu #
 Üsküdar Üniversitesi, Vakıf, İSTANBUL, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 32, SAY, %0 Burslu #
@@ -450,9 +450,9 @@ Sanko Üniversitesi, Vakıf, GAZİANTEP, Beslenme ve Diyetetik, 4, Türkçe, 0, 
 Lefke Avrupa Üniversitesi, Vakıf, LEFKE-KKTC, Beslenme ve Diyetetik, 4, İngilizce, 0, 0, 25, SAY, %100 Burslu #
 Toros Üniversitesi, Vakıf, MERSİN, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 34, SAY, %0 Burslu #
 İstanbul Rumeli Üniversitesi, Vakıf, İSTANBUL, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 56, SAY, %50 Burslu #
-Yakın Doğu Üniversitesi, Devlet, LEFKOŞA-KKTC, Beslenme ve Diyetetik, 4, İngilizce, 0, 0, 25, SAY, %100 Burslu #
+Yakın Doğu Üniversitesi, Vakıf, LEFKOŞA-KKTC, Beslenme ve Diyetetik, 4, İngilizce, 0, 0, 25, SAY, %100 Burslu #
 Avrasya Üniversitesi, Vakıf, TRABZON, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 38, SAY, %0 Burslu #
-Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Beslenme ve Diyetetik, 4, İngilizce, 0, 0, 21, SAY, %0 Burslu #
+Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Beslenme ve Diyetetik, 4, İngilizce, 0, 0, 21, SAY, %0 Burslu #
 Bezm-İ Alem Vakıf Üniversitesi, Vakıf, İSTANBUL, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 55, SAY, %25 Burslu #
 İstanbul Gelişim Üniversitesi, Vakıf, İSTANBUL, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 45, SAY, %25 Burslu #
 İstanbul Galata Üniversitesi, Vakıf, İSTANBUL, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 34, SAY, %50 Burslu #
@@ -460,13 +460,13 @@ Acıbadem Mehmet Ali Aydınlar Üniversitesi, Vakıf, İSTANBUL, Beslenme ve Diy
 İstanbul Esenyurt Üniversitesi, Vakıf, İSTANBUL, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 51, SAY, %50 Burslu #
 Lefke Avrupa Üniversitesi, Vakıf, LEFKE-KKTC, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 25, SAY, %50 Burslu #
 Yüksek İhtisas Üniversitesi, Vakıf, ANKARA, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 37, SAY, %0 Burslu #
-Yakın Doğu Üniversitesi, Devlet, LEFKOŞA-KKTC, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 32, SAY, %50 Burslu #
+Yakın Doğu Üniversitesi, Vakıf, LEFKOŞA-KKTC, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 32, SAY, %50 Burslu #
 Uluslararası Devlet Üniversitesi, Vakıf, LEFKOŞA-KKTC, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 32, SAY, %50 Burslu #
-Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 25, SAY, %50 Burslu #
-Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Beslenme ve Diyetetik, 4, İngilizce, 0, 0, 15, SAY, %50 Burslu #
+Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 25, SAY, %50 Burslu #
+Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Beslenme ve Diyetetik, 4, İngilizce, 0, 0, 15, SAY, %50 Burslu #
 Lefke Avrupa Üniversitesi, Vakıf, LEFKE-KKTC, Beslenme ve Diyetetik, 4, İngilizce, 0, 0, 25, SAY, %50 Burslu #
-Yakın Doğu Üniversitesi, Devlet, LEFKOŞA-KKTC, Beslenme ve Diyetetik, 4, İngilizce, 0, 0, 15, SAY, %50 Burslu #
-Girne Üniversitesi, Devlet, GİRNE-KKTC, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 25, SAY, %50 Burslu #
+Yakın Doğu Üniversitesi, Vakıf, LEFKOŞA-KKTC, Beslenme ve Diyetetik, 4, İngilizce, 0, 0, 15, SAY, %50 Burslu #
+Girne Üniversitesi, Vakıf, GİRNE-KKTC, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 25, SAY, %50 Burslu #
 İstanbul Gelişim Üniversitesi, Vakıf, İSTANBUL, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 23, SAY, %0 Burslu #
 İstanbul Esenyurt Üniversitesi, Vakıf, İSTANBUL, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 4, SAY, %0 Burslu #
 İstanbul Rumeli Üniversitesi, Vakıf, İSTANBUL, Beslenme ve Diyetetik, 4, Türkçe, 0, 0, 4, SAY, %0 Burslu #
@@ -548,7 +548,7 @@ Türk-Alman Üniversitesi, Devlet, İSTANBUL, Bilgisayar Mühendisliği, 4, Alma
 İstanbul Üniversitesi, Devlet, İSTANBUL, Bilgisayar Mühendisliği, 4, Türkçe, 420.22483, 28306, 90, SAY,  #
 Özyeğin Üniversitesi, Vakıf, İSTANBUL, Bilgisayar Mühendisliği, 4, İngilizce, 419.44880, 28819, 38, SAY, %50 Burslu #
 Yaşar Üniversitesi, Vakıf, İZMİR, Bilgisayar Mühendisliği, 4, İngilizce, 417.23854, 30362, 10, SAY, %100 Burslu #
-ODTÜ Kuzey Devlet Kampusu, Devlet, GÜZELYURT-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 416.35170, 30975, 15, SAY, %100 Burslu #
+ODTÜ Kuzey Devlet Kampusu, Vakıf, GÜZELYURT-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 416.35170, 30975, 15, SAY, %100 Burslu #
 Başkent Üniversitesi, Vakıf, ANKARA, Bilgisayar Mühendisliği, 4, Türkçe, 415.22732, 31774, 11, SAY, %100 Burslu #
 Marmara Üniversitesi, Devlet, İSTANBUL, Bilgisayar Mühendisliği, 4, Türkçe, 413.91222, 32666, 48, SAY,  #
 Eskişehir Teknik Üniversitesi, Devlet, ESKİŞEHİR, Bilgisayar Mühendisliği, 4, İngilizce, 413.00802, 33306, 80, SAY,  #
@@ -566,7 +566,7 @@ Ostim Teknik Üniversitesi, Vakıf, ANKARA, Bilgisayar Mühendisliği, 4, İngil
 Acıbadem Mehmet Ali Aydınlar Üniversitesi, Vakıf, İSTANBUL, Bilgisayar Mühendisliği, 4, İngilizce, 404.81861, 39570, 25, SAY, %100 Burslu #
 İstinye Üniversitesi, Vakıf, İSTANBUL, Bilgisayar Mühendisliği, 4, İngilizce, 403.73556, 40459, 8, SAY, %100 Burslu #
 Beykent Üniversitesi, Vakıf, İSTANBUL, Bilgisayar Mühendisliği, 4, İngilizce, 402.53926, 41387, 9, SAY, %100 Burslu #
-İTÜ-KKTC Eğitim Araştırma Yerleşkesi, Devlet, GAZİMAĞUSA-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 402.48826, 41428, 10, SAY, %100 Burslu #
+İTÜ-KKTC Eğitim Araştırma Yerleşkesi, Vakıf, GAZİMAĞUSA-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 402.48826, 41428, 10, SAY, %100 Burslu #
 İstanbul Sabahattin Zaim Üniversitesi, Vakıf, İSTANBUL, Bilgisayar Mühendisliği, 4, Türkçe, 401.69022, 42102, 7, SAY, %100 Burslu #
 Eskişehir Osmangazi Üniversitesi, Devlet, ESKİŞEHİR, Bilgisayar Mühendisliği, 4, Türkçe, 401.53869, 42229, 90, SAY,  #
 İstanbul Okan Üniversitesi, Vakıf, İSTANBUL, Bilgisayar Mühendisliği, 4, İngilizce, 399.26689, 44124, 7, SAY, %100 Burslu #
@@ -606,7 +606,7 @@ Aydın Adnan Menderes Üniversitesi, Devlet, AYDIN, Bilgisayar Mühendisliği, 4
 Kocaeli Üniversitesi, Devlet, KOCAELİ, Bilgisayar Mühendisliği (İ.Ö), 4, Türkçe, 378.13884, 62710, 90, SAY,  #
 Karadeniz Teknik Üniversitesi, Devlet, TRABZON, Bilgisayar Mühendisliği, 4, Türkçe, 377.88537, 62944, 90, SAY,  #
 Yeditepe Üniversitesi, Vakıf, İSTANBUL, Bilgisayar Mühendisliği, 4, İngilizce, 377.81978, 63010, 71, SAY, %50 Burslu #
-İTÜ-KKTC Eğitim Araştırma Yerleşkesi, Devlet, GAZİMAĞUSA-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 376.74402, 64068, 10, SAY, %50 Burslu #
+İTÜ-KKTC Eğitim Araştırma Yerleşkesi, Vakıf, GAZİMAĞUSA-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 376.74402, 64068, 10, SAY, %50 Burslu #
 İstanbul Gedik Üniversitesi, Vakıf, İSTANBUL, Bilgisayar Mühendisliği, 4, Türkçe, 375.09283, 65611, 5, SAY, %100 Burslu #
 İstanbul Gelişim Üniversitesi, Vakıf, İSTANBUL, Bilgisayar Mühendisliği, 4, Türkçe, 374.59222, 66083, 10, SAY, %100 Burslu #
 İstanbul Arel Üniversitesi, Vakıf, İSTANBUL, Bilgisayar Mühendisliği, 4, Türkçe, 373.86582, 66787, 5, SAY, %100 Burslu #
@@ -619,7 +619,7 @@ Nişantaşı Üniversitesi, Vakıf, İSTANBUL, Bilgisayar Mühendisliği, 4, Tü
 Ondokuz Mayıs Üniversitesi, Devlet, SAMSUN, Bilgisayar Mühendisliği, 4, Türkçe, 368.81115, 71857, 80, SAY,  #
 İstanbul Ayvansaray Üniversitesi, Vakıf, İSTANBUL, Bilgisayar Mühendisliği, 4, Türkçe, 366.57577, 74086, 5, SAY, %100 Burslu #
 Manisa Celâl Bayar Üniversitesi, Devlet, MANİSA, Bilgisayar Mühendisliği (İ.Ö), 4, İngilizce, 365.89212, 74779, 65, SAY,  #
-Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 364.66880, 76047, 10, SAY, %100 Burslu #
+Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 364.66880, 76047, 10, SAY, %100 Burslu #
 Erciyes Üniversitesi, Devlet, KAYSERİ, Bilgisayar Mühendisliği, 4, Türkçe, 362.91713, 77842, 85, SAY,  #
 Hasan Kalyoncu Üniversitesi, Vakıf, GAZİANTEP, Bilgisayar Mühendisliği, 4, İngilizce, 362.54792, 78245, 15, SAY, %100 Burslu #
 Pamukkale Üniversitesi, Devlet, DENİZLİ, Bilgisayar Mühendisliği, 4, Türkçe, 362.41625, 78382, 80, SAY,  #
@@ -674,9 +674,9 @@ Zonguldak Bülent Ecevit Üniversitesi, Devlet, ZONGULDAK, Bilgisayar Mühendisl
 Başkent Üniversitesi, Vakıf, ANKARA, Bilgisayar Mühendisliği, 4, Türkçe, 315.59426, 137203, 10, SAY, %0 Burslu #
 Işık Üniversitesi, Vakıf, İSTANBUL, Bilgisayar Mühendisliği, 4, İngilizce, 315.52207, 137323, 25, SAY, %50 Burslu #
 Atatürk Üniversitesi, Devlet, ERZURUM, Bilgisayar Mühendisliği, 4, Türkçe, 315.50417, 137356, 70, SAY,  #
-Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Bilgisayar Mühendisliği, 4, Türkçe, 311.65287, 143396, 10, SAY, %100 Burslu #
+Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Bilgisayar Mühendisliği, 4, Türkçe, 311.65287, 143396, 10, SAY, %100 Burslu #
 Yaşar Üniversitesi, Vakıf, İZMİR, Bilgisayar Mühendisliği, 4, İngilizce, 311.51131, 143648, 11, SAY, %0 Burslu #
-ODTÜ Kuzey Devlet Kampusu, Devlet, GÜZELYURT-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 310.42043, 145470, 75, SAY, %50 Burslu #
+ODTÜ Kuzey Devlet Kampusu, Vakıf, GÜZELYURT-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 310.42043, 145470, 75, SAY, %50 Burslu #
 Tekirdağ Namık Kemal Üniversitesi, Devlet, TEKİRDAĞ, Bilgisayar Mühendisliği (İ.Ö), 4, Türkçe, 309.66768, 146705, 60, SAY,  #
 Bilecik Şeyh Edebali Üniversitesi, Devlet, BİLECİK, Bilgisayar Mühendisliği, 4, Türkçe, 308.57249, 148515, 70, SAY,  #
 Isparta Uygulamalı Bilimler Üniversitesi, Devlet, ISPARTA, Bilgisayar Mühendisliği, 4, Türkçe, 308.21283, 149124, 48, SAY,  #
@@ -699,7 +699,7 @@ Karabük Üniversitesi, Devlet, KARABÜK, Bilgisayar Mühendisliği (İ.Ö), 4, 
 Hasan Kalyoncu Üniversitesi, Vakıf, GAZİANTEP, Bilgisayar Mühendisliği, 4, İngilizce, 292.73093, 177512, 15, SAY, %50 Burslu #
 Altınbaş Üniversitesi, Vakıf, İSTANBUL, Bilgisayar Mühendisliği, 4, İngilizce, 292.20608, 178614, 16, SAY, %50 Burslu #
 Fırat Üniversitesi, Devlet, ELAZIĞ, Bilgisayar Mühendisliği, 4, Türkçe, 291.51359, 180053, 85, SAY,  #
-ODTÜ Kuzey Devlet Kampusu, Devlet, GÜZELYURT-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 291.40326, 180275, 10, SAY, %0 Burslu #
+ODTÜ Kuzey Devlet Kampusu, Vakıf, GÜZELYURT-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 291.40326, 180275, 10, SAY, %0 Burslu #
 Antalya Bilim Üniversitesi, Vakıf, ANTALYA, Bilgisayar Mühendisliği, 4, İngilizce, 290.55775, 181917, 51, SAY, %50 Burslu #
 Zonguldak Bülent Ecevit Üniversitesi, Devlet, ZONGULDAK, Bilgisayar Mühendisliği (İ.Ö), 4, Türkçe, 290.01633, 183005, 60, SAY,  #
 Sivas Cumhuriyet Üniversitesi, Devlet, SİVAS, Bilgisayar Mühendisliği, 4, Türkçe, 289.93546, 183173, 70, SAY,  #
@@ -714,12 +714,12 @@ Tarsus Üniversitesi, Devlet, MERSİN, Bilgisayar Mühendisliği, 4, Türkçe, 2
 İskenderun Teknik Üniversitesi, Devlet, HATAY, Bilgisayar Mühendisliği, 4, Türkçe, 284.41838, 195033, 80, SAY,  #
 Bartın Üniversitesi, Devlet, BARTIN, Bilgisayar Mühendisliği, 4, Türkçe, 283.70755, 196683, 70, SAY,  #
 Atatürk Üniversitesi, Devlet, ERZURUM, Bilgisayar Mühendisliği (İ.Ö), 4, Türkçe, 283.66599, 196783, 60, SAY,  #
-İTÜ-KKTC Eğitim Araştırma Yerleşkesi, Devlet, GAZİMAĞUSA-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 281.24222, 202227, 20, SAY, %0 Burslu #
+İTÜ-KKTC Eğitim Araştırma Yerleşkesi, Vakıf, GAZİMAĞUSA-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 281.24222, 202227, 20, SAY, %0 Burslu #
 Kahramanmaraş Sütçü İmam Üniversitesi, Devlet, KAHRAMANMARAŞ, Bilgisayar Mühendisliği, 4, Türkçe, 280.11634, 204768, 65, SAY,  #
 İstinye Üniversitesi, Vakıf, İSTANBUL, Bilgisayar Mühendisliği, 4, İngilizce, 278.81861, 207946, 42, SAY, %50 Burslu #
 Biruni Üniversitesi, Vakıf, İSTANBUL, Bilgisayar Mühendisliği, 4, İngilizce, 278.18468, 209406, 37, SAY, %50 Burslu #
 Nevşehir Hacı Bektaş Veli Üniversitesi, Devlet, NEVŞEHİR, Bilgisayar Mühendisliği, 4, Türkçe, 277.53946, 211019, 40, SAY,  #
-Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 277.17875, 211892, 20, SAY, %0 Burslu #
+Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 277.17875, 211892, 20, SAY, %0 Burslu #
 Kırşehir Ahi Evran Üniversitesi, Devlet, KIRŞEHİR, Bilgisayar Mühendisliği, 4, Türkçe, 276.35246, 213917, 60, SAY,  #
 Türk Hava Kurumu Üniversitesi, Vakıf, ANKARA, Bilgisayar Mühendisliği, 4, İngilizce, 275.61212, 215752, 71, SAY, %50 Burslu #
 Amasya Üniversitesi, Devlet, AMASYA, Bilgisayar Mühendisliği, 4, Türkçe, 274.17132, 219388, 60, SAY,  #
@@ -730,7 +730,7 @@ Recep Tayyip Erdoğan Üniversitesi, Devlet, RİZE, Bilgisayar Mühendisliği, 4
 Giresun Üniversitesi, Devlet, GİRESUN, Bilgisayar Mühendisliği, 4, Türkçe, 270.72567, 228059, 50, SAY,  #
 Uluslararası Final Üniversitesi, Devlet, GİRNE, Bilgisayar Mühendisliği, 4, İngilizce, 270.61124, 228384, 3, SAY, %100 Burslu #
 Beykent Üniversitesi, Vakıf, İSTANBUL, Bilgisayar Mühendisliği, 4, Türkçe, 269.75281, 230619, 60, SAY, %25 Burslu #
-Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 269.32791, 231753, 5, SAY, %50 Burslu #
+Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 269.32791, 231753, 5, SAY, %50 Burslu #
 Malatya Turgut Özal Üniversitesi, Devlet, MALATYA, Bilgisayar Mühendisliği, 4, Türkçe, 269.27958, 231897, 60, SAY,  #
 Van Yüzüncü Yıl Üniversitesi, Devlet, VAN, Bilgisayar Mühendisliği, 4, Türkçe, 268.78457, 233220, 30, SAY,  #
 Lefke Avrupa Üniversitesi, Vakıf, LEFKE-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 268.75682, 233274, 10, SAY, %100 Burslu #
@@ -754,7 +754,7 @@ Yozgat Bozok Üniversitesi, Devlet, YOZGAT, Bilgisayar Mühendisliği, 4, Türk�
 Alanya Hamdullah Emin Paşa Üniversitesi, Vakıf, ANTALYA, Bilgisayar Mühendisliği, 4, İngilizce, 260.51850, 257158, 5, SAY, %50 Burslu #
 İstanbul Arel Üniversitesi, Vakıf, İSTANBUL, Bilgisayar Mühendisliği, 4, İngilizce, 259.63524, 259900, 34, SAY, %50 Burslu #
 Yakın Doğu Üniversitesi, Devlet, LEFKOŞA-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 259.55125, 260191, 15, SAY, %100 Burslu #
-Girne Üniversitesi, Devlet, GİRNE-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 255.72878, 272430, 3, SAY, %100 Burslu #
+Girne Üniversitesi, Vakıf, GİRNE-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 255.72878, 272430, 3, SAY, %100 Burslu #
 Biruni Üniversitesi, Vakıf, İSTANBUL, Bilgisayar Mühendisliği, 4, Türkçe, 255.52606, 273112, 42, SAY, %50 Burslu #
 Osmaniye Korkut Ata Üniversitesi, Devlet, OSMANİYE, Bilgisayar Mühendisliği, 4, Türkçe, 255.14884, 274375, 60, SAY,  #
 Erzincan Binali Yıldırım Üniversitesi, Devlet, ERZİNCAN, Bilgisayar Mühendisliği, 4, Türkçe, 254.00099, 278171, 70, SAY,  #
@@ -780,13 +780,13 @@ Kırgızistan-Türkiye Manas Üniversitesi, Devlet, BİŞKEK, Bilgisayar Mühend
 İstanbul Sağlık ve Teknoloji Üniversitesi, Vakıf, İSTANBUL, Bilgisayar Mühendisliği, 4, Türkçe, 0, 0, 25, SAY, %50 Burslu #
 Kocaeli Sağlık ve Teknoloji Üniversitesi, Vakıf, KOCAELİ, Bilgisayar Mühendisliği, 4, Türkçe, 0, 0, 34, SAY, %25 Burslu #
 Uluslararası Devlet Üniversitesi, Vakıf, LEFKOŞA-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 0, 0, 5, SAY, %50 Burslu #
-Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Bilgisayar Mühendisliği, 4, Türkçe, 0, 0, 10, SAY, %0 Burslu #
-Yakın Doğu Üniversitesi, Devlet, LEFKOŞA-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 0, 0, 5, SAY, %50 Burslu #
+Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Bilgisayar Mühendisliği, 4, Türkçe, 0, 0, 10, SAY, %0 Burslu #
+Yakın Doğu Üniversitesi, Vakıf, LEFKOŞA-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 0, 0, 5, SAY, %50 Burslu #
 Devlet İlim Üniversitesi, Vakıf, GİRNE-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 0, 0, 3, SAY, %100 Burslu #
-Devlet Batı Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 0, 0, 3, SAY, %100 Burslu #
-Girne Amerikan Üniversitesi, Devlet, GİRNE, Bilgisayar Mühendisliği, 4, İngilizce, 0, 0, 2, SAY, %0 Burslu #
-Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Bilgisayar Mühendisliği, 4, Türkçe, 0, 0, 5, SAY, %50 Burslu #
-Devlet Batı Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 0, 0, 7, SAY, %50 Burslu #
+Devlet Batı Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 0, 0, 3, SAY, %100 Burslu #
+Girne Amerikan Üniversitesi, Vakıf, GİRNE, Bilgisayar Mühendisliği, 4, İngilizce, 0, 0, 2, SAY, %0 Burslu #
+Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Bilgisayar Mühendisliği, 4, Türkçe, 0, 0, 5, SAY, %50 Burslu #
+Devlet Batı Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Bilgisayar Mühendisliği, 4, İngilizce, 0, 0, 7, SAY, %50 Burslu #
 Düzce Üniversitesi, Devlet, DÜZCE, Bilgisayar Mühendisliği (KKTC), 4, Türkçe, 0, 0, 2, SAY,  #
 Bolu Abant İzzet Baysal Üniversitesi, Devlet, BOLU, Bilgisayar Mühendisliği (KKTC), 4, Türkçe, 0, 0, 2, SAY,  #
 Çukurova Üniversitesi, Devlet, ADANA, Bilgisayar Mühendisliği (KKTC), 4, İngilizce, 0, 0, 2, SAY,  #
@@ -814,7 +814,7 @@ Anadolu Üniversitesi, Devlet, ESKİŞEHİR, Bilgisayar ve Öğretim Teknolojile
 Dokuz Eylül Üniversitesi, Devlet, İZMİR, Bilgisayar ve Öğretim Teknolojileri Öğretmenliği, 4, Türkçe, 0, 0, 20, SAY,  #
 Ege Üniversitesi, Devlet, İZMİR, Bilgisayar ve Öğretim Teknolojileri Öğretmenliği, 4, Türkçe, 0, 0, 20, SAY,  #
 Bursa Uludağ Üniversitesi, Devlet, BURSA, Bilgisayar ve Öğretim Teknolojileri Öğretmenliği, 4, Türkçe, 0, 0, 20, SAY,  #
-Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Bilgisayar ve Öğretim Teknolojileri Öğretmenliği, 4, İngilizce, 0, 0, 5, SAY, %100 Burslu #
+Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Bilgisayar ve Öğretim Teknolojileri Öğretmenliği, 4, İngilizce, 0, 0, 5, SAY, %100 Burslu #
 İstanbul Üniversitesi, Devlet, İSTANBUL, Bilim Tarihi, 4, Türkçe, 237.57084, 472920, 80, EA,  #
 İstanbul Medeniyet Üniversitesi, Devlet, İSTANBUL, Bilim Tarihi, 4, Türkçe, 228.87994, 538195, 50, EA,  #
 Fatih Sultan Mehmet Vakıf Üniversitesi, Vakıf, İSTANBUL, Bilim Tarihi, 4, Türkçe, 223.38014, 563575, 20, EA, %100 Burslu #
@@ -826,11 +826,11 @@ Muğla Sıtkı Koçman Üniversitesi, Devlet, MUĞLA, Bilişim Sistemleri Mühen
 Atılım Üniversitesi, Vakıf, ANKARA, Bilişim Sistemleri Mühendisliği, 4, İngilizce, 250.42517, 290543, 47, SAY, %50 Burslu #
 Piri Reis Üniversitesi, Vakıf, İSTANBUL, Bilişim Sistemleri Mühendisliği, 4, İngilizce, 249.10259, 295447, 33, SAY, %50 Burslu #
 İstanbul Teknik Üniversitesi, Devlet, İSTANBUL, Bilişim Sistemleri Mühendisliği, 4, İngilizce, 0, 0, 25, SAY, %0 Burslu #
-Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Bilişim Sistemleri Mühendisliği, 4, İngilizce, 0, 0, 10, SAY, %100 Burslu #
-Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Bilişim Sistemleri Mühendisliği, 4, İngilizce, 0, 0, 6, SAY, %0 Burslu #
-Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Bilişim Sistemleri Mühendisliği, 4, İngilizce, 0, 0, 3, SAY, %50 Burslu #
+Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Bilişim Sistemleri Mühendisliği, 4, İngilizce, 0, 0, 10, SAY, %100 Burslu #
+Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Bilişim Sistemleri Mühendisliği, 4, İngilizce, 0, 0, 6, SAY, %0 Burslu #
+Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Bilişim Sistemleri Mühendisliği, 4, İngilizce, 0, 0, 3, SAY, %50 Burslu #
 Uluslararası Devlet Üniversitesi, Vakıf, LEFKOŞA-KKTC, Bilişim Sistemleri Mühendisliği, 4, İngilizce, 0, 0, 3, SAY, %100 Burslu #
-Yakın Doğu Üniversitesi, Devlet, LEFKOŞA-KKTC, Bilişim Sistemleri Mühendisliği, 4, İngilizce, 0, 0, 3, SAY, %100 Burslu #
+Yakın Doğu Üniversitesi, Vakıf, LEFKOŞA-KKTC, Bilişim Sistemleri Mühendisliği, 4, İngilizce, 0, 0, 3, SAY, %100 Burslu #
 Kocaeli Üniversitesi, Devlet, KOCAELİ, Bilişim Sistemleri Mühendisliği (KKTC), 4, Türkçe, 0, 0, 1, SAY,  #
 Kocaeli Üniversitesi, Devlet, KOCAELİ, Bilişim Sistemleri Mühendisliği (MTOK), 4, Türkçe, 253.86909, 278575, 14, SAY,  #
 Muğla Sıtkı Koçman Üniversitesi, Devlet, MUĞLA, Bilişim Sistemleri Mühendisliği (MTOK), 4, Türkçe, 251.59374, 286455, 12, SAY,  #
@@ -842,22 +842,22 @@ Yeditepe Üniversitesi, Vakıf, İSTANBUL, Bilişim Sistemleri ve Teknolojileri,
 İstanbul Okan Üniversitesi, Vakıf, İSTANBUL, Bilişim Sistemleri ve Teknolojileri, 4, Türkçe, 303.03424, 158136, 5, SAY, %100 Burslu #
 Yeditepe Üniversitesi, Vakıf, İSTANBUL, Bilişim Sistemleri ve Teknolojileri, 4, İngilizce, 246.07181, 306593, 42, SAY, %50 Burslu #
 Atatürk Üniversitesi, Devlet, ERZURUM, Bilişim Sistemleri ve Teknolojileri, 4, Türkçe, 224.30755, 380997, 40, SAY,  #
-Yakın Doğu Üniversitesi, Devlet, LEFKOŞA-KKTC, Bilişim Sistemleri ve Teknolojileri, 4, İngilizce, 0, 0, 5, SAY, %100 Burslu #
+Yakın Doğu Üniversitesi, Vakıf, LEFKOŞA-KKTC, Bilişim Sistemleri ve Teknolojileri, 4, İngilizce, 0, 0, 5, SAY, %100 Burslu #
 İstanbul Okan Üniversitesi, Vakıf, İSTANBUL, Bilişim Sistemleri ve Teknolojileri, 4, Türkçe, 0, 0, 25, SAY, %50 Burslu #
 Muş Alparslan Üniversitesi, Devlet, MUŞ, Bilişim Sistemleri ve Teknolojileri, 4, Türkçe, 0, 0, 40, SAY,  #
 İstanbul Okan Üniversitesi, Vakıf, İSTANBUL, Bilişim Sistemleri ve Teknolojileri, 4, İngilizce, 0, 0, 34, SAY, %50 Burslu #
-Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Bilişim Sistemleri ve Teknolojileri, 4, İngilizce, 241.95188, 322565, 7, SAY, %100 Burslu #
+Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Bilişim Sistemleri ve Teknolojileri, 4, İngilizce, 241.95188, 322565, 7, SAY, %100 Burslu #
 Mersin Üniversitesi, Devlet, MERSİN, Bilişim Sistemleri ve Teknolojileri, 4, Türkçe, 240.55306, 328311, 50, SAY,  #
 Trakya Üniversitesi, Devlet, EDİRNE, Bilişim Sistemleri ve Teknolojileri, 4, Türkçe, 236.68582, 344535, 60, SAY,  #
 Burdur Mehmet Akif Ersoy Üniversitesi, Devlet, BURDUR, Bilişim Sistemleri ve Teknolojileri, 4, Türkçe, 232.66112, 360919, 50, SAY,  #
 Burdur Mehmet Akif Ersoy Üniversitesi, Devlet, BURDUR, Bilişim Sistemleri ve Teknolojileri, 4, Türkçe, 225.12409, 380034, 60, SAY,  #
-Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Bilişim Sistemleri ve Teknolojileri, 4, Türkçe, 207.20638, 388680, 7, SAY, %100 Burslu #
-Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Bilişim Sistemleri ve Teknolojileri, 4, İngilizce, 0, 0, 8, SAY, %50 Burslu #
-Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Bilişim Sistemleri ve Teknolojileri, 4, İngilizce, 0, 0, 25, SAY, %0 Burslu #
+Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Bilişim Sistemleri ve Teknolojileri, 4, Türkçe, 207.20638, 388680, 7, SAY, %100 Burslu #
+Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Bilişim Sistemleri ve Teknolojileri, 4, İngilizce, 0, 0, 8, SAY, %50 Burslu #
+Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Bilişim Sistemleri ve Teknolojileri, 4, İngilizce, 0, 0, 25, SAY, %0 Burslu #
 Sivas Cumhuriyet Üniversitesi, Devlet, SİVAS, Bilişim Sistemleri ve Teknolojileri, 4, Türkçe, 0, 0, 40, SAY,  #
 Lefke Avrupa Üniversitesi, Vakıf, LEFKE-KKTC, Bilişim Sistemleri ve Teknolojileri, 4, İngilizce, 0, 0, 15, SAY, %100 Burslu #
-Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Bilişim Sistemleri ve Teknolojileri, 4, Türkçe, 0, 0, 15, SAY, %0 Burslu #
-Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Bilişim Sistemleri ve Teknolojileri, 4, Türkçe, 0, 0, 8, SAY, %50 Burslu #
+Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Bilişim Sistemleri ve Teknolojileri, 4, Türkçe, 0, 0, 15, SAY, %0 Burslu #
+Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Bilişim Sistemleri ve Teknolojileri, 4, Türkçe, 0, 0, 8, SAY, %50 Burslu #
 Lefke Avrupa Üniversitesi, Vakıf, LEFKE-KKTC, Bilişim Sistemleri ve Teknolojileri, 4, İngilizce, 0, 0, 15, SAY, %50 Burslu #
 Ege Üniversitesi, Devlet, İZMİR, Bitki Koruma, 4, Türkçe, 289.91335, 183237, 40, SAY,  #
 Akdeniz Üniversitesi, Devlet, ANTALYA, Bitki Koruma, 4, Türkçe, 278.07555, 209647, 40, SAY,  #
@@ -1029,8 +1029,8 @@ Beykent Üniversitesi, Vakıf, İSTANBUL, Biyomedikal Mühendisliği, 4, Türkç
 Işık Üniversitesi, Vakıf, İSTANBUL, Biyomedikal Mühendisliği, 4, İngilizce, 0, 0, 9, SAY, %50 Burslu #
 İstanbul Yeni Yüzyıl Üniversitesi, Vakıf, İSTANBUL, Biyomedikal Mühendisliği, 4, Türkçe, 0, 0, 17, SAY, %50 Burslu #
 İstanbul Arel Üniversitesi, Vakıf, İSTANBUL, Biyomedikal Mühendisliği, 4, Türkçe, 0, 0, 10, SAY, %50 Burslu #
-Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Biyomedikal Mühendisliği, 4, İngilizce, 0, 0, 3, SAY, %100 Burslu #
-Yakın Doğu Üniversitesi, Devlet, LEFKOŞA-KKTC, Biyomedikal Mühendisliği, 4, İngilizce, 0, 0, 3, SAY, %100 Burslu #
+Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Biyomedikal Mühendisliği, 4, İngilizce, 0, 0, 3, SAY, %100 Burslu #
+Yakın Doğu Üniversitesi, Vakıf, LEFKOŞA-KKTC, Biyomedikal Mühendisliği, 4, İngilizce, 0, 0, 3, SAY, %100 Burslu #
 Uluslararası Devlet Üniversitesi, Vakıf, LEFKOŞA-KKTC, Biyomedikal Mühendisliği, 4, İngilizce, 0, 0, 20, SAY, %100 Burslu #
 Afyon Kocatepe Üniversitesi, Devlet, AFYONKARAHİSAR, Biyomedikal Mühendisliği (KKTC), 4, Türkçe, 0, 0, 2, SAY,  #
 Kocaeli Üniversitesi, Devlet, KOCAELİ, Biyomedikal Mühendisliği (MTOK), 4, Türkçe, 251.91091, 285300, 11, SAY,  #
@@ -1056,7 +1056,7 @@ Tokat Gaziosmanpaşa Üniversitesi, Devlet, TOKAT, Biyomühendislik, 4, Türkçe
 Kırıkkale Üniversitesi, Devlet, KIRIKKALE, Biyomühendislik, 4, Türkçe, 0, 0, 20, SAY,  #
 Adana Alparslan Türkeş Bilim ve Teknoloji Üniversitesi, Devlet, ADANA, Biyomühendislik, 4, İngilizce, 0, 0, 20, SAY,  #
 Bilecik Şeyh Edebali Üniversitesi, Devlet, BİLECİK, Biyomühendislik, 4, Türkçe, 0, 0, 30, SAY,  #
-Yakın Doğu Üniversitesi, Devlet, LEFKOŞA-KKTC, Biyomühendislik, 4, İngilizce, 0, 0, 3, SAY, %100 Burslu #
+Yakın Doğu Üniversitesi, Vakıf, LEFKOŞA-KKTC, Biyomühendislik, 4, İngilizce, 0, 0, 3, SAY, %100 Burslu #
 Marmara Üniversitesi, Devlet, İSTANBUL, Biyomühendislik (KKTC), 4, İngilizce, 364.76739, 75944, 1, SAY,  #
 Bursa Uludağ Üniversitesi, Devlet, BURSA, Biyosistem Mühendisliği, 4, Türkçe, 232.51476, 361503, 50, SAY,  #
 Erciyes Üniversitesi, Devlet, KAYSERİ, Biyosistem Mühendisliği, 4, Türkçe, 0, 0, 30, SAY,  #
@@ -1255,14 +1255,14 @@ Eskişehir Teknik Üniversitesi, Devlet, ESKİŞEHİR, Çevre Mühendisliği, 4,
 Atatürk Üniversitesi, Devlet, ERZURUM, Çevre Mühendisliği, 4, Türkçe, 0, 0, 15, SAY,  #
 Erciyes Üniversitesi, Devlet, KAYSERİ, Çevre Mühendisliği, 4, Türkçe, 0, 0, 15, SAY,  #
 Uluslararası Devlet Üniversitesi, Vakıf, LEFKOŞA-KKTC, Çevre Mühendisliği, 4, İngilizce, 0, 0, 3, SAY, %100 Burslu #
-Yakın Doğu Üniversitesi, Devlet, LEFKOŞA-KKTC, Çevre Mühendisliği, 4, İngilizce, 0, 0, 3, SAY, %100 Burslu #
+Yakın Doğu Üniversitesi, Vakıf, LEFKOŞA-KKTC, Çevre Mühendisliği, 4, İngilizce, 0, 0, 3, SAY, %100 Burslu #
 Eskişehir Teknik Üniversitesi, Devlet, ESKİŞEHİR, Çevre Mühendisliği (KKTC), 4, Türkçe, 0, 0, 1, SAY,  #
-Girne Amerikan Üniversitesi, Devlet, GİRNE-KKTC, Çin Dili ve Edebiyatı, 4, Türkçe, 0, 0, 8, DİL, %0 Burslu #
+Girne Amerikan Üniversitesi, Vakıf, GİRNE-KKTC, Çin Dili ve Edebiyatı, 4, Türkçe, 0, 0, 8, DİL, %0 Burslu #
 İstanbul Üniversitesi, Devlet, İSTANBUL, Çin Dili ve Edebiyatı, 4, Türkçe, 405.0469, 11340, 40, DİL,  #
 Erciyes Üniversitesi, Devlet, KAYSERİ, Çin Dili ve Edebiyatı, 4, Türkçe, 356.4195, 25378, 40, DİL,  #
 Nevşehir Hacı Bektaş Veli Üniversitesi, Devlet, NEVŞEHİR, Çin Dili ve Edebiyatı, 4, Türkçe, 322.1319, 36401, 30, DİL,  #
-Girne Amerikan Üniversitesi, Devlet, GİRNE-KKTC, Çin Dili ve Edebiyatı, 4, Türkçe, 232.5886, 67250, 10, DİL, %100 Burslu #
-Girne Amerikan Üniversitesi, Devlet, GİRNE-KKTC, Çin Dili ve Edebiyatı, 4, Türkçe, 0, 0, 7, DİL, %50 Burslu #
+Girne Amerikan Üniversitesi, Vakıf, GİRNE-KKTC, Çin Dili ve Edebiyatı, 4, Türkçe, 232.5886, 67250, 10, DİL, %100 Burslu #
+Girne Amerikan Üniversitesi, Vakıf, GİRNE-KKTC, Çin Dili ve Edebiyatı, 4, Türkçe, 0, 0, 7, DİL, %50 Burslu #
 İstanbul Okan Üniversitesi, Vakıf, İSTANBUL, Çince Mütercim ve Tercümanlık, 4, Türkçe, 436.7664, 5562, 4, DİL, %100 Burslu #
 İstanbul Okan Üniversitesi, Vakıf, İSTANBUL, Çince Mütercim ve Tercümanlık, 4, Türkçe, 0, 0, 26, DİL, %50 Burslu #
 İstanbul Kültür Üniversitesi, Vakıf, İSTANBUL, Çizgi Film ve Animasyon, 4, Türkçe, 370.40404, 11856, 8, SÖZ, %100 Burslu #
@@ -1366,7 +1366,7 @@ ORDU ÜNİVERSİTESİ, Devlet, ORDU, Deniz Bilimleri ve Teknolojisi Mühendisli�
 Piri Reis Üniversitesi, Vakıf, İSTANBUL, Deniz Ulaştırma İşletme Mühendisliği, 4, İngilizce, 352.17616, 89434, 15, SAY, %100 Burslu #
 Dokuz Eylül Üniversitesi, Devlet, İZMİR, Deniz Ulaştırma İşletme Mühendisliği, 4, İngilizce, 340.27490, 103510, 70, SAY,  #
 İstanbul Üniversitesi, Devlet, İSTANBUL, Deniz Ulaştırma İşletme Mühendisliği, 4, Türkçe, 319.94160, 130663, 70, SAY,  #
-İTÜ-KKTC Eğitim Araştırma Yerleşkesi, Devlet, GAZİMAĞUSA-KKTC, Deniz Ulaştırma İşletme Mühendisliği, 4, İngilizce, 315.37778, 137544, 11, SAY, %100 Burslu #
+İTÜ-KKTC Eğitim Araştırma Yerleşkesi, Vakıf, GAZİMAĞUSA-KKTC, Deniz Ulaştırma İşletme Mühendisliği, 4, İngilizce, 315.37778, 137544, 11, SAY, %100 Burslu #
 Karadeniz Teknik Üniversitesi, Devlet, TRABZON, Deniz Ulaştırma İşletme Mühendisliği, 4, Türkçe, 303.67188, 157008, 80, SAY,  #
 Ordu Üniversitesi, Devlet, ORDU, Deniz Ulaştırma İşletme Mühendisliği, 4, Türkçe, 283.49113, 197202, 40, SAY,  #
 Piri Reis Üniversitesi, Vakıf, İSTANBUL, Deniz Ulaştırma İşletme Mühendisliği, 4, İngilizce, 277.99218, 209858, 67, SAY, %50 Burslu #
@@ -1375,10 +1375,10 @@ Recep Tayyip Erdoğan Üniversitesi, Devlet, RİZE, Deniz Ulaştırma İşletme 
 Van Yüzüncü Yıl Üniversitesi, Devlet, VAN, Deniz Ulaştırma İşletme Mühendisliği, 4, Türkçe, 252.85492, 282055, 15, SAY,  #
 Piri Reis Üniversitesi, Vakıf, İSTANBUL, Deniz Ulaştırma İşletme Mühendisliği, 4, İngilizce, 252.58638, 282983, 18, SAY, %0 Burslu #
 İstanbul Teknik Üniversitesi, Devlet, İSTANBUL, Deniz Ulaştırma İşletme Mühendisliği, 4, İngilizce, 0, 0, 10, SAY, %0 Burslu #
-İTÜ-KKTC Eğitim Araştırma Yerleşkesi, Devlet, GAZİMAĞUSA-KKTC, Deniz Ulaştırma İşletme Mühendisliği, 4, İngilizce, 0, 0, 52, SAY, %50 Burslu #
-Girne Üniversitesi, Devlet, GİRNE-KKTC, Deniz Ulaştırma İşletme Mühendisliği, 4, İngilizce, 0, 0, 10, SAY, %100 Burslu #
-İTÜ-KKTC Eğitim Araştırma Yerleşkesi, Devlet, GAZİMAĞUSA-KKTC, Deniz Ulaştırma İşletme Mühendisliği, 4, İngilizce, 0, 0, 10, SAY, %0 Burslu #
-Girne Üniversitesi, Devlet, GİRNE-KKTC, Deniz Ulaştırma İşletme Mühendisliği, 4, İngilizce, 0, 0, 10, SAY, %50 Burslu #
+İTÜ-KKTC Eğitim Araştırma Yerleşkesi, Vakıf, GAZİMAĞUSA-KKTC, Deniz Ulaştırma İşletme Mühendisliği, 4, İngilizce, 0, 0, 52, SAY, %50 Burslu #
+Girne Üniversitesi, Vakıf, GİRNE-KKTC, Deniz Ulaştırma İşletme Mühendisliği, 4, İngilizce, 0, 0, 10, SAY, %100 Burslu #
+İTÜ-KKTC Eğitim Araştırma Yerleşkesi, Vakıf, GAZİMAĞUSA-KKTC, Deniz Ulaştırma İşletme Mühendisliği, 4, İngilizce, 0, 0, 10, SAY, %0 Burslu #
+Girne Üniversitesi, Vakıf, GİRNE-KKTC, Deniz Ulaştırma İşletme Mühendisliği, 4, İngilizce, 0, 0, 10, SAY, %50 Burslu #
 Karadeniz Teknik Üniversitesi, Devlet, TRABZON, Deniz Ulaştırma İşletme Mühendisliği (KKTC), 4, Türkçe, 0, 0, 1, SAY,  #
 Girne Amerikan Üniversitesi, Devlet, GİRNE, Deniz Ulaştırma İşletme Mühendisliği, 4, İngilizce, 0, 0, 10, SAY, %100 Burslu #
 Girne Amerikan Üniversitesi, Devlet, GİRNE, Deniz Ulaştırma İşletme Mühendisliği, 4, İngilizce, 0, 0, 4, SAY, %0 Burslu #
@@ -1387,7 +1387,7 @@ Piri Reis Üniversitesi, Vakıf, İSTANBUL, Denizcilik İşletmeleri Yönetimi, 
 Dokuz Eylül Üniversitesi, Devlet, İZMİR, Denizcilik İşletmeleri Yönetimi, 4, İngilizce, 289.52502, 185093, 70, EA,  #
 Kocaeli Üniversitesi, Devlet, KOCAELİ, Denizcilik İşletmeleri Yönetimi, 4, Türkçe, 248.71152, 389691, 50, EA,  #
 Akdeniz Üniversitesi, Devlet, ANTALYA, Denizcilik İşletmeleri Yönetimi, 4, Türkçe, 248.2201, 393107, 60, EA,  #
-İTÜ-KKTC Eğitim Araştırma Yerleşkesi, Devlet, GAZİMAĞUSA-KKTC, Denizcilik İşletmeleri Yönetimi, 4, İngilizce, 243.33733, 428085, 7, EA, %100 Burslu #
+İTÜ-KKTC Eğitim Araştırma Yerleşkesi, Vakıf, GAZİMAĞUSA-KKTC, Denizcilik İşletmeleri Yönetimi, 4, İngilizce, 243.33733, 428085, 7, EA, %100 Burslu #
 Mersin Üniversitesi, Devlet, MERSİN, Denizcilik İşletmeleri Yönetimi, 4, Türkçe, 239.32038, 458938, 40, EA,  #
 Bandırma Onyedi Eylül Üniversitesi, Devlet, BALIKESİR, Denizcilik İşletmeleri Yönetimi, 4, Türkçe, 236.1624, 484293, 60, EA,  #
 Samsun Üniversitesi, Devlet, SAMSUN, Denizcilik İşletmeleri Yönetimi, 4, Türkçe, 0, 0, 50, EA,  #
@@ -1395,12 +1395,12 @@ Bandırma Onyedi Eylül Üniversitesi, Devlet, BALIKESİR, Denizcilik İşletmel
 İskenderun Teknik Üniversitesi, Devlet, HATAY, Denizcilik İşletmeleri Yönetimi, 4, Türkçe, 0, 0, 50, EA,  #
 Piri Reis Üniversitesi, Vakıf, İSTANBUL, Denizcilik İşletmeleri Yönetimi, 4, İngilizce, 0, 0, 57, EA, %50 Burslu #
 Zonguldak Bülent Ecevit Üniversitesi, Devlet, ZONGULDAK, Denizcilik İşletmeleri Yönetimi, 4, Türkçe, 0, 0, 80, EA,  #
-Girne Üniversitesi, Devlet, GİRNE-KKTC, Denizcilik İşletmeleri Yönetimi, 4, İngilizce, 0, 0, 10, EA, %100 Burslu #
+Girne Üniversitesi, Vakıf, GİRNE-KKTC, Denizcilik İşletmeleri Yönetimi, 4, İngilizce, 0, 0, 10, EA, %100 Burslu #
 Ordu Üniversitesi, Devlet, ORDU, Denizcilik İşletmeleri Yönetimi, 4, Türkçe, 0, 0, 40, EA,  #
 Zonguldak Bülent Ecevit Üniversitesi, Devlet, ZONGULDAK, Denizcilik İşletmeleri Yönetimi (İ.Ö), 4, Türkçe, 0, 0, 60, EA,  #
 Piri Reis Üniversitesi, Vakıf, İSTANBUL, Denizcilik İşletmeleri Yönetimi, 4, İngilizce, 0, 0, 14, EA, %0 Burslu #
-İTÜ-KKTC Eğitim Araştırma Yerleşkesi, Devlet, GAZİMAĞUSA-KKTC, Denizcilik İşletmeleri Yönetimi, 4, İngilizce, 0, 0, 8, EA, %50 Burslu #
-İTÜ-KKTC Eğitim Araştırma Yerleşkesi, Devlet, GAZİMAĞUSA-KKTC, Denizcilik İşletmeleri Yönetimi, 4, İngilizce, 0, 0, 15, EA, %0 Burslu #
+İTÜ-KKTC Eğitim Araştırma Yerleşkesi, Vakıf, GAZİMAĞUSA-KKTC, Denizcilik İşletmeleri Yönetimi, 4, İngilizce, 0, 0, 8, EA, %50 Burslu #
+İTÜ-KKTC Eğitim Araştırma Yerleşkesi, Vakıf, GAZİMAĞUSA-KKTC, Denizcilik İşletmeleri Yönetimi, 4, İngilizce, 0, 0, 15, EA, %0 Burslu #
 Ege Üniversitesi, Devlet, İZMİR, Deri Mühendisliği, 4, Türkçe, 0, 0, 25, SAY,  #
 Bahçeşehir Üniversitesi, Vakıf, İSTANBUL, Dijital Oyun Tasarımı, 4, İngilizce, 426.94172, 23992, 10, SAY, %100 Burslu #
 İstanbul Bilgi Üniversitesi, Vakıf, İSTANBUL, Dijital Oyun Tasarımı, 4, İngilizce, 407.98223, 37080, 6, SAY, %100 Burslu #
@@ -1412,7 +1412,7 @@ Doğuş Üniversitesi, Vakıf, İSTANBUL, Dijital Oyun Tasarımı, 4, Türkçe, 
 Beykoz Üniversitesi, Vakıf, İSTANBUL, Dijital Oyun Tasarımı, 4, Türkçe, 321.43609, 128425, 6, SAY, %100 Burslu #
 Bahçeşehir Üniversitesi, Vakıf, İSTANBUL, Dijital Oyun Tasarımı, 4, İngilizce, 319.90113, 130742, 19, SAY, %50 Burslu #
 Muğla Sıtkı Koçman Üniversitesi, Devlet, MUĞLA, Dijital Oyun Tasarımı, 4, Türkçe, 300.71928, 162167, 40, SAY,  #
-Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Dijital Oyun Tasarımı, 4, İngilizce, 284.65334, 194504, 6, SAY, %100 Burslu #
+Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Dijital Oyun Tasarımı, 4, İngilizce, 284.65334, 194504, 6, SAY, %100 Burslu #
 İstanbul Ayvansaray Üniversitesi, Vakıf, İSTANBUL, Dijital Oyun Tasarımı, 4, Türkçe, 284.08833, 195807, 9, SAY, %100 Burslu #
 Bahçeşehir Üniversitesi, Vakıf, İSTANBUL, Dijital Oyun Tasarımı, 4, İngilizce, 250.89501, 288917, 40, SAY, %0 Burslu #
 İstanbul Bilgi Üniversitesi, Vakıf, İSTANBUL, Dijital Oyun Tasarımı, 4, İngilizce, 245.98550, 306900, 39, SAY, %50 Burslu #
@@ -1420,13 +1420,13 @@ Bahçeşehir Üniversitesi, Vakıf, İSTANBUL, Dijital Oyun Tasarımı, 4, İngi
 Beykent Üniversitesi, Vakıf, İSTANBUL, Dijital Oyun Tasarımı, 4, Türkçe, 230.99480, 366828, 34, SAY, %50 Burslu #
 İstinye Üniversitesi, Vakıf, İSTANBUL, Dijital Oyun Tasarımı, 4, İngilizce, 0, 0, 51, SAY, %50 Burslu #
 Beykoz Üniversitesi, Vakıf, İSTANBUL, Dijital Oyun Tasarımı, 4, Türkçe, 0, 0, 34, SAY, %50 Burslu #
-Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Dijital Oyun Tasarımı, 4, İngilizce, 0, 0, 24, SAY, %0 Burslu #
+Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Dijital Oyun Tasarımı, 4, İngilizce, 0, 0, 24, SAY, %0 Burslu #
 Doğuş Üniversitesi, Vakıf, İSTANBUL, Dijital Oyun Tasarımı, 4, Türkçe, 0, 0, 34, SAY, %50 Burslu #
 Nişantaşı Üniversitesi, Vakıf, İSTANBUL, Dijital Oyun Tasarımı, 4, Türkçe, 0, 0, 33, SAY, %50 Burslu #
 İstanbul Ayvansaray Üniversitesi, Vakıf, İSTANBUL, Dijital Oyun Tasarımı, 4, Türkçe, 0, 0, 51, SAY, %50 Burslu #
 Arkın Yaratıcı Sanatlar ve Tasarım Üniversitesi, Devlet, GİRNE, Dijital Oyun Tasarımı, 4, İngilizce, 0, 0, 20, SAY, %100 Burslu #
 Nişantaşı Üniversitesi, Vakıf, İSTANBUL, Dijital Oyun Tasarımı, 4, Türkçe, 0, 0, 1, SAY, %0 Burslu #
-Doğu Akdeniz Üniversitesi, Devlet, GAZİMAĞUSA-KKTC, Dijital Oyun Tasarımı, 4, İngilizce, 0, 0, 10, SAY, %50 Burslu #
+Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Dijital Oyun Tasarımı, 4, İngilizce, 0, 0, 10, SAY, %50 Burslu #
 Arkın Yaratıcı Sanatlar ve Tasarım Üniversitesi, Devlet, GİRNE, Dijital Oyun Tasarımı, 4, İngilizce, 0, 0, 5, SAY, %0 Burslu #
 Arkın Yaratıcı Sanatlar ve Tasarım Üniversitesi, Devlet, GİRNE, Dijital Oyun Tasarımı, 4, İngilizce, 0, 0, 10, SAY, %50 Burslu #
 İstanbul Medipol Üniversitesi, Vakıf, İSTANBUL, Dil ve Konuşma Terapisi, 4, İngilizce, 394.88791, 47808, 8, SAY, %100 Burslu #

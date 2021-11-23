@@ -14,7 +14,12 @@ class CityListView: UIView {
     private let viewTitle: UILabel = {
         let label = UILabel()
         label.text = "Şehirler"
-        label.font = UIFont.boldSystemFont(ofSize: 16)
+        if IS_SMALL_DEVICE {
+            label.font = UIFont.boldSystemFont(ofSize: 14)
+        }
+        else {
+            label.font = UIFont.boldSystemFont(ofSize: 16)
+        }
         label.textColor = .white
         return label
     }()
@@ -23,7 +28,12 @@ class CityListView: UIView {
         let tf = UITextField()
         tf.attributedText = NSAttributedString(string: "Şehir seçilmedi...")
 //        tf.font = .systemFont(ofSize: 12, weight: .semibold)
-        tf.font = UIFont.italicSystemFont(ofSize: 12)
+        if IS_SMALL_DEVICE {
+            tf.font = UIFont.italicSystemFont(ofSize: 10)
+        }
+        else {
+            tf.font = UIFont.italicSystemFont(ofSize: 12)
+        }
         tf.textColor = .white
         tf.isUserInteractionEnabled = false
         return tf

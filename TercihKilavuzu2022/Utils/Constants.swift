@@ -18,4 +18,7 @@ let BANNER_AD_ID = "ca-app-pub-6180320592686930/4022248406"
 let INTERSTITIAL_AD_ID = "ca-app-pub-6180320592686930/8079847254"
 let BANNER_AD_HEIGHT : CGFloat = 50
 let SUBSCRIPTION_VALUE: String = "4.99"
+var IS_SMALL_DEVICE: Bool {
+    return UIDevice.modelName.contains("iPhone 8")
+}
 

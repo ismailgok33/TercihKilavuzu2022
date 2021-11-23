@@ -16,7 +16,12 @@ class StatePrivateView: UIView {
     private let viewTitle: UILabel = {
         let label = UILabel()
         label.text = "Üniversite Türü"
-        label.font = UIFont.boldSystemFont(ofSize: 16)
+        if IS_SMALL_DEVICE {
+            label.font = UIFont.boldSystemFont(ofSize: 14)
+        }
+        else {
+            label.font = UIFont.boldSystemFont(ofSize: 16)
+        }
         label.textColor = .white
         return label
     }()
