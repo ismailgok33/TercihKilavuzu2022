@@ -3330,7 +3330,7 @@ Maltepe Üniversitesi, Vakıf, İSTANBUL, Görsel İletişim Tasarımı, 4, Tür
 Üsküdar Üniversitesi, Vakıf, İSTANBUL, Görsel İletişim Tasarımı, 4, Türkçe, 345.72957, 29328, 12, SÖZ, %100 Burslu #
 Işık Üniversitesi, Vakıf, İSTANBUL, Görsel İletişim Tasarımı, 4, Türkçe, 344.12828, 30927, 7, SÖZ, %100 Burslu #
 İstanbul Aydın Üniversitesi, Vakıf, İSTANBUL, Görsel İletişim Tasarımı, 4, Türkçe, 340.81212, 34611, 10, SÖZ, %100 Burslu #
-Ege Üniversitesi, Devlet, İZMİR, Görsel İletişim Tasarımı, 4, Türkçe, 338.29089, 37573, 60, SÖZ, %100 Burslu #
+Ege Üniversitesi, Devlet, İZMİR, Görsel İletişim Tasarımı, 4, Türkçe, 338.29089, 37573, 60, SÖZ,  #
 Beykent Üniversitesi, Vakıf, İSTANBUL, Görsel İletişim Tasarımı, 4, Türkçe, 337.78672, 38186, 6, SÖZ,  #
 Haliç Üniversitesi, Vakıf, İSTANBUL, Görsel İletişim Tasarımı, 4, Türkçe, 329.74251, 49191, 6, SÖZ, %100 Burslu #
 Doğuş Üniversitesi, Vakıf, İSTANBUL, Görsel İletişim Tasarımı, 4, Türkçe, 324.41126, 57714, 10, SÖZ, %100 Burslu #
@@ -7224,7 +7224,7 @@ Kapadokya Üniversitesi, Vakıf, NEVŞEHİR, Odyoloji, 4, Türkçe, 237.68744, 3
 İstanbul Medipol Üniversitesi, Vakıf, İSTANBUL, Odyoloji, 4, Türkçe, 0, 0, 42, SAY, %50 Burslu #
 Kapadokya Üniversitesi, Vakıf, NEVŞEHİR, Odyoloji, 4, Türkçe, 0, 0, 42, SAY, %25 Burslu #
 Munzur Üniversitesi, Devlet, TUNCELİ, Okul Öncesi Öğretmenliği, 4, İngilizce, 292.57896, 137143, 40, SÖZ,  #
-Boğaziçi Üniversitesi, Devlet, İSTANBUL, Okul Öncesi Öğretmenliği, 4, Türkçe, 411.71485, 2011, 60, SÖZ, %100 Burslu #
+Boğaziçi Üniversitesi, Devlet, İSTANBUL, Okul Öncesi Öğretmenliği, 4, Türkçe, 411.71485, 2011, 60, SÖZ, #
 İstanbul 29 Mayıs Üniversitesi, Vakıf, İSTANBUL, Okul Öncesi Öğretmenliği, 4, İngilizce, 409.37179, 2215, 6, SÖZ, %100 Burslu #
 Bahçeşehir Üniversitesi, Vakıf, İSTANBUL, Okul Öncesi Öğretmenliği, 4, İngilizce, 404.618, 2700, 3, SÖZ,  #
 Orta Doğu Teknik Üniversitesi, Devlet, ANKARA, Okul Öncesi Öğretmenliği, 4, Türkçe, 399.3265, 3443, 60, SÖZ,  #
@@ -7239,7 +7239,7 @@ Anadolu Üniversitesi, Devlet, ESKİŞEHİR, Okul Öncesi Öğretmenliği, 4, T�
 Başkent Üniversitesi, Vakıf, ANKARA, Okul Öncesi Öğretmenliği, 4, Türkçe, 366.46704, 13844, 7, SÖZ, %100 Burslu #
 İstanbul Sabahattin Zaim Üniversitesi, Vakıf, İSTANBUL, Okul Öncesi Öğretmenliği, 4, Türkçe, 365.81591, 14206, 8, SÖZ,  #
 Dicle Üniversitesi, Devlet, DİYARBAKIR, Okul Öncesi Öğretmenliği, 4, Türkçe, 364.97284, 14712, 60, SÖZ,  #
-İstanbul Üniversitesi, Devlet, İSTANBUL, Okul Öncesi Öğretmenliği, 4, Türkçe, 364.27828, 15069, 60, SÖZ, %100 Burslu #
+İstanbul Üniversitesi, Devlet, İSTANBUL, Okul Öncesi Öğretmenliği, 4, Türkçe, 364.27828, 15069, 60, SÖZ,  #
 İstanbul Medipol Üniversitesi, Vakıf, İSTANBUL, Okul Öncesi Öğretmenliği, 4, Türkçe, 364.14011, 15144, 8, SÖZ,  #
 Dokuz Eylül Üniversitesi, Devlet, İZMİR, Okul Öncesi Öğretmenliği, 4, Türkçe, 363.91414, 15272, 70, SÖZ,  #
 Bursa Uludağ Üniversitesi, Devlet, BURSA, Okul Öncesi Öğretmenliği, 4, Türkçe, 363.41402, 15586, 60, SÖZ,  #
@@ -7391,17 +7391,17 @@ Maltepe Üniversitesi, Vakıf, İSTANBUL, Özel Eğitim Öğretmenliği, 4, Tür
 Ege Üniversitesi, Devlet, İZMİR, Özel Eğitim Öğretmenliği, 4, Türkçe, 395.39405, 4118, 60, SÖZ,  #
 Marmara Üniversitesi, Devlet, İSTANBUL, Özel Eğitim Öğretmenliği, 4, Türkçe, 394.88591, 4218, 100, SÖZ,  #
 Ankara Üniversitesi, Devlet, ANKARA, Özel Eğitim Öğretmenliği, 4, Türkçe, 391.51374, 4895, 80, SÖZ,  #
-İstanbul Üniversitesi, Devlet, İSTANBUL, Özel Eğitim Öğretmenliği, 4, Türkçe, 391.14772, 4967, 60, SÖZ, %100 Burslu #
+İstanbul Üniversitesi, Devlet, İSTANBUL, Özel Eğitim Öğretmenliği, 4, Türkçe, 391.14772, 4967, 60, SÖZ, #
 Hasan Kalyoncu Üniversitesi, Vakıf, GAZİANTEP, Özel Eğitim Öğretmenliği, 4, Türkçe, 388.95539, 5470, 9, SÖZ, %100 Burslu #
 İstanbul Medipol Üniversitesi, Vakıf, İSTANBUL, Özel Eğitim Öğretmenliği, 4, Türkçe, 388.73508, 5522, 8, SÖZ,  #
-Gazi Üniversitesi, Devlet, ANKARA, Özel Eğitim Öğretmenliği, 4, Türkçe, 387.09334, 5927, 100, SÖZ, %100 Burslu #
+Gazi Üniversitesi, Devlet, ANKARA, Özel Eğitim Öğretmenliği, 4, Türkçe, 387.09334, 5927, 100, SÖZ,  #
 Biruni Üniversitesi, Vakıf, İSTANBUL, Özel Eğitim Öğretmenliği, 4, Türkçe, 386.75269, 6015, 9, SÖZ, %100 Burslu #
 İstanbul Aydın Üniversitesi, Vakıf, İSTANBUL, Özel Eğitim Öğretmenliği, 4, Türkçe, 385.6464, 6304, 9, SÖZ,  #
 Dokuz Eylül Üniversitesi, Devlet, İZMİR, Özel Eğitim Öğretmenliği, 4, Türkçe, 384.98798, 6495, 80, SÖZ,  #
 İnönü Üniversitesi, Devlet, MALATYA, Özel Eğitim Öğretmenliği, 4, Türkçe, 384.72545, 6572, 60, SÖZ,  #
 Anadolu Üniversitesi, Devlet, ESKİŞEHİR, Özel Eğitim Öğretmenliği, 4, Türkçe, 384.38841, 6673, 130, SÖZ,  #
 Akdeniz Üniversitesi, Devlet, ANTALYA, Özel Eğitim Öğretmenliği, 4, Türkçe, 383.55117, 6925, 60, SÖZ,  #
-Bursa Uludağ Üniversitesi, Devlet, BURSA, Özel Eğitim Öğretmenliği, 4, Türkçe, 382.81788, 7150, 60, SÖZ, %100 Burslu #
+Bursa Uludağ Üniversitesi, Devlet, BURSA, Özel Eğitim Öğretmenliği, 4, Türkçe, 382.81788, 7150, 60, SÖZ, #
 İstanbul Okan Üniversitesi, Vakıf, İSTANBUL, Özel Eğitim Öğretmenliği, 4, Türkçe, 381.87541, 7440, 7, SÖZ,  #
 Eskişehir Osmangazi Üniversitesi, Devlet, ESKİŞEHİR, Özel Eğitim Öğretmenliği, 4, Türkçe, 380.69859, 7803, 90, SÖZ,  #
 Atatürk Üniversitesi, Devlet, ERZURUM, Özel Eğitim Öğretmenliği, 4, Türkçe, 380.47973, 7880, 60, SÖZ,  #
@@ -7426,8 +7426,8 @@ Düzce Üniversitesi, Devlet, DÜZCE, Özel Eğitim Öğretmenliği, 4, Türkçe
 Giresun Üniversitesi, Devlet, GİRESUN, Özel Eğitim Öğretmenliği, 4, Türkçe, 367.26107, 13424, 50, SÖZ,  #
 Zonguldak Bülent Ecevit Üniversitesi, Devlet, ZONGULDAK, Özel Eğitim Öğretmenliği, 4, Türkçe, 366.98713, 13569, 70, SÖZ,  #
 Burdur Mehmet Akif Ersoy Üniversitesi, Devlet, BURDUR, Özel Eğitim Öğretmenliği, 4, Türkçe, 366.44712, 13854, 60, SÖZ,  #
-Kırıkkale Üniversitesi, Devlet, KIRIKKALE, Özel Eğitim Öğretmenliği, 4, Türkçe, 366.02179, 14087, 60, SÖZ, %100 Burslu #
-Lefke Avrupa Üniversitesi, Vakıf, LEFKE-KKTC, Özel Eğitim Öğretmenliği, 4, Türkçe, 362.15309, 16373, 10, SÖZ, %100 Burslu #
+Kırıkkale Üniversitesi, Devlet, KIRIKKALE, Özel Eğitim Öğretmenliği, 4, Türkçe, 366.02179, 14087, 60, SÖZ,  #
+Lefke Avrupa Üniversitesi, Vakıf, LEFKE-KKTC, Özel Eğitim Öğretmenliği, 4, Türkçe, 362.15309, 16373, 10, SÖZ, #
 Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Özel Eğitim Öğretmenliği, 4, Türkçe, 360.72114, 17265, 9, SÖZ, %100 Burslu #
 Uluslararası Devlet Üniversitesi, Vakıf, LEFKOŞA-KKTC, Özel Eğitim Öğretmenliği, 4, Türkçe, 359.69868, 17943, 13, SÖZ, %100 Burslu #
 Yakın Doğu Üniversitesi, Vakıf, LEFKOŞA-KKTC, Özel Eğitim Öğretmenliği, 4, Türkçe, 359.12748, 18329, 16, SÖZ, %100 Burslu #
@@ -8404,10 +8404,10 @@ Ardahan Üniversitesi, Devlet, ARDAHAN, Sanat Tarihi(İ.Ö), 4, Türkçe, 0, 0, 
 Tokat Gaziosmanpaşa Üniversitesi, Devlet, TOKAT, Sanat Tarihi, 4, Türkçe, 0, 0, 50, SÖZ,  #
 Afyon Kocatepe Üniversitesi, Devlet, AFYONKARAHİSAR, Sanat Tarihi(KKTC), 4, Türkçe, 0, 0, 40, SÖZ,  #
 Ankara Üniversitesi, Devlet, ANKARA, Sanat Tarihi, 4, Türkçe, 0, 0, 1, SÖZ,  #
-Ankara Üniversitesi, Devlet, ANKARA, Sanat ve Kültür Yönetimi, 4, İngilizce, 272.60101, 218450, 100, SÖZ, %100 Burslu #
+Ankara Üniversitesi, Devlet, ANKARA, Sanat ve Kültür Yönetimi, 4, İngilizce, 272.60101, 218450, 100, SÖZ, #
 Yeditepe Üniversitesi, Vakıf, İSTANBUL, Sanat ve Kültür Yönetimi, 4, İngilizce, 403.90312, 2784, 3, SÖZ, %100 Burslu #
 İstanbul Bilgi Üniversitesi, Vakıf, İSTANBUL, Sanat ve Kültür Yönetimi, 4, Türkçe, 386.38882, 6110, 5, SÖZ,  #
-Yıldız Teknik Üniversitesi, Devlet, İSTANBUL, Sanat ve Kültür Yönetimi, 4, Türkçe, 306.95984, 94824, 60, SÖZ, %100 Burslu #
+Yıldız Teknik Üniversitesi, Devlet, İSTANBUL, Sanat ve Kültür Yönetimi, 4, Türkçe, 306.95984, 94824, 60, SÖZ,  #
 İstanbul Aydın Üniversitesi, Vakıf, İSTANBUL, Sanat ve Kültür Yönetimi, 4, Türkçe, 300.29557, 112996, 3, SÖZ, %50 Burslu #
 İstanbul Aydın Üniversitesi, Vakıf, İSTANBUL, Sanat ve Kültür Yönetimi, 4, İngilizce, 0, 0, 17, SÖZ, %50 Burslu #
 İstanbul Bilgi Üniversitesi, Vakıf, İSTANBUL, Sanat ve Kültür Yönetimi, 4, İngilizce, 0, 0, 29, SÖZ, %50 Burslu #
@@ -8537,7 +8537,7 @@ Yeditepe Üniversitesi, Vakıf, İSTANBUL, Sinema ve Dijital Medya, 4, İngilizc
 İzmir Ekonomi Üniversitesi, Vakıf, İZMİR, Sinema ve Dijital Medya, 4, İngilizce, 387.09493, 5927, 4, SÖZ, %50 Burslu #
 İzmir Ekonomi Üniversitesi, Vakıf, İZMİR, Sinema ve Televizyon, 4, İngilizce, 0, 0, 25, SÖZ, %100 Burslu #
 Bahçeşehir Üniversitesi, Vakıf, İSTANBUL, Sinema ve Televizyon, 4, Türkçe, 413.10729, 1897, 7, SÖZ,  #
-Mimar Sinan Güzel Sanatlar Üniversitesi, Devlet, İSTANBUL, Sinema ve Televizyon, 4, Türkçe, 380.5844, 7842, 60, SÖZ, %100 Burslu #
+Mimar Sinan Güzel Sanatlar Üniversitesi, Devlet, İSTANBUL, Sinema ve Televizyon, 4, Türkçe, 380.5844, 7842, 60, SÖZ, #
 İstanbul Okan Üniversitesi, Vakıf, İSTANBUL, Sinema ve Televizyon, 4, Türkçe, 330.95865, 47337, 3, SÖZ, %100 Burslu #
 Işık Üniversitesi, Vakıf, İSTANBUL, Sinema ve Televizyon, 4, Türkçe, 323.88962, 58627, 5, SÖZ,  #
 Anadolu Üniversitesi, Devlet, ESKİŞEHİR, Sinema ve Televizyon, 4, Türkçe, 319.36011, 67033, 75, SÖZ,  #
@@ -9893,9 +9893,9 @@ Yaşar Üniversitesi, Vakıf, İZMİR, Turizm Rehberliği, 4, İngilizce, 0, 0, 
 Nişantaşı Üniversitesi, Vakıf, İSTANBUL, Turizm Rehberliği, 4, Türkçe, 0, 0, 1, DİL,  #
 İhsan Doğramacı Bilkent Üniversitesi, Vakıf, ANKARA, Turizm ve Otel İşletmeciliği, 4, İngilizce, 375.84318, 21024, 5, EA, %100 Burslu #
 İhsan Doğramacı Bilkent Üniversitesi, Vakıf, ANKARA, Turizm ve Otel İşletmeciliği, 4, İngilizce, 237.82167, 470996, 31, EA, %50 Burslu #
-Düzce Üniversitesi, Devlet, DÜZCE, Türk Dili ve Edebiyatı, 4, Türkçe, 216.56408, 553338, 40, SÖZ, %100 Burslu #
+Düzce Üniversitesi, Devlet, DÜZCE, Türk Dili ve Edebiyatı, 4, Türkçe, 216.56408, 553338, 40, SÖZ,  #
 TOBB Ekonomi ve Teknoloji Üniversitesi, Vakıf, ANKARA, Türk Dili ve Edebiyatı, 4, İngilizce, 434.30958, 0, 3, SÖZ,  #
-Boğaziçi Üniversitesi, Devlet, İSTANBUL, Türk Dili ve Edebiyatı, 4, Türkçe, 420.28489, 1428, 70, SÖZ, %100 Burslu #
+Boğaziçi Üniversitesi, Devlet, İSTANBUL, Türk Dili ve Edebiyatı, 4, Türkçe, 420.28489, 1428, 70, SÖZ,  #
 Yeditepe Üniversitesi, Vakıf, İSTANBUL, Türk Dili ve Edebiyatı, 4, Türkçe, 413.82935, 1838, 5, SÖZ, %100 Burslu #
 İstanbul 29 Mayıs Üniversitesi, Vakıf, İSTANBUL, Türk Dili ve Edebiyatı, 4, Türkçe, 398.64778, 3556, 5, SÖZ,  #
 İstanbul Üniversitesi, Devlet, İSTANBUL, Türk Dili ve Edebiyatı, 4, Türkçe, 351.72436, 23874, 90, SÖZ,  #
@@ -9903,7 +9903,7 @@ Hacettepe Üniversitesi, Devlet, ANKARA, Türk Dili ve Edebiyatı, 4, Türkçe, 
 Marmara Üniversitesi, Devlet, İSTANBUL, Türk Dili ve Edebiyatı, 4, Türkçe, 327.92834, 52028, 80, SÖZ,  #
 Yıldız Teknik Üniversitesi, Devlet, İSTANBUL, Türk Dili ve Edebiyatı, 4, Türkçe, 323.21204, 59844, 70, SÖZ,  #
 Mimar Sinan Güzel Sanatlar Üniversitesi, Devlet, İSTANBUL, Türk Dili ve Edebiyatı, 4, Türkçe, 322.03107, 61964, 70, SÖZ,  #
-Ankara Üniversitesi, Devlet, ANKARA, Türk Dili ve Edebiyatı, 4, Türkçe, 320.51031, 64796, 80, SÖZ, %100 Burslu #
+Ankara Üniversitesi, Devlet, ANKARA, Türk Dili ve Edebiyatı, 4, Türkçe, 320.51031, 64796, 80, SÖZ, #
 İstanbul Sabahattin Zaim Üniversitesi, Vakıf, İSTANBUL, Türk Dili ve Edebiyatı, 4, Türkçe, 318.23532, 69250, 10, SÖZ, %100 Burslu #
 Başkent Üniversitesi, Vakıf, ANKARA, Türk Dili ve Edebiyatı, 4, Türkçe, 318.21332, 69310, 6, SÖZ,  #
 Ege Üniversitesi, Devlet, İZMİR, Türk Dili ve Edebiyatı, 4, Türkçe, 315.63155, 74683, 80, SÖZ,  #
