@@ -8816,7 +8816,7 @@ Sinop Üniversitesi, Devlet, SİNOP, Sosyal Bilgiler Öğretmenliği, 4, Türkç
 Artvin Çoruh Üniversitesi, Devlet, ARTVİN, Sosyal Bilgiler Öğretmenliği, 4, Türkçe, 298.59533, 118140, 50, SÖZ,  #
 Bayburt Üniversitesi, Devlet, BAYBURT, Sosyal Bilgiler Öğretmenliği, 4, Türkçe, 296.94211, 123150, 50, SÖZ,  #
 Kafkas Üniversitesi, Devlet, KARS, Sosyal Bilgiler Öğretmenliği, 4, Türkçe, 296.82424, 123560, 50, SÖZ,  #
-Ağrı İbrahim Çeçen Üniversitesi, Devlet, AĞRI, Sosyal Bilgiler Öğretmenliği, 4, Türkçe, 296.51393, 124591, 50, SÖZ, %100 Burslu #
+Ağrı İbrahim Çeçen Üniversitesi, Devlet, AĞRI, Sosyal Bilgiler Öğretmenliği, 4, Türkçe, 296.51393, 124591, 50, SÖZ,  #
 Yakın Doğu Üniversitesi, Vakıf, LEFKOŞA-KKTC, Sosyal Bilgiler Öğretmenliği, 4, Türkçe, 263.64218, 264937, 17, SÖZ, %50 Burslu #
 KTO Karatay Üniversitesi, Vakıf, KONYA, Sosyal Hizmet, 4, Türkçe, 264.85769, 292164, 10, EA, %100 Burslu #
 KTO Karatay Üniversitesi, Vakıf, KONYA, Sosyal Hizmet, 4, Türkçe, 0, 0, 35, EA, %50 Burslu #
@@ -9252,7 +9252,7 @@ Yeditepe Üniversitesi, Vakıf, İSTANBUL, Tarih, 4, Türkçe, 437.76862, 0, 4, 
 TOBB Ekonomi ve Teknoloji Üniversitesi, Vakıf, ANKARA, Tarih, 4, İngilizce, 436.52292, 0, 3, SÖZ, %100 Burslu #
 İstanbul Bilgi Üniversitesi, Vakıf, İSTANBUL, Tarih, 4, Türkçe, 415.76087, 1693, 4, SÖZ, %100 Burslu #
 İstanbul 29 Mayıs Üniversitesi, Vakıf, İSTANBUL, Tarih, 4, İngilizce, 414.49529, 1783, 5, SÖZ,  #
-Orta Doğu Teknik Üniversitesi, Devlet, ANKARA, Tarih, 4, İngilizce, 409.09744, 2240, 70, SÖZ, %100 Burslu #
+Orta Doğu Teknik Üniversitesi, Devlet, ANKARA, Tarih, 4, İngilizce, 409.09744, 2240, 70, SÖZ,  #
 İbn Haldun Üniversitesi, Vakıf, İSTANBUL, Tarih, 4, Türkçe, 396.07929, 3995, 12, SÖZ,  #
 İstanbul Üniversitesi, Devlet, İSTANBUL, Tarih, 4, Türkçe, 379.22548, 8313, 90, SÖZ,  #
 İstanbul Sabahattin Zaim Üniversitesi, Vakıf, İSTANBUL, Tarih, 4, Türkçe, 377.09526, 9071, 5, SÖZ,  #
@@ -9431,8 +9431,6 @@ Fatih Sultan Mehmet, Vakıf, Üniversitesi, Tarih, 4, Türkçe, 0, 0, 23, SÖZ, 
 İstanbul Ayvansaray Üniversitesi, Vakıf, İSTANBUL, Tarih, 4, Türkçe, 0, 0, 25, SÖZ, %50 Burslu #
 Üsküdar Üniversitesi, Vakıf, İSTANBUL, Tarih, 4, Türkçe, 0, 0, 27, SÖZ,  #
 Kayseri Üniversitesi, Devlet, KAYSERİ, Tarih, 4, Türkçe, 0, 0, 60, SÖZ, %50 Burslu #
-İstanbul Üniversitesi, Devlet, İSTANBUL, Tarih, 4, Türkçe, 0, 0, 1, SÖZ,  #
-Anadolu Üniversitesi, Devlet, ESKİŞEHİR, Tarih, 4, Türkçe, 0, 0, 0, SÖZ,  #
 Atatürk Üniversitesi, Devlet, ERZURUM, Tarih Öğretmenliği, 4, Türkçe, 0, 0, 600, SÖZ,  #
 Atatürk Üniversitesi, Devlet, ERZURUM, Tarih Öğretmenliği, 4, Türkçe, 0, 0, 600, SÖZ,  #
 Gazi Üniversitesi, Devlet, ANKARA, Tarih Öğretmenliği, 4, Türkçe, 351.91487, 23726, 20, SÖZ,  #
@@ -9915,16 +9913,16 @@ Dokuz Eylül Üniversitesi, Devlet, İZMİR, Türk Dili ve Edebiyatı, 4, Türk�
 Anadolu Üniversitesi, Devlet, ESKİŞEHİR, Türk Dili ve Edebiyatı, 4, Türkçe, 307.7635, 92758, 70, SÖZ,  #
 İstanbul Kültür Üniversitesi, Vakıf, İSTANBUL, Türk Dili ve Edebiyatı, 4, Türkçe, 307.559, 93256, 6, SÖZ, %100 Burslu #
 İstinye Üniversitesi, Vakıf, İSTANBUL, Türk Dili ve Edebiyatı, 4, Türkçe, 305.84271, 97702, 7, SÖZ,  #
-Bursa Uludağ Üniversitesi, Devlet, BURSA, Türk Dili ve Edebiyatı, 4, Türkçe, 304.39707, 101437, 70, SÖZ, %100 Burslu #
+Bursa Uludağ Üniversitesi, Devlet, BURSA, Türk Dili ve Edebiyatı, 4, Türkçe, 304.39707, 101437, 70, SÖZ,  #
 Haliç Üniversitesi, Vakıf, İSTANBUL, Türk Dili ve Edebiyatı, 4, Türkçe, 304.28134, 101766, 9, SÖZ, %100 Burslu #
 İstanbul Yeni Yüzyıl, Vakıf, İSTANBUL, Türk Dili ve Edebiyatı, 4, Türkçe, 304.04655, 102388, 3, SÖZ, %100 Burslu #
 Doğuş Üniversitesi, Vakıf, İSTANBUL, Türk Dili ve Edebiyatı, 4, Türkçe, 302.36171, 107093, 8, SÖZ,  #
 Ankara Hacı Bayram Veli Üniversitesi, Devlet, ANKARA, Türk Dili ve Edebiyatı, 4, Türkçe, 302.29168, 107284, 80, SÖZ,  #
-Akdeniz Üniversitesi, Devlet, ANTALYA, Türk Dili ve Edebiyatı, 4, Türkçe, 302.02193, 108048, 60, SÖZ, %100 Burslu #
+Akdeniz Üniversitesi, Devlet, ANTALYA, Türk Dili ve Edebiyatı, 4, Türkçe, 302.02193, 108048, 60, SÖZ,  #
 Beykent Üniversitesi, Vakıf, İSTANBUL, Türk Dili ve Edebiyatı, 4, Türkçe, 301.86138, 108500, 9, SÖZ, %100 Burslu #
 İstanbul Gelişim Üniversitesi, Vakıf, İSTANBUL, Türk Dili ve Edebiyatı, 4, Türkçe, 300.82548, 111433, 7, SÖZ, %100 Burslu #
 Fatih Sultan Mehmet, Vakıf, Üniversitesi, Türk Dili ve Edebiyatı, 4, Türkçe, 300.76113, 111639, 12, SÖZ,  #
-Ankara Sosyal Bilimler Üniversitesi, Devlet, Ankara, Türk Dili ve Edebiyatı, 4, Türkçe, 297.61388, 121053, 60, SÖZ, %100 Burslu #
+Ankara Sosyal Bilimler Üniversitesi, Devlet, Ankara, Türk Dili ve Edebiyatı, 4, Türkçe, 297.61388, 121053, 60, SÖZ,  #
 İstanbul Arel Üniversitesi, Vakıf, İSTANBUL, Türk Dili ve Edebiyatı, 4, Türkçe, 295.48735, 127745, 7, SÖZ,  #
 Eskişehir Osmangazi Üniversitesi, Devlet, ESKİŞEHİR, Türk Dili ve Edebiyatı, 4, Türkçe, 294.51765, 130859, 80, SÖZ,  #
 Çukurova Üniversitesi, Devlet, ADANA, Türk Dili ve Edebiyatı, 4, Türkçe, 292.4031, 137750, 80, SÖZ,  #
@@ -9934,11 +9932,11 @@ Ankara Yıldırım Beyazıt Üniversitesi, Devlet, ANKARA, Türk Dili ve Edebiya
 Ondokuz Mayıs Üniversitesi, Devlet, SAMSUN, Türk Dili ve Edebiyatı, 4, Türkçe, 284.33086, 167213, 80, SÖZ,  #
 İzmir Katip Çelebi Üniversitesi, Devlet, İZMİR, Türk Dili ve Edebiyatı, 4, Türkçe, 281.21155, 179818, 80, SÖZ,  #
 Mersin Üniversitesi, Devlet, MERSİN, Türk Dili ve Edebiyatı(İ.Ö), 4, Türkçe, 279.27199, 187968, 70, SÖZ,  #
-Akdeniz Üniversitesi, Devlet, ANTALYA, Türk Dili ve Edebiyatı, 4, Türkçe, 278.82524, 189843, 50, SÖZ,  #
+Akdeniz Üniversitesi, Devlet, ANTALYA, Türk Dili ve Edebiyatı(İ.Ö), 4, Türkçe, 278.82524, 189843, 50, SÖZ,  #
 Muğla Sıtkı Koçman Üniversitesi, Devlet, MUĞLA, Türk Dili ve Edebiyatı, 4, Türkçe, 277.90003, 193961, 60, SÖZ,  #
 Sakarya Üniversitesi, Devlet, SAKARYA, Türk Dili ve Edebiyatı, 4, Türkçe, 276.62292, 199651, 100, SÖZ,  #
 Gaziantep Üniversitesi, Devlet, GAZİANTEP, Türk Dili ve Edebiyatı(İ.Ö), 4, Türkçe, 275.46316, 204867, 80, SÖZ,  #
-Bursa Uludağ Üniversitesi, Devlet, BURSA, Türk Dili ve Edebiyatı, 4, Türkçe, 275.03531, 206839, 60, SÖZ,  #
+Bursa Uludağ Üniversitesi, Devlet, BURSA, Türk Dili ve Edebiyatı(İ.Ö), 4, Türkçe, 275.03531, 206839, 60, SÖZ,  #
 Ankara Hacı Bayram Veli Üniversitesi, Devlet, ANKARA, Türk Dili ve Edebiyatı, 4, Türkçe, 274.38446, 209866, 60, SÖZ,  #
 Erciyes Üniversitesi, Devlet, KAYSERİ, Türk Dili ve Edebiyatı, 4, Türkçe, 273.94321, 212031, 80, SÖZ,  #
 Selçuk Üniversitesi, Devlet, KONYA, Türk Dili ve Edebiyatı, 4, Türkçe, 273.36915, 214722, 90, SÖZ,  #
@@ -9960,7 +9958,7 @@ Kahramanmaraş Sütçü İmam Üniversitesi, Devlet, K.Maraş, Türk Dili ve Ede
 Harran Üniversitesi, Devlet, ŞANLIURFA, Türk Dili ve Edebiyatı(İ.Ö), 4, Türkçe, 257.87527, 298375, 60, SÖZ,  #
 Çanakkale Onsekiz Mart Üniversitesi, Devlet, ÇANAKKALE, Türk Dili ve Edebiyatı, 4, Türkçe, 256.20178, 308798, 50, SÖZ,  #
 Kırıkkale Üniversitesi, Devlet, KIRIKKALE, Türk Dili ve Edebiyatı, 4, Türkçe, 255.6681, 312064, 70, SÖZ,  #
-Manisa Celâl Bayar Üniversitesi, Devlet, MANİSA, Türk Dili ve Edebiyatı, 4, Türkçe, 253.42905, 326416, 100, SÖZ, %100 Burslu #
+Manisa Celâl Bayar Üniversitesi, Devlet, MANİSA, Türk Dili ve Edebiyatı, 4, Türkçe, 253.42905, 326416, 100, SÖZ,  #
 Avrasya Üniversitesi, Vakıf, TRABZON, Türk Dili ve Edebiyatı, 4, Türkçe, 253.2134, 327873, 3, SÖZ,  #
 Trakya Üniversitesi, Devlet, Edirne, Türk Dili ve Edebiyatı, 4, Türkçe, 252.36391, 333430, 80, SÖZ,  #
 Samsun Üniversitesi, Devlet, SAMSUN, Türk Dili ve Edebiyatı(İ.Ö), 4, Türkçe, 252.09425, 335251, 60, SÖZ,  #
@@ -9991,7 +9989,7 @@ Selçuk Üniversitesi, Devlet, KONYA, Türk Dili ve Edebiyatı, 4, Türkçe, 239
 Adıyaman Üniversitesi, Devlet, ADIYAMAN, Türk Dili ve Edebiyatı(İ.Ö), 4, Türkçe, 238.98902, 429809, 60, SÖZ,  #
 Bolu Abant İzzet Baysal Üniversitesi, Devlet, BOLU, Türk Dili ve Edebiyatı, 4, Türkçe, 238.61971, 432696, 40, SÖZ,  #
 Niğde Ömer Halisdemir Üniversitesi, Devlet, NİĞDE, Türk Dili ve Edebiyatı(İ.Ö), 4, Türkçe, 238.24246, 435572, 80, SÖZ,  #
-Manisa Celâl Bayar Üniversitesi, Devlet, MANİSA, Türk Dili ve Edebiyatı, 4, Türkçe, 238.04765, 437099, 60, SÖZ,  #
+Manisa Celâl Bayar Üniversitesi, Devlet, MANİSA, Türk Dili ve Edebiyatı(İ.Ö), 4, Türkçe, 238.04765, 437099, 60, SÖZ,  #
 Mardin Artuklu Üniversitesi, Devlet, MARDİN, Türk Dili ve Edebiyatı(İ.Ö), 4, Türkçe, 237.49403, 441590, 70, SÖZ,  #
 Dicle Üniversitesi, Devlet, DİYARBAKIR, Türk Dili ve Edebiyatı(İ.Ö), 4, Türkçe, 237.26224, 443556, 50, SÖZ,  #
 İnönü Üniversitesi, Devlet, MALATYA, Türk Dili ve Edebiyatı, 4, Türkçe, 235.78119, 455239, 50, SÖZ,  #
@@ -10114,10 +10112,10 @@ Gazi Üniversitesi, Devlet, ANKARA, Türkçe Öğretmenliği, 4, Türkçe, 374.7
 Ege Üniversitesi, Devlet, İZMİR, Türkçe Öğretmenliği, 4, Türkçe, 373.27046, 10613, 60, SÖZ,  #
 Yıldız Teknik Üniversitesi, Devlet, İSTANBUL, Türkçe Öğretmenliği, 4, Türkçe, 371.84068, 11214, 60, SÖZ,  #
 İstanbul Üniversitesi, Devlet, İSTANBUL, Türkçe Öğretmenliği, 4, Türkçe, 370.19593, 11948, 55, SÖZ,  #
-Marmara Üniversitesi, Devlet, İSTANBUL, Türkçe Öğretmenliği, 4, Türkçe, 370.01744, 12031, 80, SÖZ, %100 Burslu #
+Marmara Üniversitesi, Devlet, İSTANBUL, Türkçe Öğretmenliği, 4, Türkçe, 370.01744, 12031, 80, SÖZ, #
 Başkent Üniversitesi, Vakıf, ANKARA, Türkçe Öğretmenliği, 4, Türkçe, 365.64726, 14307, 8, SÖZ,  #
 Dicle Üniversitesi, Devlet, DİYARBAKIR, Türkçe Öğretmenliği, 4, Türkçe, 365.08886, 14641, 40, SÖZ,  #
-Akdeniz Üniversitesi, Devlet, ANTALYA, Türkçe Öğretmenliği, 4, Türkçe, 364.28468, 15069, 50, SÖZ, %100 Burslu #
+Akdeniz Üniversitesi, Devlet, ANTALYA, Türkçe Öğretmenliği, 4, Türkçe, 364.28468, 15069, 50, SÖZ,  #
 Fatih Sultan Mehmet, Vakıf, Üniversitesi, Türkçe Öğretmenliği, 4, Türkçe, 363.88586, 15283, 8, SÖZ,  #
 Dokuz Eylül Üniversitesi, Devlet, İZMİR, Türkçe Öğretmenliği, 4, Türkçe, 363.61696, 15447, 80, SÖZ,  #
 Bursa Uludağ Üniversitesi, Devlet, BURSA, Türkçe Öğretmenliği, 4, Türkçe, 363.28317, 15675, 60, SÖZ,  #
