@@ -262,9 +262,9 @@ Karadeniz Teknik Üniversitesi, Devlet, TRABZON, Balıkçılık Teknolojisi Müh
 Ordu Üniversitesi, Devlet, ORDU, Balıkçılık Teknolojisi Mühendisliği, 4, Türkçe, 0, 0, 15, SAY,  #
 Girne Üniversitesi, Vakıf, GİRNE-KKTC, Balıkçılık Teknolojisi Mühendisliği, 4, İngilizce, 0, 0, 3, SAY, %100 Burslu #
 Marmara Üniversitesi, Devlet, İSTANBUL, Bankacılık, 4, Türkçe, 263.80302, 297772, 60, EA,  #
-Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, Bankacılık ve Finans, 4, İngilizce, 0, 0, 5, EA, %0 Burslu #
-Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, Bankacılık ve Finans, 4, İngilizce, 0, 0, 2, EA, %50 Burslu #
-Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, Bankacılık ve Finans, 4, İngilizce, 0, 0, 3, EA, %25 Burslu #
+Uluslararası Balkan Üniversitesi, Vakıf, ÜSKÜP, Bankacılık ve Finans, 4, İngilizce, 0, 0, 5, EA, %0 Burslu #
+Uluslararası Balkan Üniversitesi, Vakıf, ÜSKÜP, Bankacılık ve Finans, 4, İngilizce, 0, 0, 2, EA, %50 Burslu #
+Uluslararası Balkan Üniversitesi, Vakıf, ÜSKÜP, Bankacılık ve Finans, 4, İngilizce, 0, 0, 3, EA, %25 Burslu #
 İstanbul Medipol Üniversitesi, Vakıf, İSTANBUL, Bankacılık ve Sigortacılık, 4, Türkçe, 269.97943, 266161, 6, EA, %100 Burslu #
 İstanbul Gelişim Üniversitesi, Vakıf, İSTANBUL, Bankacılık ve Sigortacılık, 4, Türkçe, 254.34099, 352875, 4, EA, %100 Burslu #
 İstanbul Medipol Üniversitesi, Vakıf, İSTANBUL, Bankacılık ve Sigortacılık, 4, Türkçe, 0, 0, 34, EA, %50 Burslu #
@@ -1361,7 +1361,7 @@ Uluslararası Devlet Üniversitesi, Vakıf, LEFKOŞA-KKTC, Çocuk Gelişimi, 4, 
 Devlet Sağlık ve Toplum Bilimleri Üniversitesi, Vakıf, GÜZELYURT, Çocuk Gelişimi, 4, Türkçe, 0, 0, 17, EA, %50 Burslu #
 Uluslararası Devlet Üniversitesi, Vakıf, LEFKOŞA-KKTC, Çocuk Gelişimi, 4, Türkçe, 0, 0, 15, EA, %50 Burslu #
 ORDU ÜNİVERSİTESİ, Devlet, ORDU, Deniz Bilimleri ve Teknolojisi Mühendisliği, 4, Türkçe, 0, 0, 0, SAY,  #
-İstanbul Teknik Üniversitesi, Devlet, İSTANBUL, Deniz Ulaştırma İşletme Mühendisliği, 4, İngilizce, 385.35098, 56018, 1, SAY, %50 Burslu #
+İstanbul Teknik Üniversitesi, Devlet, İSTANBUL, Deniz Ulaştırma İşletme Mühendisliği, 4, İngilizce, 385.35098, 56018, 1, SAY,  #
 İstanbul Teknik Üniversitesi, Devlet, İSTANBUL, Deniz Ulaştırma İşletme Mühendisliği, 4, Türkçe, 363.11913, 77651, 95, SAY,  #
 Piri Reis Üniversitesi, Vakıf, İSTANBUL, Deniz Ulaştırma İşletme Mühendisliği, 4, İngilizce, 352.17616, 89434, 15, SAY, %100 Burslu #
 Dokuz Eylül Üniversitesi, Devlet, İZMİR, Deniz Ulaştırma İşletme Mühendisliği, 4, İngilizce, 340.27490, 103510, 70, SAY,  #
@@ -3208,23 +3208,20 @@ Piri Reis Üniversitesi, Vakıf, İSTANBUL, Gemi İnşaatı ve Gemi Makineleri M
 İstanbul Teknik Üniversitesi, Devlet, İSTANBUL, Gemi İnşaatı ve Gemi Makineleri Mühendisliği (KKTC), 4, Türkçe, 0, 0, 1, SAY,  #
 Bandırma Onyedi Eylül Üniversitesi, Devlet, BALIKESİR, Gemi İnşaatı ve Gemi Makineleri Mühendisliği (KKTC), 4, Türkçe, 0, 0, 1, SAY,  #
 Piri Reis Üniversitesi, Vakıf, İSTANBUL, Gemi Makineleri İşletme Mühendisliği, 4, İngilizce, 349.35945, 92667, 13, SAY, %100 Burslu #
-İstanbul Teknik Üniversitesi, Devlet, İSTANBUL, Gemi Makineleri İşletme Mühendisliği, 4, İngilizce, 347.74948, 94550, 1, SAY, %50 Burslu #
+İstanbul Teknik Üniversitesi, Devlet, İSTANBUL, Gemi Makineleri İşletme Mühendisliği, 4, İngilizce, 347.74948, 94550, 1, SAY,  #
 Dokuz Eylül Üniversitesi, Devlet, İZMİR, Gemi Makineleri İşletme Mühendisliği, 4, İngilizce, 343.41243, 99720, 50, SAY,  #
 İTÜ-KKTC Eğitim Araştırma Yerleşkesi, Vakıf, GAZİMAĞUSA-KKTC, Gemi Makineleri İşletme Mühendisliği, 4, İngilizce, 316.73135, 135456, 11, SAY, %100 Burslu #
 Piri Reis Üniversitesi, Vakıf, İSTANBUL, Gemi Makineleri İşletme Mühendisliği, 4, İngilizce, 263.08682, 249307, 57, SAY, %50 Burslu #
 Girne Üniversitesi, Vakıf, GİRNE-KKTC, Gemi Makineleri İşletme Mühendisliği, 4, İngilizce, 0, 0, 10, SAY, %100 Burslu #
-İstanbul Teknik Üniversitesi, Devlet, İSTANBUL, Gemi Makineleri İşletme Mühendisliği, 4, İngilizce, 0, 0, 10, SAY, %0 Burslu #
 İTÜ-KKTC Eğitim Araştırma Yerleşkesi, Vakıf, GAZİMAĞUSA-KKTC, Gemi Makineleri İşletme Mühendisliği, 4, İngilizce, 0, 0, 30, SAY, %50 Burslu #
 Piri Reis Üniversitesi, Vakıf, İSTANBUL, Gemi Makineleri İşletme Mühendisliği, 4, İngilizce, 0, 0, 17, SAY, %0 Burslu #
 İTÜ-KKTC Eğitim Araştırma Yerleşkesi, Vakıf, GAZİMAĞUSA-KKTC, Gemi Makineleri İşletme Mühendisliği, 4, İngilizce, 0, 0, 10, SAY, %0 Burslu #
 Dokuz Eylül Üniversitesi, Devlet, İZMİR, Gemi Makineleri İşletme Mühendisliği (KKTC), 4, İngilizce, 0, 0, 1, SAY,  #
 Piri Reis Üniversitesi, Vakıf, İSTANBUL, Gemi Makineleri İşletme Mühendisliği, 4, İngilizce, 349.35945, 92667, 13, SAY, %100 Burslu #
-İstanbul Teknik Üniversitesi, Devlet, İSTANBUL, Gemi Makineleri İşletme Mühendisliği, 4, İngilizce, 347.74948, 94550, 1, SAY, %50 Burslu #
 Dokuz Eylül Üniversitesi, Devlet, İZMİR, Gemi Makineleri İşletme Mühendisliği, 4, İngilizce, 343.41243, 99720, 50, SAY,  #
 İTÜ-KKTC Eğitim Araştırma Yerleşkesi, Vakıf, GAZİMAĞUSA-KKTC, Gemi Makineleri İşletme Mühendisliği, 4, İngilizce, 316.73135, 135456, 11, SAY, %100 Burslu #
 Piri Reis Üniversitesi, Vakıf, İSTANBUL, Gemi Makineleri İşletme Mühendisliği, 4, İngilizce, 263.08682, 249307, 57, SAY, %50 Burslu #
 Girne Üniversitesi, Vakıf, GİRNE-KKTC, Gemi Makineleri İşletme Mühendisliği, 4, İngilizce, 0, 0, 10, SAY, %100 Burslu #
-İstanbul Teknik Üniversitesi, Devlet, İSTANBUL, Gemi Makineleri İşletme Mühendisliği, 4, İngilizce, 0, 0, 10, SAY, %0 Burslu #
 İTÜ-KKTC Eğitim Araştırma Yerleşkesi, Vakıf, GAZİMAĞUSA-KKTC, Gemi Makineleri İşletme Mühendisliği, 4, İngilizce, 0, 0, 30, SAY, %50 Burslu #
 Piri Reis Üniversitesi, Vakıf, İSTANBUL, Gemi Makineleri İşletme Mühendisliği, 4, İngilizce, 0, 0, 17, SAY, %0 Burslu #
 İTÜ-KKTC Eğitim Araştırma Yerleşkesi, Vakıf, GAZİMAĞUSA-KKTC, Gemi Makineleri İşletme Mühendisliği, 4, İngilizce, 0, 0, 10, SAY, %0 Burslu #
@@ -3348,9 +3345,9 @@ Ankara Yıldırım Beyazıt Üniversitesi, Devlet, ANKARA, Görsel İletişim Ta
 Sakarya Üniversitesi, Devlet, SAKARYA, Görsel İletişim Tasarımı, 4, Türkçe, 296.10521, 125843, 60, SÖZ,  #
 Kocaeli Üniversitesi, Devlet, KOCAELİ, Görsel İletişim Tasarımı, 4, Türkçe, 291.05669, 142305, 80, SÖZ,  #
 TOBB Ekonomi ve Teknoloji Üniversitesi, Vakıf, ANKARA, Görsel İletişim Tasarımı, 4, Türkçe, 281.81035, 177324, 25, SÖZ,  #
-Aydın Adnan Menderes Üniversitesi, Devlet, AYDIN, Görsel İletişim Tasarımı, 4, Türkçe, 277.1607, 197226, 70, SÖZ, %50 Burslu #
+Aydın Adnan Menderes Üniversitesi, Devlet, AYDIN, Görsel İletişim Tasarımı, 4, Türkçe, 277.1607, 197226, 70, SÖZ,  #
 İstanbul Medipol Üniversitesi, Vakıf, İSTANBUL, Görsel İletişim Tasarımı, 4, Türkçe, 268.70451, 238016, 34, SÖZ,  #
-Kütahya Dumlupınar Üniversitesi, Devlet, KÜTAHYA, Görsel İletişim Tasarımı, 4, Türkçe, 264.12479, 262235, 80, SÖZ, %50 Burslu #
+Kütahya Dumlupınar Üniversitesi, Devlet, KÜTAHYA, Görsel İletişim Tasarımı, 4, Türkçe, 264.12479, 262235, 80, SÖZ,  #
 Süleyman Demirel Üniversitesi, Devlet, ISPARTA, Görsel İletişim Tasarımı, 4, Türkçe, 260.97903, 279868, 50, SÖZ,  #
 İstanbul Bilgi Üniversitesi, Vakıf, İSTANBUL, Görsel İletişim Tasarımı, 4, Türkçe, 258.1484, 296710, 51, SÖZ,  #
 TED Üniversitesi, Vakıf, ANKARA, Görsel İletişim Tasarımı, 4, İngilizce, 254.64941, 318617, 29, SÖZ, %50 Burslu #
@@ -3358,15 +3355,15 @@ TED Üniversitesi, Vakıf, ANKARA, Görsel İletişim Tasarımı, 4, İngilizce,
 Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Görsel İletişim Tasarımı, 4, İngilizce, 250.27038, 347463, 10, SÖZ, %50 Burslu #
 Yeditepe Üniversitesi, Vakıf, İSTANBUL, Görsel İletişim Tasarımı, 4, İngilizce, 247.46124, 366921, 49, SÖZ, %100 Burslu #
 Kadir Has Üniversitesi, Vakıf, İSTANBUL, Görsel İletişim Tasarımı, 4, İngilizce, 247.40063, 367381, 25, SÖZ, %50 Burslu #
-Nevşehir Hacı Bektaş Veli Üniversitesi, Devlet, NEVŞEHİR, Görsel İletişim Tasarımı, 4, İngilizce, 245.83478, 378564, 50, SÖZ, %50 Burslu #
+Nevşehir Hacı Bektaş Veli Üniversitesi, Devlet, NEVŞEHİR, Görsel İletişim Tasarımı, 4, İngilizce, 245.83478, 378564, 50, SÖZ,  #
 TOBB Ekonomi ve Teknoloji Üniversitesi, Vakıf, ANKARA, Görsel İletişim Tasarımı, 4, Türkçe, 242.91649, 399622, 9, SÖZ,  #
-Burdur Mehmet Akif Ersoy Üniversitesi, Devlet, BURDUR, Görsel İletişim Tasarımı, 4, Türkçe, 241.03247, 413977, 60, SÖZ, %0 Burslu #
+Burdur Mehmet Akif Ersoy Üniversitesi, Devlet, BURDUR, Görsel İletişim Tasarımı, 4, Türkçe, 241.03247, 413977, 60, SÖZ,  #
 Hasan Kalyoncu Üniversitesi, Vakıf, GAZİANTEP, Görsel İletişim Tasarımı, 4, Türkçe, 238.88282, 430657, 10, SÖZ,  #
 Yeditepe Üniversitesi, Vakıf, İSTANBUL, Görsel İletişim Tasarımı, 4, Türkçe, 238.15182, 436284, 5, SÖZ, %50 Burslu #
 Maltepe Üniversitesi, Vakıf, İSTANBUL, Görsel İletişim Tasarımı, 4, Türkçe, 237.22619, 443774, 30, SÖZ, %0 Burslu #
 Beykent Üniversitesi, Vakıf, İSTANBUL, Görsel İletişim Tasarımı, 4, Türkçe, 237.02052, 445420, 34, SÖZ, %50 Burslu #
 Yaşar Üniversitesi, Vakıf, İZMİR, Görsel İletişim Tasarımı, 4, Türkçe, 231.73752, 486235, 28, SÖZ, %50 Burslu #
-Kütahya Dumlupınar Üniversitesi, Devlet, KÜTAHYA, Görsel İletişim Tasarımı, 4, İngilizce, 229.48085, 502052, 70, SÖZ, %50 Burslu #
+Kütahya Dumlupınar Üniversitesi, Devlet, KÜTAHYA, Görsel İletişim Tasarımı (İ.Ö), 4, İngilizce, 229.48085, 502052, 70, SÖZ,  #
 Malatya Turgut Özal Üniversitesi, Devlet, MALATYA, Görsel İletişim Tasarımı(İ.Ö), 4, Türkçe, 228.83217, 506292, 40, SÖZ,  #
 Haliç Üniversitesi, Vakıf, İSTANBUL, Görsel İletişim Tasarımı, 4, Türkçe, 225.86371, 523672, 34, SÖZ,  #
 İstanbul Gedik Üniversitesi, Vakıf, İSTANBUL, Görsel İletişim Tasarımı, 4, Türkçe, 220.95104, 544256, 10, SÖZ, %50 Burslu #
@@ -3394,7 +3391,7 @@ Lefke Avrupa Üniversitesi, Vakıf, LEFKE-KKTC, Görsel İletişim Tasarımı, 4
 Yakın Doğu Üniversitesi, Vakıf, LEFKOŞA-KKTC, Görsel İletişim Tasarımı, 4, Türkçe, 0, 0, 4, SÖZ, %50 Burslu #
 Arkın Yaratıcı Sanatlar ve Tasarım Üniversitesi, Vakıf, GİRNE-KKTC, Görsel İletişim Tasarımı, 4, Türkçe, 0, 0, 3, SÖZ, %50 Burslu #
 Arkın Yaratıcı Sanatlar ve Tasarım Üniversitesi, Vakıf, GİRNE-KKTC, Görsel İletişim Tasarımı, 4, Türkçe, 0, 0, 6, SÖZ, %0 Burslu #
-Anadolu Üniversitesi, Devlet, ESKİŞEHİR, Görsel İletişim Tasarımı, 4, İngilizce, 228.5715, 508008, 400, SÖZ, %50 Burslu #
+Anadolu Üniversitesi, Devlet, ESKİŞEHİR, Görsel İletişim Tasarımı, 4, İngilizce, 228.5715, 508008, 400, SÖZ,  #
 Uluslararası Balkan Üniversitesii, YABANCI, ÜSKÜP, Görsel İletişim Tasarımı, 4, Türkçe, 0, 0, 2, SÖZ,  #
 Uluslararası Balkan Üniversitesii, YABANCI, ÜSKÜP, Görsel Sanatlar, 4, Türkçe, 0, 0, 3, SÖZ, %0 Burslu #
 Uluslararası Saraybosna Üniversitesi, YABANCI, SARAYBOSNBA, Görsel Sanatlar(MTOK), 4, Türkçe, 299.6017, 115076, 1, SÖZ,  #
@@ -3421,9 +3418,9 @@ Yakın Doğu Üniversitesi, Vakıf, LEFKOŞA-KKTC, Grafik Tasarımı, 4, Türkç
 Girne Amerikan Üniversitesi, Vakıf, GİRNE-KKTC, Grafik Tasarımı, 4, Türkçe, 0, 0, 2, EA, %0 Burslu #
 Girne Amerikan Üniversitesi, Vakıf, GİRNE-KKTC, Grafik Tasarımı, 4, Türkçe, 0, 0, 3, EA, %50 Burslu #
 Yakın Doğu Üniversitesi, Vakıf, LEFKOŞA-KKTC, Grafik Tasarımı, 4, Türkçe, 0, 0, 7, EA, %50 Burslu #
-Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, Grafik Tasarımı, 4, İngilizce, 0, 0, 5, EA, %0 Burslu #
-Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, Grafik Tasarımı, 4, İngilizce, 0, 0, 2, EA, %50 Burslu #
-Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, Grafik Tasarımı, 4, İngilizce, 0, 0, 3, EA, %25 Burslu #
+Uluslararası Balkan Üniversitesi, Vakıf, ÜSKÜP, Grafik Tasarımı, 4, İngilizce, 0, 0, 5, EA, %0 Burslu #
+Uluslararası Balkan Üniversitesi, Vakıf, ÜSKÜP, Grafik Tasarımı, 4, İngilizce, 0, 0, 2, EA, %50 Burslu #
+Uluslararası Balkan Üniversitesi, Vakıf, ÜSKÜP, Grafik Tasarımı, 4, İngilizce, 0, 0, 3, EA, %25 Burslu #
 Yalova Üniversitesi, Devlet, YALOVA, Grafik Tasarımı (KKTC), 4, Türkçe, 0, 0, 2, EA,  #
 Bayburt Üniversitesi, Devlet, BAYBURT, Gümrük İşletme, 4, Türkçe, 0, 0, 30, EA,  #
 Tarsus Üniversitesi, Devlet, MERSİN, Gümrük İşletme, 4, Türkçe, 0, 0, 40, EA,  #
@@ -5135,7 +5132,7 @@ Doğuş Üniversitesi, Vakıf, İSTANBUL, İngilizce Mütercim ve Tercümanlık,
 İstanbul Sağlık ve Teknoloji Üniversitesi, Vakıf, İSTANBUL, İngilizce Mütercim ve Tercümanlık, 4, İngilizce, 0, 0, 34, DİL, %50 Burslu #
 Girne Amerikan Üniversitesi, Vakıf, GİRNE-KKTC, İngilizce Mütercim ve Tercümanlık, 4, Türkçe, 0, 0, 4, DİL,  #
 Kırıkkale Üniversitesi, Devlet, KIRIKKALE, İngilizce Mütercim ve Tercümanlık (KKTC), 4, Türkçe, 0, 0, 3, DİL,  #
-Orta Doğu Teknik Üniversitesi, Devlet, ANKARA, İngilizce Öğretmenliği, 4, İngilizce, 463.3754, 2743, 1, DİL, %50 Burslu #
+Orta Doğu Teknik Üniversitesi, Devlet, ANKARA, İngilizce Öğretmenliği (UOLP-SUNY New Paltz) , 4, İngilizce, 463.3754, 2743, 1, DİL, %50 Burslu #
 Boğaziçi Üniversitesi, Devlet, İSTANBUL, İngilizce Öğretmenliği, 4, İngilizce, 454.37161, 3545, 90, DİL,  #
 Orta Doğu Teknik Üniversitesi, Devlet, ANKARA, İngilizce Öğretmenliği, 4, İngilizce, 444.44654, 4601, 100, DİL,  #
 Bahçeşehir Üniversitesi, Vakıf, İSTANBUL, İngilizce Öğretmenliği, 4, İngilizce, 440.51269, 5089, 8, DİL, %100 Burslu #
@@ -5221,7 +5218,7 @@ Başkent Üniversitesi, Vakıf, ANKARA, İngilizce Öğretmenliği, 4, Türkçe,
 Uluslararası Final Üniversitesi, Vakıf, GİRNE-KKTC, İngilizce Öğretmenliği, 4, İngilizce, 348.22239, 27998, 6, DİL, %100 Burslu #
 Girne Amerikan Üniversitesi, Vakıf, GİRNE-KKTC, İngilizce Öğretmenliği, 4, İngilizce, 345.15186, 29009, 16, DİL, %100 Burslu #
 Girne Üniversitesi, Vakıf, GİRNE-KKTC, İngilizce Öğretmenliği, 4, İngilizce, 344.12052, 29328, 5, DİL, %100 Burslu #
-Orta Doğu Teknik Üniversitesi, Devlet, ANKARA, İngilizce Öğretmenliği, 4, İngilizce, 343.64805, 29466, 23, DİL, %0 Burslu #
+Orta Doğu Teknik Üniversitesi, Devlet, ANKARA, İngilizce Öğretmenliği (UOLP-SUNY New Paltz) , 4, İngilizce, 343.64805, 29466, 23, DİL, %0 Burslu #
 Ankara Sosyal Bilimler Üniversitesi, Vakıf, LEFKOŞA-KKTC, İngilizce Öğretmenliği, 4, Türkçe, 339.77092, 30703, 10, DİL, %100 Burslu #
 Yeditepe Üniversitesi, Vakıf, İSTANBUL, İngilizce Öğretmenliği, 4, İngilizce, 339.43517, 30809, 4, DİL, %0 Burslu #
 Hasan Kalyoncu Üniversitesi, Vakıf, GAZİANTEP, İngilizce Öğretmenliği, 4, İngilizce, 336.77058, 31716, 22, DİL, %25 Burslu #
@@ -5240,9 +5237,9 @@ Bahçeşehir Üniversitesi, Vakıf, İSTANBUL, İngilizce Öğretmenliği, 4, T�
 Ufuk Üniversitesi, Vakıf, ANKARA, İngilizce Öğretmenliği, 4, Türkçe, 283.38016, 48834, 42, DİL, %25 Burslu #
 Maltepe Üniversitesi, Vakıf, İSTANBUL, İngilizce Öğretmenliği, 4, Türkçe, 279.5416, 50143, 5, DİL,  #
 Girne Amerikan Üniversitesi, Vakıf, GİRNE-KKTC, İngilizce Öğretmenliği, 4, İngilizce, 277.24676, 50952, 17, DİL, %50 Burslu #
-Anadolu Üniversitesi, Devlet, ESKİŞEHİR, İngilizce Öğretmenliği, 4, İngilizce, 272.82424, 52507, 30, DİL, %0 Burslu #
+Anadolu Üniversitesi, Devlet, ESKİŞEHİR, İngilizce Öğretmenliği, 4, İngilizce, 272.82424, 52507, 30, DİL,  #
 Uluslararası Devlet Üniversitesi, Vakıf, LEFKOŞA-KKTC, İngilizce Öğretmenliği, 4, İngilizce, 258.51438, 57576, 42, DİL, %50 Burslu #
-Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, İngilizce Öğretmenliği, 4, İngilizce, 249.33289, 61031, 2, DİL, %50 Burslu #
+Uluslararası Balkan Üniversitesi, Vakıf, ÜSKÜP, İngilizce Öğretmenliği, 4, İngilizce, 249.33289, 61031, 2, DİL, %50 Burslu #
 Uluslararası Saraybosna Üniversitesi, YABANCI, SARAYBOSNA, İngilizce Öğretmenliği, 4, İngilizce, 249.22075, 61075, 5, DİL, %50 Burslu #
 ODTÜ Kuzey Devlet Kampusu, Vakıf, GÜZELYURT-KKTC, İngilizce Öğretmenliği, 4, İngilizce, 245.42655, 62482, 30, DİL, %50 Burslu #
 ODTÜ Kuzey Devlet Kampusu, Vakıf, GÜZELYURT-KKTC, İngilizce Öğretmenliği, 4, Türkçe, 233.16309, 67045, 5, DİL,  #
@@ -5251,10 +5248,10 @@ Ankara Sosyal Bilimler Üniversitesi, Vakıf, LEFKOŞA-KKTC, İngilizce Öğretm
 Girne Amerikan Üniversitesi, Vakıf, GİRNE-KKTC, İngilizce Öğretmenliği, 4, Türkçe, 0, 0, 17, DİL,  #
 Uluslararası Final Üniversitesi, Vakıf, GİRNE-KKTC, İngilizce Öğretmenliği, 4, İngilizce, 0, 0, 32, DİL, %50 Burslu #
 Azerbaycan Diller Üniversitesi, Devlet, BAKÜ, İngilizce Öğretmenliği, 4, Türkçe, 0, 0, 3, DİL,  #
-Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, İngilizce Öğretmenliği, 4, İngilizce, 0, 0, 3, DİL, %25 Burslu #
+Uluslararası Balkan Üniversitesi, Vakıf, ÜSKÜP, İngilizce Öğretmenliği, 4, İngilizce, 0, 0, 3, DİL, %25 Burslu #
 Ankara Sosyal Bilimler Üniversitesi, Vakıf, LEFKOŞA-KKTC, İngilizce Öğretmenliği, 4, Türkçe, 0, 0, 5, DİL,  #
 Uluslararası Final Üniversitesi, Vakıf, GİRNE-KKTC, İngilizce Öğretmenliği, 4, Türkçe, 0, 0, 2, DİL,  #
-Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, İngilizce Öğretmenliği, 4, Türkçe, 0, 0, 5, DİL,  #
+Uluslararası Balkan Üniversitesi, Vakıf, ÜSKÜP, İngilizce Öğretmenliği, 4, Türkçe, 0, 0, 5, DİL, %0 Burslu #
 Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, İngilizce Öğretmenliği, 4, İngilizce, 373.56949, 20054, 8, DİL, %100 Burslu #
 Lefke Avrupa Üniversitesi, Vakıf, LEFKE-KKTC, İngilizce Öğretmenliği, 4, İngilizce, 354.48135, 26007, 8, DİL, %100 Burslu #
 Yakın Doğu Üniversitesi, Vakıf, LEFKOŞA-KKTC, İngilizce Öğretmenliği, 4, İngilizce, 353.06129, 26454, 10, DİL, %100 Burslu #
@@ -5305,7 +5302,7 @@ Gazi Üniversitesi, Devlet, ANKARA, İnşaat Mühendisliği, 4, İngilizce, 333.
 Başkent Üniversitesi, Vakıf, ANKARA, İnşaat Mühendisliği, 4, İngilizce, 324.40762, 124197, 10, SAY, %100 Burslu #
 İstanbul Medipol Üniversitesi, Vakıf, İSTANBUL, İnşaat Mühendisliği, 4, Türkçe, 321.41959, 128454, 4, SAY, %100 Burslu #
 Yaşar Üniversitesi, Vakıf, İZMİR, İnşaat Mühendisliği, 4, İngilizce, 319.94037, 130663, 3, SAY, %100 Burslu #
-İstanbul Teknik Üniversitesi, Devlet, İSTANBUL, İnşaat Mühendisliği, 4, İngilizce, 316.81465, 135343, 10, SAY, %0 Burslu #
+İstanbul Teknik Üniversitesi, Devlet, İSTANBUL, İnşaat Mühendisliği, 4, İngilizce, 316.81465, 135343, 10, SAY,  #
 Ege Üniversitesi, Devlet, İZMİR, İnşaat Mühendisliği, 4, Türkçe, 316.59296, 135673, 70, SAY,  #
 Gazi Üniversitesi, Devlet, ANKARA, İnşaat Mühendisliği, 4, Türkçe, 310.06780, 146082, 90, SAY,  #
 Çankaya Üniversitesi, Vakıf, ANKARA, İnşaat Mühendisliği, 4, İngilizce, 309.85869, 146391, 5, SAY, %100 Burslu #
@@ -5361,7 +5358,7 @@ Sakarya Üniversitesi, Devlet, SAKARYA, İnşaat Mühendisliği, 4, Türkçe, 24
 Çukurova Üniversitesi, Devlet, ADANA, İnşaat Mühendisliği, 4, Türkçe, 249.28086, 294764, 80, SAY,  #
 Fatih Sultan Mehmet Vakıf Üniversitesi, Vakıf, İSTANBUL, İnşaat Mühendisliği, 4, Türkçe, 248.82614, 296432, 12, SAY, %100 Burslu #
 Yeditepe Üniversitesi, Vakıf, İSTANBUL, İnşaat Mühendisliği, 4, İngilizce, 248.27743, 298371, 29, SAY, %50 Burslu #
-İstanbul Teknik Üniversitesi, Devlet, İSTANBUL, İnşaat Mühendisliği, 4, İngilizce, 0, 0, 5, SAY, %0 Burslu #
+İstanbul Teknik Üniversitesi, Devlet, İSTANBUL, İnşaat Mühendisliği, 4, İngilizce, 0, 0, 5, SAY,  #
 İstanbul Arel Üniversitesi, Vakıf, İSTANBUL, İnşaat Mühendisliği, 4, Türkçe, 0, 0, 7, SAY, %100 Burslu #
 İstanbul Gelişim Üniversitesi, Vakıf, İSTANBUL, İnşaat Mühendisliği, 4, Türkçe, 0, 0, 25, SAY, %100 Burslu #
 İstanbul Gelişim Üniversitesi, Vakıf, İSTANBUL, İnşaat Mühendisliği, 4, İngilizce, 0, 0, 25, SAY, %100 Burslu #
@@ -5639,8 +5636,8 @@ Galatasaray Üniversitesi, Devlet, İSTANBUL, İşletme, 4, Fransızca, 439.8595
 Koç Üniversitesi, Vakıf, İSTANBUL, İşletme, 4, İngilizce, 439.56027, 1590, 2, EA, %50 Burslu #
 Orta Doğu Teknik Üniversitesi, Devlet, ANKARA, İşletme, 4, İngilizce, 428.68496, 2585, 90, EA,  #
 TOBB Ekonomi ve Teknoloji Üniversitesi, Vakıf, ANKARA, İşletme, 4, Türkçe, 426.5066, 2843, 7, EA, %100 Burslu #
-Orta Doğu Teknik Üniversitesi, Devlet, ANKARA, İşletme, 4, İngilizce, 409.62872, 5749, 1, EA, %50 Burslu #
-İstanbul Teknik Üniversitesi, Devlet, İSTANBUL, İşletme, 4, İngilizce, 404.78657, 6952, 1, EA, %50 Burslu #
+Orta Doğu Teknik Üniversitesi, Devlet, ANKARA, İşletme (UOLP-SUNY Binghamton), 4, İngilizce, 409.62872, 5749, 1, EA, %50 Burslu #
+İstanbul Teknik Üniversitesi, Devlet, İSTANBUL, İşletme (UOLP-SUNY New Paltz), 4, İngilizce, 404.78657, 6952, 1, EA, %50 Burslu #
 Yeditepe Üniversitesi, Vakıf, İSTANBUL, İşletme, 4, İngilizce, 399.47475, 8577, 14, EA, %100 Burslu #
 MEF Üniversitesi, Vakıf, İSTANBUL, İşletme, 4, İngilizce, 397.66243, 9209, 5, EA, %100 Burslu #
 Bahçeşehir Üniversitesi, Vakıf, İSTANBUL, İşletme, 4, İngilizce, 396.2108, 9741, 15, EA, %100 Burslu #
@@ -5750,7 +5747,7 @@ Kocaeli Üniversitesi, Devlet, KOCAELİ, İşletme, 4, Türkçe, 244.65455, 4184
 İzmir Katip Çelebi Üniversitesi, Devlet, İZMİR, İşletme, 4, Türkçe, 244.13198, 422261, 60, EA,  #
 Çukurova Üniversitesi, Devlet, ADANA, İşletme, 4, Türkçe, 243.32645, 428164, 100, EA,  #
 İstanbul Sağlık ve Teknoloji Üniversitesi, Vakıf, İSTANBUL, İşletme, 4, İngilizce, 242.7767, 432283, 6, EA, %100 Burslu #
-Dokuz Eylül Üniversitesi, Devlet, İZMİR, İşletme, 4, İngilizce, 240.54267, 449339, 15, EA, %0 Burslu #
+Dokuz Eylül Üniversitesi, Devlet, İZMİR, İşletme, 4, İngilizce, 240.54267, 449339, 15, EA,  #
 İzmir Demokrasi Üniversitesi, Devlet, İZMİR, İşletme, 4, Türkçe, 240.21303, 451974, 60, EA,  #
 Yalova Üniversitesi, Devlet, YALOVA, İşletme, 4, İngilizce, 238.98155, 461688, 60, EA,  #
 İzmir Ekonomi Üniversitesi, Vakıf, İZMİR, İşletme, 4, İngilizce, 237.69956, 471926, 45, EA, %50 Burslu #
@@ -5780,7 +5777,7 @@ Uluslararası Saraybosna Üniversitesi, YABANCI, SARAYBOSNA, İşletme, 4, İngi
 Muğla Sıtkı Koçman Üniversitesi, Devlet, MUĞLA, İşletme, 4, Türkçe, 224.63104, 559172, 90, EA,  #
 Haliç Üniversitesi, Vakıf, İSTANBUL, İşletme, 4, İngilizce, 223.41349, 563468, 43, EA, %50 Burslu #
 Kocaeli Üniversitesi, Devlet, KOCAELİ, İşletme (İ.Ö), 4, Türkçe, 219.55794, 572842, 80, EA,  #
-İstanbul Teknik Üniversitesi, Devlet, İSTANBUL, İşletme, 4, İngilizce, 0, 0, 34, EA, %0 Burslu #
+İstanbul Teknik Üniversitesi, Devlet, İSTANBUL, İşletme (UOLP-SUNY New Paltz), 4, İngilizce, 0, 0, 34, EA, %0 Burslu #
 Çukurova Üniversitesi, Devlet, ADANA, İşletme (İ.Ö), 4, Türkçe, 0, 0, 80, EA,  #
 Adana Alparslan Türkeş Bilim ve Teknoloji Üniversitesi, Devlet, ADANA, İşletme, 4, İngilizce, 0, 0, 60, EA,  #
 Bursa Uludağ Üniversitesi, Devlet, BURSA, İşletme, 4, Türkçe, 0, 0, 60, EA,  #
@@ -5883,7 +5880,7 @@ Anadolu Üniversitesi, Devlet, ESKİŞEHİR, İşletme, 4, İngilizce, 0, 0, 20,
 Erzincan Binali Yıldırım Üniversitesi, Devlet, ERZİNCAN, İşletme, 4, Türkçe, 0, 0, 40, EA,  #
 Kafkas Üniversitesi, Devlet, KARS, İşletme, 4, Türkçe, 0, 0, 25, EA,  #
 Muş Alparslan Üniversitesi, Devlet, MUŞ, İşletme, 4, Türkçe, 0, 0, 20, EA,  #
-Orta Doğu Teknik Üniversitesi, Devlet, ANKARA, İşletme, 4, İngilizce, 0, 0, 20, EA, %0 Burslu #
+Orta Doğu Teknik Üniversitesi, Devlet, ANKARA, İşletme (UOLP-SUNY Binghamton), 4, İngilizce, 0, 0, 20, EA, %0 Burslu #
 Atılım Üniversitesi, Vakıf, ANKARA, İşletme, 4, Türkçe, 0, 0, 39, EA, %50 Burslu #
 Beykoz Üniversitesi, Vakıf, İSTANBUL, İşletme, 4, Türkçe, 0, 0, 25, EA, %50 Burslu #
 İstanbul Arel Üniversitesi, Vakıf, İSTANBUL, İşletme, 4, Türkçe, 0, 0, 21, EA, %50 Burslu #
@@ -5907,7 +5904,7 @@ Yaşar Üniversitesi, Vakıf, İZMİR, İşletme, 4, İngilizce, 0, 0, 5, EA, %0
 Nişantaşı Üniversitesi, Vakıf, İSTANBUL, İşletme, 4, Türkçe, 0, 0, 1, EA, %0 Burslu #
 Trakya Üniversitesi, Devlet, EDİRNE, İşletme (İ.Ö), 4, Türkçe, 0, 0, 40, EA,  #
 İstanbul Ticaret Üniversitesi, Vakıf, İSTANBUL, İşletme, 4, İngilizce, 0, 0, 5, EA, %0 Burslu #
-Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, İşletme, 4, İngilizce, 0, 0, 2, EA, %50 Burslu #
+Uluslararası Balkan Üniversitesi, Vakıf, ÜSKÜP, İşletme, 4, İngilizce, 0, 0, 2, EA, %50 Burslu #
 İstinye Üniversitesi, Vakıf, İSTANBUL, İşletme, 4, İngilizce, 0, 0, 24, EA, %50 Burslu #
 Artvin Çoruh Üniversitesi, Devlet, ARTVİN, İşletme, 4, Türkçe, 0, 0, 25, EA,  #
 Karamanoğlu Mehmetbey Üniversitesi, Devlet, KARAMAN, İşletme, 4, Türkçe, 0, 0, 30, EA,  #
@@ -5941,8 +5938,8 @@ Devlet Batı Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, İşletme, 4, İngilizce,
 Rauf Denktaş Üniversitesi, Vakıf, LEFKOŞA-KKTC, İşletme, 4, İngilizce, 0, 0, 3, EA, %100 Burslu #
 Uluslararası Saraybosna Üniversitesi, YABANCI, SARAYBOSNA, İşletme, 4, İngilizce, 0, 0, 5, EA, %50 Burslu #
 Uluslararası Saraybosna Üniversitesi, YABANCI, SARAYBOSNA, İşletme, 4, İngilizce, 0, 0, 5, EA, %75 Burslu #
-Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, İşletme, 4, İngilizce, 0, 0, 5, EA, %0 Burslu #
-Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, İşletme, 4, İngilizce, 0, 0, 3, EA, %25 Burslu #
+Uluslararası Balkan Üniversitesi, Vakıf, ÜSKÜP, İşletme, 4, İngilizce, 0, 0, 5, EA, %0 Burslu #
+Uluslararası Balkan Üniversitesi, Vakıf, ÜSKÜP, İşletme, 4, İngilizce, 0, 0, 3, EA, %25 Burslu #
 İstanbul Üniversitesi, Devlet, İSTANBUL, İşletme, 4, Türkçe, 0, 0, 250, EA,  #
 Anadolu Üniversitesi, Devlet, ESKİŞEHİR, İşletme, 4, Türkçe, 0, 0, 800, EA,  #
 Atatürk Üniversitesi, Devlet, ERZURUM, İşletme, 4, Türkçe, 0, 0, 600, EA,  #
@@ -6195,8 +6192,8 @@ Hoca Ahmet Yesevi Uluslararası Türk-Kazak Üniversitesi, YABANCI, TÜRKİSTAN,
 Dokuz Eylül Üniversitesi, Devlet, İZMİR, Kurgu, Ses ve Görüntü Yönetimi(KKTC), 4, Türkçe, 297.41991, 121627, 35, SÖZ,  #
 Dokuz Eylül Üniversitesi, Devlet, İZMİR, Kültür ve İletişim Bilimleri, 4, Türkçe, 306.46113, 96124, 1, SÖZ,  #
 Türk-Alman Üniversitesi, Devlet, İSTANBUL, Kültür ve İletişim Bilimleri, 4, Türkçe, 393.86994, 4422, 37, SÖZ,  #
-Orta Doğu Teknik Üniversitesi, Devlet, ANKARA, Küresel Siyaset ve Uluslararası İlişkiler, 4, İngilizce, 391.24274, 11834, 1, EA, %50 Burslu #
-Orta Doğu Teknik Üniversitesi, Devlet, ANKARA, Küresel Siyaset ve Uluslararası İlişkiler, 4, İngilizce, 0, 0, 14, EA, %0 Burslu #
+Orta Doğu Teknik Üniversitesi, Devlet, ANKARA, Küresel Siyaset ve Uluslararası İlişkiler (UOLP-SUNY Binghamton), 4, İngilizce, 391.24274, 11834, 1, EA, %50 Burslu #
+Orta Doğu Teknik Üniversitesi, Devlet, ANKARA, Küresel Siyaset ve Uluslararası İlişkiler (UOLP-SUNY Binghamton), 4, İngilizce, 0, 0, 14, EA, %0 Burslu #
 Türk-Alman Üniversitesi, Devlet, İSTANBUL, Kürt Dili ve Edebiyatı, 4, Türkçe, 0, 0, 3, SÖZ,  #
 Mardin Artuklu Üniversitesi, Devlet, MARDİN, Kürt Dili ve Edebiyatı, 4, Türkçe, 275.97235, 202523, 25, SÖZ,  #
 Bingöl Üniversitesi, Devlet, BİNGÖL, Kürt Dili ve Edebiyatı, 4, Türkçe, 0, 0, 30, SÖZ,  #
@@ -6705,7 +6702,7 @@ Koç Üniversitesi, Vakıf, İSTANBUL, Medya ve Görsel Sanatlar, 4, Türkçe, 2
 İstanbul Medipol Üniversitesi, Vakıf, İSTANBUL, Medya ve İletişim, 4, Türkçe, 228.51, 508417, 45, SÖZ, %100 Burslu #
 Beykent Üniversitesi, Vakıf, İSTANBUL, Medya ve İletişim, 4, Türkçe, 317.98808, 69762, 12, SÖZ, %100 Burslu #
 İstanbul Ticaret Üniversitesi, Vakıf, İSTANBUL, Medya ve İletişim, 4, Türkçe, 315.51827, 74916, 7, SÖZ,  #
-İzmir Katip Çelebi Üniversitesi, Devlet, İZMİR, Medya ve İletişim, 4, Türkçe, 282.94916, 172704, 80, SÖZ, %50 Burslu #
+İzmir Katip Çelebi Üniversitesi, Devlet, İZMİR, Medya ve İletişim, 4, Türkçe, 282.94916, 172704, 80, SÖZ,  #
 Beykent Üniversitesi, Vakıf, İSTANBUL, Medya ve İletişim, 4, Türkçe, 0, 0, 68, SÖZ, %50 Burslu #
 KTO Karatay Üniversitesi, Vakıf, KONYA, Mekatronik Mühendisliği, 4, Türkçe, 257.95850, 265189, 20, SAY, %100 Burslu #
 KTO Karatay Üniversitesi, Vakıf, KONYA, Mekatronik Mühendisliği, 4, Türkçe, 0, 0, 10, SAY, %50 Burslu #
@@ -7023,9 +7020,9 @@ Uluslararası Final Üniversitesi, Vakıf, GİRNE, Mimarlık, 4, İngilizce, 0, 
 Bahçeşehir Devlet Üniversitesi, Vakıf, İSTANBUL, Mimarlık, 4, İngilizce, 0, 0, 3, SAY, %100 Burslu #
 Rauf Denktaş Üniversitesi, Vakıf, LEFKOŞA-KKTC, Mimarlık, 4, İngilizce, 0, 0, 3, SAY, %100 Burslu #
 Uluslararası Saraybosna Üniversitesi, YABANCI, SARAYBOSNA, Mimarlık, 4, İngilizce, 0, 0, 5, SAY, %50 Burslu #
-Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, Mimarlık, 4, İngilizce, 0, 0, 5, SAY, %0 Burslu #
-Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, Mimarlık, 4, İngilizce, 0, 0, 2, SAY, %50 Burslu #
-Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, Mimarlık, 4, İngilizce, 0, 0, 3, SAY, %25 Burslu #
+Uluslararası Balkan Üniversitesi, Vakıf, ÜSKÜP, Mimarlık, 4, İngilizce, 0, 0, 5, SAY, %0 Burslu #
+Uluslararası Balkan Üniversitesi, Vakıf, ÜSKÜP, Mimarlık, 4, İngilizce, 0, 0, 2, SAY, %50 Burslu #
+Uluslararası Balkan Üniversitesi, Vakıf, ÜSKÜP, Mimarlık, 4, İngilizce, 0, 0, 3, SAY, %25 Burslu #
 Ankara Hacı Bayram Veli Üniversitesi, Devlet, ANKARA, Moda Tasarımı, 4, Türkçe, 244.7983, 417303, 28, EA,  #
 Selçuk Üniversitesi, Devlet, KONYA, Moda Tasarımı, 4, Türkçe, 0, 0, 40, EA,  #
 Ankara Hacı Bayram Veli Üniversitesi, Devlet, ANKARA, Moda Tasarımı (MTOK), 4, Türkçe, 221.55787, 568774, 8, EA,  #
@@ -7801,7 +7798,7 @@ Antalya Bilim Üniversitesi, Vakıf, ANTALYA, Psikoloji, 4, İngilizce, 240.5979
 Acıbadem Mehmet Ali Aydınlar Üniversitesi, Vakıf, İSTANBUL, Psikoloji, 4, İngilizce, 240.34085, 450987, 32, EA, %0 Burslu #
 Lefke Avrupa Üniversitesi, Vakıf, LEFKE-KKTC, Psikoloji, 4, İngilizce, 239.65993, 456247, 3, EA, %0 Burslu #
 İstanbul Atlas Üniversitesi, Vakıf, İSTANBUL, Psikoloji, 4, İngilizce, 239.38927, 458421, 34, EA, %50 Burslu #
-Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, Psikoloji, 4, İngilizce, 239.19029, 459999, 2, EA, %50 Burslu #
+Uluslararası Balkan Üniversitesi, Vakıf, ÜSKÜP, Psikoloji, 4, İngilizce, 239.19029, 459999, 2, EA, %50 Burslu #
 Lefke Avrupa Üniversitesi, Vakıf, LEFKE-KKTC, Psikoloji, 4, Türkçe, 239.07707, 460849, 45, EA, %0 Burslu #
 İstanbul Ayvansaray Üniversitesi, Vakıf, İSTANBUL, Psikoloji, 4, İngilizce, 238.97085, 461768, 46, EA, %50 Burslu #
 Üsküdar Üniversitesi, Vakıf, İSTANBUL, Psikoloji, 4, Türkçe, 237.31555, 474934, 38, EA, %0 Burslu #
@@ -7862,7 +7859,7 @@ Uluslararası Final Üniversitesi, Vakıf, GİRNE, Psikoloji, 4, İngilizce, 0, 
 Devlet Batı Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Psikoloji, 4, Türkçe, 0, 0, 36, EA, %50 Burslu #
 Bahçeşehir Devlet Üniversitesi, Vakıf, LEFKOŞA-KKTC, Psikoloji, 4, İngilizce, 0, 0, 21, EA, %50 Burslu #
 Bakü Devlet Üniversitesi, Devlet, BAKÜ-AZERBAYCAN, Psikoloji, 4, İngilizce, 0, 0, 15, EA, %0 Burslu #
-Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, Psikoloji, 4, İngilizce, 0, 0, 3, EA, %25 Burslu #
+Uluslararası Balkan Üniversitesi, Vakıf, ÜSKÜP, Psikoloji, 4, İngilizce, 0, 0, 3, EA, %25 Burslu #
 ODTÜ Kuzey Devlet Kampusu, Vakıf, GÜZELYURT-KKTC, Psikoloji, 4, İngilizce, 0, 0, 7, EA, %0 Burslu #
 Beykoz Üniversitesi, Vakıf, İSTANBUL, Psikoloji, 4, İngilizce, 0, 0, 34, EA, %50 Burslu #
 Haliç Üniversitesi, Vakıf, İSTANBUL, Psikoloji, 4, İngilizce, 0, 0, 12, EA, %0 Burslu #
@@ -7874,10 +7871,10 @@ Toros Üniversitesi, Vakıf, MERSİN, Psikoloji, 4, İngilizce, 0, 0, 51, EA, %0
 Girne Amerikan Üniversitesi, Vakıf, GİRNE-KKTC, Psikoloji, 4, Türkçe, 0, 0, 17, EA, %0 Burslu #
 Girne Amerikan Üniversitesi, Vakıf, GİRNE-KKTC, Psikoloji, 4, İngilizce, 0, 0, 14, EA, %0 Burslu #
 Uluslararası Final Üniversitesi, Vakıf, GİRNE, Psikoloji, 4, İngilizce, 0, 0, 6, EA, %0 Burslu #
-Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, Psikoloji, 4, İngilizce, 0, 0, 5, EA, %0 Burslu #
-Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, Psikolojik Danışmanlık ve Rehberlik, 4, İngilizce, 0, 0, 5, EA, %0 Burslu #
-Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, Psikolojik Danışmanlık ve Rehberlik, 4, İngilizce, 0, 0, 2, EA, %50 Burslu #
-Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, Psikolojik Danışmanlık ve Rehberlik, 4, İngilizce, 0, 0, 3, EA, %25 Burslu #
+Uluslararası Balkan Üniversitesi, Vakıf, ÜSKÜP, Psikoloji, 4, İngilizce, 0, 0, 5, EA, %0 Burslu #
+Uluslararası Balkan Üniversitesi, Vakıf, ÜSKÜP, Psikolojik Danışmanlık ve Rehberlik, 4, İngilizce, 0, 0, 5, EA, %0 Burslu #
+Uluslararası Balkan Üniversitesi, Vakıf, ÜSKÜP, Psikolojik Danışmanlık ve Rehberlik, 4, İngilizce, 0, 0, 2, EA, %50 Burslu #
+Uluslararası Balkan Üniversitesi, Vakıf, ÜSKÜP, Psikolojik Danışmanlık ve Rehberlik, 4, İngilizce, 0, 0, 3, EA, %25 Burslu #
 Azerbaycan Devlet Pedagoji Üniversitesi, Devlet, BAKÜ, Psikolojik Danışmanlık ve Rehberlik Öğretmenliği, 4, İngilizce, 0, 0, 5, EA, %0 Burslu #
 Muğla Sıtkı Koçman Üniversitesi, Devlet, MUĞLA, Radyo, Televizyon ve Sinema, 4, İngilizce, 0, 0, 2, SÖZ, %100 Burslu #
 Yeditepe Üniversitesi, Vakıf, İSTANBUL, Radyo, Televizyon ve Sinema, 4, İngilizce, 408.65581, 2281, 10, SÖZ, %100 Burslu #
@@ -8151,12 +8148,12 @@ Ege Üniversitesi, Devlet, İZMİR, Reklamcılık, 4, Türkçe, 314.53745, 77013
 İstanbul Aydın Üniversitesi, Vakıf, İSTANBUL, Reklamcılık, 4, Türkçe, 312.57328, 81398, 9, SÖZ, %100 Burslu #
 İstanbul Gelişim Üniversitesi, Vakıf, İSTANBUL, Reklamcılık, 4, Türkçe, 300.25138, 113139, 4, SÖZ,  #
 Akdeniz Üniversitesi, Devlet, ANTALYA, Reklamcılık, 4, Türkçe, 288.98255, 149699, 70, SÖZ,  #
-Kocaeli Üniversitesi, Devlet, KOCAELİ, Reklamcılık, 4, İngilizce, 269.37601, 234486, 80, SÖZ, %50 Burslu #
+Kocaeli Üniversitesi, Devlet, KOCAELİ, Reklamcılık, 4, İngilizce, 269.37601, 234486, 80, SÖZ,  #
 Bahçeşehir Üniversitesi, Vakıf, İSTANBUL, Reklamcılık, 4, İngilizce, 261.10095, 279170, 22, SÖZ, %50 Burslu #
 İstanbul Bilgi Üniversitesi, Vakıf, İSTANBUL, Reklamcılık, 4, Türkçe, 241.13257, 413190, 76, SÖZ,  #
-Selçuk Üniversitesi, Devlet, KONYA, Reklamcılık, 4, İngilizce, 234.95732, 461620, 70, SÖZ, %50 Burslu #
+Selçuk Üniversitesi, Devlet, KONYA, Reklamcılık, 4, İngilizce, 234.95732, 461620, 70, SÖZ,  #
 Kadir Has Üniversitesi, Vakıf, İSTANBUL, Reklamcılık(İ.Ö), 4, Türkçe, 229.81204, 499799, 25, SÖZ,  #
-Selçuk Üniversitesi, Devlet, KONYA, Reklamcılık, 4, Türkçe, 0, 0, 60, SÖZ, %0 Burslu #
+Selçuk Üniversitesi, Devlet, KONYA, Reklamcılık (İ.Ö), 4, Türkçe, 0, 0, 60, SÖZ,  #
 Bahçeşehir Üniversitesi, Vakıf, İSTANBUL, Reklamcılık, 4, Türkçe, 0, 0, 26, SÖZ, %50 Burslu #
 İstanbul Aydın Üniversitesi, Vakıf, İSTANBUL, Reklamcılık, 4, Türkçe, 0, 0, 52, SÖZ, %50 Burslu #
 İstanbul Gelişim Üniversitesi, Vakıf, İSTANBUL, Reklamcılık, 4, Türkçe, 0, 0, 21, SÖZ, %50 Burslu #
@@ -8542,7 +8539,7 @@ Mimar Sinan Güzel Sanatlar Üniversitesi, Devlet, İSTANBUL, Sinema ve Televizy
 Işık Üniversitesi, Vakıf, İSTANBUL, Sinema ve Televizyon, 4, Türkçe, 323.88962, 58627, 5, SÖZ,  #
 Anadolu Üniversitesi, Devlet, ESKİŞEHİR, Sinema ve Televizyon, 4, Türkçe, 319.36011, 67033, 75, SÖZ,  #
 İstanbul Arel Üniversitesi, Vakıf, İSTANBUL, Sinema ve Televizyon, 4, Türkçe, 309.8868, 87632, 5, SÖZ,  #
-Akdeniz Üniversitesi, Devlet, ANTALYA, Sinema ve Televizyon, 4, İngilizce, 297.91109, 120198, 60, SÖZ, %50 Burslu #
+Akdeniz Üniversitesi, Devlet, ANTALYA, Sinema ve Televizyon, 4, İngilizce, 297.91109, 120198, 60, SÖZ,  #
 Bahçeşehir Üniversitesi, Vakıf, İSTANBUL, Sinema ve Televizyon, 4, Türkçe, 269.69156, 232888, 21, SÖZ, %0 Burslu #
 Bahçeşehir Üniversitesi, Vakıf, İSTANBUL, Sinema ve Televizyon, 4, Türkçe, 227.90505, 512134, 21, SÖZ,  #
 Afyon Kocatepe Üniversitesi, Devlet, AFYONKARAHİSAR, Sinema ve Televizyon, 4, Türkçe, 226.5951, 519720, 60, SÖZ,  #
@@ -8553,12 +8550,12 @@ Işık Üniversitesi, Vakıf, İSTANBUL, Sinema ve Televizyon, 4, Türkçe, 0, 0
 İstanbul Arel Üniversitesi, Vakıf, İSTANBUL, Sinema ve Televizyon, 4, Türkçe, 0, 0, 27, SÖZ, %0 Burslu #
 Ankara Üniversitesi, Devlet, ANKARA, Sinoloji, 4, Türkçe, 391.77858, 14776, 30, DİL,  #
 Ankara Üniversitesi, Devlet, ANKARA, Sinoloji (U.Ö), 4, Türkçe, 269.01595, 53826, 100, DİL,  #
-Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, Siyasal Bilimler, 4, İngilizce, 268.14381, 275252, 2, EA, %50 Burslu #
+Uluslararası Balkan Üniversitesi, Vakıf, ÜSKÜP, Siyasal Bilimler, 4, İngilizce, 268.14381, 275252, 2, EA, %50 Burslu #
 Uluslararası Saraybosna Üniversitesi, YABANCI, SARAYBOSNA, Siyasal Bilimler, 4, İngilizce, 228.79645, 538644, 2, EA, %100 Burslu #
 Uluslararası Saraybosna Üniversitesi, YABANCI, SARAYBOSNA, Siyasal Bilimler, 4, İngilizce, 0, 0, 5, EA, %75 Burslu #
 Uluslararası Saraybosna Üniversitesi, YABANCI, SARAYBOSNA, Siyasal Bilimler, 4, İngilizce, 0, 0, 5, EA, %50 Burslu #
-Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, Siyasal Bilimler, 4, İngilizce, 0, 0, 5, EA, %0 Burslu #
-Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, Siyasal Bilimler, 4, İngilizce, 0, 0, 3, EA, %25 Burslu #
+Uluslararası Balkan Üniversitesi, Vakıf, ÜSKÜP, Siyasal Bilimler, 4, İngilizce, 0, 0, 5, EA, %0 Burslu #
+Uluslararası Balkan Üniversitesi, Vakıf, ÜSKÜP, Siyasal Bilimler, 4, İngilizce, 0, 0, 3, EA, %25 Burslu #
 Galatasaray Üniversitesi, Devlet, İSTANBUL, Siyaset Bilimi, 4, Fransızca, 421.05839, 3585, 30, EA,  #
 Doğu Akdeniz Üniversitesi, Vakıf, GAZİMAĞUSA-KKTC, Siyaset Bilimi, 4, İngilizce, 0, 0, 3, EA, %100 Burslu #
 İhsan Doğramacı Bilkent Üniversitesi, Vakıf, ANKARA, Siyaset Bilimi ve Kamu Yönetimi, 4, İngilizce, 414.89277, 4606, 21, EA, %100 Burslu #
@@ -9256,7 +9253,7 @@ Orta Doğu Teknik Üniversitesi, Devlet, ANKARA, Tarih, 4, İngilizce, 409.09744
 İbn Haldun Üniversitesi, Vakıf, İSTANBUL, Tarih, 4, Türkçe, 396.07929, 3995, 12, SÖZ,  #
 İstanbul Üniversitesi, Devlet, İSTANBUL, Tarih, 4, Türkçe, 379.22548, 8313, 90, SÖZ,  #
 İstanbul Sabahattin Zaim Üniversitesi, Vakıf, İSTANBUL, Tarih, 4, Türkçe, 377.09526, 9071, 5, SÖZ,  #
-Ankara Üniversitesi, Devlet, ANKARA, Tarih, 4, İngilizce, 360.65388, 17311, 80, SÖZ, %50 Burslu #
+Ankara Üniversitesi, Devlet, ANKARA, Tarih, 4, İngilizce, 360.65388, 17311, 80, SÖZ,  #
 Koç Üniversitesi, Vakıf, İSTANBUL, Tarih, 4, Türkçe, 355.94421, 20605, 10, SÖZ,  #
 Gazi Üniversitesi, Devlet, ANKARA, Tarih Öğretmenliği, 4, Türkçe, 351.91487, 23726, 20, SÖZ,  #
 Marmara Üniversitesi, Devlet, İSTANBUL, Tarih, 4, Türkçe, 351.79527, 23812, 80, SÖZ,  #
@@ -9287,7 +9284,7 @@ Dokuz Eylül Üniversitesi, Devlet, İZMİR, Tarih, 4, Türkçe, 269.50287, 2338
 Çanakkale Onsekiz Mart Üniversitesi, Devlet, ÇANAKKALE, Tarih, 4, Türkçe, 265.41927, 255227, 70, SÖZ,  #
 Ondokuz Mayıs Üniversitesi, Devlet, SAMSUN, Tarih, 4, Türkçe, 264.34074, 261028, 70, SÖZ,  #
 Ankara Hacı Bayram Veli Üniversitesi, Devlet, ANKARA, Tarih, 4, Türkçe, 260.7345, 281302, 60, SÖZ,  #
-Kocaeli Üniversitesi, Devlet, KOCAELİ, Tarih, 4, Türkçe, 258.14163, 296772, 70, SÖZ, %50 Burslu #
+Kocaeli Üniversitesi, Devlet, KOCAELİ, Tarih, 4, Türkçe, 258.14163, 296772, 70, SÖZ,  #
 TOBB Ekonomi ve Teknoloji Üniversitesi, Vakıf, ANKARA, Tarih(İ.Ö), 4, Türkçe, 257.60263, 300105, 7, SÖZ,  #
 Bursa Uludağ Üniversitesi, Devlet, BURSA, Tarih, 4, Türkçe, 254.42325, 320090, 60, SÖZ,  #
 İzmir Katip Çelebi Üniversitesi, Devlet, İZMİR, Tarih, 4, Türkçe, 253.48897, 326014, 70, SÖZ,  #
@@ -9331,7 +9328,7 @@ Kırgızistan-Türkiye Manas Üniversitesi, Devlet, Bişkek, Tarih, 4, Türkçe,
 Nevşehir Hacı Bektaş Veli Üniversitesi, Devlet, NEVŞEHİR, Tarih, 4, Türkçe, 218.23552, 550702, 70, SÖZ,  #
 Düzce Üniversitesi, Devlet, DÜZCE, Tarih, 4, Türkçe, 211.67784, 557545, 70, SÖZ,  #
 Amasya Üniversitesi, Devlet, AMASYA, Tarih, 4, Türkçe, 208.60445, 559426, 60, SÖZ,  #
-Recep Tayyip Erdoğan Üniversitesi, Devlet, RİZE, Tarih, 4, Türkçe, 203.41968, 562388, 70, SÖZ, %50 Burslu #
+Recep Tayyip Erdoğan Üniversitesi, Devlet, RİZE, Tarih, 4, Türkçe, 203.41968, 562388, 70, SÖZ,  #
 Yakın Doğu Üniversitesi, Vakıf, LEFKOŞA-KKTC, Tarih, 4, Türkçe, 0, 0, 5, SÖZ,  #
 Mardin Artuklu Üniversitesi, Devlet, MARDİN, Tarih, 4, İngilizce, 0, 0, 20, SÖZ, %100 Burslu #
 İstanbul 29 Mayıs Üniversitesi, Vakıf, İSTANBUL, Tarih(İ.Ö), 4, Türkçe, 0, 0, 25, SÖZ,  #
@@ -9690,7 +9687,7 @@ TOBB Ekonomi ve Teknoloji Üniversitesi, Vakıf, ANKARA, Tıp, 4, Türkçe, 419.
 Atılım Üniversitesi, Vakıf, ANKARA, Tıp, 4, İngilizce, 419.50903, 28776, 12, SAY, %25 Burslu #
 Nişantaşı Üniversitesi, Vakıf, İSTANBUL, Tıp, 4, Türkçe, 419.00152, 29102, 1, SAY, %25 Burslu #
 İstanbul Sağlık ve Teknoloji Üniversitesi, Vakıf, İSTANBUL, Tıp, 4, Türkçe, 415.03456, 31902, 59, SAY, %25 Burslu #
-Azerbaycan Tıp Üniversitesi, Devlet, BAKÜ, Tıp, 4, Türkçe, 414.79025, 32056, 40, SAY, %0 Burslu #
+Azerbaycan Tıp Üniversitesi, Devlet, BAKÜ, Tıp, 4, Türkçe, 414.79025, 32056, 40, SAY,  #
 Lokman Hekim Üniversitesi, Vakıf, ANKARA, Tıp, 4, Türkçe, 414.79492, 32056, 75, SAY, %25 Burslu #
 Yeditepe Üniversitesi, Vakıf, İSTANBUL, Tıp, 4, İngilizce, 414.69096, 32126, 65, SAY, %0 Burslu #
 Ufuk Üniversitesi, Vakıf, ANKARA, Tıp, 4, Türkçe, 413.98049, 32616, 61, SAY, %0 Burslu #
@@ -9946,7 +9943,7 @@ Karadeniz Teknik Üniversitesi, Devlet, TRABZON, Türk Dili ve Edebiyatı, 4, T�
 Aydın Adnan Menderes Üniversitesi, Devlet, AYDIN, Türk Dili ve Edebiyatı, 4, Türkçe, 267.49095, 244203, 70, SÖZ,  #
 Pamukkale Üniversitesi, Devlet, DENİZLİ, Türk Dili ve Edebiyatı, 4, Türkçe, 267.1413, 246005, 80, SÖZ,  #
 Bolu Abant İzzet Baysal Üniversitesi, Devlet, BOLU, Türk Dili ve Edebiyatı, 4, Türkçe, 266.47992, 249447, 60, SÖZ,  #
-İnönü Üniversitesi, Devlet, MALATYA, Türk Dili ve Edebiyatı, 4, Türkçe, 265.09617, 256943, 70, SÖZ, %50 Burslu #
+İnönü Üniversitesi, Devlet, MALATYA, Türk Dili ve Edebiyatı, 4, Türkçe, 265.09617, 256943, 70, SÖZ,  #
 TOBB Ekonomi ve Teknoloji Üniversitesi, Vakıf, ANKARA, Türk Dili ve Edebiyatı, 4, Türkçe, 263.88713, 263484, 7, SÖZ,  #
 Dicle Üniversitesi, Devlet, DİYARBAKIR, Türk Dili ve Edebiyatı, 4, Türkçe, 262.67059, 270301, 70, SÖZ,  #
 Atatürk Üniversitesi, Devlet, ERZURUM, Türk Dili ve Edebiyatı, 4, Türkçe, 260.91852, 280217, 80, SÖZ,  #
@@ -9993,7 +9990,7 @@ Manisa Celâl Bayar Üniversitesi, Devlet, MANİSA, Türk Dili ve Edebiyatı(İ.
 Mardin Artuklu Üniversitesi, Devlet, MARDİN, Türk Dili ve Edebiyatı(İ.Ö), 4, Türkçe, 237.49403, 441590, 70, SÖZ,  #
 Dicle Üniversitesi, Devlet, DİYARBAKIR, Türk Dili ve Edebiyatı(İ.Ö), 4, Türkçe, 237.26224, 443556, 50, SÖZ,  #
 İnönü Üniversitesi, Devlet, MALATYA, Türk Dili ve Edebiyatı, 4, Türkçe, 235.78119, 455239, 50, SÖZ,  #
-Aksaray Üniversitesi, Devlet, AKSARAY, Türk Dili ve Edebiyatı, 4, Türkçe, 235.78456, 455239, 60, SÖZ, %0 Burslu #
+Aksaray Üniversitesi, Devlet, AKSARAY, Türk Dili ve Edebiyatı, 4, Türkçe, 235.78456, 455239, 60, SÖZ,  #
 İstanbul Kültür Üniversitesi, Vakıf, İSTANBUL, Türk Dili ve Edebiyatı, 4, Türkçe, 235.23913, 459401, 5, SÖZ,  #
 Giresun Üniversitesi, Devlet, GİRESUN, Türk Dili ve Edebiyatı(İ.Ö), 4, Türkçe, 235.06737, 460770, 60, SÖZ,  #
 Bandırma Onyedi Eylül Üniversitesi, Devlet, BALIKESİR, Türk Dili ve Edebiyatı(İ.Ö), 4, Türkçe, 234.93763, 461788, 40, SÖZ,  #
@@ -10003,7 +10000,7 @@ Trakya Üniversitesi, Devlet, Edirne, Türk Dili ve Edebiyatı, 4, Türkçe, 232
 Bilecik Şeyh Edebali Üniversitesi, Devlet, BİLECİK, Türk Dili ve Edebiyatı, 4, Türkçe, 232.86692, 477718, 70, SÖZ,  #
 Kırşehir Ahi Evran Üniversitesi, Devlet, KIRŞEHİR, Türk Dili ve Edebiyatı, 4, Türkçe, 231.41663, 488589, 60, SÖZ,  #
 Kırklareli Üniversitesi, Devlet, KIRKLARELİ, Türk Dili ve Edebiyatı, 4, Türkçe, 230.85077, 492650, 70, SÖZ,  #
-Karabük Üniversitesi, Devlet, KARABÜK, Türk Dili ve Edebiyatı, 4, Türkçe, 230.53775, 494824, 70, SÖZ, %50 Burslu #
+Karabük Üniversitesi, Devlet, KARABÜK, Türk Dili ve Edebiyatı, 4, Türkçe, 230.53775, 494824, 70, SÖZ,  #
 Fatih Sultan Mehmet, Vakıf, Üniversitesi, Türk Dili ve Edebiyatı, 4, Türkçe, 229.14684, 504250, 28, SÖZ,  #
 Bartın Üniversitesi, Devlet, BARTIN, Türk Dili ve Edebiyatı, 4, Türkçe, 228.66422, 507447, 60, SÖZ,  #
 Karamanoğlu Mehmetbey Üniversitesi, Devlet, KARAMAN, Türk Dili ve Edebiyatı, 4, Türkçe, 228.26031, 509989, 60, SÖZ,  #
@@ -10251,9 +10248,9 @@ Erciyes Üniversitesi, Devlet, KAYSERİ, Uçak Mühendisliği (KKTC), 4, Türkç
 Türk Hava Kurumu Üniversitesi, Vakıf, ANKARA, Uçak Mühendisliği, 4, İngilizce, 426.25199, 24414, 7, SAY, %100 Burslu #
 Türk Hava Kurumu Üniversitesi, Vakıf, ANKARA, Uçak Mühendisliği, 4, İngilizce, 253.70491, 279138, 3, SAY, %0 Burslu #
 İstanbul Üniversitesi, Devlet, İSTANBUL, Ukrayna Dili ve Edebiyatı, 4, Türkçe, 343.52476, 29505, 25, DİL,  #
-Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, Uluslararası Ekonomik İlişkiler, 4, İngilizce, 0, 0, 2, EA, %50 Burslu #
-Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, Uluslararası Ekonomik İlişkiler, 4, İngilizce, 0, 0, 5, EA, %0 Burslu #
-Uluslararası Balkan Üniversitesi, Devlet, ÜSKÜP, Uluslararası Ekonomik İlişkiler, 4, İngilizce, 0, 0, 3, EA, %25 Burslu #
+Uluslararası Balkan Üniversitesi, Vakıf, ÜSKÜP, Uluslararası Ekonomik İlişkiler, 4, İngilizce, 0, 0, 2, EA, %50 Burslu #
+Uluslararası Balkan Üniversitesi, Vakıf, ÜSKÜP, Uluslararası Ekonomik İlişkiler, 4, İngilizce, 0, 0, 5, EA, %0 Burslu #
+Uluslararası Balkan Üniversitesi, Vakıf, ÜSKÜP, Uluslararası Ekonomik İlişkiler, 4, İngilizce, 0, 0, 3, EA, %25 Burslu #
 Özyeğin Üniversitesi, Vakıf, İSTANBUL, Uluslararası Finans, 4, İngilizce, 430.41634, 2401, 4, EA, %100 Burslu #
 Yeditepe Üniversitesi, Vakıf, İSTANBUL, Uluslararası Finans, 4, İngilizce, 377.42021, 19866, 4, EA, %100 Burslu #
 Bahçeşehir Üniversitesi, Vakıf, İSTANBUL, Uluslararası Finans, 4, İngilizce, 370.46698, 25309, 3, EA, %100 Burslu #
@@ -10424,7 +10421,7 @@ Uluslararası Saraybosna Üniversitesi, YABANCI, SARAYBOSNA, Uluslararası İli�
 Anadolu Üniversitesi, Devlet, ESKİŞEHİR, Uluslararası İlişkiler, 4, Türkçe, 0, 0, 600, EA,  #
 Anadolu Üniversitesi, Devlet, ESKİŞEHİR, Uluslararası İlişkiler, 4, İngilizce, 0, 0, 150, EA,  #
 Yeditepe Üniversitesi, Vakıf, İSTANBUL, Uluslararası İşletme Yönetimi, 4, Fransızca, 365.00138, 30427, 3, EA, %100 Burslu #
-Marmara Üniversitesi, Devlet, İSTANBUL, Uluslararası İşletme Yönetimi, 4, İngilizce, 294.37147, 168798, 15, EA, %0 Burslu #
+Marmara Üniversitesi, Devlet, İSTANBUL, Uluslararası İşletme Yönetimi, 4, İngilizce, 294.37147, 168798, 15, EA,  #
 Çağ Üniversitesi, Vakıf, MERSİN, Uluslararası İşletme Yönetimi, 4, İngilizce, 279.45665, 223618, 4, EA, %100 Burslu #
 Yeditepe Üniversitesi, Vakıf, İSTANBUL, Uluslararası İşletme Yönetimi, 4, Almanca, 260.15072, 317925, 18, EA, %50 Burslu #
 Yeditepe Üniversitesi, Vakıf, İSTANBUL, Uluslararası İşletme Yönetimi, 4, Almanca, 259.09935, 323977, 2, EA, %0 Burslu #
@@ -10752,7 +10749,7 @@ Konya Teknik Üniversitesi, Devlet, KONYA, Yazılım Mühendisliği, 4, Türkçe
 Çankaya Üniversitesi, Vakıf, ANKARA, Yazılım Mühendisliği, 4, İngilizce, 341.15096, 102475, 37, SAY, %50 Burslu #
 Adana Alparslan Türkeş Bilim ve Teknoloji Üniversitesi, Devlet, ADANA, Yazılım Mühendisliği, 4, İngilizce, 339.5794, 104346, 60, SAY,  #
 Bandırma Onyedi Eylül Üniversitesi, Devlet, BALIKESİR, Yazılım Mühendisliği, 4, Türkçe, 339.19745, 104802, 60, SAY,  #
-Fırat Üniversitesi, Devlet, ELAZIĞ, Yazılım Mühendisliği, 4, İngilizce, 333.32295, 112095, 20, SAY, %0 Burslu #
+Fırat Üniversitesi, Devlet, ELAZIĞ, Yazılım Mühendisliği, 4, İngilizce, 333.32295, 112095, 20, SAY,  #
 Yaşar Üniversitesi, Vakıf, İZMİR, Yazılım Mühendisliği, 4, İngilizce, 331.85923, 113987, 43, SAY, %50 Burslu #
 Maltepe Üniversitesi, Vakıf, İSTANBUL, Yazılım Mühendisliği, 4, İngilizce, 323.2199, 125888, 37, SAY, %50 Burslu #
 Bahçeşehir Üniversitesi, Vakıf, İSTANBUL, Yazılım Mühendisliği, 4, İngilizce, 322.70119, 126617, 57, SAY, %0 Burslu #
